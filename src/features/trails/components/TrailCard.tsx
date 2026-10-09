@@ -11,7 +11,7 @@ export function TrailCard({ trail }: { trail: Trail }) {
   return (
     <Link
       to={routes.trail(trail.id)}
-      className="group flex h-full flex-col rounded-t-full rounded-b-2xl border border-line bg-canvas p-3 transition-all duration-300 hover:-translate-y-1 hover:border-primary/40 hover:shadow-[0_12px_40px_-12px_rgb(0_0_0/0.12)] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary"
+      className="group flex h-full flex-col rounded-t-full rounded-b-2xl border border-line bg-canvas p-3 transition-[translate,border-color,box-shadow] duration-300 hover:-translate-y-1 hover:border-primary/40 hover:shadow-[0_12px_40px_-12px_rgb(0_0_0/0.12)] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary"
     >
       {/* Janela em arco */}
       <div className={`relative flex aspect-4/3 items-end justify-center overflow-hidden rounded-t-full pb-8 ${tone.soft}`}>

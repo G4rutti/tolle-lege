@@ -23,7 +23,7 @@ export function SacramentCard({ sacrament, number }: { sacrament: Sacrament; num
         <h3 className="mt-4 font-serif text-3xl font-medium text-ink">{sacrament.name}</h3>
         <p className="mt-1 text-ink-muted">{sacrament.tagline}</p>
 
-        <p className="mt-8 text-xs font-semibold tracking-[0.2em] text-ink-muted uppercase">
+        <p className="mt-8 text-xs font-semibold tracking-widest text-ink-muted uppercase">
           Sinais
         </p>
         <ul className="mt-3 flex flex-wrap gap-2">

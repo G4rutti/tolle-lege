@@ -32,7 +32,7 @@ export function LiturgicalYearPage() {
       <section className="mx-auto grid max-w-7xl items-center gap-12 px-6 py-16 sm:py-24 lg:grid-cols-2 lg:px-10">
         <Reveal>
           <SeasonWheel seasons={seasons} today={today} selected={selected.id} onSelect={setSelectedId}>
-            <p className="text-[0.65rem] font-semibold tracking-[0.2em] text-primary-strong uppercase sm:text-xs">
+            <p className="text-xs font-semibold tracking-widest text-primary-strong uppercase sm:text-xs">
               {isCurrent ? 'Estamos no' : 'Tempo do'}
             </p>
             <p className="mt-1 font-serif text-2xl leading-tight text-ink sm:text-3xl">{selected.name}</p>

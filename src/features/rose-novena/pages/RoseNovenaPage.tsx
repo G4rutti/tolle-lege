@@ -93,12 +93,12 @@ export function RoseNovenaPage() {
             <dl className="divide-y divide-line rounded-3xl border border-line bg-canvas">
               {theresaFacts.map((fact) => (
                 <div key={fact.label} className="px-6 py-4">
-                  <dt className="text-xs font-semibold tracking-[0.2em] text-primary-strong uppercase">{fact.label}</dt>
+                  <dt className="text-xs font-semibold tracking-widest text-primary-strong uppercase">{fact.label}</dt>
                   <dd className="mt-1 text-ink/85">{fact.value}</dd>
                 </div>
               ))}
               <div className="px-6 py-4">
-                <dt className="text-xs font-semibold tracking-[0.2em] text-primary-strong uppercase">Festa</dt>
+                <dt className="text-xs font-semibold tracking-widest text-primary-strong uppercase">Festa</dt>
                 <dd className="mt-1 text-ink/85">1º de outubro</dd>
               </div>
             </dl>

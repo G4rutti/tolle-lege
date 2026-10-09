@@ -126,7 +126,7 @@ export function ShieldOfTrinity() {
       </svg>
 
       <div aria-live="polite">
-        <p className="text-xs font-semibold tracking-[0.2em] text-primary-strong uppercase">
+        <p className="text-xs font-semibold tracking-widest text-primary-strong uppercase">
           Toque em uma Pessoa
         </p>
         <ul className="mt-4 space-y-3 font-serif text-2xl text-ink">

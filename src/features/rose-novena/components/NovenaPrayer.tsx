@@ -55,7 +55,7 @@ export function NovenaPrayer({ day, onComplete }: NovenaPrayerProps) {
         <AnimatePresence mode="wait">
           {step === 'prayer' && (
             <motion.div key="prayer" initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -8 }}>
-              <p className="text-xs font-semibold tracking-[0.2em] text-primary-strong uppercase">
+              <p className="text-xs font-semibold tracking-widest text-primary-strong uppercase">
                 {day ? `${ordinalDay(day)} · ` : ''}Primeiro, a oração
               </p>
               <p className="mt-3 text-sm text-ink-muted">
@@ -70,7 +70,7 @@ export function NovenaPrayer({ day, onComplete }: NovenaPrayerProps) {
               <button
                 type="button"
                 onClick={() => setStep('glories')}
-                className="mt-8 rounded-full bg-ink px-7 py-3.5 text-sm font-semibold text-canvas transition-colors hover:bg-primary-strong"
+                className="mt-8 rounded-md bg-accent px-7 py-3.5 text-sm font-semibold text-accent-on transition-colors hover:bg-accent-hover"
               >
                 Rezei a oração, seguir para as Glórias
               </button>
@@ -79,7 +79,7 @@ export function NovenaPrayer({ day, onComplete }: NovenaPrayerProps) {
 
           {step === 'glories' && (
             <motion.div key="glories" initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -8 }}>
-              <p className="text-xs font-semibold tracking-[0.2em] text-primary-strong uppercase">
+              <p className="text-xs font-semibold tracking-widest text-primary-strong uppercase">
                 24 Glórias, uma por ano de vida de Teresinha
               </p>
               <h3 className="mt-4 font-serif text-2xl font-medium text-ink">{glory.title}</h3>
@@ -101,7 +101,7 @@ export function NovenaPrayer({ day, onComplete }: NovenaPrayerProps) {
 
           {step === 'done' && (
             <motion.div key="done" initial={{ opacity: 0, scale: 0.96 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.6 }}>
-              <p className="text-xs font-semibold tracking-[0.2em] text-rose uppercase">🌹 Chuva de rosas</p>
+              <p className="text-xs font-semibold tracking-widest text-rose uppercase">🌹 Chuva de rosas</p>
               <h3 className="mt-3 font-serif text-3xl font-medium text-ink sm:text-4xl">
                 {day ? `Você recebeu a rosa do ${ordinalDay(day)}` : 'Você recebeu uma rosa'}
               </h3>

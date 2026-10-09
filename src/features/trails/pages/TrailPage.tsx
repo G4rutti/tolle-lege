@@ -125,7 +125,7 @@ function TrailContent({ trail }: { trail: Trail }) {
 
                   {step.tips && (
                     <div className="mt-6 rounded-xl border border-line p-4">
-                      <p className="flex items-center gap-2 text-xs font-semibold tracking-[0.2em] text-primary-strong uppercase">
+                      <p className="flex items-center gap-2 text-xs font-semibold tracking-widest text-primary-strong uppercase">
                         <Info className="size-4" />
                         Bom saber
                       </p>

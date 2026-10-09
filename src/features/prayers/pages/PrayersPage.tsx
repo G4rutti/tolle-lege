@@ -60,7 +60,7 @@ export function PrayersPage() {
           <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
             {Object.values(mysterySets).map((set) => (
               <Reveal key={set.id} className="rounded-2xl border border-line bg-canvas p-6">
-                <p className="text-xs font-semibold tracking-[0.2em] text-primary-strong uppercase">
+                <p className="text-xs font-semibold tracking-widest text-primary-strong uppercase">
                   {set.days}
                 </p>
                 <h3 className="mt-2 font-serif text-xl text-ink">{set.title}</h3>

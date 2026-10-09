@@ -53,7 +53,7 @@ export function MaryPage() {
 
       {/* Magnificat */}
       <section className="relative isolate overflow-hidden bg-marian py-16 text-canvas sm:py-24">
-        <div aria-hidden className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_50%_0%,rgb(255_255_255/0.18),transparent_60%)]" />
+        <div aria-hidden className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_50%_0%,color-mix(in_oklch,var(--color-canvas)_18%,transparent),transparent_60%)]" />
         <div className="mx-auto max-w-3xl px-6 text-center">
           <Reveal>
             <p className="rubric text-canvas/70">O cântico de Maria</p>
@@ -148,7 +148,7 @@ export function MaryPage() {
                 <h3 className="mt-3 font-serif text-2xl">{place.name}</h3>
                 <p className="text-sm text-canvas/50">{place.place}</p>
                 <p className="mt-4 text-sm leading-relaxed text-canvas/80">{place.text}</p>
-                <span className="mt-auto pt-5 text-xs font-semibold tracking-[0.15em] text-canvas/50 uppercase">
+                <span className="mt-auto pt-5 text-xs font-semibold tracking-widest text-canvas/50 uppercase">
                   {place.kind === 'apparition' ? 'Aparição reconhecida' : 'Imagem e devoção'}
                 </span>
               </Reveal>

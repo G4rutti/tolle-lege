@@ -160,11 +160,11 @@ export function TrinityPage() {
 
                   <div className="mt-6 grid gap-6 md:grid-cols-2">
                     <div>
-                      <p className="text-xs font-semibold tracking-[0.2em] text-terracotta uppercase">O que dizia</p>
+                      <p className="text-xs font-semibold tracking-widest text-terracotta uppercase">O que dizia</p>
                       <p className="mt-2 leading-relaxed text-canvas/80">{heresy.claim}</p>
                     </div>
                     <div>
-                      <p className="text-xs font-semibold tracking-[0.2em] text-primary uppercase">Por que está errado</p>
+                      <p className="text-xs font-semibold tracking-widest text-primary uppercase">Por que está errado</p>
                       <p className="mt-2 leading-relaxed text-canvas/80">{heresy.whyWrong}</p>
                     </div>
                   </div>

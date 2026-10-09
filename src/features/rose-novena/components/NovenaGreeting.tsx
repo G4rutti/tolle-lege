@@ -45,7 +45,7 @@ export function NovenaGreeting() {
             >
               <X className="size-4" />
             </button>
-            <p className="pr-6 text-xs font-semibold tracking-[0.2em] text-rose uppercase">🌹 Chuva de rosas</p>
+            <p className="pr-6 text-xs font-semibold tracking-widest text-rose uppercase">🌹 Chuva de rosas</p>
             <p className="mt-2 font-serif text-lg leading-snug text-ink">{message}</p>
             <p className="mt-1 text-sm text-ink-muted">
               “Depois da minha morte, farei cair uma chuva de rosas.” — Santa Teresinha

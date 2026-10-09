@@ -11,6 +11,7 @@ type Petal = {
   hue: string
 }
 
+// ds-forge: ok ilustração (pétalas de rosa da Novena), não é cor de interface
 const HUES = ['#e27d91', '#d9667d', '#c9465f', '#f0a3b1', '#b3334e']
 
 function createPetals(count: number): Petal[] {

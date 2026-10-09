@@ -146,7 +146,7 @@ function Tile({ to, className, children }: { to: string; className: string; chil
     >
       <ArrowUpRight
         aria-hidden
-        className="absolute top-6 right-6 size-5 opacity-40 transition-all duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:opacity-100"
+        className="absolute top-6 right-6 size-5 opacity-40 transition-[opacity,transform] duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:opacity-100"
       />
       {children}
     </Link>

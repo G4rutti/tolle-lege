@@ -35,7 +35,7 @@ export function StopPanel({ stops, selected, onSelect, intro, finalAction, dark 
           >
             {stop ? (
               <>
-                <p className="text-xs font-semibold tracking-[0.2em] text-primary uppercase">
+                <p className="text-xs font-semibold tracking-widest text-primary uppercase">
                   {selected! + 1} de {stops.length}
                 </p>
                 <h2 className={`mt-2 font-serif text-3xl font-medium ${dark ? 'text-canvas' : 'text-ink'}`}>

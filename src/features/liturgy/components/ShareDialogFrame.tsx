@@ -112,7 +112,7 @@ export function ShareDialogFrame({ title, canvasRef, fileName, shareTitle, disab
               type="button"
               onClick={() => exportImage('share')}
               disabled={busy || disabled}
-              className="inline-flex items-center gap-2 rounded-full bg-ink px-6 py-3 text-sm font-semibold text-canvas transition-colors hover:bg-primary-strong disabled:opacity-40"
+              className="inline-flex items-center gap-2 rounded-md bg-accent px-6 py-3 text-sm font-semibold text-accent-on transition-colors hover:bg-accent-hover disabled:opacity-40"
             >
               <Share2 className="size-4" />
               Compartilhar
@@ -135,7 +135,7 @@ type ThemePickerProps = {
 export function ThemePicker({ value, onChange, color }: ThemePickerProps) {
   return (
     <fieldset>
-      <legend className="text-xs font-semibold tracking-[0.2em] text-primary-strong uppercase">Cor</legend>
+      <legend className="text-xs font-semibold tracking-widest text-primary-strong uppercase">Cor</legend>
       <div className="mt-3 flex flex-wrap gap-3">
         {shareThemes.map((theme) => (
           <button
@@ -149,7 +149,7 @@ export function ThemePicker({ value, onChange, color }: ThemePickerProps) {
             style={{ background: `linear-gradient(135deg, ${theme.card} 50%, ${theme.outer} 50%)` }}
           >
             {theme.id === themeForLiturgicalColor[color] && (
-              <span className="absolute -top-1 -right-1 rounded-full bg-ink px-1 text-[0.55rem] font-bold text-canvas">
+              <span className="absolute -top-1 -right-1 rounded-full bg-ink px-1 text-xs font-bold text-canvas">
                 HOJE
               </span>
             )}
@@ -170,7 +170,7 @@ type OptionGroupProps = {
 export function OptionGroup({ label, options, value, onChange }: OptionGroupProps) {
   return (
     <fieldset>
-      <legend className="text-xs font-semibold tracking-[0.2em] text-primary-strong uppercase">{label}</legend>
+      <legend className="text-xs font-semibold tracking-widest text-primary-strong uppercase">{label}</legend>
       <div className="mt-3 flex flex-wrap gap-2">
         {options.map((option) => (
           <button

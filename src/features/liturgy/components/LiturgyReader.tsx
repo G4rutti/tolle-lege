@@ -44,7 +44,7 @@ export function LiturgyReader({ date }: { date: Date }) {
       </header>
 
       <figure className="mt-10 rounded-2xl border border-line bg-canvas p-6">
-        <figcaption className="text-xs font-semibold tracking-[0.2em] text-primary-strong uppercase">
+        <figcaption className="text-xs font-semibold tracking-widest text-primary-strong uppercase">
           Oração do dia
         </figcaption>
         <blockquote className="mt-3 font-serif text-lg leading-relaxed whitespace-pre-line text-ink/80 italic">

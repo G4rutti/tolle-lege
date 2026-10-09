@@ -97,7 +97,7 @@ export function ShareImageDialog({ item, date, color, onClose }: ShareImageDialo
       onClose={onClose}
     >
       <fieldset>
-        <legend className="text-xs font-semibold tracking-[0.2em] text-primary-strong uppercase">
+        <legend className="text-xs font-semibold tracking-widest text-primary-strong uppercase">
           Toque nos trechos
         </legend>
         <ul className="mt-3 space-y-2">

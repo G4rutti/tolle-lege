@@ -44,7 +44,7 @@ export function ReadingView({ kind, options, date, color }: ReadingViewProps) {
         </div>
         <div className="relative shrink-0">
           <ShareImageButton item={current} date={date} color={color} />
-          <span className="pointer-events-none absolute -top-2 -right-2 rounded-full bg-primary px-1.5 py-0.5 text-[0.6rem] font-bold tracking-wide text-canvas uppercase">
+          <span className="pointer-events-none absolute -top-2 -right-2 rounded-full bg-primary px-1.5 py-0.5 text-xs font-bold tracking-wide text-canvas uppercase">
             Novo
           </span>
         </div>

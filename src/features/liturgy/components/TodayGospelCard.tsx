@@ -22,7 +22,7 @@ export function TodayGospelCard({ className = '' }: { className?: string }) {
         <BookOpen className="size-5" />
       </span>
       <span className="min-w-0 flex-1">
-        <span className="block text-[0.65rem] font-semibold tracking-[0.2em] text-primary-strong uppercase">
+        <span className="block text-xs font-semibold tracking-widest text-primary-strong uppercase">
           Toma e lê hoje
         </span>
         {gospel && data ? (

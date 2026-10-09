@@ -86,7 +86,7 @@ export function Hero() {
         {/* Luz suave no centro do pergaminho */}
         <div
           aria-hidden
-          className="absolute inset-0 bg-[radial-gradient(ellipse_at_50%_var(--church-y),rgb(250_247_240/0.9),transparent_60%)]"
+          className="absolute inset-0 bg-[radial-gradient(ellipse_at_50%_var(--church-y),color-mix(in_oklch,var(--color-canvas)_90%,transparent),transparent_60%)]"
         />
 
         {/* Ostensório: resplendor girando devagar e medalhão sépia atrás da igreja */}

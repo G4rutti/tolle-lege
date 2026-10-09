@@ -60,7 +60,7 @@ export function RosaryGuide() {
           className="w-24 shrink-0 sm:w-32 lg:w-full lg:max-w-xs"
         />
         <div className="min-w-0 flex-1 lg:w-full lg:max-w-xs lg:flex-none lg:text-center">
-          <p className="truncate text-xs font-semibold tracking-[0.15em] text-primary-strong uppercase lg:hidden">
+          <p className="truncate text-xs font-semibold tracking-widest text-primary-strong uppercase lg:hidden">
             {step.label}
           </p>
           {mystery && (
@@ -106,7 +106,7 @@ export function RosaryGuide() {
               transition={{ duration: 0.2 }}
             >
               {/* No celular, o rótulo já aparece no topo fixo */}
-              <p className="hidden text-xs font-semibold tracking-[0.2em] text-primary-strong uppercase lg:block">
+              <p className="hidden text-xs font-semibold tracking-widest text-primary-strong uppercase lg:block">
                 {step.label}
               </p>
 
@@ -149,7 +149,7 @@ export function RosaryGuide() {
             <button
               type="button"
               onClick={() => setIndex(0)}
-              className="inline-flex items-center gap-2 rounded-full bg-ink px-6 py-3 text-sm font-semibold text-canvas transition-colors hover:bg-primary-strong"
+              className="inline-flex items-center gap-2 rounded-md bg-accent px-6 py-3 text-sm font-semibold text-accent-on transition-colors hover:bg-accent-hover"
             >
               <RotateCcw className="size-4" />
               Rezar de novo
@@ -158,7 +158,7 @@ export function RosaryGuide() {
             <button
               type="button"
               onClick={() => go(1)}
-              className="inline-flex items-center gap-1 rounded-full bg-ink px-6 py-3 text-sm font-semibold text-canvas transition-colors hover:bg-primary-strong"
+              className="inline-flex items-center gap-1 rounded-md bg-accent px-6 py-3 text-sm font-semibold text-accent-on transition-colors hover:bg-accent-hover"
             >
               Próximo
               <ChevronRight className="size-4" />

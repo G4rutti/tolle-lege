@@ -86,7 +86,7 @@ export function InteriorPlan({ stops, selected, onSelect }: InteriorPlanProps) {
           onClick={() => onSelect(index)}
           aria-label={`${index + 1}. ${stop.title}`}
           aria-pressed={selected === index}
-          className="absolute flex size-8 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border-2 border-canvas bg-primary-strong font-serif text-sm text-canvas shadow-md transition-transform hover:scale-110 aria-pressed:scale-125 aria-pressed:bg-ink"
+          className="absolute flex size-8 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border-2 border-canvas bg-accent font-serif text-sm text-canvas shadow-md transition-transform hover:scale-110 aria-pressed:scale-125 aria-pressed:bg-ink"
           style={{ left: `${(stop.x / 360) * 100}%`, top: `${(stop.y / 560) * 100}%` }}
         >
           {index + 1}

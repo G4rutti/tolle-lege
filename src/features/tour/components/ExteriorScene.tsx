@@ -68,7 +68,7 @@ export function ExteriorScene({ stops, selected, onSelect }: ExteriorSceneProps)
             onClick={() => onSelect(index)}
             aria-label={`${index + 1}. ${stop.title}`}
             aria-pressed={selected === index}
-            className="group absolute top-0 left-0 flex size-9 items-center justify-center rounded-full border-2 border-canvas bg-primary-strong font-serif text-sm text-canvas shadow-[0_4px_16px_rgb(0_0_0/0.35)] transition-[opacity,background-color,scale] duration-200 hover:scale-110 aria-pressed:scale-125 aria-pressed:bg-ink"
+            className="group absolute top-0 left-0 flex size-9 items-center justify-center rounded-full border-2 border-canvas bg-accent font-serif text-sm text-canvas shadow-[0_4px_16px_rgb(0_0_0/0.35)] transition-[opacity,background-color,scale] duration-200 hover:scale-110 aria-pressed:scale-125 aria-pressed:bg-ink"
             style={{ opacity: 0 }}
           >
             <span aria-hidden className="absolute inset-0 rounded-full bg-primary/50 motion-safe:animate-ping group-aria-pressed:hidden" />

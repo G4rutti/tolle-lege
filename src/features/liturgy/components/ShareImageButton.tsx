@@ -22,7 +22,7 @@ export function ShareImageButton({ item, date, color, className, children }: Sha
         onClick={() => setOpen(true)}
         className={
           className ??
-          'inline-flex items-center gap-2 rounded-full bg-ink px-5 py-2.5 text-sm font-semibold text-canvas transition-colors hover:bg-primary-strong'
+          'inline-flex items-center gap-2 rounded-md bg-accent px-5 py-2.5 text-sm font-semibold text-accent-on transition-colors hover:bg-accent-hover'
         }
       >
         {children ?? (
