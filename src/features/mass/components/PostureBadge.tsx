@@ -1,10 +1,10 @@
 import { postureLabels, type Posture } from '../data'
 
-/** Classes literais para o Tailwind detectar no build. */
+/** Postura é o que se faz: rubrica em telha, como no missal (identidade.md: madeira diz, telha faz). */
 const postureClasses: Record<Posture, string> = {
-  stand: 'bg-marian-soft text-marian',
-  sit: 'bg-sage-soft text-sage',
-  kneel: 'bg-terracotta-soft text-terracotta',
+  stand: 'bg-accent-subtle text-accent-hover',
+  sit: 'bg-accent-subtle text-accent-hover',
+  kneel: 'bg-accent-subtle text-accent-hover',
 }
 
 export function PostureBadge({ posture }: { posture: Posture }) {

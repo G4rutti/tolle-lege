@@ -22,7 +22,7 @@ export function SaintOfTheDayCard({ className = '' }: { className?: string }) {
       {/* Medalhão sépia, como os da hero */}
       <span
         aria-hidden
-        className="flex size-16 shrink-0 items-center justify-center rounded-full border-4 border-double border-primary bg-[radial-gradient(circle_at_50%_40%,#d8bd88,#b08a4c_70%,#8a6a35)] text-canvas shadow-[inset_0_0_14px_rgb(60_40_15/0.45)]"
+        className="flex size-16 shrink-0 items-center justify-center rounded-full border-4 border-double border-primary bg-[radial-gradient(circle_at_50%_40%,var(--color-primitivos-moldura),var(--color-primitivos-barrado)_70%,var(--color-primitivos-granito))] text-canvas shadow-[inset_0_0_14px_rgb(60_40_15/0.45)]"
       >
         <CrossPattee className="size-6" />
       </span>

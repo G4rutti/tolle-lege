@@ -1,3 +1,4 @@
+import { raw } from '@/styles/ds/tokens'
 import type { ShareTheme } from './themes'
 
 export type ShareCardContent = {
@@ -273,9 +274,8 @@ function drawMedallion(ctx: CanvasRenderingContext2D, cx: number, cy: number, r:
     ctx.stroke()
   }
   const fill = ctx.createRadialGradient(cx, cy - r * 0.2, 0, cx, cy, r - 12)
-  fill.addColorStop(0, '#d8bd88')
-  fill.addColorStop(0.7, '#b08a4c')
-  fill.addColorStop(1, '#8a6a35')
+  fill.addColorStop(0, raw['color.primitivos.telha'])
+  fill.addColorStop(1, raw['color.primitivos.telha-escura'])
   ctx.fillStyle = fill
   ctx.beginPath()
   ctx.arc(cx, cy, r - 12, 0, Math.PI * 2)
@@ -283,7 +283,7 @@ function drawMedallion(ctx: CanvasRenderingContext2D, cx: number, cy: number, r:
   const size = r * 0.8
   ctx.translate(cx - size / 2, cy - size / 2)
   ctx.scale(size / 24, size / 24)
-  ctx.fillStyle = '#fbf8f3'
+  ctx.fillStyle = raw['color.primitivos.branco']
   ctx.fill(new Path2D(CROSS_PATTEE))
   ctx.restore()
 }

@@ -3,7 +3,7 @@
 
 /* Design system "Cal e telha" (ds-forge): gerado de design-system/tokens. Não edite ds/ à mão. */
 @import './ds/tokens.css';
-@import './ds/tailwind.css';
+/* ds/tailwind.css não é importado: a escala --spacing dele (24/32/48/64px) mudaria p-5…p-8 do site inteiro. */
 
 /* Tela larga e deitada: a hero vira um tríptico, com a igreja no centro. Igual a HERO_WIDE_QUERY. */
 @custom-variant wide (@media (min-width: 1024px) and (min-aspect-ratio: 105/100));
@@ -23,19 +23,33 @@
   --color-ink: var(--color-text-default);
   --color-ink-muted: var(--color-text-muted);
 
-  /* Ação: telha. Só no que se faz (botão, link de ação, próximo passo). */
-  --color-primary: var(--color-accent-default);
-  --color-primary-strong: var(--color-accent-hover);
-  --color-primary-soft: var(--color-accent-subtle);
+  /* Ex-ouro. Ícones, fios e rótulos não são ação: granito e moldura. Ação usa as classes accent (telha). */
+  --color-primary: var(--color-text-muted);
+  --color-primary-strong: var(--color-text-muted);
+  --color-primary-soft: var(--color-surface-sunken);
 
-  /* Antes púrpura cardinalícia; marcava rubricas e cruzes, agora é ação (telha) */
-  --color-cardinal: var(--color-accent-default);
+  /* Ex-púrpura cardinalícia (cruzes, citações): madeira */
+  --color-cardinal: var(--color-text-default);
+
+  /* Ação (telha), cor do dia e cores litúrgicas, direto dos tokens */
+  --color-accent: var(--color-accent-default);
+  --color-accent-hover: var(--color-accent-hover);
+  --color-accent-on: var(--color-accent-on);
+  --color-accent-subtle: var(--color-accent-subtle);
+  --color-dia: var(--color-dia-default);
+  --color-dia-on: var(--color-dia-on);
+  --color-liturgia-verde: var(--color-liturgia-verde);
+  --color-liturgia-roxo: var(--color-liturgia-roxo);
+  --color-liturgia-vermelho: var(--color-liturgia-vermelho);
+  --color-liturgia-rosa: var(--color-liturgia-rosa);
+  --color-liturgia-branco: var(--color-liturgia-branco);
 
   /* Acentos por área */
   --color-marian: #3f5f86; /* dúvidas */
   --color-marian-soft: #dde4ec;
-  --color-terracotta: #b5634c; /* curiosidades */
-  --color-terracotta-soft: #f0ddd4;
+  /* Curiosidades: era terracota, brigava com a telha (ação). Agora madeira. */
+  --color-terracotta: var(--color-text-default);
+  --color-terracotta-soft: var(--color-surface-sunken);
   --color-sage: #56735a; /* primeiros passos */
   --color-sage-soft: #dfe7dc;
   --color-rose: #a52d47; /* Novena das Rosas */

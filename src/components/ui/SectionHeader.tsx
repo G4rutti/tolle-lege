@@ -1,5 +1,4 @@
 import type { ReactNode } from 'react'
-import { CrossPattee } from './CrossPattee'
 
 type SectionHeaderProps = {
   eyebrow: string
@@ -17,9 +16,10 @@ export function SectionHeader({ eyebrow, title, description, align = 'left' }: S
       <p
         className={`flex items-center gap-3 rubric text-primary-strong ${centered ? 'justify-center' : ''}`}
       >
-        <CrossPattee className="size-3 shrink-0 text-cardinal" />
+        {/* Arquinho na cor do dia: abre cada seção (identidade.md) */}
+        <span aria-hidden className="inline-block h-4 w-3 shrink-0 rounded-t-full border-2 border-b-0 border-dia" />
         {eyebrow}
-        <span aria-hidden className="h-px w-10 bg-primary/50" />
+        <span aria-hidden className="h-px w-10 bg-line" />
       </p>
       <h2 className="mt-4 font-serif text-4xl font-medium tracking-tight text-balance text-ink sm:text-5xl">
         {title}

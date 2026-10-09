@@ -1,3 +1,4 @@
+import { raw, type TokenName } from '@/styles/ds/tokens'
 import type { LiturgicalColor } from '../types'
 
 export type ShareThemeId = 'canvas' | 'gold' | 'marian' | 'terracotta' | 'sage' | 'rose' | 'night'
@@ -14,15 +15,19 @@ export type ShareTheme = {
   accent: string
 }
 
-/** Cores fixas (o canvas não lê as variáveis CSS do tema). */
+/** O canvas não lê variáveis CSS: usa os valores resolvidos dos tokens (design-system/tokens). */
+const c = (name: TokenName) => raw[name]
+/** Mesma cor com transparência (oklch(... / a)). */
+const a = (name: TokenName, alpha: number) => raw[name].replace(')', ` / ${alpha})`)
+
 export const shareThemes: ShareTheme[] = [
-  { id: 'canvas', name: 'Cal', outer: '#e9dfcf', card: '#fbf8f3', text: '#2b2622', muted: '#6b625a', accent: '#8a6a35' },
-  { id: 'gold', name: 'Ouro', outer: '#5c4522', card: '#8a6a35', text: '#fbf8f3', muted: '#f3eadbcc', accent: '#f3eadb' },
-  { id: 'marian', name: 'Mariano', outer: '#2f4764', card: '#4a6b94', text: '#fbf8f3', muted: '#e3eaf3cc', accent: '#e3eaf3' },
-  { id: 'terracotta', name: 'Terracota', outer: '#8f4a38', card: '#c9725b', text: '#fffaf6', muted: '#f6e4decc', accent: '#fff1ea' },
-  { id: 'sage', name: 'Sálvia', outer: '#3f5842', card: '#5f7f63', text: '#fbf8f3', muted: '#e5ede4cc', accent: '#e5ede4' },
-  { id: 'rose', name: 'Rosa', outer: '#7a1f35', card: '#b3334e', text: '#fff7f8', muted: '#f8e3e7cc', accent: '#f8e3e7' },
-  { id: 'night', name: 'Noite', outer: '#171412', card: '#2b2622', text: '#fbf8f3', muted: '#fbf8f399', accent: '#b08d57' },
+  { id: 'canvas', name: 'Cal', outer: c('color.primitivos.moldura'), card: c('color.primitivos.cal'), text: c('color.primitivos.madeira'), muted: c('color.primitivos.granito-escuro'), accent: c('color.primitivos.telha') },
+  { id: 'gold', name: 'Telha', outer: c('color.primitivos.telha-escura'), card: c('color.primitivos.telha'), text: c('color.primitivos.branco'), muted: a('color.primitivos.branco', 0.8), accent: c('color.primitivos.telha-clara') },
+  { id: 'marian', name: 'Roxo', outer: c('color.primitivos.madeira'), card: c('color.liturgia.roxo'), text: c('color.primitivos.branco'), muted: a('color.primitivos.branco', 0.8), accent: c('color.primitivos.branco') },
+  { id: 'terracotta', name: 'Madeira', outer: c('color.primitivos.ferro'), card: c('color.primitivos.madeira'), text: c('color.primitivos.cal'), muted: a('color.primitivos.cal', 0.75), accent: c('color.primitivos.telha-clara') },
+  { id: 'sage', name: 'Verde', outer: c('color.primitivos.madeira'), card: c('color.liturgia.verde'), text: c('color.primitivos.branco'), muted: a('color.primitivos.branco', 0.8), accent: c('color.primitivos.branco') },
+  { id: 'rose', name: 'Vermelho', outer: c('color.primitivos.madeira'), card: c('color.liturgia.vermelho'), text: c('color.primitivos.branco'), muted: a('color.primitivos.branco', 0.8), accent: c('color.primitivos.branco') },
+  { id: 'night', name: 'Noite', outer: c('color.primitivos.noite-sunken'), card: c('color.primitivos.ferro'), text: c('color.primitivos.cal'), muted: a('color.primitivos.cal', 0.6), accent: c('color.primitivos.noite-telha') },
 ]
 
 /** Tema que combina com a cor litúrgica do dia. */

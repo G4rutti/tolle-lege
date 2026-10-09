@@ -59,7 +59,7 @@ export function ExploreSection() {
           <Reveal className="md:col-span-2 lg:col-span-3">
             <Tile
               to={routes.tour}
-              className="bg-[radial-gradient(ellipse_at_80%_50%,rgb(176_141_87/0.35),transparent_60%)] bg-ink text-canvas"
+              className="bg-[radial-gradient(ellipse_at_80%_50%,color-mix(in_oklch,var(--color-dia)_calc(0.35*100%),transparent),transparent_60%)] bg-ink text-canvas"
             >
               <div className="flex h-full flex-col gap-8 sm:flex-row sm:items-center sm:justify-between">
                 <div className="max-w-xl">

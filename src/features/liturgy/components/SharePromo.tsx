@@ -12,7 +12,7 @@ export function SharePromo({ liturgy }: { liturgy: Liturgy }) {
 
   return (
     <section className="relative isolate overflow-hidden rounded-3xl bg-ink p-6 text-canvas sm:p-8">
-      <div aria-hidden className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_85%_50%,rgb(176_141_87/0.35),transparent_60%)]" />
+      <div aria-hidden className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_85%_50%,color-mix(in_oklch,var(--color-dia)_calc(0.35*100%),transparent),transparent_60%)]" />
 
       <div className="flex flex-col gap-8 sm:flex-row sm:items-center">
         {/* Mini-imagens empilhadas, como prévia do resultado */}

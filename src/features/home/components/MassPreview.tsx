@@ -11,7 +11,7 @@ export function MassPreview() {
       {/* Brilho dourado vindo do altar */}
       <div
         aria-hidden
-        className="absolute inset-x-0 bottom-0 -z-10 h-2/3 bg-[radial-gradient(ellipse_at_50%_100%,rgb(176_141_87/0.35),transparent_70%)]"
+        className="absolute inset-x-0 bottom-0 -z-10 h-2/3 bg-[radial-gradient(ellipse_at_50%_100%,color-mix(in_oklch,var(--color-dia)_calc(0.35*100%),transparent),transparent_70%)]"
       />
 
       <div className="mx-auto max-w-7xl px-6 lg:px-10">

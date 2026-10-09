@@ -63,7 +63,7 @@ export function TourPage() {
 
         {part === 'outside' ? (
           <div className="mx-auto grid max-w-7xl gap-6 px-6 pb-12 lg:grid-cols-[3fr_2fr] lg:gap-10 lg:px-10">
-            <div className="relative h-[55vh] overflow-hidden rounded-3xl bg-[radial-gradient(ellipse_at_50%_40%,rgb(176_141_87/0.25),transparent_65%)] lg:h-[72vh]">
+            <div className="relative h-[55vh] overflow-hidden rounded-3xl bg-[radial-gradient(ellipse_at_50%_40%,color-mix(in_oklch,var(--color-dia)_calc(0.25*100%),transparent),transparent_65%)] lg:h-[72vh]">
               <Suspense>
                 <ExteriorScene stops={exteriorStops} selected={outsideStop} onSelect={setOutsideStop} />
               </Suspense>

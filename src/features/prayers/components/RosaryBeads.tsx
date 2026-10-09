@@ -56,7 +56,7 @@ export function RosaryBeads({ current, done, className = 'w-full max-w-xs' }: Ro
             stroke={state === 'todo' ? 'var(--color-ink-muted)' : 'var(--color-primary-strong)'}
             strokeWidth="1.2"
             className={state === 'current' ? 'motion-safe:animate-pulse' : undefined}
-            style={state === 'current' ? { filter: 'drop-shadow(0 0 6px rgb(176 141 87 / 0.9))' } : undefined}
+            style={state === 'current' ? { filter: 'drop-shadow(0 0 6px color-mix(in oklch, var(--color-dia) calc(0.9 * 100%), transparent))' } : undefined}
           />
         )
       })}

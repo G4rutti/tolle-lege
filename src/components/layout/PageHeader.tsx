@@ -1,6 +1,5 @@
 import type { ReactNode } from 'react'
 import { LightRays } from '@/components/ui/LightRays'
-import { Rosette } from '@/components/ui/Rosette'
 import { StainedGlassWindow } from '@/components/ui/StainedGlassWindow'
 
 type PageHeaderProps = {
@@ -20,7 +19,7 @@ export function PageHeader({ eyebrow, title, description, glassSeed = 3, childre
       <div className="mx-auto grid max-w-7xl items-center gap-10 px-6 py-14 sm:py-20 md:grid-cols-[1fr_auto] lg:px-10">
         <div className="max-w-2xl">
           <p className="flex items-center gap-2 rubric text-primary-strong">
-            <Rosette className="size-4 text-primary" />
+            <span aria-hidden className="inline-block h-4 w-3 shrink-0 rounded-t-full border-2 border-b-0 border-dia" />
             {eyebrow}
           </p>
           <h1 className="mt-4 font-serif text-5xl font-medium tracking-tight text-balance text-ink sm:text-6xl">

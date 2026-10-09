@@ -98,7 +98,7 @@ export function Hero() {
           <div className="absolute top-[calc(var(--church-y)-var(--church-size)*0.08)] left-1/2 size-[calc(var(--church-size)*2.9)] -translate-1/2">
             <Resplendor className="size-full motion-safe:animate-[spin_240s_linear_infinite]" />
           </div>
-          <div className="absolute top-[calc(var(--church-y)-var(--church-size)*0.08)] left-1/2 size-[calc(var(--church-size)*1.15)] -translate-1/2 rounded-full border-[5px] border-double border-primary bg-[radial-gradient(circle_at_50%_40%,#d8bd88,#b08a4c_70%,#8a6a35)] shadow-[0_0_0_6px_var(--color-parchment),0_0_0_7px_rgb(168_130_63/0.6),inset_0_0_40px_rgb(60_40_15/0.45)]" />
+          <div className="absolute top-[calc(var(--church-y)-var(--church-size)*0.08)] left-1/2 size-[calc(var(--church-size)*1.15)] -translate-1/2 rounded-full border-[5px] border-double border-primary bg-[radial-gradient(circle_at_50%_40%,var(--color-primitivos-moldura),var(--color-primitivos-barrado)_70%,var(--color-primitivos-granito))] shadow-[0_0_0_6px_var(--color-parchment),0_0_0_7px_color-mix(in_oklch,var(--color-primitivos-granito)_calc(0.6*100%),transparent),inset_0_0_40px_rgb(60_40_15/0.45)]" />
         </motion.div>
 
         {/* Moldura de iluminura, com cruzes nos cantos */}

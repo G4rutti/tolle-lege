@@ -7,6 +7,7 @@ import { FaqList, faqItems } from '@/features/faq'
 import { LiturgyTodayCard, SaintOfTheDayCard } from '@/features/liturgy'
 import { TrailGrid } from '@/features/trails'
 import { ClosingCta } from '../components/ClosingCta'
+import { DayPortal } from '../components/DayPortal'
 import { ExploreSection } from '../components/ExploreSection'
 import { Hero } from '../components/Hero'
 import { MassPreview } from '../components/MassPreview'
@@ -20,6 +21,8 @@ export function HomePage() {
     <>
       <title>Tolle Lege · Uma introdução à fé católica</title>
       <Hero />
+
+      <DayPortal />
 
       {/* Trilhas */}
       <section className="py-24 sm:py-32">
