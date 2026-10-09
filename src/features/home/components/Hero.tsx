@@ -182,16 +182,18 @@ export function Hero() {
         >
           <div className="max-w-xl wide:max-w-sm wide:justify-self-end wide:text-right">
             <p className="flex items-center gap-3 rubric text-cardinal wide:justify-end wide:text-xs 2xl:text-sm">
-              <CrossPattee className="size-3 shrink-0" />
+              <span aria-hidden className="inline-block h-4 w-3 shrink-0 rounded-t-full border-2 border-b-0 border-dia" />
               Uma introdução à fé católica
             </p>
-            {/* Como num missal: a capitular em vermelho, o resto em preto */}
+            {/* O arco da porta, na cor do tempo litúrgico, entre as duas palavras (identidade.md) */}
             <h1
               id="hero-title"
-              className="mt-4 font-serif text-6xl font-medium tracking-tight text-ink sm:text-7xl 2xl:text-8xl"
+              aria-label="Tolle Lege"
+              className="mt-4 flex items-end gap-3 font-serif text-6xl font-medium tracking-tight text-ink sm:text-7xl 2xl:text-8xl wide:justify-end"
             >
-              <span className="text-cardinal">T</span>olle <span className="text-cardinal">L</span>
-              ege
+              <span aria-hidden>Tolle</span>{' '}
+              <span aria-hidden className="mb-[0.12em] inline-block h-[0.82em] w-[0.56em] rounded-t-full bg-dia transition-colors duration-500" />
+              <span aria-hidden>Lege</span>
             </h1>
             <p className="mt-5 text-lg leading-relaxed text-pretty text-ink-muted">
               A Palavra edifica a Igreja. Um caminho simples para conhecer o que ela crê, celebra

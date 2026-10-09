@@ -1,0 +1,3209 @@
+{
+ "origem": "https://tolle-et-lege.vercel.app",
+ "local": false,
+ "quando": "2026-10-09T23:09:13.610Z",
+ "renderizado": true,
+ "duracaoSeg": 82,
+ "limite": 60,
+ "atingiuLimite": false,
+ "naFila": 0,
+ "sitemaps": [
+  "https://tolle-et-lege.vercel.app/sitemap.xml"
+ ],
+ "robotsDisallow": [],
+ "navegacao": {
+  "header": [
+   {
+    "texto": "Tolle Lege",
+    "href": "/"
+   }
+  ],
+  "footer": []
+ },
+ "contatos": {
+  "telefones": [],
+  "whatsapp": [],
+  "emails": [],
+  "ceps": [],
+  "social": {}
+ },
+ "paginas": [
+  {
+   "slug": "home",
+   "url": "https://tolle-et-lege.vercel.app/",
+   "path": "/",
+   "status": 200,
+   "origem": "inicio",
+   "lastModified": "Wed, 07 Oct 2026 23:42:05 GMT",
+   "titulo": "Tolle Lege · Uma introdução à fé católica",
+   "descricao": "Um caminho simples para conhecer a fé católica: trilhas para cada história, a Missa passo a passo, liturgia diária, orações e uma visita guiada por uma igreja em 3D.",
+   "robots": null,
+   "canonical": "https://tolle-et-lege.vercel.app/",
+   "ogImage": "https://tolle-et-lege.vercel.app/og-image.jpg?v=2",
+   "favicon": "/favicon.svg",
+   "lang": "pt-BR",
+   "viewport": true,
+   "headings": [
+    {
+     "n": 1,
+     "t": "T olle L ege"
+    },
+    {
+     "n": 2,
+     "t": "Cada caminho começa de um lugar"
+    },
+    {
+     "n": 3,
+     "t": "Não sou batizado"
+    },
+    {
+     "n": 3,
+     "t": "Sou batizado e quero voltar"
+    },
+    {
+     "n": 3,
+     "t": "Venho de outra religião"
+    },
+    {
+     "n": 3,
+     "t": "Só tenho curiosidade"
+    },
+    {
+     "n": 2,
+     "t": "Uma celebração em quatro movimentos"
+    },
+    {
+     "n": 2,
+     "t": "Para ir além do primeiro passo"
+    },
+    {
+     "n": 3,
+     "t": "Orações e Terço"
+    },
+    {
+     "n": 3,
+     "t": "Visita guiada"
+    },
+    {
+     "n": 3,
+     "t": "Os sete sacramentos"
+    },
+    {
+     "n": 3,
+     "t": "Como se confessar"
+    },
+    {
+     "n": 3,
+     "t": "Glossário da fé"
+    },
+    {
+     "n": 2,
+     "t": "A mesma Palavra, no mundo inteiro"
+    },
+    {
+     "n": 3,
+     "t": "6ª feira da 27ª Semana do Tempo Comum"
+    },
+    {
+     "n": 2,
+     "t": "Você sabia?"
+    },
+    {
+     "n": 2,
+     "t": "Não existe pergunta boba"
+    },
+    {
+     "n": 2,
+     "t": "O próximo passo é seu"
+    }
+   ],
+   "palavras": 905,
+   "imagens": [],
+   "forms": [],
+   "iframes": [],
+   "schema": [],
+   "schemaData": [],
+   "contatos": {
+    "telefones": [],
+    "whatsapp": [],
+    "emails": [],
+    "ceps": [],
+    "social": {}
+   },
+   "header": [
+    {
+     "texto": "Tolle Lege",
+     "href": "/"
+    }
+   ],
+   "footer": [],
+   "linksInternos": 43,
+   "linksExternos": 2,
+   "linksSaida": [
+    "/",
+    "/trails",
+    "/mass",
+    "/liturgy",
+    "/trails/not-baptized",
+    "/trails/returning",
+    "/trails/other-religion",
+    "/trails/curious",
+    "/liturgical-year",
+    "/prayers",
+    "/tour",
+    "/sacraments",
+    "/confession",
+    "/glossary",
+    "/curiosities",
+    "/faq",
+    "/mary",
+    "/trinity",
+    "/rose-novena"
+   ],
+   "inlinks": 40,
+   "importancia": 1110,
+   "shots": [
+    "shots/home-desktop.jpg",
+    "shots/home-mobile.jpg"
+   ],
+   "problemas": []
+  },
+  {
+   "slug": "sacraments",
+   "url": "https://tolle-et-lege.vercel.app/sacraments",
+   "path": "/sacraments",
+   "status": 200,
+   "origem": "sitemap",
+   "lastModified": "Fri, 09 Oct 2026 23:08:23 GMT",
+   "titulo": "Sacramentos · Tolle Lege",
+   "descricao": "Sinais visíveis pelos quais Deus age de verdade na vida de cada pessoa, do nascimento na fé até o fim da vida.",
+   "robots": null,
+   "canonical": "https://tolle-et-lege.vercel.app/sacraments",
+   "ogImage": "https://tolle-et-lege.vercel.app/og-image.jpg?v=2",
+   "favicon": "/favicon.svg",
+   "lang": "pt-BR",
+   "viewport": true,
+   "headings": [
+    {
+     "n": 1,
+     "t": "Os sete sacramentos"
+    },
+    {
+     "n": 2,
+     "t": "Sacramentos da iniciação"
+    },
+    {
+     "n": 3,
+     "t": "Batismo"
+    },
+    {
+     "n": 3,
+     "t": "Crisma"
+    },
+    {
+     "n": 3,
+     "t": "Eucaristia"
+    },
+    {
+     "n": 2,
+     "t": "Sacramentos de cura"
+    },
+    {
+     "n": 3,
+     "t": "Confissão"
+    },
+    {
+     "n": 3,
+     "t": "Unção dos Enfermos"
+    },
+    {
+     "n": 2,
+     "t": "Sacramentos do serviço"
+    },
+    {
+     "n": 3,
+     "t": "Ordem"
+    },
+    {
+     "n": 3,
+     "t": "Matrimônio"
+    }
+   ],
+   "palavras": 1114,
+   "imagens": [],
+   "forms": [],
+   "iframes": [],
+   "schema": [],
+   "schemaData": [],
+   "contatos": {
+    "telefones": [],
+    "whatsapp": [],
+    "emails": [],
+    "ceps": [],
+    "social": {}
+   },
+   "header": [
+    {
+     "texto": "Tolle Lege",
+     "href": "/"
+    }
+   ],
+   "footer": [
+    {
+     "texto": "Tolle Lege",
+     "href": "/"
+    },
+    {
+     "texto": "Trilhas",
+     "href": "/trails"
+    },
+    {
+     "texto": "Dúvidas",
+     "href": "/faq"
+    },
+    {
+     "texto": "Curiosidades",
+     "href": "/curiosities"
+    },
+    {
+     "texto": "Visita guiada",
+     "href": "/tour"
+    },
+    {
+     "texto": "A Missa",
+     "href": "/mass"
+    },
+    {
+     "texto": "Santíssima Trindade",
+     "href": "/trinity"
+    },
+    {
+     "texto": "Maria",
+     "href": "/mary"
+    },
+    {
+     "texto": "Sacramentos",
+     "href": "/sacraments"
+    },
+    {
+     "texto": "Ano litúrgico",
+     "href": "/liturgical-year"
+    },
+    {
+     "texto": "Glossário",
+     "href": "/glossary"
+    },
+    {
+     "texto": "Liturgia diária",
+     "href": "/liturgy"
+    },
+    {
+     "texto": "Orações e Terço",
+     "href": "/prayers"
+    },
+    {
+     "texto": "Novena das Rosas",
+     "href": "/rose-novena"
+    },
+    {
+     "texto": "Confissão",
+     "href": "/confession"
+    },
+    {
+     "texto": "API Liturgia Diária",
+     "href": "https://liturgia.up.railway.app"
+    }
+   ],
+   "linksInternos": 26,
+   "linksExternos": 1,
+   "linksSaida": [
+    "/sacraments",
+    "/",
+    "/mass",
+    "/confession",
+    "/trails",
+    "/faq",
+    "/curiosities",
+    "/tour",
+    "/trinity",
+    "/mary",
+    "/liturgical-year",
+    "/glossary",
+    "/liturgy",
+    "/prayers",
+    "/rose-novena"
+   ],
+   "inlinks": 38,
+   "importancia": 75,
+   "shots": [
+    "shots/sacraments-desktop.jpg",
+    "shots/sacraments-mobile.jpg"
+   ],
+   "problemas": []
+  },
+  {
+   "slug": "glossary",
+   "url": "https://tolle-et-lege.vercel.app/glossary",
+   "path": "/glossary",
+   "status": 200,
+   "origem": "sitemap",
+   "lastModified": "Fri, 09 Oct 2026 23:08:28 GMT",
+   "titulo": "Glossário · Tolle Lege",
+   "descricao": "Ambão, sacrário, homilia… As palavras que você vai ouvir na igreja, explicadas de um jeito simples.",
+   "robots": null,
+   "canonical": "https://tolle-et-lege.vercel.app/glossary",
+   "ogImage": "https://tolle-et-lege.vercel.app/og-image.jpg?v=2",
+   "favicon": "/favicon.svg",
+   "lang": "pt-BR",
+   "viewport": true,
+   "headings": [
+    {
+     "n": 1,
+     "t": "Glossário da fé"
+    },
+    {
+     "n": 2,
+     "t": "A"
+    },
+    {
+     "n": 2,
+     "t": "B"
+    },
+    {
+     "n": 2,
+     "t": "C"
+    },
+    {
+     "n": 2,
+     "t": "D"
+    },
+    {
+     "n": 2,
+     "t": "E"
+    },
+    {
+     "n": 2,
+     "t": "G"
+    },
+    {
+     "n": 2,
+     "t": "H"
+    },
+    {
+     "n": 2,
+     "t": "I"
+    },
+    {
+     "n": 2,
+     "t": "L"
+    },
+    {
+     "n": 2,
+     "t": "M"
+    },
+    {
+     "n": 2,
+     "t": "N"
+    },
+    {
+     "n": 2,
+     "t": "P"
+    },
+    {
+     "n": 2,
+     "t": "Q"
+    },
+    {
+     "n": 2,
+     "t": "S"
+    },
+    {
+     "n": 2,
+     "t": "T"
+    },
+    {
+     "n": 2,
+     "t": "V"
+    }
+   ],
+   "palavras": 882,
+   "imagens": [],
+   "forms": [],
+   "iframes": [],
+   "schema": [],
+   "schemaData": [],
+   "contatos": {
+    "telefones": [],
+    "whatsapp": [],
+    "emails": [],
+    "ceps": [],
+    "social": {}
+   },
+   "header": [
+    {
+     "texto": "Tolle Lege",
+     "href": "/"
+    }
+   ],
+   "footer": [
+    {
+     "texto": "Tolle Lege",
+     "href": "/"
+    },
+    {
+     "texto": "Trilhas",
+     "href": "/trails"
+    },
+    {
+     "texto": "Dúvidas",
+     "href": "/faq"
+    },
+    {
+     "texto": "Curiosidades",
+     "href": "/curiosities"
+    },
+    {
+     "texto": "Visita guiada",
+     "href": "/tour"
+    },
+    {
+     "texto": "A Missa",
+     "href": "/mass"
+    },
+    {
+     "texto": "Santíssima Trindade",
+     "href": "/trinity"
+    },
+    {
+     "texto": "Maria",
+     "href": "/mary"
+    },
+    {
+     "texto": "Sacramentos",
+     "href": "/sacraments"
+    },
+    {
+     "texto": "Ano litúrgico",
+     "href": "/liturgical-year"
+    },
+    {
+     "texto": "Glossário",
+     "href": "/glossary"
+    },
+    {
+     "texto": "Liturgia diária",
+     "href": "/liturgy"
+    },
+    {
+     "texto": "Orações e Terço",
+     "href": "/prayers"
+    },
+    {
+     "texto": "Novena das Rosas",
+     "href": "/rose-novena"
+    },
+    {
+     "texto": "Confissão",
+     "href": "/confession"
+    },
+    {
+     "texto": "API Liturgia Diária",
+     "href": "https://liturgia.up.railway.app"
+    }
+   ],
+   "linksInternos": 52,
+   "linksExternos": 1,
+   "linksSaida": [
+    "/glossary",
+    "/",
+    "/liturgical-year",
+    "/mary",
+    "/sacraments",
+    "/trails/not-baptized",
+    "/trails/returning",
+    "/confession",
+    "/trinity",
+    "/prayers",
+    "/liturgy",
+    "/mass",
+    "/trails",
+    "/faq",
+    "/curiosities",
+    "/tour",
+    "/rose-novena"
+   ],
+   "inlinks": 38,
+   "importancia": 75,
+   "shots": [
+    "shots/glossary-desktop.jpg",
+    "shots/glossary-mobile.jpg"
+   ],
+   "problemas": []
+  },
+  {
+   "slug": "mass",
+   "url": "https://tolle-et-lege.vercel.app/mass",
+   "path": "/mass",
+   "status": 200,
+   "origem": "sitemap",
+   "lastModified": "Fri, 09 Oct 2026 23:08:15 GMT",
+   "titulo": "Como funciona a Missa · Tolle Lege",
+   "descricao": "Passo a passo, o que acontece em cada momento, se é hora de ficar em pé, sentado ou de joelhos, e o que responder.",
+   "robots": null,
+   "canonical": "https://tolle-et-lege.vercel.app/mass",
+   "ogImage": "https://tolle-et-lege.vercel.app/og-image.jpg?v=2",
+   "favicon": "/favicon.svg",
+   "lang": "pt-BR",
+   "viewport": true,
+   "headings": [
+    {
+     "n": 1,
+     "t": "Como funciona a Missa"
+    },
+    {
+     "n": 2,
+     "t": "Ritos iniciais"
+    },
+    {
+     "n": 3,
+     "t": "Canto de entrada"
+    },
+    {
+     "n": 3,
+     "t": "Sinal da cruz e saudação"
+    },
+    {
+     "n": 3,
+     "t": "Ato penitencial"
+    },
+    {
+     "n": 3,
+     "t": "Glória"
+    },
+    {
+     "n": 3,
+     "t": "Oração do dia (Coleta)"
+    },
+    {
+     "n": 2,
+     "t": "Liturgia da Palavra"
+    },
+    {
+     "n": 3,
+     "t": "Primeira leitura"
+    },
+    {
+     "n": 3,
+     "t": "Salmo responsorial"
+    },
+    {
+     "n": 3,
+     "t": "Segunda leitura"
+    },
+    {
+     "n": 3,
+     "t": "Aclamação e Evangelho"
+    },
+    {
+     "n": 3,
+     "t": "Homilia"
+    },
+    {
+     "n": 3,
+     "t": "Profissão de fé (Creio)"
+    },
+    {
+     "n": 3,
+     "t": "Oração dos fiéis"
+    },
+    {
+     "n": 2,
+     "t": "Liturgia Eucarística"
+    },
+    {
+     "n": 3,
+     "t": "Apresentação das oferendas"
+    },
+    {
+     "n": 3,
+     "t": "Oração eucarística e Santo"
+    },
+    {
+     "n": 3,
+     "t": "Consagração"
+    },
+    {
+     "n": 3,
+     "t": "Pai-Nosso e abraço da paz"
+    },
+    {
+     "n": 3,
+     "t": "Comunhão"
+    },
+    {
+     "n": 2,
+     "t": "Ritos finais"
+    },
+    {
+     "n": 3,
+     "t": "Bênção final"
+    },
+    {
+     "n": 3,
+     "t": "Despedida"
+    }
+   ],
+   "palavras": 938,
+   "imagens": [],
+   "forms": [],
+   "iframes": [],
+   "schema": [],
+   "schemaData": [],
+   "contatos": {
+    "telefones": [],
+    "whatsapp": [],
+    "emails": [],
+    "ceps": [],
+    "social": {}
+   },
+   "header": [
+    {
+     "texto": "Tolle Lege",
+     "href": "/"
+    }
+   ],
+   "footer": [
+    {
+     "texto": "Tolle Lege",
+     "href": "/"
+    },
+    {
+     "texto": "Trilhas",
+     "href": "/trails"
+    },
+    {
+     "texto": "Dúvidas",
+     "href": "/faq"
+    },
+    {
+     "texto": "Curiosidades",
+     "href": "/curiosities"
+    },
+    {
+     "texto": "Visita guiada",
+     "href": "/tour"
+    },
+    {
+     "texto": "A Missa",
+     "href": "/mass"
+    },
+    {
+     "texto": "Santíssima Trindade",
+     "href": "/trinity"
+    },
+    {
+     "texto": "Maria",
+     "href": "/mary"
+    },
+    {
+     "texto": "Sacramentos",
+     "href": "/sacraments"
+    },
+    {
+     "texto": "Ano litúrgico",
+     "href": "/liturgical-year"
+    },
+    {
+     "texto": "Glossário",
+     "href": "/glossary"
+    },
+    {
+     "texto": "Liturgia diária",
+     "href": "/liturgy"
+    },
+    {
+     "texto": "Orações e Terço",
+     "href": "/prayers"
+    },
+    {
+     "texto": "Novena das Rosas",
+     "href": "/rose-novena"
+    },
+    {
+     "texto": "Confissão",
+     "href": "/confession"
+    },
+    {
+     "texto": "API Liturgia Diária",
+     "href": "https://liturgia.up.railway.app"
+    }
+   ],
+   "linksInternos": 21,
+   "linksExternos": 1,
+   "linksSaida": [
+    "/mass",
+    "/",
+    "/trails",
+    "/faq",
+    "/curiosities",
+    "/tour",
+    "/trinity",
+    "/mary",
+    "/sacraments",
+    "/liturgical-year",
+    "/glossary",
+    "/liturgy",
+    "/prayers",
+    "/rose-novena",
+    "/confession"
+   ],
+   "inlinks": 36,
+   "importancia": 71,
+   "shots": [
+    "shots/mass-desktop.jpg",
+    "shots/mass-mobile.jpg"
+   ],
+   "problemas": []
+  },
+  {
+   "slug": "prayers",
+   "url": "https://tolle-et-lege.vercel.app/prayers",
+   "path": "/prayers",
+   "status": 200,
+   "origem": "sitemap",
+   "lastModified": "Fri, 09 Oct 2026 23:08:21 GMT",
+   "titulo": "Orações e Terço · Tolle Lege",
+   "descricao": "As orações que todo católico conhece e um terço guiado para rezar conta por conta.",
+   "robots": null,
+   "canonical": "https://tolle-et-lege.vercel.app/prayers",
+   "ogImage": "https://tolle-et-lege.vercel.app/og-image.jpg?v=2",
+   "favicon": "/favicon.svg",
+   "lang": "pt-BR",
+   "viewport": true,
+   "headings": [
+    {
+     "n": 1,
+     "t": "Orações e Terço"
+    },
+    {
+     "n": 2,
+     "t": "Orações essenciais"
+    },
+    {
+     "n": 3,
+     "t": "Sinal da Cruz"
+    },
+    {
+     "n": 3,
+     "t": "Pai-Nosso"
+    },
+    {
+     "n": 3,
+     "t": "Ave-Maria"
+    },
+    {
+     "n": 3,
+     "t": "Glória ao Pai"
+    },
+    {
+     "n": 3,
+     "t": "Credo (Símbolo dos Apóstolos)"
+    },
+    {
+     "n": 3,
+     "t": "Salve-Rainha"
+    },
+    {
+     "n": 3,
+     "t": "Ato de Contrição"
+    },
+    {
+     "n": 3,
+     "t": "Vinde, Espírito Santo"
+    },
+    {
+     "n": 3,
+     "t": "Santo Anjo"
+    },
+    {
+     "n": 2,
+     "t": "Rezar o terço, conta por conta"
+    },
+    {
+     "n": 3,
+     "t": "Sinal da Cruz"
+    },
+    {
+     "n": 3,
+     "t": "Mistérios gozosos"
+    },
+    {
+     "n": 3,
+     "t": "Mistérios luminosos"
+    },
+    {
+     "n": 3,
+     "t": "Mistérios dolorosos"
+    },
+    {
+     "n": 3,
+     "t": "Mistérios gloriosos"
+    }
+   ],
+   "palavras": 911,
+   "imagens": [],
+   "forms": [],
+   "iframes": [],
+   "schema": [],
+   "schemaData": [],
+   "contatos": {
+    "telefones": [],
+    "whatsapp": [],
+    "emails": [],
+    "ceps": [],
+    "social": {}
+   },
+   "header": [
+    {
+     "texto": "Tolle Lege",
+     "href": "/"
+    }
+   ],
+   "footer": [
+    {
+     "texto": "Tolle Lege",
+     "href": "/"
+    },
+    {
+     "texto": "Trilhas",
+     "href": "/trails"
+    },
+    {
+     "texto": "Dúvidas",
+     "href": "/faq"
+    },
+    {
+     "texto": "Curiosidades",
+     "href": "/curiosities"
+    },
+    {
+     "texto": "Visita guiada",
+     "href": "/tour"
+    },
+    {
+     "texto": "A Missa",
+     "href": "/mass"
+    },
+    {
+     "texto": "Santíssima Trindade",
+     "href": "/trinity"
+    },
+    {
+     "texto": "Maria",
+     "href": "/mary"
+    },
+    {
+     "texto": "Sacramentos",
+     "href": "/sacraments"
+    },
+    {
+     "texto": "Ano litúrgico",
+     "href": "/liturgical-year"
+    },
+    {
+     "texto": "Glossário",
+     "href": "/glossary"
+    },
+    {
+     "texto": "Liturgia diária",
+     "href": "/liturgy"
+    },
+    {
+     "texto": "Orações e Terço",
+     "href": "/prayers"
+    },
+    {
+     "texto": "Novena das Rosas",
+     "href": "/rose-novena"
+    },
+    {
+     "texto": "Confissão",
+     "href": "/confession"
+    },
+    {
+     "texto": "API Liturgia Diária",
+     "href": "https://liturgia.up.railway.app"
+    }
+   ],
+   "linksInternos": 19,
+   "linksExternos": 1,
+   "linksSaida": [
+    "/prayers",
+    "/",
+    "/trails",
+    "/faq",
+    "/curiosities",
+    "/tour",
+    "/mass",
+    "/trinity",
+    "/mary",
+    "/sacraments",
+    "/liturgical-year",
+    "/glossary",
+    "/liturgy",
+    "/rose-novena",
+    "/confession"
+   ],
+   "inlinks": 33,
+   "importancia": 65,
+   "shots": [
+    "shots/prayers-desktop.jpg",
+    "shots/prayers-mobile.jpg"
+   ],
+   "problemas": []
+  },
+  {
+   "slug": "mary",
+   "url": "https://tolle-et-lege.vercel.app/mary",
+   "path": "/mary",
+   "status": 200,
+   "origem": "sitemap",
+   "lastModified": "Fri, 09 Oct 2026 23:08:33 GMT",
+   "titulo": "Maria, Mãe de Jesus · Tolle Lege",
+   "descricao": "Quem foi a jovem de Nazaré, por que os católicos a honram e o que a Igreja ensina sobre ela.",
+   "robots": null,
+   "canonical": "https://tolle-et-lege.vercel.app/mary",
+   "ogImage": "https://tolle-et-lege.vercel.app/og-image.jpg?v=2",
+   "favicon": "/favicon.svg",
+   "lang": "pt-BR",
+   "viewport": true,
+   "headings": [
+    {
+     "n": 1,
+     "t": "Maria, Mãe de Jesus"
+    },
+    {
+     "n": 2,
+     "t": "Uma jovem de Nazaré"
+    },
+    {
+     "n": 3,
+     "t": "A Anunciação"
+    },
+    {
+     "n": 3,
+     "t": "A Visitação"
+    },
+    {
+     "n": 3,
+     "t": "O Natal"
+    },
+    {
+     "n": 3,
+     "t": "A apresentação no Templo"
+    },
+    {
+     "n": 3,
+     "t": "As bodas de Caná"
+    },
+    {
+     "n": 3,
+     "t": "Aos pés da Cruz"
+    },
+    {
+     "n": 3,
+     "t": "Pentecostes"
+    },
+    {
+     "n": 2,
+     "t": "Os quatro dogmas marianos"
+    },
+    {
+     "n": 3,
+     "t": "Mãe de Deus"
+    },
+    {
+     "n": 3,
+     "t": "Sempre Virgem"
+    },
+    {
+     "n": 3,
+     "t": "Imaculada Conceição"
+    },
+    {
+     "n": 3,
+     "t": "Assunção"
+    },
+    {
+     "n": 2,
+     "t": "As perguntas que mais aparecem"
+    },
+    {
+     "n": 2,
+     "t": "Aparições e devoções"
+    },
+    {
+     "n": 3,
+     "t": "Guadalupe"
+    },
+    {
+     "n": 3,
+     "t": "Aparecida"
+    },
+    {
+     "n": 3,
+     "t": "Lourdes"
+    },
+    {
+     "n": 3,
+     "t": "Fátima"
+    },
+    {
+     "n": 2,
+     "t": "Festas de Nossa Senhora"
+    },
+    {
+     "n": 2,
+     "t": "Ela sempre leva a Jesus"
+    }
+   ],
+   "palavras": 1297,
+   "imagens": [],
+   "forms": [],
+   "iframes": [],
+   "schema": [],
+   "schemaData": [],
+   "contatos": {
+    "telefones": [],
+    "whatsapp": [],
+    "emails": [],
+    "ceps": [],
+    "social": {}
+   },
+   "header": [
+    {
+     "texto": "Tolle Lege",
+     "href": "/"
+    }
+   ],
+   "footer": [
+    {
+     "texto": "Tolle Lege",
+     "href": "/"
+    },
+    {
+     "texto": "Trilhas",
+     "href": "/trails"
+    },
+    {
+     "texto": "Dúvidas",
+     "href": "/faq"
+    },
+    {
+     "texto": "Curiosidades",
+     "href": "/curiosities"
+    },
+    {
+     "texto": "Visita guiada",
+     "href": "/tour"
+    },
+    {
+     "texto": "A Missa",
+     "href": "/mass"
+    },
+    {
+     "texto": "Santíssima Trindade",
+     "href": "/trinity"
+    },
+    {
+     "texto": "Maria",
+     "href": "/mary"
+    },
+    {
+     "texto": "Sacramentos",
+     "href": "/sacraments"
+    },
+    {
+     "texto": "Ano litúrgico",
+     "href": "/liturgical-year"
+    },
+    {
+     "texto": "Glossário",
+     "href": "/glossary"
+    },
+    {
+     "texto": "Liturgia diária",
+     "href": "/liturgy"
+    },
+    {
+     "texto": "Orações e Terço",
+     "href": "/prayers"
+    },
+    {
+     "texto": "Novena das Rosas",
+     "href": "/rose-novena"
+    },
+    {
+     "texto": "Confissão",
+     "href": "/confession"
+    },
+    {
+     "texto": "API Liturgia Diária",
+     "href": "https://liturgia.up.railway.app"
+    }
+   ],
+   "linksInternos": 23,
+   "linksExternos": 1,
+   "linksSaida": [
+    "/mary",
+    "/",
+    "/prayers",
+    "/trails",
+    "/faq",
+    "/curiosities",
+    "/tour",
+    "/mass",
+    "/trinity",
+    "/sacraments",
+    "/liturgical-year",
+    "/glossary",
+    "/liturgy",
+    "/rose-novena",
+    "/confession"
+   ],
+   "inlinks": 30,
+   "importancia": 59,
+   "shots": [
+    "shots/mary-desktop.jpg",
+    "shots/mary-mobile.jpg"
+   ],
+   "problemas": []
+  },
+  {
+   "slug": "confession",
+   "url": "https://tolle-et-lege.vercel.app/confession",
+   "path": "/confession",
+   "status": 200,
+   "origem": "sitemap",
+   "lastModified": "Fri, 09 Oct 2026 23:08:26 GMT",
+   "titulo": "Confissão · Tolle Lege",
+   "descricao": "O reencontro com a misericórdia de Deus. Passo a passo e exame de consciência, para quem faz tempo ou nunca foi.",
+   "robots": null,
+   "canonical": "https://tolle-et-lege.vercel.app/confession",
+   "ogImage": "https://tolle-et-lege.vercel.app/og-image.jpg?v=2",
+   "favicon": "/favicon.svg",
+   "lang": "pt-BR",
+   "viewport": true,
+   "headings": [
+    {
+     "n": 1,
+     "t": "Como se confessar"
+    },
+    {
+     "n": 2,
+     "t": "Não tenha medo"
+    },
+    {
+     "n": 2,
+     "t": "Antes, durante e depois"
+    },
+    {
+     "n": 3,
+     "t": "Peça luz ao Espírito Santo"
+    },
+    {
+     "n": 3,
+     "t": "Faça o exame de consciência"
+    },
+    {
+     "n": 3,
+     "t": "Arrependa-se e decida mudar"
+    },
+    {
+     "n": 3,
+     "t": "Cumprimente e faça o sinal da cruz"
+    },
+    {
+     "n": 3,
+     "t": "Diga há quanto tempo não se confessa"
+    },
+    {
+     "n": 3,
+     "t": "Conte seus pecados"
+    },
+    {
+     "n": 3,
+     "t": "Ouça o conselho e a penitência"
+    },
+    {
+     "n": 3,
+     "t": "Reze o ato de contrição"
+    },
+    {
+     "n": 3,
+     "t": "Receba a absolvição"
+    },
+    {
+     "n": 3,
+     "t": "Cumpra a penitência"
+    },
+    {
+     "n": 3,
+     "t": "Agradeça e recomece"
+    },
+    {
+     "n": 2,
+     "t": "Ato de Contrição"
+    },
+    {
+     "n": 2,
+     "t": "Um olhar honesto sobre a própria vida"
+    }
+   ],
+   "palavras": 906,
+   "imagens": [],
+   "forms": [],
+   "iframes": [],
+   "schema": [],
+   "schemaData": [],
+   "contatos": {
+    "telefones": [],
+    "whatsapp": [],
+    "emails": [],
+    "ceps": [],
+    "social": {}
+   },
+   "header": [
+    {
+     "texto": "Tolle Lege",
+     "href": "/"
+    }
+   ],
+   "footer": [
+    {
+     "texto": "Tolle Lege",
+     "href": "/"
+    },
+    {
+     "texto": "Trilhas",
+     "href": "/trails"
+    },
+    {
+     "texto": "Dúvidas",
+     "href": "/faq"
+    },
+    {
+     "texto": "Curiosidades",
+     "href": "/curiosities"
+    },
+    {
+     "texto": "Visita guiada",
+     "href": "/tour"
+    },
+    {
+     "texto": "A Missa",
+     "href": "/mass"
+    },
+    {
+     "texto": "Santíssima Trindade",
+     "href": "/trinity"
+    },
+    {
+     "texto": "Maria",
+     "href": "/mary"
+    },
+    {
+     "texto": "Sacramentos",
+     "href": "/sacraments"
+    },
+    {
+     "texto": "Ano litúrgico",
+     "href": "/liturgical-year"
+    },
+    {
+     "texto": "Glossário",
+     "href": "/glossary"
+    },
+    {
+     "texto": "Liturgia diária",
+     "href": "/liturgy"
+    },
+    {
+     "texto": "Orações e Terço",
+     "href": "/prayers"
+    },
+    {
+     "texto": "Novena das Rosas",
+     "href": "/rose-novena"
+    },
+    {
+     "texto": "Confissão",
+     "href": "/confession"
+    },
+    {
+     "texto": "API Liturgia Diária",
+     "href": "https://liturgia.up.railway.app"
+    }
+   ],
+   "linksInternos": 17,
+   "linksExternos": 1,
+   "linksSaida": [
+    "/confession",
+    "/",
+    "/trails",
+    "/faq",
+    "/curiosities",
+    "/tour",
+    "/mass",
+    "/trinity",
+    "/mary",
+    "/sacraments",
+    "/liturgical-year",
+    "/glossary",
+    "/liturgy",
+    "/prayers",
+    "/rose-novena"
+   ],
+   "inlinks": 28,
+   "importancia": 55,
+   "shots": [
+    "shots/confession-desktop.jpg",
+    "shots/confession-mobile.jpg"
+   ],
+   "problemas": []
+  },
+  {
+   "slug": "trinity",
+   "url": "https://tolle-et-lege.vercel.app/trinity",
+   "path": "/trinity",
+   "status": 200,
+   "origem": "sitemap",
+   "lastModified": "Fri, 09 Oct 2026 23:08:30 GMT",
+   "titulo": "Santíssima Trindade · Tolle Lege",
+   "descricao": "Um só Deus em três Pessoas: Pai, Filho e Espírito Santo. O que isso quer dizer e onde está na Bíblia.",
+   "robots": null,
+   "canonical": "https://tolle-et-lege.vercel.app/trinity",
+   "ogImage": "https://tolle-et-lege.vercel.app/og-image.jpg?v=2",
+   "favicon": "/favicon.svg",
+   "lang": "pt-BR",
+   "viewport": true,
+   "headings": [
+    {
+     "n": 1,
+     "t": "A Santíssima Trindade"
+    },
+    {
+     "n": 2,
+     "t": "Quatro frases que resumem tudo"
+    },
+    {
+     "n": 3,
+     "t": "Há um só Deus"
+    },
+    {
+     "n": 3,
+     "t": "Três Pessoas são Deus"
+    },
+    {
+     "n": 3,
+     "t": "As Pessoas são distintas"
+    },
+    {
+     "n": 3,
+     "t": "Iguais e eternas"
+    },
+    {
+     "n": 2,
+     "t": "A palavra não está lá, a verdade está"
+    },
+    {
+     "n": 2,
+     "t": "Água, ovo, sorvete napolitano…"
+    },
+    {
+     "n": 3,
+     "t": "A água"
+    },
+    {
+     "n": 3,
+     "t": "O homem que é pai, filho e marido"
+    },
+    {
+     "n": 3,
+     "t": "O sol, a luz e o calor"
+    },
+    {
+     "n": 3,
+     "t": "O trevo de três folhas"
+    },
+    {
+     "n": 3,
+     "t": "O ovo"
+    },
+    {
+     "n": 3,
+     "t": "O sorvete napolitano"
+    },
+    {
+     "n": 3,
+     "t": "Três amigos inseparáveis"
+    },
+    {
+     "n": 2,
+     "t": "Os erros que ajudaram a Igreja a falar certo"
+    },
+    {
+     "n": 3,
+     "t": "Modalismo"
+    },
+    {
+     "n": 3,
+     "t": "Arianismo"
+    },
+    {
+     "n": 3,
+     "t": "Macedonianismo"
+    },
+    {
+     "n": 3,
+     "t": "Triteísmo"
+    },
+    {
+     "n": 3,
+     "t": "Parcialismo"
+    },
+    {
+     "n": 2,
+     "t": "Com humildade, e começando pelo amor"
+    },
+    {
+     "n": 3,
+     "t": "O Amante, o Amado e o Amor"
+    },
+    {
+     "n": 3,
+     "t": "O menino na praia"
+    }
+   ],
+   "palavras": 1415,
+   "imagens": [],
+   "forms": [],
+   "iframes": [],
+   "schema": [],
+   "schemaData": [],
+   "contatos": {
+    "telefones": [],
+    "whatsapp": [],
+    "emails": [],
+    "ceps": [],
+    "social": {}
+   },
+   "header": [
+    {
+     "texto": "Tolle Lege",
+     "href": "/"
+    }
+   ],
+   "footer": [
+    {
+     "texto": "Tolle Lege",
+     "href": "/"
+    },
+    {
+     "texto": "Trilhas",
+     "href": "/trails"
+    },
+    {
+     "texto": "Dúvidas",
+     "href": "/faq"
+    },
+    {
+     "texto": "Curiosidades",
+     "href": "/curiosities"
+    },
+    {
+     "texto": "Visita guiada",
+     "href": "/tour"
+    },
+    {
+     "texto": "A Missa",
+     "href": "/mass"
+    },
+    {
+     "texto": "Santíssima Trindade",
+     "href": "/trinity"
+    },
+    {
+     "texto": "Maria",
+     "href": "/mary"
+    },
+    {
+     "texto": "Sacramentos",
+     "href": "/sacraments"
+    },
+    {
+     "texto": "Ano litúrgico",
+     "href": "/liturgical-year"
+    },
+    {
+     "texto": "Glossário",
+     "href": "/glossary"
+    },
+    {
+     "texto": "Liturgia diária",
+     "href": "/liturgy"
+    },
+    {
+     "texto": "Orações e Terço",
+     "href": "/prayers"
+    },
+    {
+     "texto": "Novena das Rosas",
+     "href": "/rose-novena"
+    },
+    {
+     "texto": "Confissão",
+     "href": "/confession"
+    },
+    {
+     "texto": "API Liturgia Diária",
+     "href": "https://liturgia.up.railway.app"
+    }
+   ],
+   "linksInternos": 23,
+   "linksExternos": 1,
+   "linksSaida": [
+    "/trinity",
+    "/",
+    "/prayers",
+    "/trails",
+    "/faq",
+    "/curiosities",
+    "/tour",
+    "/mass",
+    "/mary",
+    "/sacraments",
+    "/liturgical-year",
+    "/glossary",
+    "/liturgy",
+    "/rose-novena",
+    "/confession"
+   ],
+   "inlinks": 27,
+   "importancia": 53,
+   "shots": [
+    "shots/trinity-desktop.jpg",
+    "shots/trinity-mobile.jpg"
+   ],
+   "problemas": []
+  },
+  {
+   "slug": "trails",
+   "url": "https://tolle-et-lege.vercel.app/trails",
+   "path": "/trails",
+   "status": 200,
+   "origem": "sitemap",
+   "lastModified": "Fri, 09 Oct 2026 23:08:07 GMT",
+   "titulo": "Trilhas · Tolle Lege",
+   "descricao": "Escolha a trilha que mais se parece com a sua história: passos curtos, com algo concreto para fazer em cada um.",
+   "robots": null,
+   "canonical": "https://tolle-et-lege.vercel.app/trails",
+   "ogImage": "https://tolle-et-lege.vercel.app/og-image.jpg?v=2",
+   "favicon": "/favicon.svg",
+   "lang": "pt-BR",
+   "viewport": true,
+   "headings": [
+    {
+     "n": 1,
+     "t": "Cada caminho começa de um lugar"
+    },
+    {
+     "n": 3,
+     "t": "Não sou batizado"
+    },
+    {
+     "n": 3,
+     "t": "Sou batizado e quero voltar"
+    },
+    {
+     "n": 3,
+     "t": "Venho de outra religião"
+    },
+    {
+     "n": 3,
+     "t": "Só tenho curiosidade"
+    }
+   ],
+   "palavras": 171,
+   "imagens": [],
+   "forms": [],
+   "iframes": [],
+   "schema": [],
+   "schemaData": [],
+   "contatos": {
+    "telefones": [],
+    "whatsapp": [],
+    "emails": [],
+    "ceps": [],
+    "social": {}
+   },
+   "header": [
+    {
+     "texto": "Tolle Lege",
+     "href": "/"
+    }
+   ],
+   "footer": [
+    {
+     "texto": "Tolle Lege",
+     "href": "/"
+    },
+    {
+     "texto": "Trilhas",
+     "href": "/trails"
+    },
+    {
+     "texto": "Dúvidas",
+     "href": "/faq"
+    },
+    {
+     "texto": "Curiosidades",
+     "href": "/curiosities"
+    },
+    {
+     "texto": "Visita guiada",
+     "href": "/tour"
+    },
+    {
+     "texto": "A Missa",
+     "href": "/mass"
+    },
+    {
+     "texto": "Santíssima Trindade",
+     "href": "/trinity"
+    },
+    {
+     "texto": "Maria",
+     "href": "/mary"
+    },
+    {
+     "texto": "Sacramentos",
+     "href": "/sacraments"
+    },
+    {
+     "texto": "Ano litúrgico",
+     "href": "/liturgical-year"
+    },
+    {
+     "texto": "Glossário",
+     "href": "/glossary"
+    },
+    {
+     "texto": "Liturgia diária",
+     "href": "/liturgy"
+    },
+    {
+     "texto": "Orações e Terço",
+     "href": "/prayers"
+    },
+    {
+     "texto": "Novena das Rosas",
+     "href": "/rose-novena"
+    },
+    {
+     "texto": "Confissão",
+     "href": "/confession"
+    },
+    {
+     "texto": "API Liturgia Diária",
+     "href": "https://liturgia.up.railway.app"
+    }
+   ],
+   "linksInternos": 21,
+   "linksExternos": 1,
+   "linksSaida": [
+    "/trails",
+    "/",
+    "/trails/not-baptized",
+    "/trails/returning",
+    "/trails/other-religion",
+    "/trails/curious",
+    "/faq",
+    "/curiosities",
+    "/tour",
+    "/mass",
+    "/trinity",
+    "/mary",
+    "/sacraments",
+    "/liturgical-year",
+    "/glossary",
+    "/liturgy",
+    "/prayers",
+    "/rose-novena",
+    "/confession"
+   ],
+   "inlinks": 26,
+   "importancia": 51,
+   "problemas": []
+  },
+  {
+   "slug": "liturgical-year",
+   "url": "https://tolle-et-lege.vercel.app/liturgical-year",
+   "path": "/liturgical-year",
+   "status": 200,
+   "origem": "sitemap",
+   "lastModified": "Fri, 09 Oct 2026 23:08:25 GMT",
+   "titulo": "Ano litúrgico · Tolle Lege",
+   "descricao": "Ao longo do ano, a Igreja percorre toda a vida de Jesus. Cada tempo tem seu clima e sua cor.",
+   "robots": null,
+   "canonical": "https://tolle-et-lege.vercel.app/liturgical-year",
+   "ogImage": "https://tolle-et-lege.vercel.app/og-image.jpg?v=2",
+   "favicon": "/favicon.svg",
+   "lang": "pt-BR",
+   "viewport": true,
+   "headings": [
+    {
+     "n": 1,
+     "t": "O ano litúrgico"
+    },
+    {
+     "n": 2,
+     "t": "Tempo Comum"
+    },
+    {
+     "n": 2,
+     "t": "Próximas datas"
+    },
+    {
+     "n": 2,
+     "t": "Por que o padre muda de cor?"
+    }
+   ],
+   "palavras": 267,
+   "imagens": [],
+   "forms": [],
+   "iframes": [],
+   "schema": [],
+   "schemaData": [],
+   "contatos": {
+    "telefones": [],
+    "whatsapp": [],
+    "emails": [],
+    "ceps": [],
+    "social": {}
+   },
+   "header": [
+    {
+     "texto": "Tolle Lege",
+     "href": "/"
+    }
+   ],
+   "footer": [
+    {
+     "texto": "Tolle Lege",
+     "href": "/"
+    },
+    {
+     "texto": "Trilhas",
+     "href": "/trails"
+    },
+    {
+     "texto": "Dúvidas",
+     "href": "/faq"
+    },
+    {
+     "texto": "Curiosidades",
+     "href": "/curiosities"
+    },
+    {
+     "texto": "Visita guiada",
+     "href": "/tour"
+    },
+    {
+     "texto": "A Missa",
+     "href": "/mass"
+    },
+    {
+     "texto": "Santíssima Trindade",
+     "href": "/trinity"
+    },
+    {
+     "texto": "Maria",
+     "href": "/mary"
+    },
+    {
+     "texto": "Sacramentos",
+     "href": "/sacraments"
+    },
+    {
+     "texto": "Ano litúrgico",
+     "href": "/liturgical-year"
+    },
+    {
+     "texto": "Glossário",
+     "href": "/glossary"
+    },
+    {
+     "texto": "Liturgia diária",
+     "href": "/liturgy"
+    },
+    {
+     "texto": "Orações e Terço",
+     "href": "/prayers"
+    },
+    {
+     "texto": "Novena das Rosas",
+     "href": "/rose-novena"
+    },
+    {
+     "texto": "Confissão",
+     "href": "/confession"
+    },
+    {
+     "texto": "API Liturgia Diária",
+     "href": "https://liturgia.up.railway.app"
+    }
+   ],
+   "linksInternos": 17,
+   "linksExternos": 1,
+   "linksSaida": [
+    "/liturgical-year",
+    "/",
+    "/trails",
+    "/faq",
+    "/curiosities",
+    "/tour",
+    "/mass",
+    "/trinity",
+    "/mary",
+    "/sacraments",
+    "/glossary",
+    "/liturgy",
+    "/prayers",
+    "/rose-novena",
+    "/confession"
+   ],
+   "inlinks": 25,
+   "importancia": 49,
+   "problemas": []
+  },
+  {
+   "slug": "liturgy",
+   "url": "https://tolle-et-lege.vercel.app/liturgy",
+   "path": "/liturgy",
+   "status": 200,
+   "origem": "sitemap",
+   "lastModified": "Fri, 09 Oct 2026 20:08:44 GMT",
+   "titulo": "Liturgia diária · Tolle Lege",
+   "descricao": "As leituras, o salmo e o Evangelho que a Igreja inteira lê hoje, em cada Missa no mundo.",
+   "robots": null,
+   "canonical": "https://tolle-et-lege.vercel.app/liturgy",
+   "ogImage": "https://tolle-et-lege.vercel.app/og-image.jpg?v=2",
+   "favicon": "/favicon.svg",
+   "lang": "pt-BR",
+   "viewport": true,
+   "headings": [
+    {
+     "n": 1,
+     "t": "A Palavra de cada dia"
+    },
+    {
+     "n": 2,
+     "t": "6ª feira da 27ª Semana do Tempo Comum"
+    },
+    {
+     "n": 2,
+     "t": "Leve a Palavra a mais pessoas"
+    },
+    {
+     "n": 3,
+     "t": "Leitura da carta de São Paulo aos Gálatas"
+    }
+   ],
+   "palavras": 336,
+   "imagens": [],
+   "forms": [],
+   "iframes": [],
+   "schema": [],
+   "schemaData": [],
+   "contatos": {
+    "telefones": [],
+    "whatsapp": [],
+    "emails": [],
+    "ceps": [],
+    "social": {}
+   },
+   "header": [
+    {
+     "texto": "Tolle Lege",
+     "href": "/"
+    }
+   ],
+   "footer": [
+    {
+     "texto": "Tolle Lege",
+     "href": "/"
+    },
+    {
+     "texto": "Trilhas",
+     "href": "/trails"
+    },
+    {
+     "texto": "Dúvidas",
+     "href": "/faq"
+    },
+    {
+     "texto": "Curiosidades",
+     "href": "/curiosities"
+    },
+    {
+     "texto": "Visita guiada",
+     "href": "/tour"
+    },
+    {
+     "texto": "A Missa",
+     "href": "/mass"
+    },
+    {
+     "texto": "Santíssima Trindade",
+     "href": "/trinity"
+    },
+    {
+     "texto": "Maria",
+     "href": "/mary"
+    },
+    {
+     "texto": "Sacramentos",
+     "href": "/sacraments"
+    },
+    {
+     "texto": "Ano litúrgico",
+     "href": "/liturgical-year"
+    },
+    {
+     "texto": "Glossário",
+     "href": "/glossary"
+    },
+    {
+     "texto": "Liturgia diária",
+     "href": "/liturgy"
+    },
+    {
+     "texto": "Orações e Terço",
+     "href": "/prayers"
+    },
+    {
+     "texto": "Novena das Rosas",
+     "href": "/rose-novena"
+    },
+    {
+     "texto": "Confissão",
+     "href": "/confession"
+    },
+    {
+     "texto": "API Liturgia Diária",
+     "href": "https://liturgia.up.railway.app"
+    }
+   ],
+   "linksInternos": 17,
+   "linksExternos": 1,
+   "linksSaida": [
+    "/liturgy",
+    "/",
+    "/trails",
+    "/faq",
+    "/curiosities",
+    "/tour",
+    "/mass",
+    "/trinity",
+    "/mary",
+    "/sacraments",
+    "/liturgical-year",
+    "/glossary",
+    "/prayers",
+    "/rose-novena",
+    "/confession"
+   ],
+   "inlinks": 23,
+   "importancia": 45,
+   "problemas": []
+  },
+  {
+   "slug": "faq",
+   "url": "https://tolle-et-lege.vercel.app/faq",
+   "path": "/faq",
+   "status": 200,
+   "origem": "sitemap",
+   "lastModified": "Fri, 09 Oct 2026 23:08:18 GMT",
+   "titulo": "Dúvidas · Tolle Lege",
+   "descricao": "Não existe pergunta boba. As perguntas mais comuns de quem está chegando à fé católica, com respostas diretas.",
+   "robots": null,
+   "canonical": "https://tolle-et-lege.vercel.app/faq",
+   "ogImage": "https://tolle-et-lege.vercel.app/og-image.jpg?v=2",
+   "favicon": "/favicon.svg",
+   "lang": "pt-BR",
+   "viewport": true,
+   "headings": [
+    {
+     "n": 1,
+     "t": "Perguntas que todo mundo faz"
+    }
+   ],
+   "palavras": 837,
+   "imagens": [],
+   "forms": [],
+   "iframes": [],
+   "schema": [],
+   "schemaData": [],
+   "contatos": {
+    "telefones": [],
+    "whatsapp": [],
+    "emails": [],
+    "ceps": [],
+    "social": {}
+   },
+   "header": [
+    {
+     "texto": "Tolle Lege",
+     "href": "/"
+    }
+   ],
+   "footer": [
+    {
+     "texto": "Tolle Lege",
+     "href": "/"
+    },
+    {
+     "texto": "Trilhas",
+     "href": "/trails"
+    },
+    {
+     "texto": "Dúvidas",
+     "href": "/faq"
+    },
+    {
+     "texto": "Curiosidades",
+     "href": "/curiosities"
+    },
+    {
+     "texto": "Visita guiada",
+     "href": "/tour"
+    },
+    {
+     "texto": "A Missa",
+     "href": "/mass"
+    },
+    {
+     "texto": "Santíssima Trindade",
+     "href": "/trinity"
+    },
+    {
+     "texto": "Maria",
+     "href": "/mary"
+    },
+    {
+     "texto": "Sacramentos",
+     "href": "/sacraments"
+    },
+    {
+     "texto": "Ano litúrgico",
+     "href": "/liturgical-year"
+    },
+    {
+     "texto": "Glossário",
+     "href": "/glossary"
+    },
+    {
+     "texto": "Liturgia diária",
+     "href": "/liturgy"
+    },
+    {
+     "texto": "Orações e Terço",
+     "href": "/prayers"
+    },
+    {
+     "texto": "Novena das Rosas",
+     "href": "/rose-novena"
+    },
+    {
+     "texto": "Confissão",
+     "href": "/confession"
+    },
+    {
+     "texto": "API Liturgia Diária",
+     "href": "https://liturgia.up.railway.app"
+    }
+   ],
+   "linksInternos": 26,
+   "linksExternos": 1,
+   "linksSaida": [
+    "/faq",
+    "/",
+    "/sacraments",
+    "/confession",
+    "/mary",
+    "/mass",
+    "/prayers",
+    "/glossary",
+    "/liturgical-year",
+    "/trails",
+    "/curiosities",
+    "/tour",
+    "/trinity",
+    "/liturgy",
+    "/rose-novena"
+   ],
+   "inlinks": 22,
+   "importancia": 43,
+   "problemas": []
+  },
+  {
+   "slug": "curiosities",
+   "url": "https://tolle-et-lege.vercel.app/curiosities",
+   "path": "/curiosities",
+   "status": 200,
+   "origem": "sitemap",
+   "lastModified": "Fri, 09 Oct 2026 23:08:20 GMT",
+   "titulo": "Curiosidades · Tolle Lege",
+   "descricao": "Histórias, palavras e símbolos por trás da fé católica. Você sabia?",
+   "robots": null,
+   "canonical": "https://tolle-et-lege.vercel.app/curiosities",
+   "ogImage": "https://tolle-et-lege.vercel.app/og-image.jpg?v=2",
+   "favicon": "/favicon.svg",
+   "lang": "pt-BR",
+   "viewport": true,
+   "headings": [
+    {
+     "n": 1,
+     "t": "Você sabia?"
+    }
+   ],
+   "palavras": 483,
+   "imagens": [],
+   "forms": [],
+   "iframes": [],
+   "schema": [],
+   "schemaData": [],
+   "contatos": {
+    "telefones": [],
+    "whatsapp": [],
+    "emails": [],
+    "ceps": [],
+    "social": {}
+   },
+   "header": [
+    {
+     "texto": "Tolle Lege",
+     "href": "/"
+    }
+   ],
+   "footer": [
+    {
+     "texto": "Tolle Lege",
+     "href": "/"
+    },
+    {
+     "texto": "Trilhas",
+     "href": "/trails"
+    },
+    {
+     "texto": "Dúvidas",
+     "href": "/faq"
+    },
+    {
+     "texto": "Curiosidades",
+     "href": "/curiosities"
+    },
+    {
+     "texto": "Visita guiada",
+     "href": "/tour"
+    },
+    {
+     "texto": "A Missa",
+     "href": "/mass"
+    },
+    {
+     "texto": "Santíssima Trindade",
+     "href": "/trinity"
+    },
+    {
+     "texto": "Maria",
+     "href": "/mary"
+    },
+    {
+     "texto": "Sacramentos",
+     "href": "/sacraments"
+    },
+    {
+     "texto": "Ano litúrgico",
+     "href": "/liturgical-year"
+    },
+    {
+     "texto": "Glossário",
+     "href": "/glossary"
+    },
+    {
+     "texto": "Liturgia diária",
+     "href": "/liturgy"
+    },
+    {
+     "texto": "Orações e Terço",
+     "href": "/prayers"
+    },
+    {
+     "texto": "Novena das Rosas",
+     "href": "/rose-novena"
+    },
+    {
+     "texto": "Confissão",
+     "href": "/confession"
+    },
+    {
+     "texto": "API Liturgia Diária",
+     "href": "https://liturgia.up.railway.app"
+    }
+   ],
+   "linksInternos": 17,
+   "linksExternos": 1,
+   "linksSaida": [
+    "/curiosities",
+    "/",
+    "/trails",
+    "/faq",
+    "/tour",
+    "/mass",
+    "/trinity",
+    "/mary",
+    "/sacraments",
+    "/liturgical-year",
+    "/glossary",
+    "/liturgy",
+    "/prayers",
+    "/rose-novena",
+    "/confession"
+   ],
+   "inlinks": 21,
+   "importancia": 41,
+   "problemas": []
+  },
+  {
+   "slug": "tour",
+   "url": "https://tolle-et-lege.vercel.app/tour",
+   "path": "/tour",
+   "status": 200,
+   "origem": "sitemap",
+   "lastModified": "Fri, 09 Oct 2026 23:08:35 GMT",
+   "titulo": "Visita guiada · Tolle Lege",
+   "descricao": "Percorra uma igreja em 3D, da escadaria ao galo no alto da torre, e descubra o sentido do altar, do sacrário e da pia batismal.",
+   "robots": null,
+   "canonical": "https://tolle-et-lege.vercel.app/tour",
+   "ogImage": "https://tolle-et-lege.vercel.app/og-image.jpg?v=2",
+   "favicon": "/favicon.svg",
+   "lang": "pt-BR",
+   "viewport": true,
+   "headings": [
+    {
+     "n": 1,
+     "t": "Conheça uma igreja por dentro e por fora"
+    },
+    {
+     "n": 2,
+     "t": "Cada detalhe diz algo"
+    }
+   ],
+   "palavras": 133,
+   "imagens": [],
+   "forms": [],
+   "iframes": [],
+   "schema": [],
+   "schemaData": [],
+   "contatos": {
+    "telefones": [],
+    "whatsapp": [],
+    "emails": [],
+    "ceps": [],
+    "social": {}
+   },
+   "header": [
+    {
+     "texto": "Tolle Lege",
+     "href": "/"
+    }
+   ],
+   "footer": [
+    {
+     "texto": "Tolle Lege",
+     "href": "/"
+    },
+    {
+     "texto": "Trilhas",
+     "href": "/trails"
+    },
+    {
+     "texto": "Dúvidas",
+     "href": "/faq"
+    },
+    {
+     "texto": "Curiosidades",
+     "href": "/curiosities"
+    },
+    {
+     "texto": "Visita guiada",
+     "href": "/tour"
+    },
+    {
+     "texto": "A Missa",
+     "href": "/mass"
+    },
+    {
+     "texto": "Santíssima Trindade",
+     "href": "/trinity"
+    },
+    {
+     "texto": "Maria",
+     "href": "/mary"
+    },
+    {
+     "texto": "Sacramentos",
+     "href": "/sacraments"
+    },
+    {
+     "texto": "Ano litúrgico",
+     "href": "/liturgical-year"
+    },
+    {
+     "texto": "Glossário",
+     "href": "/glossary"
+    },
+    {
+     "texto": "Liturgia diária",
+     "href": "/liturgy"
+    },
+    {
+     "texto": "Orações e Terço",
+     "href": "/prayers"
+    },
+    {
+     "texto": "Novena das Rosas",
+     "href": "/rose-novena"
+    },
+    {
+     "texto": "Confissão",
+     "href": "/confession"
+    },
+    {
+     "texto": "API Liturgia Diária",
+     "href": "https://liturgia.up.railway.app"
+    }
+   ],
+   "linksInternos": 17,
+   "linksExternos": 1,
+   "linksSaida": [
+    "/tour",
+    "/",
+    "/trails",
+    "/faq",
+    "/curiosities",
+    "/mass",
+    "/trinity",
+    "/mary",
+    "/sacraments",
+    "/liturgical-year",
+    "/glossary",
+    "/liturgy",
+    "/prayers",
+    "/rose-novena",
+    "/confession"
+   ],
+   "inlinks": 21,
+   "importancia": 41,
+   "problemas": []
+  },
+  {
+   "slug": "rose-novena",
+   "url": "https://tolle-et-lege.vercel.app/rose-novena",
+   "path": "/rose-novena",
+   "status": 200,
+   "origem": "sitemap",
+   "lastModified": "Fri, 09 Oct 2026 23:08:32 GMT",
+   "titulo": "Novena das Rosas · Tolle Lege",
+   "descricao": "Nove dias de oração a Santa Teresinha do Menino Jesus, que prometeu passar o seu Céu fazendo o bem sobre a terra.",
+   "robots": null,
+   "canonical": "https://tolle-et-lege.vercel.app/rose-novena",
+   "ogImage": "https://tolle-et-lege.vercel.app/og-image.jpg?v=2",
+   "favicon": "/favicon.svg",
+   "lang": "pt-BR",
+   "viewport": true,
+   "headings": [
+    {
+     "n": 1,
+     "t": "Novena das Rosas"
+    },
+    {
+     "n": 2,
+     "t": "A rosa desabrocha com a sua oração"
+    },
+    {
+     "n": 3,
+     "t": "Oração da Novena das Rosas"
+    },
+    {
+     "n": 2,
+     "t": "0 de 9 rosas"
+    },
+    {
+     "n": 2,
+     "t": "Santa Teresinha do Menino Jesus"
+    },
+    {
+     "n": 2,
+     "t": "Por que rosas?"
+    }
+   ],
+   "palavras": 670,
+   "imagens": [],
+   "forms": [],
+   "iframes": [],
+   "schema": [],
+   "schemaData": [],
+   "contatos": {
+    "telefones": [],
+    "whatsapp": [],
+    "emails": [],
+    "ceps": [],
+    "social": {}
+   },
+   "header": [
+    {
+     "texto": "Tolle Lege",
+     "href": "/"
+    }
+   ],
+   "footer": [
+    {
+     "texto": "Tolle Lege",
+     "href": "/"
+    },
+    {
+     "texto": "Trilhas",
+     "href": "/trails"
+    },
+    {
+     "texto": "Dúvidas",
+     "href": "/faq"
+    },
+    {
+     "texto": "Curiosidades",
+     "href": "/curiosities"
+    },
+    {
+     "texto": "Visita guiada",
+     "href": "/tour"
+    },
+    {
+     "texto": "A Missa",
+     "href": "/mass"
+    },
+    {
+     "texto": "Santíssima Trindade",
+     "href": "/trinity"
+    },
+    {
+     "texto": "Maria",
+     "href": "/mary"
+    },
+    {
+     "texto": "Sacramentos",
+     "href": "/sacraments"
+    },
+    {
+     "texto": "Ano litúrgico",
+     "href": "/liturgical-year"
+    },
+    {
+     "texto": "Glossário",
+     "href": "/glossary"
+    },
+    {
+     "texto": "Liturgia diária",
+     "href": "/liturgy"
+    },
+    {
+     "texto": "Orações e Terço",
+     "href": "/prayers"
+    },
+    {
+     "texto": "Novena das Rosas",
+     "href": "/rose-novena"
+    },
+    {
+     "texto": "Confissão",
+     "href": "/confession"
+    },
+    {
+     "texto": "API Liturgia Diária",
+     "href": "https://liturgia.up.railway.app"
+    }
+   ],
+   "linksInternos": 17,
+   "linksExternos": 1,
+   "linksSaida": [
+    "/rose-novena",
+    "/",
+    "/trails",
+    "/faq",
+    "/curiosities",
+    "/tour",
+    "/mass",
+    "/trinity",
+    "/mary",
+    "/sacraments",
+    "/liturgical-year",
+    "/glossary",
+    "/liturgy",
+    "/prayers",
+    "/confession"
+   ],
+   "inlinks": 20,
+   "importancia": 39,
+   "problemas": []
+  },
+  {
+   "slug": "trails--not-baptized",
+   "url": "https://tolle-et-lege.vercel.app/trails/not-baptized",
+   "path": "/trails/not-baptized",
+   "status": 200,
+   "origem": "sitemap",
+   "lastModified": "Fri, 09 Oct 2026 23:08:09 GMT",
+   "titulo": "Não sou batizado · Tolle Lege",
+   "descricao": "Conheça o caminho do catecumenato e como dar os primeiros passos rumo ao Batismo.",
+   "robots": null,
+   "canonical": "https://tolle-et-lege.vercel.app/trails/not-baptized",
+   "ogImage": "https://tolle-et-lege.vercel.app/og-image.jpg?v=2",
+   "favicon": "/favicon.svg",
+   "lang": "pt-BR",
+   "viewport": true,
+   "headings": [
+    {
+     "n": 1,
+     "t": "Não sou batizado"
+    },
+    {
+     "n": 2,
+     "t": "Deus chama você pelo nome"
+    },
+    {
+     "n": 2,
+     "t": "Procure uma paróquia"
+    },
+    {
+     "n": 2,
+     "t": "As etapas do caminho"
+    },
+    {
+     "n": 2,
+     "t": "Escolha um padrinho ou madrinha"
+    },
+    {
+     "n": 2,
+     "t": "Participe da Missa desde já"
+    },
+    {
+     "n": 2,
+     "t": "Aprenda a rezar"
+    },
+    {
+     "n": 2,
+     "t": "Batismo, Crisma e Eucaristia"
+    }
+   ],
+   "palavras": 1287,
+   "imagens": [],
+   "forms": [],
+   "iframes": [],
+   "schema": [],
+   "schemaData": [],
+   "contatos": {
+    "telefones": [],
+    "whatsapp": [],
+    "emails": [],
+    "ceps": [],
+    "social": {}
+   },
+   "header": [
+    {
+     "texto": "Tolle Lege",
+     "href": "/"
+    }
+   ],
+   "footer": [
+    {
+     "texto": "Tolle Lege",
+     "href": "/"
+    },
+    {
+     "texto": "Trilhas",
+     "href": "/trails"
+    },
+    {
+     "texto": "Dúvidas",
+     "href": "/faq"
+    },
+    {
+     "texto": "Curiosidades",
+     "href": "/curiosities"
+    },
+    {
+     "texto": "Visita guiada",
+     "href": "/tour"
+    },
+    {
+     "texto": "A Missa",
+     "href": "/mass"
+    },
+    {
+     "texto": "Santíssima Trindade",
+     "href": "/trinity"
+    },
+    {
+     "texto": "Maria",
+     "href": "/mary"
+    },
+    {
+     "texto": "Sacramentos",
+     "href": "/sacraments"
+    },
+    {
+     "texto": "Ano litúrgico",
+     "href": "/liturgical-year"
+    },
+    {
+     "texto": "Glossário",
+     "href": "/glossary"
+    },
+    {
+     "texto": "Liturgia diária",
+     "href": "/liturgy"
+    },
+    {
+     "texto": "Orações e Terço",
+     "href": "/prayers"
+    },
+    {
+     "texto": "Novena das Rosas",
+     "href": "/rose-novena"
+    },
+    {
+     "texto": "Confissão",
+     "href": "/confession"
+    },
+    {
+     "texto": "API Liturgia Diária",
+     "href": "https://liturgia.up.railway.app"
+    }
+   ],
+   "linksInternos": 24,
+   "linksExternos": 1,
+   "linksSaida": [
+    "/trails/not-baptized",
+    "/",
+    "/trails",
+    "/mass",
+    "/prayers",
+    "/sacraments",
+    "/trails/returning",
+    "/trails/other-religion",
+    "/trails/curious",
+    "/faq",
+    "/curiosities",
+    "/tour",
+    "/trinity",
+    "/mary",
+    "/liturgical-year",
+    "/glossary",
+    "/liturgy",
+    "/rose-novena",
+    "/confession"
+   ],
+   "inlinks": 7,
+   "importancia": 12,
+   "problemas": []
+  },
+  {
+   "slug": "trails--returning",
+   "url": "https://tolle-et-lege.vercel.app/trails/returning",
+   "path": "/trails/returning",
+   "status": 200,
+   "origem": "sitemap",
+   "lastModified": "Fri, 09 Oct 2026 23:08:11 GMT",
+   "titulo": "Sou batizado e quero voltar · Tolle Lege",
+   "descricao": "Reencontre a vida da Igreja: Confissão, Missa, Crisma e uma rotina de oração.",
+   "robots": null,
+   "canonical": "https://tolle-et-lege.vercel.app/trails/returning",
+   "ogImage": "https://tolle-et-lege.vercel.app/og-image.jpg?v=2",
+   "favicon": "/favicon.svg",
+   "lang": "pt-BR",
+   "viewport": true,
+   "headings": [
+    {
+     "n": 1,
+     "t": "Sou batizado e quero voltar"
+    },
+    {
+     "n": 2,
+     "t": "A porta está aberta"
+    },
+    {
+     "n": 2,
+     "t": "Volte à Missa de domingo"
+    },
+    {
+     "n": 2,
+     "t": "Faça uma boa Confissão"
+    },
+    {
+     "n": 2,
+     "t": "Complete a sua iniciação"
+    },
+    {
+     "n": 2,
+     "t": "Se a sua situação de casamento for delicada"
+    },
+    {
+     "n": 2,
+     "t": "Crie uma rotina de oração"
+    }
+   ],
+   "palavras": 1037,
+   "imagens": [],
+   "forms": [],
+   "iframes": [],
+   "schema": [],
+   "schemaData": [],
+   "contatos": {
+    "telefones": [],
+    "whatsapp": [],
+    "emails": [],
+    "ceps": [],
+    "social": {}
+   },
+   "header": [
+    {
+     "texto": "Tolle Lege",
+     "href": "/"
+    }
+   ],
+   "footer": [
+    {
+     "texto": "Tolle Lege",
+     "href": "/"
+    },
+    {
+     "texto": "Trilhas",
+     "href": "/trails"
+    },
+    {
+     "texto": "Dúvidas",
+     "href": "/faq"
+    },
+    {
+     "texto": "Curiosidades",
+     "href": "/curiosities"
+    },
+    {
+     "texto": "Visita guiada",
+     "href": "/tour"
+    },
+    {
+     "texto": "A Missa",
+     "href": "/mass"
+    },
+    {
+     "texto": "Santíssima Trindade",
+     "href": "/trinity"
+    },
+    {
+     "texto": "Maria",
+     "href": "/mary"
+    },
+    {
+     "texto": "Sacramentos",
+     "href": "/sacraments"
+    },
+    {
+     "texto": "Ano litúrgico",
+     "href": "/liturgical-year"
+    },
+    {
+     "texto": "Glossário",
+     "href": "/glossary"
+    },
+    {
+     "texto": "Liturgia diária",
+     "href": "/liturgy"
+    },
+    {
+     "texto": "Orações e Terço",
+     "href": "/prayers"
+    },
+    {
+     "texto": "Novena das Rosas",
+     "href": "/rose-novena"
+    },
+    {
+     "texto": "Confissão",
+     "href": "/confession"
+    },
+    {
+     "texto": "API Liturgia Diária",
+     "href": "https://liturgia.up.railway.app"
+    }
+   ],
+   "linksInternos": 25,
+   "linksExternos": 1,
+   "linksSaida": [
+    "/trails/returning",
+    "/",
+    "/trails",
+    "/mass",
+    "/confession",
+    "/sacraments",
+    "/prayers",
+    "/trails/not-baptized",
+    "/trails/other-religion",
+    "/trails/curious",
+    "/faq",
+    "/curiosities",
+    "/tour",
+    "/trinity",
+    "/mary",
+    "/liturgical-year",
+    "/glossary",
+    "/liturgy",
+    "/rose-novena"
+   ],
+   "inlinks": 7,
+   "importancia": 12,
+   "problemas": []
+  },
+  {
+   "slug": "trails--other-religion",
+   "url": "https://tolle-et-lege.vercel.app/trails/other-religion",
+   "path": "/trails/other-religion",
+   "status": 200,
+   "origem": "sitemap",
+   "lastModified": "Fri, 09 Oct 2026 23:08:12 GMT",
+   "titulo": "Venho de outra religião · Tolle Lege",
+   "descricao": "O que muda, o que permanece e as perguntas mais comuns de quem chega de outra tradição.",
+   "robots": null,
+   "canonical": "https://tolle-et-lege.vercel.app/trails/other-religion",
+   "ogImage": "https://tolle-et-lege.vercel.app/og-image.jpg?v=2",
+   "favicon": "/favicon.svg",
+   "lang": "pt-BR",
+   "viewport": true,
+   "headings": [
+    {
+     "n": 1,
+     "t": "Venho de outra religião"
+    },
+    {
+     "n": 2,
+     "t": "O que você já traz"
+    },
+    {
+     "n": 2,
+     "t": "Escritura e Tradição"
+    },
+    {
+     "n": 2,
+     "t": "Graça, fé e obras"
+    },
+    {
+     "n": 2,
+     "t": "A Eucaristia"
+    },
+    {
+     "n": 2,
+     "t": "Maria e os santos"
+    },
+    {
+     "n": 2,
+     "t": "O Papa e a Igreja"
+    },
+    {
+     "n": 2,
+     "t": "Como entrar na plena comunhão"
+    }
+   ],
+   "palavras": 1152,
+   "imagens": [],
+   "forms": [],
+   "iframes": [],
+   "schema": [],
+   "schemaData": [],
+   "contatos": {
+    "telefones": [],
+    "whatsapp": [],
+    "emails": [],
+    "ceps": [],
+    "social": {}
+   },
+   "header": [
+    {
+     "texto": "Tolle Lege",
+     "href": "/"
+    }
+   ],
+   "footer": [
+    {
+     "texto": "Tolle Lege",
+     "href": "/"
+    },
+    {
+     "texto": "Trilhas",
+     "href": "/trails"
+    },
+    {
+     "texto": "Dúvidas",
+     "href": "/faq"
+    },
+    {
+     "texto": "Curiosidades",
+     "href": "/curiosities"
+    },
+    {
+     "texto": "Visita guiada",
+     "href": "/tour"
+    },
+    {
+     "texto": "A Missa",
+     "href": "/mass"
+    },
+    {
+     "texto": "Santíssima Trindade",
+     "href": "/trinity"
+    },
+    {
+     "texto": "Maria",
+     "href": "/mary"
+    },
+    {
+     "texto": "Sacramentos",
+     "href": "/sacraments"
+    },
+    {
+     "texto": "Ano litúrgico",
+     "href": "/liturgical-year"
+    },
+    {
+     "texto": "Glossário",
+     "href": "/glossary"
+    },
+    {
+     "texto": "Liturgia diária",
+     "href": "/liturgy"
+    },
+    {
+     "texto": "Orações e Terço",
+     "href": "/prayers"
+    },
+    {
+     "texto": "Novena das Rosas",
+     "href": "/rose-novena"
+    },
+    {
+     "texto": "Confissão",
+     "href": "/confession"
+    },
+    {
+     "texto": "API Liturgia Diária",
+     "href": "https://liturgia.up.railway.app"
+    }
+   ],
+   "linksInternos": 23,
+   "linksExternos": 1,
+   "linksSaida": [
+    "/trails/other-religion",
+    "/",
+    "/trails",
+    "/sacraments",
+    "/mary",
+    "/trails/not-baptized",
+    "/trails/returning",
+    "/trails/curious",
+    "/faq",
+    "/curiosities",
+    "/tour",
+    "/mass",
+    "/trinity",
+    "/liturgical-year",
+    "/glossary",
+    "/liturgy",
+    "/prayers",
+    "/rose-novena",
+    "/confession"
+   ],
+   "inlinks": 6,
+   "importancia": 10,
+   "problemas": []
+  },
+  {
+   "slug": "trails--curious",
+   "url": "https://tolle-et-lege.vercel.app/trails/curious",
+   "path": "/trails/curious",
+   "status": 200,
+   "origem": "sitemap",
+   "lastModified": "Fri, 09 Oct 2026 23:08:14 GMT",
+   "titulo": "Só tenho curiosidade · Tolle Lege",
+   "descricao": "Sem compromisso: entenda o essencial da fé católica, seus símbolos e costumes.",
+   "robots": null,
+   "canonical": "https://tolle-et-lege.vercel.app/trails/curious",
+   "ogImage": "https://tolle-et-lege.vercel.app/og-image.jpg?v=2",
+   "favicon": "/favicon.svg",
+   "lang": "pt-BR",
+   "viewport": true,
+   "headings": [
+    {
+     "n": 1,
+     "t": "Só tenho curiosidade"
+    },
+    {
+     "n": 2,
+     "t": "Quem é Jesus para os cristãos"
+    },
+    {
+     "n": 2,
+     "t": "Em que os católicos creem"
+    },
+    {
+     "n": 2,
+     "t": "Os sete sacramentos"
+    },
+    {
+     "n": 2,
+     "t": "Símbolos e costumes"
+    },
+    {
+     "n": 2,
+     "t": "Visite uma Missa"
+    }
+   ],
+   "palavras": 618,
+   "imagens": [],
+   "forms": [],
+   "iframes": [],
+   "schema": [],
+   "schemaData": [],
+   "contatos": {
+    "telefones": [],
+    "whatsapp": [],
+    "emails": [],
+    "ceps": [],
+    "social": {}
+   },
+   "header": [
+    {
+     "texto": "Tolle Lege",
+     "href": "/"
+    }
+   ],
+   "footer": [
+    {
+     "texto": "Tolle Lege",
+     "href": "/"
+    },
+    {
+     "texto": "Trilhas",
+     "href": "/trails"
+    },
+    {
+     "texto": "Dúvidas",
+     "href": "/faq"
+    },
+    {
+     "texto": "Curiosidades",
+     "href": "/curiosities"
+    },
+    {
+     "texto": "Visita guiada",
+     "href": "/tour"
+    },
+    {
+     "texto": "A Missa",
+     "href": "/mass"
+    },
+    {
+     "texto": "Santíssima Trindade",
+     "href": "/trinity"
+    },
+    {
+     "texto": "Maria",
+     "href": "/mary"
+    },
+    {
+     "texto": "Sacramentos",
+     "href": "/sacraments"
+    },
+    {
+     "texto": "Ano litúrgico",
+     "href": "/liturgical-year"
+    },
+    {
+     "texto": "Glossário",
+     "href": "/glossary"
+    },
+    {
+     "texto": "Liturgia diária",
+     "href": "/liturgy"
+    },
+    {
+     "texto": "Orações e Terço",
+     "href": "/prayers"
+    },
+    {
+     "texto": "Novena das Rosas",
+     "href": "/rose-novena"
+    },
+    {
+     "texto": "Confissão",
+     "href": "/confession"
+    },
+    {
+     "texto": "API Liturgia Diária",
+     "href": "https://liturgia.up.railway.app"
+    }
+   ],
+   "linksInternos": 25,
+   "linksExternos": 1,
+   "linksSaida": [
+    "/trails/curious",
+    "/",
+    "/trails",
+    "/prayers",
+    "/sacraments",
+    "/liturgical-year",
+    "/mass",
+    "/trails/not-baptized",
+    "/trails/returning",
+    "/trails/other-religion",
+    "/faq",
+    "/curiosities",
+    "/tour",
+    "/trinity",
+    "/mary",
+    "/glossary",
+    "/liturgy",
+    "/rose-novena",
+    "/confession"
+   ],
+   "inlinks": 6,
+   "importancia": 10,
+   "problemas": []
+  }
+ ],
+ "arquivos": [],
+ "redirecionadas": [],
+ "bloqueadas": [],
+ "erros": [],
+ "assets": []
+}

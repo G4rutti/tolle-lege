@@ -158,7 +158,7 @@ function TrailContent({ trail }: { trail: Trail }) {
                     type="button"
                     onClick={() => toggle(index)}
                     aria-pressed={completed}
-                    className="mt-6 flex w-fit items-center gap-2 rounded-full border border-line px-5 py-2.5 text-sm font-semibold text-ink transition-colors hover:border-ink aria-pressed:border-transparent aria-pressed:bg-ink aria-pressed:text-canvas"
+                    className="mt-6 flex w-fit items-center gap-2 rounded-md border border-accent px-5 py-2.5 text-sm font-semibold text-accent transition-colors hover:bg-accent-subtle aria-pressed:border-transparent aria-pressed:bg-accent aria-pressed:text-accent-on"
                   >
                     <Check className="size-4" />
                     {completed ? 'Concluído' : 'Marcar como concluído'}

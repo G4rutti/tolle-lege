@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
   <style>
-    .bg { fill: #e8e1cf } .ink { stroke: #2a221b } .gold { stroke: #7a1f26 }
-    @media (prefers-color-scheme: dark) { .bg { fill: #2a221b } .ink { stroke: #e8e1cf } .gold { stroke: #c59d55 } }
+    .bg { fill: #f6f6f3 } .ink { stroke: #4b3123 } .gold { stroke: #ac573b }
+    @media (prefers-color-scheme: dark) { .bg { fill: #2f2e2d } .ink { stroke: #ebe8e0 } .gold { stroke: #e08a6d } }
   </style>
   <rect class="bg" width="32" height="32" rx="7" />
   <g fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">

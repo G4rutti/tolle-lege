@@ -6,6 +6,17 @@ import { normalizeText } from '@/lib/text'
 import { FaqList } from '../components/FaqList'
 import { faqCategories, faqItems, type FaqCategory } from '../data'
 
+/** Dados estruturados (FAQPage) para o Google mostrar as perguntas no resultado. */
+const faqSchema = JSON.stringify({
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqItems.map((item) => ({
+    '@type': 'Question',
+    name: item.question,
+    acceptedAnswer: { '@type': 'Answer', text: item.answer.join(' ') },
+  })),
+})
+
 const categories = Object.entries(faqCategories) as [FaqCategory, string][]
 
 export function FaqPage() {
@@ -25,6 +36,7 @@ export function FaqPage() {
   return (
     <>
       <title>Dúvidas · Tolle Lege</title>
+      <script type="application/ld+json">{faqSchema}</script>
       <PageHeader
         eyebrow="Dúvidas"
         title="Perguntas que todo mundo faz"
