@@ -1,6 +1,6 @@
 # Inventário: localhost
 
-- Origem: http://localhost:4173 · lido em 2026-10-09 · renderizado (Playwright) · 70s
+- Origem: http://localhost:4173 · lido em 2026-10-09 · renderizado (Playwright) · 61s
 - Páginas: **19** · arquivos (PDF etc.): 0 · redirecionamentos já existentes: 0 · erros: 0 · bloqueadas pelo robots: 0
 - Sitemaps: https://tolle-et-lege.vercel.app/sitemap.xml, http://localhost:4173/sitemap.xml
 - Palavras no total: 15413 · schema em uso: WebSite, FAQPage, Question, Answer
@@ -49,5 +49,3 @@
 - /mass: shots/mass-desktop.jpg, shots/mass-mobile.jpg
 - /prayers: shots/prayers-desktop.jpg, shots/prayers-mobile.jpg
 - /mary: shots/mary-desktop.jpg, shots/mary-mobile.jpg
-- /confession: shots/confession-desktop.jpg, shots/confession-mobile.jpg
-- /trinity: shots/trinity-desktop.jpg, shots/trinity-mobile.jpg

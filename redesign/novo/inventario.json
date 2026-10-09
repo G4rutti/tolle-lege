@@ -1,10 +1,10 @@
 {
  "origem": "http://localhost:4173",
  "local": false,
- "quando": "2026-10-09T23:12:49.844Z",
+ "quando": "2026-10-09T23:15:54.380Z",
  "renderizado": true,
- "duracaoSeg": 70,
- "limite": 60,
+ "duracaoSeg": 61,
+ "limite": 80,
  "atingiuLimite": false,
  "naFila": 0,
  "sitemaps": [
@@ -1448,10 +1448,6 @@
    ],
    "inlinks": 28,
    "importancia": 55,
-   "shots": [
-    "shots/confession-desktop.jpg",
-    "shots/confession-mobile.jpg"
-   ],
    "problemas": []
   },
   {
@@ -1684,10 +1680,6 @@
    ],
    "inlinks": 27,
    "importancia": 53,
-   "shots": [
-    "shots/trinity-desktop.jpg",
-    "shots/trinity-mobile.jpg"
-   ],
    "problemas": []
   },
   {
