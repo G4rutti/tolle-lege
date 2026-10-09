@@ -1,35 +1,35 @@
 /* Limita o scan de classes ao src/ (evita varrer public/models/*.glb) */
 @import 'tailwindcss' source('../');
 
-/* Fontes self-hosted. EB Garamond: a serifada clássica dos missais e livros antigos. */
-@import '@fontsource-variable/eb-garamond/wght.css';
-@import '@fontsource-variable/eb-garamond/wght-italic.css';
-@import '@fontsource-variable/inter';
+/* Design system "Cal e telha" (ds-forge): gerado de design-system/tokens. Não edite ds/ à mão. */
+@import './ds/tokens.css';
+@import './ds/tailwind.css';
 
 /* Tela larga e deitada: a hero vira um tríptico, com a igreja no centro. Igual a HERO_WIDE_QUERY. */
 @custom-variant wide (@media (min-width: 1024px) and (min-aspect-ratio: 105/100));
 
 /*
- * Tokens de design — conceito "missal antigo": pergaminho, papel, tinta sépia e ouro.
- * Nomes semânticos: ao trocar de design system, só os valores mudam.
- * Regra de proporção: ~80% pergaminho/papel, ~15% tinta, ~5% cor.
+ * Apelidos antigos apontando para os tokens "Cal e telha" (design-system/identidade.md):
+ * cal, moldura, madeira, granito e telha da Igreja Matriz de Resende. Telha só onde se age.
+ * ponytail: nomes antigos (ink, canvas, primary…) mantidos para não reescrever 130 arquivos;
+ * migrar para as classes semânticas (text-default, surface-raised, accent) por área quando tocar no arquivo.
  */
 @theme {
   /* Neutros */
-  --color-parchment: #e8e1cf; /* pergaminho — fundo da página */
-  --color-canvas: #faf7f0; /* papel — cartões e painéis */
-  --color-surface: #ddd4bf; /* pergaminho escuro — seções alternadas */
-  --color-line: #cfc3a8; /* bordas e divisores */
-  --color-ink: #2a221b; /* tinta sépia — texto principal */
-  --color-ink-muted: #5f5347; /* texto secundário */
+  --color-parchment: var(--color-surface-default);
+  --color-canvas: var(--color-surface-raised);
+  --color-surface: var(--color-surface-sunken);
+  --color-line: var(--color-border-default);
+  --color-ink: var(--color-text-default);
+  --color-ink-muted: var(--color-text-muted);
 
-  /* Primária: ouro velho. Use -strong para texto (contraste AA). */
-  --color-primary: #a8823f;
-  --color-primary-strong: #74561f;
-  --color-primary-soft: #efe3c8;
+  /* Ação: telha. Só no que se faz (botão, link de ação, próximo passo). */
+  --color-primary: var(--color-accent-default);
+  --color-primary-strong: var(--color-accent-hover);
+  --color-primary-soft: var(--color-accent-subtle);
 
-  /* Púrpura cardinalícia: fios e detalhes, com parcimônia */
-  --color-cardinal: #7a1f26;
+  /* Antes púrpura cardinalícia; marcava rubricas e cruzes, agora é ação (telha) */
+  --color-cardinal: var(--color-accent-default);
 
   /* Acentos por área */
   --color-marian: #3f5f86; /* dúvidas */
@@ -48,8 +48,8 @@
   --radius-3xl: 0.375rem;
 
   /* Tipografia */
-  --font-serif: 'EB Garamond Variable', ui-serif, Georgia, serif;
-  --font-sans: 'Inter Variable', ui-sans-serif, system-ui, sans-serif;
+  --font-serif: var(--font-family-display);
+  --font-sans: var(--font-family-text);
 
   /* Animações */
   --animate-glass: glass 7s ease-in-out infinite;
@@ -78,6 +78,18 @@
   }
 }
 
+/* Cor do dia (main.tsx define data-tempo pelo calendário). Só no arco: logo, portal, marcadores. */
+[data-tempo='purple'] {
+  --color-dia-default: var(--color-liturgia-roxo);
+}
+[data-tempo='red'] {
+  --color-dia-default: var(--color-liturgia-vermelho);
+}
+[data-tempo='white'] {
+  --color-dia-default: var(--color-liturgia-branco);
+  --color-dia-on: var(--color-text-default);
+}
+
 @layer base {
   html {
     scroll-behavior: smooth;
@@ -93,25 +105,14 @@
     @apply bg-parchment font-sans text-ink antialiased;
   }
 
-  /* Grão de papel sobre toda a página, bem sutil */
-  body::after {
-    content: '';
-    position: fixed;
-    inset: 0;
-    z-index: 60;
-    pointer-events: none;
-    opacity: 0.07;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0.25 0 0 0 0 0.18 0 0 0 0 0.1 0 0 0 1.4 -0.2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
-  }
-
   ::selection {
     @apply bg-primary-soft text-ink;
   }
 }
 
 @layer components {
-  /* Rubrica: rótulo em versaletes, como os títulos de seção dos missais */
+  /* Rubrica: rótulo de seção em Figtree 600 caixa-alta (identidade.md: instrução em texto, não em display) */
   .rubric {
-    @apply font-serif text-sm font-semibold tracking-[0.28em] uppercase;
+    @apply font-sans text-xs font-semibold tracking-widest uppercase;
   }
 }

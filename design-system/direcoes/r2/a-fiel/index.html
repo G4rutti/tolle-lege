@@ -1,0 +1,976 @@
+<!doctype html>
+<html lang="pt-BR" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tolle Lege · r2 a-fiel (cal e telha)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Brygada+1918:wght@400;500;600;700&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+/* ===== tokens: build do tokens.json (não edite à mão) ===== */
+:root {
+  --color-marca-50: oklch(97.7% 0.003 38.79);
+  --color-marca-100: oklch(94.58% 0.0103 38.79);
+  --color-marca-200: oklch(89.27% 0.0264 38.79);
+  --color-marca-300: oklch(82.25% 0.0588 38.79);
+  --color-marca-400: oklch(72.93% 0.1109 38.79);
+  --color-marca-500: oklch(63.92% 0.1371 38.79);
+  --color-marca-600: oklch(55.4% 0.1189 38.79);  /* cor-âncora · origem: telha de barro, terracotta_tile, modelo 3D Igreja Matriz de Resende */
+  --color-marca-700: oklch(47.42% 0.0957 38.79);
+  --color-marca-800: oklch(39.43% 0.0712 38.79);
+  --color-marca-900: oklch(31.95% 0.0495 38.79);
+  --color-marca-950: oklch(23.97% 0.0312 38.79);
+  --color-neutro-50: oklch(98.5% 0.004 38.79);
+  --color-neutro-100: oklch(96.7% 0.004 38.79);
+  --color-neutro-200: oklch(92.2% 0.0143 38.79);
+  --color-neutro-300: oklch(87% 0.0143 38.79);
+  --color-neutro-400: oklch(70.8% 0.0143 38.79);
+  --color-neutro-500: oklch(55.6% 0.0143 38.79);
+  --color-neutro-600: oklch(43.9% 0.0143 38.79);
+  --color-neutro-700: oklch(37.1% 0.0143 38.79);
+  --color-neutro-800: oklch(26.9% 0.0143 38.79);
+  --color-neutro-900: oklch(20.5% 0.0121 38.79);
+  --color-neutro-950: oklch(14.5% 0.0121 38.79);
+  --color-sucesso-50: oklch(97.7% 0.0093 150);
+  --color-sucesso-100: oklch(94.6% 0.0332 150);
+  --color-sucesso-200: oklch(89.3% 0.0892 150);
+  --color-sucesso-300: oklch(82.3% 0.1299 150);
+  --color-sucesso-400: oklch(73% 0.13 150);
+  --color-sucesso-500: oklch(64% 0.1175 150);
+  --color-sucesso-600: oklch(55.5% 0.1019 150);
+  --color-sucesso-700: oklch(47.5% 0.082 150);
+  --color-sucesso-800: oklch(39.5% 0.061 150);
+  --color-sucesso-900: oklch(32% 0.0424 150);
+  --color-sucesso-950: oklch(24% 0.0266 150);
+  --color-aviso-50: oklch(97.7% 0.0053 80);
+  --color-aviso-100: oklch(94.6% 0.0182 80);
+  --color-aviso-200: oklch(89.3% 0.0457 80);
+  --color-aviso-300: oklch(82.3% 0.0977 80);
+  --color-aviso-400: oklch(73% 0.0977 80);
+  --color-aviso-500: oklch(64% 0.0884 80);
+  --color-aviso-600: oklch(55.5% 0.0766 80);
+  --color-aviso-700: oklch(47.5% 0.0617 80);
+  --color-aviso-800: oklch(39.5% 0.0459 80);
+  --color-aviso-900: oklch(32% 0.0319 80);
+  --color-aviso-950: oklch(24% 0.0201 80);
+  --color-erro-50: oklch(97.7% 0.0028 27);
+  --color-erro-100: oklch(94.6% 0.0099 27);
+  --color-erro-200: oklch(89.3% 0.0254 27);
+  --color-erro-300: oklch(82.3% 0.0567 27);
+  --color-erro-400: oklch(73% 0.1075 27);
+  --color-erro-500: oklch(64% 0.1636 27);
+  --color-erro-600: oklch(55.5% 0.1508 27);
+  --color-erro-700: oklch(47.5% 0.1213 27);
+  --color-erro-800: oklch(39.5% 0.0902 27);
+  --color-erro-900: oklch(32% 0.0627 27);
+  --color-erro-950: oklch(24% 0.0393 27);
+  --color-info-50: oklch(97.7% 0.003 245);
+  --color-info-100: oklch(94.6% 0.0101 245);
+  --color-info-200: oklch(89.3% 0.0253 245);
+  --color-info-300: oklch(82.3% 0.0544 245);
+  --color-info-400: oklch(73% 0.097 245);
+  --color-info-500: oklch(64% 0.1074 245);
+  --color-info-600: oklch(55.5% 0.0931 245);
+  --color-info-700: oklch(47.5% 0.075 245);
+  --color-info-800: oklch(39.5% 0.0557 245);
+  --color-info-900: oklch(32% 0.0388 245);
+  --color-info-950: oklch(24% 0.0244 245);
+  --color-primitivos-cal: oklch(97.23% 0.004 106.47);  /* origem: lime_plaster, paredes da igreja (modelo 3D Igreja Matriz de Resende). Fundo do site. */
+  --color-primitivos-branco: oklch(98.78% 0.0013 106.42);  /* origem: cal mais clara, cartões. Texto sobre telha. */
+  --color-primitivos-moldura: oklch(88.92% 0.006 239.83);  /* origem: molduras das janelas (modelo 3D). Superfície afundada. */
+  --color-primitivos-barrado: oklch(78.99% 0.0159 241.83);  /* origem: barrado pintado (modelo 3D). Bordas. */
+  --color-primitivos-granito: oklch(65.61% 0.0121 243.74);  /* origem: cantaria de granito (modelo 3D). Borda forte, nunca texto sobre cal. */
+  --color-primitivos-granito-escuro: oklch(47.4% 0.012 238.73);  /* origem: granito escurecido para texto secundário AA sobre cal e moldura. */
+  --color-primitivos-telha: oklch(55.4% 0.1189 38.79);  /* origem: terracotta_tile, telha de barro (modelo 3D). Acento de ação. */
+  --color-primitivos-telha-escura: oklch(47.47% 0.0962 39.03);  /* origem: telha escurecida, hover. */
+  --color-primitivos-telha-clara: oklch(94.58% 0.0103 38.79);  /* origem: telha clarificada (palette.mjs, marca-100). Destaque suave. */
+  --color-primitivos-madeira: oklch(34.03% 0.0446 49.05);  /* origem: madeira escura das portas (modelo 3D). Tinta. */
+  --color-primitivos-ferro: oklch(30.18% 0.0023 67.74);  /* origem: ferro forjado das grades (modelo 3D). Superfície invertida, noite. */
+  --color-primitivos-erro: oklch(47.5% 0.1213 27);  /* origem: palette.mjs, erro-700. Feedback de erro. */
+  --color-primitivos-noite-base: oklch(22.81% 0.0195 52.41);  /* origem: madeira em noite. Fundo do modo escuro. */
+  --color-primitivos-noite-raised: oklch(25.82% 0.0223 57.58);  /* origem: madeira em noite, elevação 1. */
+  --color-primitivos-noite-sunken: oklch(18% 0.014 52);  /* origem: madeira em noite, afundado. */
+  --color-primitivos-noite-ferro: oklch(34.49% 0.0037 84.58);  /* origem: ferro em noite. Linhas no escuro. */
+  --color-primitivos-noite-cal: oklch(93.44% 0.0099 87.47);  /* origem: cal sob luz de vela. Texto no escuro. */
+  --color-primitivos-noite-granito: oklch(73.43% 0.0118 243.71);  /* origem: granito sob luz de vela. Texto secundário no escuro. */
+  --color-primitivos-noite-telha: oklch(74.09% 0.1113 35.58);  /* origem: telha sob luz de vela. Acento no escuro. */
+  --color-primitivos-noite-telha-clara: oklch(82% 0.075 36);  /* origem: telha clarificada, hover no escuro. */
+  --color-primitivos-noite-telha-fundo: oklch(32% 0.05 40);  /* origem: telha escurecida, fundo de destaque no escuro. */
+  --color-primitivos-noite-erro: oklch(74% 0.11 27);  /* origem: erro clarificado no escuro. */
+  --color-surface-default: var(--color-primitivos-cal);  /* uso: surface.default (light cal, dark noite-base) */
+  --color-surface-raised: var(--color-primitivos-branco);  /* uso: surface.raised (light branco, dark noite-raised) */
+  --color-surface-sunken: var(--color-primitivos-moldura);  /* uso: surface.sunken (light moldura, dark noite-sunken) */
+  --color-surface-inverse: var(--color-primitivos-ferro);  /* uso: surface.inverse (light ferro, dark noite-cal) */
+  --color-text-default: var(--color-primitivos-madeira);  /* uso: text.default (light madeira, dark noite-cal) */
+  --color-text-muted: var(--color-primitivos-granito-escuro);  /* uso: text.muted (light granito-escuro, dark noite-granito) */
+  --color-text-inverse: var(--color-primitivos-cal);  /* uso: text.inverse (light cal, dark ferro) */
+  --color-border-default: var(--color-primitivos-barrado);  /* uso: border.default (light barrado, dark noite-ferro) */
+  --color-border-strong: var(--color-primitivos-granito);  /* uso: border.strong (light granito, dark noite-granito) */
+  --color-accent-default: var(--color-primitivos-telha);  /* uso: accent.default (light telha, dark noite-telha) */
+  --color-accent-hover: var(--color-primitivos-telha-escura);  /* uso: accent.hover (light telha-escura, dark noite-telha-clara) */
+  --color-accent-on: var(--color-primitivos-branco);  /* uso: accent.on (light branco, dark noite-base) */
+  --color-accent-subtle: var(--color-primitivos-telha-clara);  /* uso: accent.subtle (light telha-clara, dark noite-telha-fundo) */
+  --color-feedback-danger: var(--color-primitivos-erro);  /* uso: feedback.danger (light erro, dark noite-erro) */
+  --color-focus-ring: var(--color-primitivos-telha);  /* uso: focus.ring (light telha, dark noite-telha) */
+  --font-family-display: "Brygada 1918", Georgia, serif;  /* display: Brygada 1918 (romana de contraste baixo, inscrição). Não é da lista do cemitério. */
+  --font-family-text: "Figtree", system-ui, sans-serif;  /* texto e UI: Figtree (humanista contemporâneo). */
+  --font-size-display: clamp(2.5rem, 1.6rem + 4vw, 4.75rem);  /* display, até 76px */
+  --font-size-h1: clamp(1.75rem, 1.35rem + 1.6vw, 2.5rem);  /* h1 */
+  --font-size-h2: 1.375rem;  /* h2 */
+  --font-size-body: 1rem;  /* corpo */
+  --font-size-small: 0.875rem;  /* texto de apoio */
+  --font-size-label: 0.75rem;  /* label caixa-alta */
+  --space-1: 4px;  /* grade de 4 */
+  --space-2: 8px;  /* grade de 4 */
+  --space-3: 12px;  /* grade de 4 */
+  --space-4: 16px;  /* grade de 4 */
+  --space-5: 24px;  /* grade de 4 */
+  --space-6: 32px;  /* grade de 4 */
+  --space-7: 48px;  /* grade de 4 */
+  --space-8: 64px;  /* grade de 4 */
+  --radius-none: 0;  /* sem canto */
+  --radius-sm: 2px;  /* chip, pílula de estado */
+  --radius-md: 4px;  /* cartão e painel */
+  --radius-control: 4px;  /* botão, campo */
+  --radius-arch: 999px 999px 2px 2px;  /* forma-assinatura: arco da porta (topo semicircular, base reta) */
+  --border-width-default: 1px;  /* fio padrão */
+  --border-width-strong: 2px;  /* destaque e foco de tela */
+  --shadow-sm: 0 1px 2px color-mix(in oklch, var(--color-primitivos-madeira) 12%, transparent);  /* luz natural mínima (claro). No escuro, vira borda. */
+  --shadow-none: none;  /* escuro: borda no lugar de sombra */
+  --motion-duration-fast: 160ms;  /* press, foco, hover de controle */
+  --motion-duration-base: 400ms;  /* luz que muda, tema, entrada */
+  --motion-duration-slow: 700ms;  /* reserva, não usada em componente */
+  --motion-ease-light: cubic-bezier(0.2, 0.6, 0.2, 1);  /* curva da luz: entra rápido, assenta */
+  --line-height-tight: 1.05;  /* display */
+  --line-height-heading: 1.2;  /* títulos */
+  --line-height-body: 1.55;  /* corpo */
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --size-control-md: 2.75rem;  /* altura de controle, toque ≥ 44px */
+  --size-control-sm: 2.25rem;  /* altura de chip */
+  --size-icon: 1.25rem;  /* ícone monoline */
+  --size-layout-max: 72rem;  /* largura da página */
+  --size-reading: 40rem;  /* medida de leitura */
+  --size-touch-min: 2.75rem;  /* alvo de toque mínimo */
+  --share-cal: 46;  /* proporção de uso, cal */
+  --share-moldura: 14;
+  --share-granito: 10;
+  --share-madeira: 9;
+  --share-ferro: 6;
+  --share-telha: 4;  /* ação, pequena por regra */
+  --letter-spacing-label: 0.12em;  /* caixa-alta de label */
+}
+
+[data-theme="dark"] {
+  --color-surface-default: var(--color-primitivos-noite-base);
+  --color-surface-raised: var(--color-primitivos-noite-raised);
+  --color-surface-sunken: var(--color-primitivos-noite-sunken);
+  --color-surface-inverse: var(--color-primitivos-noite-cal);
+  --color-text-default: var(--color-primitivos-noite-cal);
+  --color-text-muted: var(--color-primitivos-noite-granito);
+  --color-text-inverse: var(--color-primitivos-ferro);
+  --color-border-default: var(--color-primitivos-noite-ferro);
+  --color-border-strong: var(--color-primitivos-noite-granito);
+  --color-accent-default: var(--color-primitivos-noite-telha);
+  --color-accent-hover: var(--color-primitivos-noite-telha-clara);
+  --color-accent-on: var(--color-primitivos-noite-base);
+  --color-accent-subtle: var(--color-primitivos-noite-telha-fundo);
+  --color-feedback-danger: var(--color-primitivos-noite-erro);
+  --color-focus-ring: var(--color-primitivos-noite-telha);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --color-surface-default: var(--color-primitivos-noite-base);
+    --color-surface-raised: var(--color-primitivos-noite-raised);
+    --color-surface-sunken: var(--color-primitivos-noite-sunken);
+    --color-surface-inverse: var(--color-primitivos-noite-cal);
+    --color-text-default: var(--color-primitivos-noite-cal);
+    --color-text-muted: var(--color-primitivos-noite-granito);
+    --color-text-inverse: var(--color-primitivos-ferro);
+    --color-border-default: var(--color-primitivos-noite-ferro);
+    --color-border-strong: var(--color-primitivos-noite-granito);
+    --color-accent-default: var(--color-primitivos-noite-telha);
+    --color-accent-hover: var(--color-primitivos-noite-telha-clara);
+    --color-accent-on: var(--color-primitivos-noite-base);
+    --color-accent-subtle: var(--color-primitivos-noite-telha-fundo);
+    --color-feedback-danger: var(--color-primitivos-noite-erro);
+    --color-focus-ring: var(--color-primitivos-noite-telha);
+  }
+}
+
+:root { color-scheme: light dark; }
+[data-theme="light"] { color-scheme: light; }
+[data-theme="dark"] { color-scheme: dark; }
+
+/* ===== base ===== */
+[data-theme="dark"] { --shadow-sm: var(--shadow-none); }
+*, *::before, *::after { box-sizing: border-box; }
+html { color-scheme: light; }
+[data-theme="dark"] { color-scheme: dark; }
+body {
+  margin: 0;
+  background: var(--color-surface-default);
+  color: var(--color-text-default);
+  font-family: var(--font-family-text);
+  font-size: var(--font-size-body);
+  line-height: var(--line-height-body);
+  font-weight: var(--font-weight-regular);
+  transition: background-color var(--motion-duration-base) var(--motion-ease-light), color var(--motion-duration-base) var(--motion-ease-light);
+}
+h1, h2, h3, p { margin: 0; }
+h1, h2 { font-family: var(--font-family-display); font-weight: var(--font-weight-regular); line-height: var(--line-height-heading); }
+h1 { font-size: var(--font-size-h1); }
+h2 { font-size: var(--font-size-h2); }
+a { color: inherit; }
+:focus-visible { outline: 2px solid var(--color-focus-ring); outline-offset: 2px; }
+.wrap { max-width: var(--size-layout-max); margin: 0 auto; padding: 0 var(--space-4); }
+.sec { padding: var(--space-8) 0; border-top: var(--border-width-default) solid var(--color-border-default); }
+.sec-head { display: grid; gap: var(--space-2); margin-bottom: var(--space-6); }
+.label { font-size: var(--font-size-label); font-weight: var(--font-weight-semibold); letter-spacing: var(--letter-spacing-label); text-transform: uppercase; color: var(--color-text-muted); }
+.muted { color: var(--color-text-muted); }
+.icon { width: var(--size-icon); height: var(--size-icon); flex: none; fill: none; stroke: currentColor; stroke-width: 1.75; stroke-linecap: round; stroke-linejoin: round; }
+.sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+
+/* ===== 1. assinatura ===== */
+.assinatura { padding: var(--space-6) 0 var(--space-8); }
+.topo { display: flex; align-items: center; justify-content: space-between; gap: var(--space-4); padding: var(--space-4) 0; }
+.wordmark { font-family: var(--font-family-display); font-size: var(--font-size-h2); display: inline-flex; align-items: flex-end; gap: var(--space-2); text-decoration: none; }
+.wordmark .arco-mini { width: 1.1em; height: 1.45em; border: var(--border-width-strong) solid var(--color-accent-default); border-radius: var(--radius-arch); border-bottom: 0; }
+.wordmark .arco-mini { border-bottom-width: 0; }
+.wordmark-grande { font-family: var(--font-family-display); font-size: var(--font-size-display); line-height: var(--line-height-tight); display: flex; flex-wrap: wrap; align-items: flex-end; gap: var(--space-3); margin: var(--space-6) 0 var(--space-4); }
+.wordmark-grande .arco { width: 0.62em; height: 0.92em; border-radius: var(--radius-arch); background: var(--color-accent-default); }
+.wordmark-grande em { font-style: normal; color: var(--color-accent-default); }
+.personalidade { font-size: 1.25rem; max-width: var(--size-reading); margin-bottom: var(--space-5); }
+.dono { display: grid; gap: var(--space-2); max-width: var(--size-reading); padding: var(--space-4) var(--space-5); border-left: var(--border-width-strong) solid var(--color-accent-default); background: var(--color-surface-raised); }
+.toggle { display: inline-flex; align-items: center; gap: var(--space-2); min-height: var(--size-touch-min); padding: 0 var(--space-4); border: var(--border-width-default) solid var(--color-border-strong); border-radius: var(--radius-control); background: var(--color-surface-raised); color: var(--color-text-default); font: inherit; font-size: var(--font-size-small); font-weight: var(--font-weight-medium); cursor: pointer; transition: background-color var(--motion-duration-fast) var(--motion-ease-light); }
+.toggle:hover { background: var(--color-accent-subtle); }
+
+/* ===== 2. cor ===== */
+.barra { display: flex; height: 6rem; border-radius: var(--radius-md); overflow: hidden; border: var(--border-width-default) solid var(--color-border-default); }
+.barra > div { min-width: 0; }
+.share-cal { flex-grow: var(--share-cal); background: var(--color-primitivos-cal); }
+.share-moldura { flex-grow: var(--share-moldura); background: var(--color-primitivos-moldura); }
+.share-granito { flex-grow: var(--share-granito); background: var(--color-primitivos-granito); }
+.share-madeira { flex-grow: var(--share-madeira); background: var(--color-primitivos-madeira); }
+.share-ferro { flex-grow: var(--share-ferro); background: var(--color-primitivos-ferro); }
+.share-telha { flex-grow: var(--share-telha); background: var(--color-primitivos-telha); }
+.legenda-cor { font-size: var(--font-size-small); color: var(--color-text-muted); margin-top: var(--space-3); }
+.cores { display: grid; grid-template-columns: 1fr; gap: var(--space-3); margin-top: var(--space-6); }
+.cor { display: grid; grid-template-columns: 3.5rem 1fr; gap: var(--space-3); align-items: start; padding-bottom: var(--space-3); border-bottom: var(--border-width-default) solid var(--color-border-default); }
+.cor-amostra { width: 3.5rem; height: 3.5rem; border-radius: var(--radius-sm); border: var(--border-width-default) solid var(--color-border-default); }
+.cor-amostra.a-cal { background: var(--color-primitivos-cal); }
+.cor-amostra.a-moldura { background: var(--color-primitivos-moldura); }
+.cor-amostra.a-granito { background: var(--color-primitivos-granito); }
+.cor-amostra.a-madeira { background: var(--color-primitivos-madeira); }
+.cor-amostra.a-ferro { background: var(--color-primitivos-ferro); }
+.cor-amostra.a-telha { background: var(--color-primitivos-telha); }
+.cor-nome { font-weight: var(--font-weight-semibold); }
+.cor-origem { font-size: var(--font-size-small); color: var(--color-text-muted); }
+.pares { display: grid; grid-template-columns: 1fr; gap: var(--space-3); margin-top: var(--space-6); }
+.par { display: flex; align-items: center; justify-content: space-between; gap: var(--space-3); padding: var(--space-3) var(--space-4); border-radius: var(--radius-sm); font-size: var(--font-size-small); }
+.par strong { font-weight: var(--font-weight-semibold); }
+.par.p-cal { background: var(--color-primitivos-cal); color: var(--color-primitivos-madeira); border: var(--border-width-default) solid var(--color-border-default); }
+.par.p-ferro { background: var(--color-primitivos-ferro); color: var(--color-primitivos-cal); }
+.par.p-telha { background: var(--color-primitivos-telha); color: var(--color-primitivos-branco); }
+.par.p-madeira { background: var(--color-primitivos-madeira); color: var(--color-primitivos-cal); }
+.par.p-moldura { background: var(--color-primitivos-moldura); color: var(--color-primitivos-madeira); }
+.par.p-cal-muted { background: var(--color-primitivos-cal); color: var(--color-primitivos-granito-escuro); border: var(--border-width-default) solid var(--color-border-default); }
+.razao { font-variant-numeric: tabular-nums; font-weight: var(--font-weight-semibold); }
+
+/* ===== 3. tipografia ===== */
+.tipo { display: grid; gap: var(--space-5); }
+.tipo-display { font-family: var(--font-family-display); font-size: var(--font-size-display); line-height: var(--line-height-tight); }
+.tipo-meta { font-size: var(--font-size-small); color: var(--color-text-muted); display: block; margin-top: var(--space-1); }
+.tipo-h2 { font-family: var(--font-family-display); font-size: var(--font-size-h2); }
+.tipo-body { max-width: var(--size-reading); }
+.tipo-small { font-size: var(--font-size-small); color: var(--color-text-muted); max-width: var(--size-reading); }
+.tipo-linha { display: grid; gap: var(--space-2); padding-top: var(--space-4); border-top: var(--border-width-default) solid var(--color-border-default); }
+.tipo-linha:first-child { border-top: 0; padding-top: 0; }
+.tipo-spec { font-size: var(--font-size-label); color: var(--color-text-muted); font-variant-numeric: tabular-nums; }
+
+/* ===== 4. forma e componentes ===== */
+.forma-grid { display: grid; gap: var(--space-6); }
+.bloco { display: grid; gap: var(--space-4); align-content: start; }
+.estados { display: grid; gap: var(--space-3); grid-template-columns: 1fr; }
+.estado-linha { display: grid; gap: var(--space-2); align-items: center; grid-template-columns: 7rem 1fr; }
+.estado-linha .label { font-size: var(--font-size-label); }
+.estado-linha .botoes { display: flex; flex-wrap: wrap; gap: var(--space-2); }
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: var(--space-2); min-height: var(--size-control-md); padding: 0 var(--space-4); border-radius: var(--radius-control); border: var(--border-width-default) solid transparent; font: inherit; font-size: var(--font-size-small); font-weight: var(--font-weight-semibold); cursor: pointer; text-decoration: none; transition: background-color var(--motion-duration-fast) var(--motion-ease-light), color var(--motion-duration-fast) var(--motion-ease-light), border-color var(--motion-duration-fast) var(--motion-ease-light); position: relative; overflow: hidden; }
+.btn::after { content: ""; position: absolute; inset: 0; background: linear-gradient(100deg, transparent 20%, color-mix(in oklch, var(--color-primitivos-branco) 22%, transparent) 50%, transparent 80%); transform: translateX(-120%); transition: transform var(--motion-duration-base) var(--motion-ease-light); pointer-events: none; }
+.btn:hover::after, .btn.is-hover::after { transform: translateX(120%); }
+.btn:focus-visible, .btn.is-focus { outline: 2px solid var(--color-focus-ring); outline-offset: 2px; }
+.btn:disabled, .btn.is-disabled { cursor: not-allowed; opacity: 0.45; }
+.btn:disabled::after { display: none; }
+.btn--primary { background: var(--color-accent-default); color: var(--color-accent-on); }
+.btn--primary:hover, .btn--primary.is-hover { background: var(--color-accent-hover); }
+.btn--secondary { background: var(--color-surface-raised); color: var(--color-text-default); border-color: var(--color-border-strong); }
+.btn--secondary:hover, .btn--secondary.is-hover { background: var(--color-accent-subtle); }
+.btn--ghost { background: transparent; color: var(--color-text-default); text-decoration: underline; text-underline-offset: 4px; text-decoration-color: var(--color-border-strong); }
+.btn--ghost:hover, .btn--ghost.is-hover { color: var(--color-accent-default); text-decoration-color: var(--color-accent-default); }
+.btn--danger { background: transparent; color: var(--color-feedback-danger); border-color: var(--color-feedback-danger); }
+.btn--danger:hover, .btn--danger.is-hover { background: var(--color-accent-subtle); }
+.btn--sm { min-height: var(--size-control-sm); padding: 0 var(--space-3); }
+
+.campo { display: grid; gap: var(--space-2); }
+.campo-label { font-size: var(--font-size-small); font-weight: var(--font-weight-semibold); }
+.campo-ajuda { font-size: var(--font-size-small); color: var(--color-text-muted); }
+.campo-erro { font-size: var(--font-size-small); color: var(--color-feedback-danger); display: flex; gap: var(--space-2); align-items: center; }
+.controle { position: relative; display: flex; align-items: center; }
+.input, .select { width: 100%; min-height: var(--size-control-md); padding: 0 var(--space-4); border-radius: var(--radius-control); border: var(--border-width-default) solid var(--color-border-strong); background: var(--color-surface-raised); color: var(--color-text-default); font: inherit; font-size: var(--font-size-body); appearance: none; -webkit-appearance: none; }
+.input::placeholder { color: var(--color-text-muted); }
+.input:hover, .select:hover { border-color: var(--color-text-muted); }
+.input:focus-visible, .select:focus-visible { outline: 2px solid var(--color-focus-ring); outline-offset: 0; border-color: var(--color-focus-ring); }
+.input[aria-invalid="true"] { border-color: var(--color-feedback-danger); border-width: var(--border-width-strong); }
+.select { padding-right: var(--space-7); }
+.controle .icon { position: absolute; right: var(--space-4); pointer-events: none; color: var(--color-text-muted); }
+.check { display: flex; align-items: center; gap: var(--space-3); min-height: var(--size-touch-min); cursor: pointer; font-size: var(--font-size-small); }
+.check input { width: 1.25rem; height: 1.25rem; accent-color: var(--color-accent-default); margin: 0; }
+.switch { display: flex; align-items: center; justify-content: space-between; gap: var(--space-3); min-height: var(--size-touch-min); font-size: var(--font-size-small); }
+.switch-track { position: relative; width: 2.75rem; height: 1.5rem; border-radius: var(--radius-control); background: var(--color-border-strong); border: 0; padding: 0; cursor: pointer; flex: none; transition: background-color var(--motion-duration-base) var(--motion-ease-light); }
+.switch-track::after { content: ""; position: absolute; top: var(--space-1); left: var(--space-1); width: 1rem; height: 1rem; border-radius: var(--radius-sm); background: var(--color-surface-raised); transition: transform var(--motion-duration-base) var(--motion-ease-light); }
+.switch-track[aria-checked="true"] { background: var(--color-accent-default); }
+.switch-track[aria-checked="true"]::after { transform: translateX(1.25rem); }
+.switch-track:focus-visible { outline: 2px solid var(--color-focus-ring); outline-offset: 2px; }
+.badge { display: inline-flex; align-items: center; gap: var(--space-1); min-height: var(--size-control-sm); padding: 0 var(--space-3); border-radius: var(--radius-sm); font-size: var(--font-size-label); font-weight: var(--font-weight-semibold); letter-spacing: var(--letter-spacing-label); text-transform: uppercase; background: var(--color-accent-subtle); color: var(--color-primitivos-madeira); border: var(--border-width-default) solid var(--color-accent-default); }
+.badge--neutro { background: var(--color-surface-sunken); color: var(--color-text-default); border-color: var(--color-border-strong); }
+.badge--leitura { background: transparent; color: var(--color-text-default); border-color: var(--color-border-default); }
+.card { display: grid; gap: var(--space-3); padding: var(--space-5); background: var(--color-surface-raised); border: var(--border-width-default) solid var(--color-border-default); border-radius: var(--radius-md); box-shadow: var(--shadow-sm); position: relative; overflow: hidden; transition: border-color var(--motion-duration-base) var(--motion-ease-light); }
+.card::before { content: ""; position: absolute; inset: 0; background: radial-gradient(120% 80% at 50% -10%, var(--color-accent-subtle), transparent 60%); opacity: 0; transition: opacity var(--motion-duration-base) var(--motion-ease-light); pointer-events: none; }
+.card:hover { border-color: var(--color-border-strong); }
+.card:hover::before { opacity: 1; }
+.card:focus-within { outline: 2px solid var(--color-focus-ring); outline-offset: 2px; }
+.card--arco { padding-top: var(--space-5); }
+.card--arco .arco-topo { width: 100%; aspect-ratio: 4 / 3; border-radius: var(--radius-arch); background: var(--color-surface-sunken); border: var(--border-width-default) solid var(--color-border-default); display: grid; place-items: center; color: var(--color-text-default); }
+.card--arco .arco-topo svg { width: 2.5rem; height: 2.5rem; }
+.card-titulo { font-family: var(--font-family-display); font-size: var(--font-size-h2); }
+.card-texto { font-size: var(--font-size-small); color: var(--color-text-muted); }
+
+/* ===== 5. tela de produto ===== */
+.produto { display: grid; gap: var(--space-6); }
+.frame-celular { width: 100%; max-width: 24.375rem; margin: 0 auto; background: var(--color-surface-default); border: var(--border-width-default) solid var(--color-border-strong); border-radius: var(--radius-md); overflow: hidden; box-shadow: var(--shadow-sm); }
+.app-top { display: flex; align-items: center; justify-content: space-between; gap: var(--space-3); padding: var(--space-3) var(--space-4); border-bottom: var(--border-width-default) solid var(--color-border-default); background: var(--color-surface-raised); }
+.app-top .icone-btn { width: var(--size-touch-min); height: var(--size-touch-min); display: grid; place-items: center; border: 0; background: transparent; color: var(--color-text-default); border-radius: var(--radius-control); cursor: pointer; }
+.app-top .icone-btn:focus-visible { outline: 2px solid var(--color-focus-ring); outline-offset: 2px; }
+.app-corpo { display: grid; gap: var(--space-4); padding: var(--space-4); }
+.app-cab { display: grid; gap: var(--space-2); }
+.app-cab h1 { font-size: var(--font-size-h2); }
+.progresso { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-1); }
+.progresso span { height: 0.25rem; border-radius: var(--radius-sm); background: var(--color-border-default); }
+.progresso span.feito { background: var(--color-accent-default); }
+.progresso span.atual { background: var(--color-text-default); }
+.planta-bloco { display: grid; gap: var(--space-2); padding: var(--space-3); background: var(--color-surface-raised); border: var(--border-width-default) solid var(--color-border-default); border-radius: var(--radius-md); }
+.planta { width: 100%; height: auto; display: block; }
+.planta .p-parede { fill: var(--color-primitivos-granito); }
+.planta .p-nave { fill: var(--color-primitivos-cal); stroke: var(--color-primitivos-granito); stroke-width: 2; }
+.planta .p-banco { stroke: var(--color-primitivos-moldura); stroke-width: 6; }
+.planta .p-altar { fill: var(--color-primitivos-madeira); }
+.planta .p-ambao { fill: var(--color-primitivos-ferro); }
+.planta .p-pia { fill: var(--color-primitivos-barrado); stroke: var(--color-primitivos-granito); stroke-width: 2; }
+.planta .p-porta { fill: var(--color-primitivos-madeira); }
+.planta .p-arco-linha { fill: none; stroke: var(--color-primitivos-telha); stroke-width: 2; }
+.planta .p-marca { fill: var(--color-raised-plain, var(--color-primitivos-branco)); stroke: var(--color-primitivos-madeira); stroke-width: 1.5; transition: fill var(--motion-duration-base) var(--motion-ease-light); }
+.planta .p-marca-texto { font-family: var(--font-family-text); font-size: var(--font-size-label); font-weight: 600; fill: var(--color-primitivos-madeira); text-anchor: middle; }
+.planta .p-marca-atual { fill: var(--color-primitivos-telha); }
+.planta .p-marca-atual + .p-marca-texto { fill: var(--color-primitivos-branco); }
+.planta-legenda { font-size: var(--font-size-label); color: var(--color-text-muted); display: flex; justify-content: space-between; }
+.paradas { display: grid; gap: var(--space-2); }
+.parada-btn { display: grid; grid-template-columns: 2.25rem 1fr auto; align-items: center; gap: var(--space-3); min-height: var(--size-touch-min); padding: var(--space-2) var(--space-3); background: var(--color-surface-raised); border: var(--border-width-default) solid var(--color-border-default); border-radius: var(--radius-control); color: var(--color-text-default); font: inherit; text-align: left; cursor: pointer; transition: background-color var(--motion-duration-fast) var(--motion-ease-light), border-color var(--motion-duration-fast) var(--motion-ease-light); }
+.parada-btn:hover { border-color: var(--color-border-strong); background: var(--color-accent-subtle); }
+.parada-btn[aria-pressed="true"] { border-color: var(--color-accent-default); border-width: var(--border-width-strong); }
+.parada-btn:focus-visible { outline: 2px solid var(--color-focus-ring); outline-offset: 2px; }
+.parada-num { width: 2.25rem; height: 2.25rem; display: grid; place-items: center; border-radius: var(--radius-sm); background: var(--color-surface-sunken); font-variant-numeric: tabular-nums; font-weight: var(--font-weight-semibold); font-size: var(--font-size-small); }
+.parada-btn[aria-pressed="true"] .parada-num { background: var(--color-accent-default); color: var(--color-accent-on); }
+.parada-nome { font-weight: var(--font-weight-semibold); }
+.parada-tempo { font-size: var(--font-size-label); color: var(--color-text-muted); font-variant-numeric: tabular-nums; }
+.painel { display: grid; gap: var(--space-4); padding: var(--space-5); background: var(--color-surface-raised); border: var(--border-width-default) solid var(--color-border-default); border-radius: var(--radius-md); }
+.painel-titulo { font-family: var(--font-family-display); font-size: var(--font-size-h1); line-height: var(--line-height-heading); }
+.painel-texto { color: var(--color-text-default); }
+.painel-acoes { display: grid; gap: var(--space-2); }
+.painel-acoes .btn { width: 100%; }
+.painel-ajustes { display: grid; gap: var(--space-2); padding-top: var(--space-3); border-top: var(--border-width-default) solid var(--color-border-default); }
+.app-busca .campo-ajuda { font-size: var(--font-size-label); }
+
+/* ===== 6. peça de marca ===== */
+.peca-wrap { display: grid; gap: var(--space-5); justify-items: center; }
+.peca { width: min(100%, 22.5rem); aspect-ratio: 4 / 5; background: var(--color-primitivos-cal); border: var(--border-width-default) solid var(--color-border-default); position: relative; overflow: hidden; display: grid; grid-template-rows: auto 1fr auto; padding: var(--space-5); color: var(--color-primitivos-madeira); }
+.peca-topo { display: flex; justify-content: space-between; align-items: baseline; font-size: var(--font-size-label); font-weight: var(--font-weight-semibold); letter-spacing: var(--letter-spacing-label); text-transform: uppercase; }
+.peca-arco { justify-self: center; align-self: center; width: 76%; aspect-ratio: 3 / 4; background: var(--color-primitivos-moldura); border-radius: var(--radius-arch); display: grid; place-items: center; text-align: center; padding: var(--space-5); position: relative; }
+.peca-arco::before { content: ""; position: absolute; inset: var(--space-3); border-radius: var(--radius-arch); border: var(--border-width-default) solid var(--color-primitivos-telha); pointer-events: none; }
+.peca-santo { display: grid; gap: var(--space-2); }
+.peca-santo .nome { font-family: var(--font-family-display); font-size: 2.25rem; line-height: var(--line-height-heading); }
+.peca-santo .data { font-size: var(--font-size-small); color: var(--color-primitivos-granito-escuro); }
+.peca-rodape { display: flex; justify-content: space-between; align-items: flex-end; gap: var(--space-3); }
+.peca-rodape .marca { font-family: var(--font-family-display); font-size: var(--font-size-h2); }
+.peca-rodape .frase { font-size: var(--font-size-small); max-width: 11rem; text-align: right; }
+.peca-nota { font-size: var(--font-size-small); color: var(--color-text-muted); max-width: var(--size-reading); text-align: center; }
+.peca-fio { width: 100%; height: var(--border-width-strong); background: var(--color-primitivos-telha); }
+
+.cartao-sobre { display: grid; gap: var(--space-4); }
+.regras { display: grid; gap: var(--space-3); }
+.regra { display: grid; grid-template-columns: 2rem 1fr; gap: var(--space-3); align-items: start; }
+.regra .icon { color: var(--color-accent-default); }
+
+/* ===== 7. movimento ===== */
+.mov-grid { display: grid; gap: var(--space-5); }
+.mov-caixa { display: grid; gap: var(--space-3); padding: var(--space-5); background: var(--color-surface-raised); border: var(--border-width-default) solid var(--color-border-default); border-radius: var(--radius-md); }
+.mov-tabela { display: grid; gap: var(--space-2); font-size: var(--font-size-small); font-variant-numeric: tabular-nums; }
+.mov-tabela div { display: flex; justify-content: space-between; gap: var(--space-3); padding-bottom: var(--space-2); border-bottom: var(--border-width-default) solid var(--color-border-default); }
+.arco-luz { width: 9rem; aspect-ratio: 3 / 4; border-radius: var(--radius-arch); background: var(--color-primitivos-moldura); position: relative; overflow: hidden; }
+.arco-luz::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, var(--color-primitivos-branco), transparent 75%); opacity: 0; }
+.mov-entrada { animation: entrada var(--motion-duration-base) var(--motion-ease-light) both; }
+.mov-entrada.atraso { animation-delay: var(--motion-duration-fast); }
+.arco-luz.acende::after { animation: luz var(--motion-duration-base) var(--motion-ease-light) both; }
+@keyframes entrada { from { opacity: 0; transform: translateY(var(--space-2)); } to { opacity: 1; transform: none; } }
+@keyframes luz { from { opacity: 0.9; } to { opacity: 0; } }
+
+/* ===== responsivo ===== */
+@media (min-width: 40rem) {
+  .cores { grid-template-columns: repeat(2, 1fr); }
+  .pares { grid-template-columns: repeat(3, 1fr); }
+  .estados { grid-template-columns: 1fr; }
+  .mov-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (min-width: 60rem) {
+  .forma-grid { grid-template-columns: 1fr 1fr; }
+  .produto { grid-template-columns: 1fr 1fr; align-items: start; }
+  .tipo { grid-template-columns: 1fr; }
+  .cores { grid-template-columns: repeat(3, 1fr); }
+  .cartao-sobre { grid-template-columns: 1fr 1fr; align-items: center; }
+  .peca-wrap { grid-template-columns: 1fr 1fr; justify-items: center; align-items: center; }
+}
+@media (min-width: 40rem) {
+  .frame-celular { max-width: 24.375rem; }
+}
+
+
+/* ===== r2: cor litúrgica do dia (enxerto da D) + regra de ação (enxerto da B) ===== */
+:root {
+  --color-liturgia-verde: #3f5a46;    /* Tempo Comum */
+  --color-liturgia-roxo: #6d5591;     /* Advento, Quaresma */
+  --color-liturgia-vermelho: #a5402f; /* Pentecostes, Paixão, mártires */
+  --color-liturgia-rosa: #9c4a6b;     /* Gaudete, Laetare */
+  --color-liturgia-branco: var(--color-primitivos-moldura); /* Natal, Páscoa: texto em madeira */
+  --cor-do-dia: var(--color-liturgia-verde);
+  --cor-do-dia-on: var(--color-primitivos-branco);
+}
+[data-tempo="roxo"] { --cor-do-dia: var(--color-liturgia-roxo); }
+[data-tempo="vermelho"] { --cor-do-dia: var(--color-liturgia-vermelho); }
+[data-tempo="rosa"] { --cor-do-dia: var(--color-liturgia-rosa); }
+[data-tempo="branco"] { --cor-do-dia: var(--color-liturgia-branco); --cor-do-dia-on: var(--color-primitivos-madeira); }
+.tempos { display: flex; flex-wrap: wrap; gap: var(--space-2); margin: var(--space-4) 0; }
+.tempos button { font: inherit; font-size: var(--font-size-small); padding: .5rem .85rem; border: 1px solid var(--color-border-default); border-radius: 4px; background: var(--color-surface-raised); color: var(--color-text-default); cursor: pointer; display: inline-flex; gap: .5rem; align-items: center; }
+.tempos button[aria-pressed="true"] { border-color: var(--color-text-default); }
+.tempos .pt { width: .7rem; height: .9rem; border-radius: 999px 999px 0 0; border: 1px solid var(--color-border-strong); }
+.missa { display: grid; gap: var(--space-4); max-width: 40rem; }
+.missa-cab { display: flex; align-items: center; gap: var(--space-3); }
+.missa-cab .faixa { width: 1.1rem; height: 1.5rem; border-radius: 999px 999px 0 0; background: var(--cor-do-dia); border: 1px solid var(--color-border-strong); transition: background-color 400ms; }
+.passo { border-top: 1px solid var(--color-border-default); padding-top: var(--space-4); display: grid; gap: var(--space-2); }
+.rubrica { color: var(--color-accent-default); font-weight: 600; font-size: var(--font-size-small); }
+.fala { font-family: var(--font-family-display); font-size: 1.25rem; line-height: 1.4; margin: 0; }
+.fala b { font-weight: 600; }
+.passo-acoes { display: flex; justify-content: space-between; align-items: center; gap: var(--space-3); margin-top: var(--space-4); }
+.btn-acao { font: inherit; font-weight: 600; background: var(--color-accent-default); color: var(--color-accent-on); border: 0; border-radius: 4px; padding: .75rem 1.1rem; cursor: pointer; }
+.btn-acao:hover { background: var(--color-accent-hover); }
+.btn-acao:focus-visible, .tempos button:focus-visible { outline: 2px solid var(--color-focus-ring); outline-offset: 3px; }
+
+
+/* ===== movimento reduzido ===== */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- 1. ASSINATURA -->
+  <header class="assinatura" id="assinatura">
+    <div class="topo">
+      <a class="wordmark" href="#assinatura" aria-label="Tolle Lege, topo da página">
+        <span class="arco-mini" aria-hidden="true"></span>
+        <span>Tolle Lege</span>
+      </a>
+      <button class="toggle" type="button" id="tema" aria-pressed="false">
+        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" id="tema-icone"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+        <span id="tema-texto">Noite na igreja</span>
+      </button>
+    </div>
+
+    <p class="wordmark-grande" role="img" aria-label="Tolle Lege">
+      <span>Tolle</span><span class="arco" aria-hidden="true"></span><span>Lege</span>
+    </p>
+    <p class="personalidade">Pedra, cal e telha. Uma igreja de verdade, aberta para ler e para rezar, sem enfeite que não esteja lá.</p>
+    <div class="dono">
+      <span class="label">Regra de dono</span>
+      <p><strong>Telha só onde se age.</strong> Todo o resto é madeira sobre cal. O barro da igreja marca o botão, a parada e o próximo passo, e mais nada.</p>
+    </div>
+  </header>
+
+  <!-- 2. COR -->
+  <section class="sec" id="cor" aria-labelledby="t-cor">
+    <div class="sec-head">
+      <span class="label">02 · Cor</span>
+      <h2 id="t-cor">Os materiais da igreja, na proporção em que aparecem</h2>
+      <p class="muted">A cor não foi escolhida no painel. Veio do modelo 3D fixo da Igreja Matriz de Resende: cal nas paredes, granito nas cantarias, barro na telha, madeira nas portas e ferro nas grades.</p>
+    </div>
+    <div class="barra" role="img" aria-label="Proporção de uso: cal 46%, moldura 14%, granito 10%, madeira 9%, ferro 6%, telha 4%">
+      <div class="share-cal"></div>
+      <div class="share-moldura"></div>
+      <div class="share-granito"></div>
+      <div class="share-madeira"></div>
+      <div class="share-ferro"></div>
+      <div class="share-telha"></div>
+    </div>
+    <p class="legenda-cor">Cal fica com a superfície. Telha fica com o que se toca. Quando a telha aparece em área grande, algo está errado.</p>
+
+    <div class="cores">
+      <div class="cor"><span class="cor-amostra a-cal"></span><div><p class="cor-nome">Cal</p><p class="cor-origem">lime_plaster, paredes. Fundo do site (surface.default).</p></div></div>
+      <div class="cor"><span class="cor-amostra a-moldura"></span><div><p class="cor-nome">Moldura</p><p class="cor-origem">molduras das janelas. Superfície afundada (surface.sunken).</p></div></div>
+      <div class="cor"><span class="cor-amostra a-granito"></span><div><p class="cor-nome">Granito</p><p class="cor-origem">cantaria de granito. Borda forte, nunca texto sobre cal.</p></div></div>
+      <div class="cor"><span class="cor-amostra a-madeira"></span><div><p class="cor-nome">Madeira</p><p class="cor-origem">portas e bancos. Tinta: todo texto de leitura (text.default).</p></div></div>
+      <div class="cor"><span class="cor-amostra a-ferro"></span><div><p class="cor-nome">Ferro</p><p class="cor-origem">ferro forjado das grades. Superfície invertida e noite.</p></div></div>
+      <div class="cor"><span class="cor-amostra a-telha"></span><div><p class="cor-nome">Telha</p><p class="cor-origem">terracotta_tile, telhado. Acento de ação (accent.default), com a escala da palette.mjs.</p></div></div>
+    </div>
+
+    <h3 class="label" style="margin-top: var(--space-7);">Pares de contraste (WCAG, calculados)</h3>
+    <div class="pares">
+      <div class="par p-cal"><span>Madeira sobre cal</span><span class="razao">11,0 : 1</span></div>
+      <div class="par p-cal-muted"><span>Granito escuro sobre cal (muted)</span><span class="razao">6,2 : 1</span></div>
+      <div class="par p-telha"><span>Branco sobre telha (accent.on)</span><span class="razao">4,9 : 1</span></div>
+      <div class="par p-moldura"><span>Madeira sobre moldura</span><span class="razao">8,6 : 1</span></div>
+      <div class="par p-ferro"><span>Cal sobre ferro</span><span class="razao">12,5 : 1</span></div>
+      <div class="par p-madeira"><span>Cal sobre madeira</span><span class="razao">11,0 : 1</span></div>
+    </div>
+  </section>
+
+  <!-- 3. TIPOGRAFIA -->
+  <section class="sec" id="tipo" aria-labelledby="t-tipo">
+    <div class="sec-head">
+      <span class="label">03 · Tipografia</span>
+      <h2 id="t-tipo">Brygada 1918 para a voz da igreja, Figtree para o uso</h2>
+      <p class="muted">Brygada é uma romana de contraste baixo, feita para inscrição e texto impresso. Figtree é humanista de uso diário. Pares de estrutura diferente, sem duas grotescas parecidas.</p>
+    </div>
+    <div class="tipo">
+      <div class="tipo-linha">
+        <p class="tipo-display">Visita guiada</p>
+        <span class="tipo-spec">display · Brygada 1918 · clamp 2.5 → 4.75 rem · lh 1.05</span>
+      </div>
+      <div class="tipo-linha">
+        <h1>Igreja Matriz de Resende</h1>
+        <span class="tipo-spec">h1 · Brygada 1918 · 1.75 → 2.5 rem · lh 1.2</span>
+      </div>
+      <div class="tipo-linha">
+        <h2 class="tipo-h2">A Palavra é lida em voz alta, do ambão</h2>
+        <span class="tipo-spec">h2 · Brygada 1918 · 1.375 rem</span>
+      </div>
+      <div class="tipo-linha">
+        <p class="tipo-body">A nave é o espaço do povo. Você pode sentar, ficar de pé ou ajoelhar. Se quiser só olhar, o roteiro leva uns vinte minutos e não exige nada de você.</p>
+        <span class="tipo-spec">body · Figtree 400 · 1 rem · lh 1.55 · medida 40 rem</span>
+      </div>
+      <div class="tipo-linha">
+        <p class="tipo-small">Horários de missa podem mudar em feriados. Confirme com a secretaria da paróquia.</p>
+        <span class="tipo-spec">small · Figtree 400 · 0.875 rem</span>
+      </div>
+      <div class="tipo-linha">
+        <span class="label">Parada 2 de 5 · ambão</span>
+        <span class="tipo-spec">label · Figtree 600 · 0.75 rem · caixa-alta · tracking 0.12em</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. FORMA E COMPONENTES -->
+  <section class="sec" id="forma" aria-labelledby="t-forma">
+    <div class="sec-head">
+      <span class="label">04 · Forma e componentes</span>
+      <h2 id="t-forma">O arco é a forma. Todo o resto é reto, com canto de 2 a 4 px</h2>
+      <p class="muted">Arco só em imagem, cartão de destaque e a marca. Controles, campos e painéis ficam com canto de 4 px. Sombra mínima: um fio de luz natural. No escuro, a sombra vira borda.</p>
+    </div>
+
+    <div class="forma-grid">
+      <div class="bloco">
+        <span class="label">Botões · normal, hover, foco, desabilitado</span>
+        <div class="estados">
+          <div class="estado-linha"><span class="label">Primário</span><div class="botoes">
+            <button class="btn btn--primary" type="button">Ouvir a parada</button>
+            <button class="btn btn--primary is-hover" type="button">Hover</button>
+            <button class="btn btn--primary is-focus" type="button">Foco</button>
+            <button class="btn btn--primary" type="button" disabled>Desabilitado</button>
+          </div></div>
+          <div class="estado-linha"><span class="label">Secundário</span><div class="botoes">
+            <button class="btn btn--secondary" type="button">Marcar visita</button>
+            <button class="btn btn--secondary is-hover" type="button">Hover</button>
+            <button class="btn btn--secondary is-focus" type="button">Foco</button>
+            <button class="btn btn--secondary" type="button" disabled>Desabilitado</button>
+          </div></div>
+          <div class="estado-linha"><span class="label">Ghost</span><div class="botoes">
+            <button class="btn btn--ghost" type="button">Pular para o altar</button>
+            <button class="btn btn--ghost is-hover" type="button">Hover</button>
+            <button class="btn btn--ghost is-focus" type="button">Foco</button>
+            <button class="btn btn--ghost" type="button" disabled>Desabilitado</button>
+          </div></div>
+          <div class="estado-linha"><span class="label">Destrutivo</span><div class="botoes">
+            <button class="btn btn--danger" type="button">Remover roteiro</button>
+            <button class="btn btn--danger is-hover" type="button">Hover</button>
+            <button class="btn btn--danger is-focus" type="button">Foco</button>
+            <button class="btn btn--danger" type="button" disabled>Desabilitado</button>
+          </div></div>
+        </div>
+      </div>
+
+      <div class="bloco">
+        <span class="label">Campos</span>
+        <div class="campo">
+          <label class="campo-label" for="busca">Paróquia ou cidade</label>
+          <div class="controle">
+            <input class="input" id="busca" type="text" placeholder="Ex.: Resende, RJ" aria-describedby="busca-ajuda">
+          </div>
+          <span class="campo-ajuda" id="busca-ajuda">Usamos para mostrar horários perto de você.</span>
+        </div>
+        <div class="campo">
+          <label class="campo-label" for="nome">Nome da visita</label>
+          <div class="controle">
+            <input class="input" id="nome" type="text" value="Visita de domingo" aria-invalid="true" aria-describedby="nome-erro">
+          </div>
+          <span class="campo-erro" id="nome-erro">
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="12" x2="12" y1="8" y2="12"/><line x1="12" x2="12.01" y1="16" y2="16"/></svg>
+            Use até 40 caracteres.
+          </span>
+        </div>
+        <div class="campo">
+          <label class="campo-label" for="roteiro">Roteiro</label>
+          <div class="controle">
+            <select class="select" id="roteiro" aria-describedby="roteiro-ajuda">
+              <option>Completo, cerca de 40 min</option>
+              <option>Rápido, cerca de 15 min</option>
+              <option>Só a nave</option>
+            </select>
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+          </div>
+          <span class="campo-ajuda" id="roteiro-ajuda">Você pode trocar depois.</span>
+        </div>
+        <label class="check"><input type="checkbox" checked> Já li a parada anterior</label>
+        <div class="switch">
+          <span id="sw-label">Narração em voz alta</span>
+          <button class="switch-track" type="button" role="switch" aria-checked="false" aria-labelledby="sw-label" id="narracao"></button>
+        </div>
+        <div>
+          <span class="badge">Parada 2 de 5</span>
+          <span class="badge badge--neutro">Desde 1 hora</span>
+          <span class="badge badge--leitura">Leitura</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="cards" style="margin-top: var(--space-7); display: grid; gap: var(--space-4);">
+      <article class="card card--arco">
+        <div class="arco-topo" aria-hidden="true">
+          <svg class="icon" viewBox="0 0 24 24"><path d="M4 21V11a8 8 0 0 1 16 0v10"/><path d="M4 21h16"/></svg>
+        </div>
+        <span class="label">Roteiro</span>
+        <h3 class="card-titulo">Pia batismal</h3>
+        <p class="card-texto">Onde se batiza. A primeira coisa que o rito toca é a água.</p>
+      </article>
+      <article class="card">
+        <span class="label">Cartão sem arco</span>
+        <h3 class="card-titulo">Horários da semana</h3>
+        <p class="card-texto">O arco fica só no destaque. Cartão comum tem canto de 4 px.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- 5. TELA DE PRODUTO -->
+  <section class="sec" id="produto" aria-labelledby="t-produto">
+    <div class="sec-head">
+      <span class="label">05 · Tela de produto</span>
+      <h2 id="t-produto">Visita guiada, no celular</h2>
+      <p class="muted">Uma parada por vez. A planta mostra onde você está e o painel mostra o que fazer ali. Demonstração em 390 px.</p>
+    </div>
+
+    <div class="produto">
+      <div class="frame-celular" aria-label="Simulação da tela de visita guiada">
+        <header class="app-top">
+          <button class="icone-btn" type="button" aria-label="Voltar">
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m12 19-7-7 7-7"/><path d="M19 12H5"/></svg>
+          </button>
+          <span class="wordmark" style="font-size: var(--font-size-body);"><span class="arco-mini" aria-hidden="true"></span><span>Tolle Lege</span></span>
+          <button class="icone-btn" type="button" aria-label="Compartilhar roteiro">
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/><polyline points="16 6 12 2 8 6"/><line x1="12" x2="12" y1="2" y2="15"/></svg>
+          </button>
+        </header>
+
+        <div class="app-corpo">
+          <div class="app-cab">
+            <span class="label">Igreja Matriz de Resende</span>
+            <h1>Visita guiada</h1>
+            <div class="progresso" role="img" aria-label="Progresso: 1 de 3 paradas feitas, parada 2 em andamento">
+              <span class="feito"></span><span class="atual"></span><span></span>
+            </div>
+          </div>
+
+          <div class="planta-bloco">
+            <svg class="planta" viewBox="0 0 240 300" role="img" aria-labelledby="planta-t">
+              <title id="planta-t">Planta da igreja: pia batismal na entrada, ambão à frente da nave, altar no fundo</title>
+              <rect class="p-parede" x="4" y="4" width="232" height="292" rx="2"/>
+              <rect class="p-nave" x="16" y="16" width="208" height="268"/>
+              <rect class="p-altar" x="92" y="36" width="56" height="24"/>
+              <rect class="p-ambao" x="72" y="92" width="96" height="14"/>
+              <rect class="p-banco" x="30" y="150" width="180" height="0"/>
+              <line class="p-banco" x1="34" y1="150" x2="206" y2="150"/>
+              <line class="p-banco" x1="34" y1="176" x2="206" y2="176"/>
+              <line class="p-banco" x1="34" y1="202" x2="206" y2="202"/>
+              <circle class="p-pia" cx="44" cy="250" r="12"/>
+              <rect class="p-porta" x="104" y="268" width="32" height="24"/>
+              <path class="p-arco-linha" d="M104 268 V 258 A 16 16 0 0 1 136 258 V 268"/>
+              <circle class="p-marca-atual" cx="44" cy="250" r="0"/>
+              <g>
+                <circle class="p-marca p-marca-atual" cx="44" cy="232" r="9"/>
+                <text class="p-marca-texto" x="44" y="236">1</text>
+              </g>
+              <g>
+                <circle class="p-marca" cx="120" cy="99" r="9"/>
+                <text class="p-marca-texto" x="120" y="103">2</text>
+              </g>
+              <g>
+                <circle class="p-marca" cx="120" cy="56" r="9"/>
+                <text class="p-marca-texto" x="120" y="60">3</text>
+              </g>
+            </svg>
+            <div class="planta-legenda"><span>Entrada</span><span>Altar ao fundo</span></div>
+          </div>
+
+          <div class="paradas" role="group" aria-label="Paradas do roteiro">
+            <button class="parada-btn" type="button" aria-pressed="false" data-parada="0">
+              <span class="parada-num">1</span><span class="parada-nome">Pia batismal</span><span class="parada-tempo">4 min</span>
+            </button>
+            <button class="parada-btn" type="button" aria-pressed="true" data-parada="1">
+              <span class="parada-num">2</span><span class="parada-nome">Ambão</span><span class="parada-tempo">6 min</span>
+            </button>
+            <button class="parada-btn" type="button" aria-pressed="false" data-parada="2">
+              <span class="parada-num">3</span><span class="parada-nome">Altar</span><span class="parada-tempo">5 min</span>
+            </button>
+          </div>
+
+          <article class="painel" id="painel" aria-live="polite">
+            <span class="label" id="painel-rotulo">Parada 2 de 3 · postura: de pé</span>
+            <h2 class="painel-titulo" id="painel-titulo">Ambão</h2>
+            <p class="painel-texto" id="painel-texto">É a mesa da Palavra. Daqui se lêem as leituras e o Evangelho antes da homilia. Repare que ele fica à frente da nave, separado do altar: são dois gestos diferentes da missa.</p>
+            <div class="painel-acoes">
+              <button class="btn btn--primary" type="button">
+                <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                Próxima parada: Altar
+              </button>
+              <button class="btn btn--secondary" type="button">Marcar como visitada</button>
+            </div>
+            <div class="painel-ajustes">
+              <label class="check"><input type="checkbox"> Já li o trecho do Evangelho</label>
+              <div class="switch">
+                <span id="sw2-label">Narração em voz alta</span>
+                <button class="switch-track" type="button" role="switch" aria-checked="false" aria-labelledby="sw2-label"></button>
+              </div>
+            </div>
+          </article>
+
+          <div class="campo app-busca">
+            <label class="campo-label" for="busca-parada">Ir para uma parada</label>
+            <div class="controle">
+              <input class="input" id="busca-parada" type="search" placeholder="Pia, ambão, altar…">
+            </div>
+            <span class="campo-ajuda">Busca nas paradas deste roteiro.</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="cartao-sobre">
+        <div class="regras">
+          <div class="regra">
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+            <div><p><strong>A planta é a navegação.</strong></p><p class="muted">Cada número é uma parada. Toque no número ou na parada, o painel acompanha.</p></div>
+          </div>
+          <div class="regra">
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+            <div><p><strong>Telha só na ação.</strong></p><p class="muted">O botão de próxima parada é o único elemento de telha no painel. A parada atual usa a telha no número.</p></div>
+          </div>
+        </div>
+        <p class="muted">Textos de exemplo. Conteúdo final da visita deve ser conferido com a paróquia.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. PEÇA DE MARCA -->
+
+  <!-- r2. MISSA PASSO A PASSO -->
+  <section class="sec" id="missa" aria-labelledby="t-missa">
+    <div class="sec-head">
+      <span class="label">r2 · Telha faz, madeira diz</span>
+      <h2 id="t-missa">Missa passo a passo: a regra do missal, com o barro da igreja</h2>
+      <p class="muted">O que se faz (postura, gesto, botão) vem em telha. O que se diz vem em madeira. A cor litúrgica do dia aparece só num arco pequeno, como marcador.</p>
+    </div>
+    <div class="tempos" role="group" aria-label="Tempo litúrgico de exemplo">
+  <button type="button" data-t="verde" aria-pressed="true"><span class="pt" style="background:var(--color-liturgia-verde)"></span>Tempo Comum</button>
+  <button type="button" data-t="roxo" aria-pressed="false"><span class="pt" style="background:var(--color-liturgia-roxo)"></span>Advento</button>
+  <button type="button" data-t="vermelho" aria-pressed="false"><span class="pt" style="background:var(--color-liturgia-vermelho)"></span>Pentecostes</button>
+  <button type="button" data-t="rosa" aria-pressed="false"><span class="pt" style="background:var(--color-liturgia-rosa)"></span>Gaudete</button>
+  <button type="button" data-t="branco" aria-pressed="false"><span class="pt" style="background:var(--color-liturgia-branco)"></span>Natal</button>
+</div>
+    <div class="missa">
+      <div class="missa-cab"><span class="faixa" aria-hidden="true"></span><span class="label" id="missa-tempo">Tempo Comum · verde</span></div>
+      <div class="passo">
+        <span class="label">Ritos iniciais · 2 de 9</span>
+        <span class="rubrica">De pé. Faça o sinal da cruz.</span>
+        <p class="fala">Em nome do Pai, e do Filho, e do Espírito Santo. <b>Amém.</b></p>
+        <p class="muted">O padre começa; o povo responde a parte em negrito.</p>
+      </div>
+      <div class="passo">
+        <span class="rubrica">Continue de pé.</span>
+        <p class="fala">O Senhor esteja convosco. <b>Ele está no meio de nós.</b></p>
+      </div>
+      <div class="passo-acoes"><span class="muted">Próximo: ato penitencial</span><button class="btn-acao" type="button">Próximo passo</button></div>
+    </div>
+  </section>
+
+  <section class="sec" id="peca" aria-labelledby="t-peca">
+    <div class="sec-head">
+      <span class="label">06 · Peça de marca</span>
+      <h2 id="t-peca">Santo do dia, em 4:5 para compartilhar</h2>
+      <p class="muted">Formato 1080 × 1350. Sem foto de santo no hero: o arco guarda o nome, a cal dá o fundo e a telha vira um fio. Exibido em 360 px de largura.</p>
+    </div>
+    <div class="peca-wrap">
+      <figure class="peca" role="img" aria-label="Imagem de partilha: santo do dia, exemplo São Francisco de Assis, 4 de outubro">
+        <div class="peca-topo"><span>Santo do dia</span><span>04.10</span></div>
+        <div class="peca-arco">
+          <div class="peca-santo">
+            <span class="label">Exemplo</span>
+            <span class="nome">São Francisco de Assis</span>
+            <span class="data">4 de outubro · memória</span>
+          </div>
+        </div>
+        <div class="peca-rodape">
+          <span class="marca">Tolle Lege</span>
+          <span class="frase">Toma e lê. Uma linha por dia.</span>
+        </div>
+      </figure>
+      <div class="cartao-sobre" style="justify-items: start;">
+        <div class="regras">
+          <div class="regra">
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 21V11a8 8 0 0 1 16 0v10"/><path d="M4 21h16"/></svg>
+            <div><p><strong>O arco é o recorte.</strong></p><p class="muted">A forma da porta da igreja enquadra o nome. Serve de foto, de moldura e de ícone.</p></div>
+          </div>
+          <div class="regra">
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/></svg>
+            <div><p><strong>O fio de telha.</strong></p><p class="muted">Uma linha de 2 px no rodapé e uma moldura interna. Nada de degradê nem de brilho.</p></div>
+          </div>
+        </div>
+        <p class="peca-nota">O nome do santo e a data vêm do calendário litúrgico do site. Este exemplo é fixo.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. MOVIMENTO -->
+  <section class="sec" id="movimento" aria-labelledby="t-mov">
+    <div class="sec-head">
+      <span class="label">07 · Movimento</span>
+      <h2 id="t-mov">Luz que muda, em 400 ms</h2>
+      <p class="muted">Nada salta. A luz passa pelo botão e pelo arco como se o sol se movesse pela nave. Com movimento reduzido, tudo aparece de uma vez.</p>
+    </div>
+    <div class="mov-grid">
+      <div class="mov-caixa">
+        <span class="label">Hover no botão · luz passa</span>
+        <button class="btn btn--primary" type="button">Passe o mouse aqui</button>
+        <div class="mov-tabela">
+          <div><span>Duração base</span><span>400 ms</span></div>
+          <div><span>Curva</span><span>cubic-bezier(.2,.6,.2,1)</span></div>
+          <div><span>Propriedades</span><span>transform, background-color</span></div>
+        </div>
+      </div>
+      <div class="mov-caixa">
+        <span class="label">Entrada do arco · luz acende</span>
+        <div class="arco-luz acende" id="arco-luz" aria-hidden="true"></div>
+        <button class="btn btn--secondary" type="button" id="repete-luz">Ver de novo</button>
+        <div class="mov-tabela">
+          <div><span>Rápida (press, foco)</span><span>160 ms</span></div>
+          <div><span>Lenta (tema)</span><span>400 ms</span></div>
+          <div><span>Reduzida</span><span>sem animação</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="mov-caixa mov-entrada" style="margin-top: var(--space-5);">
+      <span class="label">Entrada em escada · 400 ms, atraso de 160 ms</span>
+      <p class="mov-entrada atraso">Entram uma a uma, como as pessoas entram na nave.</p>
+    </div>
+  </section>
+
+  <footer class="sec" style="border-bottom: 0;">
+    <p class="muted">Tolle Lege · direção c-cal-e-telha · rodada r1</p>
+  </footer>
+</div>
+
+<script>
+(function () {
+  var root = document.documentElement;
+  var tema = document.getElementById('tema');
+  var temaTexto = document.getElementById('tema-texto');
+  var temaIcone = document.getElementById('tema-icone');
+  var SOL = '<circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/>';
+  var LUA = '<path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/>';
+
+  tema.addEventListener('click', function () {
+    var escuro = root.getAttribute('data-theme') !== 'dark';
+    root.setAttribute('data-theme', escuro ? 'dark' : 'light');
+    tema.setAttribute('aria-pressed', String(escuro));
+    temaTexto.textContent = escuro ? 'Dia na igreja' : 'Noite na igreja';
+    temaIcone.innerHTML = escuro ? SOL : LUA;
+  });
+
+  document.querySelectorAll('.switch-track').forEach(function (s) {
+    s.addEventListener('click', function () {
+      s.setAttribute('aria-checked', String(s.getAttribute('aria-checked') !== 'true'));
+    });
+  });
+
+  var paradas = [
+    { t: 'Pia batismal', r: 'Parada 1 de 3 · postura: de pé', x: 'É onde se batiza. A primeira coisa que o rito toca é a água. Fique um momento e repare na pedra: ela é a mesma das cantarias por fora.' },
+    { t: 'Ambão', r: 'Parada 2 de 3 · postura: de pé', x: 'É a mesa da Palavra. Daqui se lêem as leituras e o Evangelho antes da homilia. Repare que ele fica à frente da nave, separado do altar: são dois gestos diferentes da missa.' },
+    { t: 'Altar', r: 'Parada 3 de 3 · postura: sentado', x: 'Mesa do sacrifício eucarístico. Ela fica no fundo, em frente aos fiéis. Sente-se por um momento e deixe o olhar subir até o arco da capela-mor.' }
+  ];
+  var btns = document.querySelectorAll('.parada-btn');
+  var titulo = document.getElementById('painel-titulo');
+  var texto = document.getElementById('painel-texto');
+  var rotulo = document.getElementById('painel-rotulo');
+  var marcas = document.querySelectorAll('.p-marca');
+  var ordem = [2, 1, 0];
+
+  function ir(i) {
+    btns.forEach(function (b, k) { b.setAttribute('aria-pressed', String(k === i)); });
+    titulo.textContent = paradas[i].t;
+    rotulo.textContent = paradas[i].r;
+    texto.textContent = paradas[i].x;
+    marcas.forEach(function (m) { m.classList.remove('p-marca-atual'); });
+    var g = marcas[ordem[i]];
+    if (g) g.classList.add('p-marca-atual');
+  }
+  btns.forEach(function (b) {
+    b.addEventListener('click', function () { ir(Number(b.getAttribute('data-parada'))); });
+  });
+
+  var arco = document.getElementById('arco-luz');
+  document.getElementById('repete-luz').addEventListener('click', function () {
+    arco.classList.remove('acende');
+    void arco.offsetWidth;
+    arco.classList.add('acende');
+  });
+})();
+</script>
+<script>
+document.querySelectorAll(".tempos button").forEach((b) => b.addEventListener("click", () => {
+  const t = b.dataset.t, nome = b.textContent.trim();
+  if (t === "verde") document.documentElement.removeAttribute("data-tempo"); else document.documentElement.dataset.tempo = t;
+  document.querySelectorAll(".tempos button").forEach((x) => x.setAttribute("aria-pressed", String(x === b)));
+  const m = document.getElementById("missa-tempo"); if (m) m.textContent = nome + " · " + t;
+  const p = document.getElementById("portal-tempo"); if (p) p.textContent = "Hoje · " + nome;
+}));
+</script>
+</body>
+</html>

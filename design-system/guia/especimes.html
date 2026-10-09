@@ -1,0 +1,357 @@
+<!doctype html>
+<!-- ds-forge: ignore-file (gerado por specimen.mjs) -->
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Espécimes · Tolle Lege</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Brygada+1918:wght@400;500;600;700&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+/* gerado por ds-forge/tokens-build a partir de design-system\tokens\componentes.json, design-system\tokens\dimensoes.json, design-system\tokens\movimento.json, design-system\tokens\primitivos.json, design-system\tokens\semanticos.json, design-system\tokens\tipografia.json - não edite à mão */
+:root {
+  --share-cal: 46;  /* proporção de uso, cal */
+  --share-moldura: 14;
+  --share-granito: 10;
+  --share-madeira: 9;
+  --share-ferro: 6;
+  --share-telha: 4;  /* ação, pequena por regra */
+  --space-1: 4px;  /* grade de 4 */
+  --space-2: 8px;  /* grade de 4 */
+  --space-3: 12px;  /* grade de 4 */
+  --space-4: 16px;  /* grade de 4 */
+  --space-5: 24px;  /* grade de 4 */
+  --space-6: 32px;  /* grade de 4 */
+  --space-7: 48px;  /* grade de 4 */
+  --space-8: 64px;  /* grade de 4 */
+  --radius-none: 0;  /* sem canto */
+  --radius-sm: 2px;  /* chip, pílula de estado */
+  --radius-md: 4px;  /* cartão e painel */
+  --radius-control: 4px;  /* botão, campo */
+  --radius-arch: 999px 999px 2px 2px;  /* forma-assinatura: arco da porta (topo semicircular, base reta) */
+  --border-width-default: 1px;  /* fio padrão */
+  --border-width-strong: 2px;  /* destaque e foco de tela */
+  --shadow-sm: 0 1px 2px color-mix(in oklch, var(--color-primitivos-madeira) 12%, transparent);  /* luz natural mínima (claro). No escuro, vira borda. */
+  --shadow-none: none;  /* escuro: borda no lugar de sombra */
+  --size-control-md: 2.75rem;  /* altura de controle, toque ≥ 44px */
+  --size-control-sm: 2.25rem;  /* altura de chip */
+  --size-icon: 1.25rem;  /* ícone monoline */
+  --size-layout-max: 72rem;  /* largura da página */
+  --size-reading: 40rem;  /* medida de leitura */
+  --size-touch-min: 2.75rem;  /* alvo de toque mínimo */
+  --motion-duration-fast: 160ms;  /* press, foco, hover de controle */
+  --motion-duration-base: 400ms;  /* luz que muda, tema, entrada */
+  --motion-duration-slow: 700ms;  /* reserva, não usada em componente */
+  --motion-ease-light: cubic-bezier(0.2, 0.6, 0.2, 1);  /* curva da luz: entra rápido, assenta */
+  --color-marca-50: oklch(97.7% 0.003 38.79);
+  --color-marca-100: oklch(94.58% 0.0103 38.79);
+  --color-marca-200: oklch(89.27% 0.0264 38.79);
+  --color-marca-300: oklch(82.25% 0.0588 38.79);
+  --color-marca-400: oklch(72.93% 0.1109 38.79);
+  --color-marca-500: oklch(63.92% 0.1371 38.79);
+  --color-marca-600: oklch(55.4% 0.1189 38.79);  /* cor-âncora · origem: telha de barro, terracotta_tile, modelo 3D Igreja Matriz de Resende */
+  --color-marca-700: oklch(47.42% 0.0957 38.79);
+  --color-marca-800: oklch(39.43% 0.0712 38.79);
+  --color-marca-900: oklch(31.95% 0.0495 38.79);
+  --color-marca-950: oklch(23.97% 0.0312 38.79);
+  --color-neutro-50: oklch(98.5% 0.004 38.79);
+  --color-neutro-100: oklch(96.7% 0.004 38.79);
+  --color-neutro-200: oklch(92.2% 0.0143 38.79);
+  --color-neutro-300: oklch(87% 0.0143 38.79);
+  --color-neutro-400: oklch(70.8% 0.0143 38.79);
+  --color-neutro-500: oklch(55.6% 0.0143 38.79);
+  --color-neutro-600: oklch(43.9% 0.0143 38.79);
+  --color-neutro-700: oklch(37.1% 0.0143 38.79);
+  --color-neutro-800: oklch(26.9% 0.0143 38.79);
+  --color-neutro-900: oklch(20.5% 0.0121 38.79);
+  --color-neutro-950: oklch(14.5% 0.0121 38.79);
+  --color-erro-50: oklch(97.7% 0.0028 27);
+  --color-erro-100: oklch(94.6% 0.0099 27);
+  --color-erro-200: oklch(89.3% 0.0254 27);
+  --color-erro-300: oklch(82.3% 0.0567 27);
+  --color-erro-400: oklch(73% 0.1075 27);
+  --color-erro-500: oklch(64% 0.1636 27);
+  --color-erro-600: oklch(55.5% 0.1508 27);
+  --color-erro-700: oklch(47.5% 0.1213 27);
+  --color-erro-800: oklch(39.5% 0.0902 27);
+  --color-erro-900: oklch(32% 0.0627 27);
+  --color-erro-950: oklch(24% 0.0393 27);
+  --color-primitivos-cal: oklch(97.23% 0.004 106.47);  /* origem: lime_plaster, paredes da igreja (modelo 3D Igreja Matriz de Resende). Fundo do site. */
+  --color-primitivos-branco: oklch(98.78% 0.0013 106.42);  /* origem: cal mais clara, cartões. Texto sobre telha. */
+  --color-primitivos-moldura: oklch(88.92% 0.006 239.83);  /* origem: molduras das janelas (modelo 3D). Superfície afundada. */
+  --color-primitivos-barrado: oklch(78.99% 0.0159 241.83);  /* origem: barrado pintado (modelo 3D). Bordas. */
+  --color-primitivos-granito: oklch(65.61% 0.0121 243.74);  /* origem: cantaria de granito (modelo 3D). Borda forte, nunca texto sobre cal. */
+  --color-primitivos-granito-escuro: oklch(47.4% 0.012 238.73);  /* origem: granito escurecido para texto secundário AA sobre cal e moldura. */
+  --color-primitivos-telha: oklch(55.4% 0.1189 38.79);  /* origem: terracotta_tile, telha de barro (modelo 3D). Acento de ação. */
+  --color-primitivos-telha-escura: oklch(47.47% 0.0962 39.03);  /* origem: telha escurecida, hover. */
+  --color-primitivos-telha-clara: oklch(94.58% 0.0103 38.79);  /* origem: telha clarificada (palette.mjs, marca-100). Destaque suave. */
+  --color-primitivos-madeira: oklch(34.03% 0.0446 49.05);  /* origem: madeira escura das portas (modelo 3D). Tinta. */
+  --color-primitivos-ferro: oklch(30.18% 0.0023 67.74);  /* origem: ferro forjado das grades (modelo 3D). Superfície invertida, noite. */
+  --color-primitivos-erro: oklch(47.5% 0.1213 27);  /* origem: palette.mjs, erro-700. Feedback de erro. */
+  --color-primitivos-noite-base: oklch(22.81% 0.0195 52.41);  /* origem: madeira em noite. Fundo do modo escuro. */
+  --color-primitivos-noite-raised: oklch(25.82% 0.0223 57.58);  /* origem: madeira em noite, elevação 1. */
+  --color-primitivos-noite-sunken: oklch(18% 0.014 52);  /* origem: madeira em noite, afundado. */
+  --color-primitivos-noite-ferro: oklch(34.49% 0.0037 84.58);  /* origem: ferro em noite. Linhas no escuro. */
+  --color-primitivos-noite-cal: oklch(93.44% 0.0099 87.47);  /* origem: cal sob luz de vela. Texto no escuro. */
+  --color-primitivos-noite-granito: oklch(73.43% 0.0118 243.71);  /* origem: granito sob luz de vela. Texto secundário no escuro. */
+  --color-primitivos-noite-telha: oklch(74.09% 0.1113 35.58);  /* origem: telha sob luz de vela. Acento no escuro. */
+  --color-primitivos-noite-telha-clara: oklch(82% 0.075 36);  /* origem: telha clarificada, hover no escuro. */
+  --color-primitivos-noite-telha-fundo: oklch(32% 0.05 40);  /* origem: telha escurecida, fundo de destaque no escuro. */
+  --color-primitivos-noite-erro: oklch(74% 0.11 27);  /* origem: erro clarificado no escuro. */
+  --color-liturgia-verde: oklch(43.97% 0.0461 152.24);  /* origem: cor litúrgica do Tempo Comum (calendário que o site já calcula). Fundo do portal/arco no dia verde. */
+  --color-liturgia-roxo: oklch(49.96% 0.0964 301.43);  /* origem: cor litúrgica do Advento e da Quaresma (já usada em liturgical-year/seasonInfo.ts). */
+  --color-liturgia-vermelho: oklch(50.7% 0.1373 31.74);  /* origem: cor litúrgica de Pentecostes, Paixão e mártires (#b0463a do site, escurecido para AA). Fica perto da telha: nunca usar como ação. */
+  --color-liturgia-rosa: oklch(52.19% 0.1153 356.47);  /* origem: cor litúrgica de Gaudete e Laetare. Substitui pink-300/400 do Tailwind. */
+  --color-liturgia-branco: var(--color-primitivos-moldura);  /* origem: cor litúrgica do Natal e da Páscoa; branco vira moldura clara, texto em madeira. */
+  --color-surface-default: var(--color-primitivos-cal);  /* uso: surface.default (light cal, dark noite-base) */
+  --color-surface-raised: var(--color-primitivos-branco);  /* uso: surface.raised (light branco, dark noite-raised) */
+  --color-surface-sunken: var(--color-primitivos-moldura);  /* uso: surface.sunken (light moldura, dark noite-sunken) */
+  --color-surface-inverse: var(--color-primitivos-ferro);  /* uso: surface.inverse (light ferro, dark noite-cal) */
+  --color-text-default: var(--color-primitivos-madeira);  /* uso: text.default (light madeira, dark noite-cal) */
+  --color-text-muted: var(--color-primitivos-granito-escuro);  /* uso: text.muted (light granito-escuro, dark noite-granito) */
+  --color-text-inverse: var(--color-primitivos-cal);  /* uso: text.inverse (light cal, dark ferro) */
+  --color-border-default: var(--color-primitivos-barrado);  /* uso: border.default (light barrado, dark noite-ferro) */
+  --color-border-strong: var(--color-primitivos-granito);  /* uso: border.strong (light granito, dark noite-granito) */
+  --color-accent-default: var(--color-primitivos-telha);  /* uso: accent.default (light telha, dark noite-telha) */
+  --color-accent-hover: var(--color-primitivos-telha-escura);  /* uso: accent.hover (light telha-escura, dark noite-telha-clara) */
+  --color-accent-on: var(--color-primitivos-branco);  /* uso: accent.on (light branco, dark noite-base) */
+  --color-accent-subtle: var(--color-primitivos-telha-clara);  /* uso: accent.subtle (light telha-clara, dark noite-telha-fundo) */
+  --color-feedback-danger: var(--color-primitivos-erro);  /* uso: feedback.danger (light erro, dark noite-erro) */
+  --color-focus-ring: var(--color-primitivos-telha);  /* uso: focus.ring (light telha, dark noite-telha) */
+  --color-dia-default: var(--color-liturgia-verde);  /* uso: arco do nome, portal da home, arquinho de seção. Valor do dia trocado em runtime. */
+  --color-dia-on: var(--color-primitivos-branco);  /* uso: texto sobre o portal (no Natal/Páscoa vira madeira). */
+  --font-family-display: "Brygada 1918", Georgia, serif;  /* display: Brygada 1918 (romana de contraste baixo, inscrição). Não é da lista do cemitério. */
+  --font-family-text: "Figtree", system-ui, sans-serif;  /* texto e UI: Figtree (humanista contemporâneo). */
+  --font-size-display: clamp(2.5rem, 1.6rem + 4vw, 4.75rem);  /* display, até 76px */
+  --font-size-h1: clamp(1.75rem, 1.35rem + 1.6vw, 2.5rem);  /* h1 */
+  --font-size-h2: 1.375rem;  /* h2 */
+  --font-size-body: 1rem;  /* corpo */
+  --font-size-small: 0.875rem;  /* texto de apoio */
+  --font-size-label: 0.75rem;  /* label caixa-alta */
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --line-height-tight: 1.05;  /* display */
+  --line-height-heading: 1.2;  /* títulos */
+  --line-height-body: 1.55;  /* corpo */
+  --letter-spacing-label: 0.12em;  /* caixa-alta de label */
+}
+
+[data-theme="dark"] {
+  --color-surface-default: var(--color-primitivos-noite-base);
+  --color-surface-raised: var(--color-primitivos-noite-raised);
+  --color-surface-sunken: var(--color-primitivos-noite-sunken);
+  --color-surface-inverse: var(--color-primitivos-noite-cal);
+  --color-text-default: var(--color-primitivos-noite-cal);
+  --color-text-muted: var(--color-primitivos-noite-granito);
+  --color-text-inverse: var(--color-primitivos-ferro);
+  --color-border-default: var(--color-primitivos-noite-ferro);
+  --color-border-strong: var(--color-primitivos-noite-granito);
+  --color-accent-default: var(--color-primitivos-noite-telha);
+  --color-accent-hover: var(--color-primitivos-noite-telha-clara);
+  --color-accent-on: var(--color-primitivos-noite-base);
+  --color-accent-subtle: var(--color-primitivos-noite-telha-fundo);
+  --color-feedback-danger: var(--color-primitivos-noite-erro);
+  --color-focus-ring: var(--color-primitivos-noite-telha);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --color-surface-default: var(--color-primitivos-noite-base);
+    --color-surface-raised: var(--color-primitivos-noite-raised);
+    --color-surface-sunken: var(--color-primitivos-noite-sunken);
+    --color-surface-inverse: var(--color-primitivos-noite-cal);
+    --color-text-default: var(--color-primitivos-noite-cal);
+    --color-text-muted: var(--color-primitivos-noite-granito);
+    --color-text-inverse: var(--color-primitivos-ferro);
+    --color-border-default: var(--color-primitivos-noite-ferro);
+    --color-border-strong: var(--color-primitivos-noite-granito);
+    --color-accent-default: var(--color-primitivos-noite-telha);
+    --color-accent-hover: var(--color-primitivos-noite-telha-clara);
+    --color-accent-on: var(--color-primitivos-noite-base);
+    --color-accent-subtle: var(--color-primitivos-noite-telha-fundo);
+    --color-feedback-danger: var(--color-primitivos-noite-erro);
+    --color-focus-ring: var(--color-primitivos-noite-telha);
+  }
+}
+
+:root { color-scheme: light dark; }
+[data-theme="light"] { color-scheme: light; }
+[data-theme="dark"] { color-scheme: dark; }
+
+</style>
+<style>
+/* casca da página: usa os tokens do próprio DS quando existem, com fallback neutro */
+:root { --_bg: var(--color-surface-default, #fafafa); --_fg: var(--color-text-default, #111); --_muted: var(--color-text-muted, #666); --_line: var(--color-border-default, #e5e5e5); --_raised: var(--color-surface-raised, #fff); --_accent: var(--color-accent-default, #111); }
+* { box-sizing: border-box; }
+html { background: var(--_bg); color: var(--_fg); }
+body { margin: 0; font: 15px/1.5 var(--font-family-text, ui-sans-serif, system-ui, sans-serif); }
+code, .mono { font-family: var(--font-family-mono, ui-monospace, monospace); font-size: 12px; }
+header.top { flex-wrap: wrap; position: sticky; top: 0; z-index: 10; display: flex; gap: 16px; align-items: center; justify-content: space-between; padding: 12px clamp(16px, 4vw, 40px); background: var(--_bg); border-bottom: 1px solid var(--_line); }
+header.top h1 { margin: 0; font: 600 16px/1.2 var(--font-family-display, inherit); }
+header.top nav { display: flex; gap: 14px; flex-wrap: wrap; font-size: 13px; }
+header.top nav a { color: var(--_muted); text-decoration: none; }
+header.top nav a:hover { color: var(--_fg); }
+.toggle { font: inherit; font-size: 13px; padding: 6px 12px; border: 1px solid var(--_line); background: var(--_raised); color: var(--_fg); border-radius: 6px; cursor: pointer; }
+main { padding: 0 clamp(16px, 4vw, 40px) 80px; max-width: 1280px; }
+section { padding-top: 48px; }
+section > h2 { font: 600 13px/1 var(--font-family-mono, monospace); text-transform: uppercase; letter-spacing: .08em; color: var(--_muted); margin: 0 0 20px; padding-bottom: 10px; border-bottom: 1px solid var(--_line); }
+h4 { margin: 24px 0 10px; font-size: 13px; color: var(--_muted); font-weight: 500; }
+.scale { display: grid; grid-template-columns: 140px 1fr; gap: 12px; align-items: center; margin-bottom: 10px; }
+.scale-name { font-weight: 600; } .scale-name small { display: block; font-weight: 400; color: var(--_muted); font-size: 12px; }
+.steps { display: grid; grid-template-columns: repeat(11, minmax(0, 1fr)); gap: 4px; }
+.sw { all: unset; cursor: copy; background: var(--c); height: 64px; border-radius: 6px; display: flex; flex-direction: column; justify-content: flex-end; padding: 6px; font-size: 11px; color: transparent; position: relative; box-shadow: inset 0 0 0 1px color-mix(in oklch, var(--_fg) 8%, transparent); }
+.sw span, .sw code { color: color-mix(in oklch, var(--c), black 60%); font-size: 10px; } .sw:nth-child(n+6) span, .sw:nth-child(n+6) code { color: color-mix(in oklch, var(--c), white 75%); }
+.sw.anchor::after { content: ""; position: absolute; top: 6px; right: 6px; width: 7px; height: 7px; border-radius: 50%; background: currentColor; color: color-mix(in oklch, var(--c), black 60%); }
+.sem-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 8px; }
+.sem { all: unset; cursor: copy; display: grid; grid-template-columns: 36px 1fr; gap: 2px 10px; padding: 10px; border: 1px solid var(--_line); border-radius: 8px; background: var(--_raised); }
+.sem i { grid-row: span 3; width: 36px; height: 36px; border-radius: 6px; box-shadow: inset 0 0 0 1px color-mix(in oklch, var(--_fg) 12%, transparent); }
+.sem b { font-size: 13px; font-weight: 600; } .sem code { color: var(--_muted); } .sem small { color: var(--_muted); font-size: 12px; }
+table { border-collapse: collapse; width: 100%; font-size: 13px; }
+th, td { text-align: left; padding: 8px 10px; border-bottom: 1px solid var(--_line); vertical-align: middle; }
+th { font-weight: 500; color: var(--_muted); } td.num { font-variant-numeric: tabular-nums; }
+tr.fail td { color: var(--color-feedback-danger, #b91c1c); }
+.pair { display: inline-grid; place-items: center; width: 44px; height: 30px; border-radius: 6px; font-weight: 700; box-shadow: inset 0 0 0 1px color-mix(in oklch, var(--_fg) 10%, transparent); }
+.type-row { display: grid; grid-template-columns: 200px 1fr; gap: 24px; padding: 20px 0; border-bottom: 1px solid var(--_line); align-items: baseline; }
+.type-meta { display: grid; gap: 2px; } .type-meta code { color: var(--_muted); }
+.type-sample { outline: none; max-width: 70ch; text-wrap: pretty; }
+.fams { display: grid; gap: 12px; } .fam span { font-size: 32px; display: block; } .fam code { color: var(--_muted); }
+.sizes { display: flex; flex-wrap: wrap; gap: 20px; align-items: baseline; margin-top: 24px; } .size { display: grid; } .size code { color: var(--_muted); }
+.sp { display: grid; grid-template-columns: 40px auto 1fr; gap: 12px; align-items: center; margin: 6px 0; } .sp i { display: block; height: 14px; background: var(--_accent); border-radius: 2px; } .sp small { color: var(--_muted); }
+.row { display: flex; flex-wrap: wrap; gap: 20px; }
+.rad, .shd { display: grid; gap: 8px; width: 140px; } .rad i, .shd i { display: block; width: 120px; height: 80px; background: var(--_raised); border: 1px solid var(--_line); }
+.shd i { border: 0; } .rad small { color: var(--_muted); font-size: 12px; }
+.mo { margin: 12px 0 18px; } .track { display: grid; gap: 6px; margin-top: 6px; }
+.ball { all: unset; cursor: pointer; position: relative; height: 28px; border-radius: 6px; background: color-mix(in oklch, var(--_fg) 5%, transparent); }
+.ball span { position: absolute; left: 0; top: 0; height: 28px; width: 110px; display: grid; place-items: center; font-size: 11px; border-radius: 6px; background: var(--_accent); color: var(--color-accent-on, #fff); transition: transform var(--d) var(--e); }
+.ball.go span { transform: translateX(calc(min(60vw, 900px) - 120px)); }
+ul.z { list-style: none; padding: 0; display: grid; gap: 4px; }
+.toast { position: fixed; bottom: 16px; left: 50%; transform: translateX(-50%) translateY(20px); opacity: 0; padding: 8px 14px; border-radius: 8px; background: var(--_fg); color: var(--_bg); font-size: 13px; transition: transform .2s, opacity .2s; pointer-events: none; }
+.toast.on { transform: translateX(-50%); opacity: 1; }
+main, section, .scale, .type-row, .sem-grid { min-width: 0; } .tw { overflow-x: auto; } .type-sample { overflow-wrap: anywhere; }
+.ball.go span { transform: translateX(calc(100% * 0 + min(60vw, 900px) - 120px)); } .track { overflow: hidden; }
+@media (max-width: 720px) { .scale, .type-row { grid-template-columns: 1fr; } .steps { grid-template-columns: repeat(6, 1fr); } }
+@media (prefers-reduced-motion: reduce) { .ball span { transition: none; } }
+</style>
+</head>
+<body>
+<header class="top">
+  <h1>Tolle Lege · espécimes</h1>
+  <nav><a href="#cor">Cor</a><a href="#contraste">Contraste</a><a href="#tipo">Tipografia</a><a href="#espaco">Espaço</a><a href="#forma">Forma</a><a href="#movimento">Movimento</a></nav>
+  <button class="toggle" id="theme">tema: auto</button>
+</header>
+<main>
+<section id="cor"><h2>Cor · primitivos</h2>
+  <div class="scale">
+    <div class="scale-name">marca</div>
+    <div class="steps"><button class="sw" style="--c: var(--color-marca-50)" data-copy="var(--color-marca-50)" title="color.marca.50
+oklch(97.7% 0.003 38.79)
+#f9f7f6"><span>50</span><code>#f9f7f6</code></button><button class="sw" style="--c: var(--color-marca-100)" data-copy="var(--color-marca-100)" title="color.marca.100
+oklch(94.58% 0.0103 38.79)
+#f4ebe8"><span>100</span><code>#f4ebe8</code></button><button class="sw" style="--c: var(--color-marca-200)" data-copy="var(--color-marca-200)" title="color.marca.200
+oklch(89.27% 0.0264 38.79)
+#ecd6cf"><span>200</span><code>#ecd6cf</code></button><button class="sw" style="--c: var(--color-marca-300)" data-copy="var(--color-marca-300)" title="color.marca.300
+oklch(82.25% 0.0588 38.79)
+#e8b9a9"><span>300</span><code>#e8b9a9</code></button><button class="sw" style="--c: var(--color-marca-400)" data-copy="var(--color-marca-400)" title="color.marca.400
+oklch(72.93% 0.1109 38.79)
+#e38e73"><span>400</span><code>#e38e73</code></button><button class="sw" style="--c: var(--color-marca-500)" data-copy="var(--color-marca-500)" title="color.marca.500
+oklch(63.92% 0.1371 38.79)
+#d06b49"><span>500</span><code>#d06b49</code></button><button class="sw anchor" style="--c: var(--color-marca-600)" data-copy="var(--color-marca-600)" title="color.marca.600
+oklch(55.4% 0.1189 38.79)
+#ac573b
+cor-âncora · origem: telha de barro, terracotta_tile, modelo 3D Igreja Matriz de Resende"><span>600</span><code>#ac573b</code></button><button class="sw" style="--c: var(--color-marca-700)" data-copy="var(--color-marca-700)" title="color.marca.700
+oklch(47.42% 0.0957 38.79)
+#894731"><span>700</span><code>#894731</code></button><button class="sw" style="--c: var(--color-marca-800)" data-copy="var(--color-marca-800)" title="color.marca.800
+oklch(39.43% 0.0712 38.79)
+#663828"><span>800</span><code>#663828</code></button><button class="sw" style="--c: var(--color-marca-900)" data-copy="var(--color-marca-900)" title="color.marca.900
+oklch(31.95% 0.0495 38.79)
+#482a20"><span>900</span><code>#482a20</code></button><button class="sw" style="--c: var(--color-marca-950)" data-copy="var(--color-marca-950)" title="color.marca.950
+oklch(23.97% 0.0312 38.79)
+#2c1a14"><span>950</span><code>#2c1a14</code></button></div>
+  </div>
+  <div class="scale">
+    <div class="scale-name">neutro</div>
+    <div class="steps"><button class="sw" style="--c: var(--color-neutro-50)" data-copy="var(--color-neutro-50)" title="color.neutro.50
+oklch(98.5% 0.004 38.79)
+#fdf9f8"><span>50</span><code>#fdf9f8</code></button><button class="sw" style="--c: var(--color-neutro-100)" data-copy="var(--color-neutro-100)" title="color.neutro.100
+oklch(96.7% 0.004 38.79)
+#f7f3f2"><span>100</span><code>#f7f3f2</code></button><button class="sw" style="--c: var(--color-neutro-200)" data-copy="var(--color-neutro-200)" title="color.neutro.200
+oklch(92.2% 0.0143 38.79)
+#eee2de"><span>200</span><code>#eee2de</code></button><button class="sw" style="--c: var(--color-neutro-300)" data-copy="var(--color-neutro-300)" title="color.neutro.300
+oklch(87% 0.0143 38.79)
+#ddd1cd"><span>300</span><code>#ddd1cd</code></button><button class="sw" style="--c: var(--color-neutro-400)" data-copy="var(--color-neutro-400)" title="color.neutro.400
+oklch(70.8% 0.0143 38.79)
+#a99e9a"><span>400</span><code>#a99e9a</code></button><button class="sw" style="--c: var(--color-neutro-500)" data-copy="var(--color-neutro-500)" title="color.neutro.500
+oklch(55.6% 0.0143 38.79)
+#7b716d"><span>500</span><code>#7b716d</code></button><button class="sw" style="--c: var(--color-neutro-600)" data-copy="var(--color-neutro-600)" title="color.neutro.600
+oklch(43.9% 0.0143 38.79)
+#5a504d"><span>600</span><code>#5a504d</code></button><button class="sw" style="--c: var(--color-neutro-700)" data-copy="var(--color-neutro-700)" title="color.neutro.700
+oklch(37.1% 0.0143 38.79)
+#473e3a"><span>700</span><code>#473e3a</code></button><button class="sw" style="--c: var(--color-neutro-800)" data-copy="var(--color-neutro-800)" title="color.neutro.800
+oklch(26.9% 0.0143 38.79)
+#2d2421"><span>800</span><code>#2d2421</code></button><button class="sw" style="--c: var(--color-neutro-900)" data-copy="var(--color-neutro-900)" title="color.neutro.900
+oklch(20.5% 0.0121 38.79)
+#1c1513"><span>900</span><code>#1c1513</code></button><button class="sw" style="--c: var(--color-neutro-950)" data-copy="var(--color-neutro-950)" title="color.neutro.950
+oklch(14.5% 0.0121 38.79)
+#0f0807"><span>950</span><code>#0f0807</code></button></div>
+  </div>
+  <div class="scale">
+    <div class="scale-name">erro</div>
+    <div class="steps"><button class="sw" style="--c: var(--color-erro-50)" data-copy="var(--color-erro-50)" title="color.erro.50
+oklch(97.7% 0.0028 27)
+#f9f7f6"><span>50</span><code>#f9f7f6</code></button><button class="sw" style="--c: var(--color-erro-100)" data-copy="var(--color-erro-100)" title="color.erro.100
+oklch(94.6% 0.0099 27)
+#f4ebea"><span>100</span><code>#f4ebea</code></button><button class="sw" style="--c: var(--color-erro-200)" data-copy="var(--color-erro-200)" title="color.erro.200
+oklch(89.3% 0.0254 27)
+#ecd6d3"><span>200</span><code>#ecd6d3</code></button><button class="sw" style="--c: var(--color-erro-300)" data-copy="var(--color-erro-300)" title="color.erro.300
+oklch(82.3% 0.0567 27)
+#e8b8b1"><span>300</span><code>#e8b8b1</code></button><button class="sw" style="--c: var(--color-erro-400)" data-copy="var(--color-erro-400)" title="color.erro.400
+oklch(73% 0.1075 27)
+#e38d83"><span>400</span><code>#e38d83</code></button><button class="sw" style="--c: var(--color-erro-500)" data-copy="var(--color-erro-500)" title="color.erro.500
+oklch(64% 0.1636 27)
+#de5d53"><span>500</span><code>#de5d53</code></button><button class="sw" style="--c: var(--color-erro-600)" data-copy="var(--color-erro-600)" title="color.erro.600
+oklch(55.5% 0.1508 27)
+#bb4840"><span>600</span><code>#bb4840</code></button><button class="sw" style="--c: var(--color-erro-700)" data-copy="var(--color-erro-700)" title="color.erro.700
+oklch(47.5% 0.1213 27)
+#943c35"><span>700</span><code>#943c35</code></button><button class="sw" style="--c: var(--color-erro-800)" data-copy="var(--color-erro-800)" title="color.erro.800
+oklch(39.5% 0.0902 27)
+#6f302b"><span>800</span><code>#6f302b</code></button><button class="sw" style="--c: var(--color-erro-900)" data-copy="var(--color-erro-900)" title="color.erro.900
+oklch(32% 0.0627 27)
+#4e2521"><span>900</span><code>#4e2521</code></button><button class="sw" style="--c: var(--color-erro-950)" data-copy="var(--color-erro-950)" title="color.erro.950
+oklch(24% 0.0393 27)
+#301815"><span>950</span><code>#301815</code></button></div>
+  </div></section>
+<section><h2>Cor · semânticos</h2><p style="color:var(--_muted);margin-top:-8px">Componente usa só estes. Clique pra copiar a var.</p>
+  <div class="sem-group"><h4>primitivos</h4><div class="sem-grid"><button class="sem" data-copy="var(--color-primitivos-cal)"><i style="background: var(--color-primitivos-cal)"></i><b>primitivos.cal</b><code>#f6f6f3</code><small>origem: lime_plaster, paredes da igreja (modelo 3D Igreja Matriz de Resende). Fundo do site.</small></button><button class="sem" data-copy="var(--color-primitivos-branco)"><i style="background: var(--color-primitivos-branco)"></i><b>primitivos.branco</b><code>#fbfbfa</code><small>origem: cal mais clara, cartões. Texto sobre telha.</small></button><button class="sem" data-copy="var(--color-primitivos-moldura)"><i style="background: var(--color-primitivos-moldura)"></i><b>primitivos.moldura</b><code>#d7dbde</code><small>origem: molduras das janelas (modelo 3D). Superfície afundada.</small></button><button class="sem" data-copy="var(--color-primitivos-barrado)"><i style="background: var(--color-primitivos-barrado)"></i><b>primitivos.barrado</b><code>#b2bcc4</code><small>origem: barrado pintado (modelo 3D). Bordas.</small></button><button class="sem" data-copy="var(--color-primitivos-granito)"><i style="background: var(--color-primitivos-granito)"></i><b>primitivos.granito</b><code>#8b9298</code><small>origem: cantaria de granito (modelo 3D). Borda forte, nunca texto sobre cal.</small></button><button class="sem" data-copy="var(--color-primitivos-granito-escuro)"><i style="background: var(--color-primitivos-granito-escuro)"></i><b>primitivos.granito-escuro</b><code>#565d62</code><small>origem: granito escurecido para texto secundário AA sobre cal e moldura.</small></button><button class="sem" data-copy="var(--color-primitivos-telha)"><i style="background: var(--color-primitivos-telha)"></i><b>primitivos.telha</b><code>#ac573b</code><small>origem: terracotta_tile, telha de barro (modelo 3D). Acento de ação.</small></button><button class="sem" data-copy="var(--color-primitivos-telha-escura)"><i style="background: var(--color-primitivos-telha-escura)"></i><b>primitivos.telha-escura</b><code>#894731</code><small>origem: telha escurecida, hover.</small></button><button class="sem" data-copy="var(--color-primitivos-telha-clara)"><i style="background: var(--color-primitivos-telha-clara)"></i><b>primitivos.telha-clara</b><code>#f4ebe8</code><small>origem: telha clarificada (palette.mjs, marca-100). Destaque suave.</small></button><button class="sem" data-copy="var(--color-primitivos-madeira)"><i style="background: var(--color-primitivos-madeira)"></i><b>primitivos.madeira</b><code>#4b3123</code><small>origem: madeira escura das portas (modelo 3D). Tinta.</small></button><button class="sem" data-copy="var(--color-primitivos-ferro)"><i style="background: var(--color-primitivos-ferro)"></i><b>primitivos.ferro</b><code>#2f2e2d</code><small>origem: ferro forjado das grades (modelo 3D). Superfície invertida, noite.</small></button><button class="sem" data-copy="var(--color-primitivos-erro)"><i style="background: var(--color-primitivos-erro)"></i><b>primitivos.erro</b><code>#943c35</code><small>origem: palette.mjs, erro-700. Feedback de erro.</small></button><button class="sem" data-copy="var(--color-primitivos-noite-base)"><i style="background: var(--color-primitivos-noite-base)"></i><b>primitivos.noite-base</b><code>#241a14</code><small>origem: madeira em noite. Fundo do modo escuro.</small></button><button class="sem" data-copy="var(--color-primitivos-noite-raised)"><i style="background: var(--color-primitivos-noite-raised)"></i><b>primitivos.noite-raised</b><code>#2c2119</code><small>origem: madeira em noite, elevação 1.</small></button><button class="sem" data-copy="var(--color-primitivos-noite-sunken)"><i style="background: var(--color-primitivos-noite-sunken)"></i><b>primitivos.noite-sunken</b><code>#17100c</code><small>origem: madeira em noite, afundado.</small></button><button class="sem" data-copy="var(--color-primitivos-noite-ferro)"><i style="background: var(--color-primitivos-noite-ferro)"></i><b>primitivos.noite-ferro</b><code>#3a3937</code><small>origem: ferro em noite. Linhas no escuro.</small></button><button class="sem" data-copy="var(--color-primitivos-noite-cal)"><i style="background: var(--color-primitivos-noite-cal)"></i><b>primitivos.noite-cal</b><code>#ece9e2</code><small>origem: cal sob luz de vela. Texto no escuro.</small></button><button class="sem" data-copy="var(--color-primitivos-noite-granito)"><i style="background: var(--color-primitivos-noite-granito)"></i><b>primitivos.noite-granito</b><code>#a3aab0</code><small>origem: granito sob luz de vela. Texto secundário no escuro.</small></button><button class="sem" data-copy="var(--color-primitivos-noite-telha)"><i style="background: var(--color-primitivos-noite-telha)"></i><b>primitivos.noite-telha</b><code>#e8917a</code><small>origem: telha sob luz de vela. Acento no escuro.</small></button><button class="sem" data-copy="var(--color-primitivos-noite-telha-clara)"><i style="background: var(--color-primitivos-noite-telha-clara)"></i><b>primitivos.noite-telha-clara</b><code>#f0b4a3</code><small>origem: telha clarificada, hover no escuro.</small></button><button class="sem" data-copy="var(--color-primitivos-noite-telha-fundo)"><i style="background: var(--color-primitivos-noite-telha-fundo)"></i><b>primitivos.noite-telha-fundo</b><code>#492a1f</code><small>origem: telha escurecida, fundo de destaque no escuro.</small></button><button class="sem" data-copy="var(--color-primitivos-noite-erro)"><i style="background: var(--color-primitivos-noite-erro)"></i><b>primitivos.noite-erro</b><code>#e88f85</code><small>origem: erro clarificado no escuro.</small></button></div></div>
+  <div class="sem-group"><h4>liturgia</h4><div class="sem-grid"><button class="sem" data-copy="var(--color-liturgia-verde)"><i style="background: var(--color-liturgia-verde)"></i><b>liturgia.verde</b><code>#3f5a46</code><small>origem: cor litúrgica do Tempo Comum (calendário que o site já calcula). Fundo do portal/arco no dia verde.</small></button><button class="sem" data-copy="var(--color-liturgia-roxo)"><i style="background: var(--color-liturgia-roxo)"></i><b>liturgia.roxo</b><code>#6d5591</code><small>origem: cor litúrgica do Advento e da Quaresma (já usada em liturgical-year/seasonInfo.ts).</small></button><button class="sem" data-copy="var(--color-liturgia-vermelho)"><i style="background: var(--color-liturgia-vermelho)"></i><b>liturgia.vermelho</b><code>#a5402f</code><small>origem: cor litúrgica de Pentecostes, Paixão e mártires (#b0463a do site, escurecido para AA). Fica perto da telha: nunca usar como ação.</small></button><button class="sem" data-copy="var(--color-liturgia-rosa)"><i style="background: var(--color-liturgia-rosa)"></i><b>liturgia.rosa</b><code>#9c4a6b</code><small>origem: cor litúrgica de Gaudete e Laetare. Substitui pink-300/400 do Tailwind.</small></button><button class="sem" data-copy="var(--color-liturgia-branco)"><i style="background: var(--color-liturgia-branco)"></i><b>liturgia.branco</b><code>→ primitivos.moldura</code><small>origem: cor litúrgica do Natal e da Páscoa; branco vira moldura clara, texto em madeira.</small></button></div></div>
+  <div class="sem-group"><h4>surface</h4><div class="sem-grid"><button class="sem" data-copy="var(--color-surface-default)"><i style="background: var(--color-surface-default)"></i><b>surface.default</b><code>→ primitivos.cal · escuro → primitivos.noite-base</code><small>uso: surface.default (light cal, dark noite-base)</small></button><button class="sem" data-copy="var(--color-surface-raised)"><i style="background: var(--color-surface-raised)"></i><b>surface.raised</b><code>→ primitivos.branco · escuro → primitivos.noite-raised</code><small>uso: surface.raised (light branco, dark noite-raised)</small></button><button class="sem" data-copy="var(--color-surface-sunken)"><i style="background: var(--color-surface-sunken)"></i><b>surface.sunken</b><code>→ primitivos.moldura · escuro → primitivos.noite-sunken</code><small>uso: surface.sunken (light moldura, dark noite-sunken)</small></button><button class="sem" data-copy="var(--color-surface-inverse)"><i style="background: var(--color-surface-inverse)"></i><b>surface.inverse</b><code>→ primitivos.ferro · escuro → primitivos.noite-cal</code><small>uso: surface.inverse (light ferro, dark noite-cal)</small></button></div></div>
+  <div class="sem-group"><h4>text</h4><div class="sem-grid"><button class="sem" data-copy="var(--color-text-default)"><i style="background: var(--color-text-default)"></i><b>text.default</b><code>→ primitivos.madeira · escuro → primitivos.noite-cal</code><small>uso: text.default (light madeira, dark noite-cal)</small></button><button class="sem" data-copy="var(--color-text-muted)"><i style="background: var(--color-text-muted)"></i><b>text.muted</b><code>→ primitivos.granito-escuro · escuro → primitivos.noite-granito</code><small>uso: text.muted (light granito-escuro, dark noite-granito)</small></button><button class="sem" data-copy="var(--color-text-inverse)"><i style="background: var(--color-text-inverse)"></i><b>text.inverse</b><code>→ primitivos.cal · escuro → primitivos.ferro</code><small>uso: text.inverse (light cal, dark ferro)</small></button></div></div>
+  <div class="sem-group"><h4>border</h4><div class="sem-grid"><button class="sem" data-copy="var(--color-border-default)"><i style="background: var(--color-border-default)"></i><b>border.default</b><code>→ primitivos.barrado · escuro → primitivos.noite-ferro</code><small>uso: border.default (light barrado, dark noite-ferro)</small></button><button class="sem" data-copy="var(--color-border-strong)"><i style="background: var(--color-border-strong)"></i><b>border.strong</b><code>→ primitivos.granito · escuro → primitivos.noite-granito</code><small>uso: border.strong (light granito, dark noite-granito)</small></button></div></div>
+  <div class="sem-group"><h4>accent</h4><div class="sem-grid"><button class="sem" data-copy="var(--color-accent-default)"><i style="background: var(--color-accent-default)"></i><b>accent.default</b><code>→ primitivos.telha · escuro → primitivos.noite-telha</code><small>uso: accent.default (light telha, dark noite-telha)</small></button><button class="sem" data-copy="var(--color-accent-hover)"><i style="background: var(--color-accent-hover)"></i><b>accent.hover</b><code>→ primitivos.telha-escura · escuro → primitivos.noite-telha-clara</code><small>uso: accent.hover (light telha-escura, dark noite-telha-clara)</small></button><button class="sem" data-copy="var(--color-accent-on)"><i style="background: var(--color-accent-on)"></i><b>accent.on</b><code>→ primitivos.branco · escuro → primitivos.noite-base</code><small>uso: accent.on (light branco, dark noite-base)</small></button><button class="sem" data-copy="var(--color-accent-subtle)"><i style="background: var(--color-accent-subtle)"></i><b>accent.subtle</b><code>→ primitivos.telha-clara · escuro → primitivos.noite-telha-fundo</code><small>uso: accent.subtle (light telha-clara, dark noite-telha-fundo)</small></button></div></div>
+  <div class="sem-group"><h4>feedback</h4><div class="sem-grid"><button class="sem" data-copy="var(--color-feedback-danger)"><i style="background: var(--color-feedback-danger)"></i><b>feedback.danger</b><code>→ primitivos.erro · escuro → primitivos.noite-erro</code><small>uso: feedback.danger (light erro, dark noite-erro)</small></button></div></div>
+  <div class="sem-group"><h4>focus</h4><div class="sem-grid"><button class="sem" data-copy="var(--color-focus-ring)"><i style="background: var(--color-focus-ring)"></i><b>focus.ring</b><code>→ primitivos.telha · escuro → primitivos.noite-telha</code><small>uso: focus.ring (light telha, dark noite-telha)</small></button></div></div>
+  <div class="sem-group"><h4>dia</h4><div class="sem-grid"><button class="sem" data-copy="var(--color-dia-default)"><i style="background: var(--color-dia-default)"></i><b>dia.default</b><code>→ liturgia.verde</code><small>uso: arco do nome, portal da home, arquinho de seção. Valor do dia trocado em runtime.</small></button><button class="sem" data-copy="var(--color-dia-on)"><i style="background: var(--color-dia-on)"></i><b>dia.on</b><code>→ primitivos.branco</code><small>uso: texto sobre o portal (no Natal/Páscoa vira madeira).</small></button></div></div></section>
+<section id="contraste"><h2>Contraste</h2><div class="tw"><table><thead><tr><th>modo</th><th></th><th>texto</th><th>fundo</th><th>WCAG</th><th>APCA Lc</th><th></th></tr></thead><tbody><tr class=""><td>base</td><td><span class="pair" style="color: var(--color-primitivos-branco); background: var(--color-liturgia-verde)" >Aa</span></td><td><code>primitivos.branco</code></td><td><code>liturgia.verde</code></td><td class="num">7.34</td><td class="num">-88</td><td>passa (mín 4.5)</td></tr><tr class=""><td>base</td><td><span class="pair" style="color: var(--color-primitivos-branco); background: var(--color-liturgia-roxo)" >Aa</span></td><td><code>primitivos.branco</code></td><td><code>liturgia.roxo</code></td><td class="num">6.04</td><td class="num">-83</td><td>passa (mín 4.5)</td></tr><tr class=""><td>base</td><td><span class="pair" style="color: var(--color-primitivos-branco); background: var(--color-liturgia-vermelho)" >Aa</span></td><td><code>primitivos.branco</code></td><td><code>liturgia.vermelho</code></td><td class="num">6.01</td><td class="num">-83</td><td>passa (mín 4.5)</td></tr><tr class=""><td>base</td><td><span class="pair" style="color: var(--color-primitivos-branco); background: var(--color-liturgia-rosa)" >Aa</span></td><td><code>primitivos.branco</code></td><td><code>liturgia.rosa</code></td><td class="num">5.63</td><td class="num">-81</td><td>passa (mín 4.5)</td></tr><tr class=""><td>base</td><td><span class="pair" style="color: var(--color-primitivos-madeira); background: var(--color-liturgia-branco)" >Aa</span></td><td><code>primitivos.madeira</code></td><td><code>liturgia.branco</code></td><td class="num">8.55</td><td class="num">76</td><td>passa (mín 4.5)</td></tr><tr class=""><td>base</td><td><span class="pair" style="color: var(--color-text-default); background: var(--color-surface-default)" >Aa</span></td><td><code>text.default</code></td><td><code>surface.default</code></td><td class="num">11.00</td><td class="num">92</td><td>passa (mín 4.5)</td></tr><tr class=""><td>base</td><td><span class="pair" style="color: var(--color-text-default); background: var(--color-surface-raised)" >Aa</span></td><td><code>text.default</code></td><td><code>surface.raised</code></td><td class="num">11.51</td><td class="num">95</td><td>passa (mín 4.5)</td></tr><tr class=""><td>base</td><td><span class="pair" style="color: var(--color-text-default); background: var(--color-surface-sunken)" >Aa</span></td><td><code>text.default</code></td><td><code>surface.sunken</code></td><td class="num">8.55</td><td class="num">76</td><td>passa (mín 4.5)</td></tr><tr class=""><td>base</td><td><span class="pair" style="color: var(--color-text-muted); background: var(--color-surface-default)" >Aa</span></td><td><code>text.muted</code></td><td><code>surface.default</code></td><td class="num">6.18</td><td class="num">78</td><td>passa (mín 4.5)</td></tr><tr class=""><td>base</td><td><span class="pair" style="color: var(--color-text-muted); background: var(--color-surface-raised)" >Aa</span></td><td><code>text.muted</code></td><td><code>surface.raised</code></td><td class="num">6.46</td><td class="num">81</td><td>passa (mín 4.5)</td></tr><tr class=""><td>base</td><td><span class="pair" style="color: var(--color-text-muted); background: var(--color-surface-sunken)" >Aa</span></td><td><code>text.muted</code></td><td><code>surface.sunken</code></td><td class="num">4.80</td><td class="num">62</td><td>passa (mín 4.5)</td></tr><tr class=""><td>base</td><td><span class="pair" style="color: var(--color-text-inverse); background: var(--color-surface-inverse)" >Aa</span></td><td><code>text.inverse</code></td><td><code>surface.inverse</code></td><td class="num">12.52</td><td class="num">-97</td><td>passa (mín 4.5)</td></tr><tr class=""><td>base</td><td><span class="pair" style="color: var(--color-accent-on); background: var(--color-accent-default)" >Aa</span></td><td><code>accent.on</code></td><td><code>accent.default</code></td><td class="num">4.85</td><td class="num">-77</td><td>passa (mín 4.5)</td></tr><tr class=""><td>base</td><td><span class="pair" style="color: var(--color-accent-on); background: var(--color-accent-hover)" >Aa</span></td><td><code>accent.on</code></td><td><code>accent.hover</code></td><td class="num">6.74</td><td class="num">-86</td><td>passa (mín 4.5)</td></tr><tr class=""><td>base</td><td><span class="pair" style="color: var(--color-accent-default); background: var(--color-surface-default)" >Aa</span></td><td><code>accent.default</code></td><td><code>surface.default</code></td><td class="num">4.64</td><td class="num">69</td><td>passa (mín 4.5)</td></tr><tr class=""><td>base</td><td><span class="pair" style="color: var(--color-feedback-danger); background: var(--color-surface-default)" >Aa</span></td><td><code>feedback.danger</code></td><td><code>surface.default</code></td><td class="num">6.56</td><td class="num">78</td><td>passa (mín 4.5)</td></tr><tr class=""><td>dark</td><td><span class="pair" style="color: var(--color-primitivos-branco); background: var(--color-liturgia-verde)" data-mode="dark">Aa</span></td><td><code>primitivos.branco</code></td><td><code>liturgia.verde</code></td><td class="num">7.34</td><td class="num">-88</td><td>passa (mín 4.5)</td></tr><tr class=""><td>dark</td><td><span class="pair" style="color: var(--color-primitivos-branco); background: var(--color-liturgia-roxo)" data-mode="dark">Aa</span></td><td><code>primitivos.branco</code></td><td><code>liturgia.roxo</code></td><td class="num">6.04</td><td class="num">-83</td><td>passa (mín 4.5)</td></tr><tr class=""><td>dark</td><td><span class="pair" style="color: var(--color-primitivos-branco); background: var(--color-liturgia-vermelho)" data-mode="dark">Aa</span></td><td><code>primitivos.branco</code></td><td><code>liturgia.vermelho</code></td><td class="num">6.01</td><td class="num">-83</td><td>passa (mín 4.5)</td></tr><tr class=""><td>dark</td><td><span class="pair" style="color: var(--color-primitivos-branco); background: var(--color-liturgia-rosa)" data-mode="dark">Aa</span></td><td><code>primitivos.branco</code></td><td><code>liturgia.rosa</code></td><td class="num">5.63</td><td class="num">-81</td><td>passa (mín 4.5)</td></tr><tr class=""><td>dark</td><td><span class="pair" style="color: var(--color-primitivos-madeira); background: var(--color-liturgia-branco)" data-mode="dark">Aa</span></td><td><code>primitivos.madeira</code></td><td><code>liturgia.branco</code></td><td class="num">8.55</td><td class="num">76</td><td>passa (mín 4.5)</td></tr><tr class=""><td>dark</td><td><span class="pair" style="color: var(--color-text-default); background: var(--color-surface-default)" data-mode="dark">Aa</span></td><td><code>text.default</code></td><td><code>surface.default</code></td><td class="num">14.05</td><td class="num">-92</td><td>passa (mín 4.5)</td></tr><tr class=""><td>dark</td><td><span class="pair" style="color: var(--color-text-default); background: var(--color-surface-raised)" data-mode="dark">Aa</span></td><td><code>text.default</code></td><td><code>surface.raised</code></td><td class="num">12.94</td><td class="num">-91</td><td>passa (mín 4.5)</td></tr><tr class=""><td>dark</td><td><span class="pair" style="color: var(--color-text-default); background: var(--color-surface-sunken)" data-mode="dark">Aa</span></td><td><code>text.default</code></td><td><code>surface.sunken</code></td><td class="num">15.54</td><td class="num">-93</td><td>passa (mín 4.5)</td></tr><tr class=""><td>dark</td><td><span class="pair" style="color: var(--color-text-muted); background: var(--color-surface-default)" data-mode="dark">Aa</span></td><td><code>text.muted</code></td><td><code>surface.default</code></td><td class="num">7.25</td><td class="num">-54</td><td>passa (mín 4.5)</td></tr><tr class=""><td>dark</td><td><span class="pair" style="color: var(--color-text-muted); background: var(--color-surface-raised)" data-mode="dark">Aa</span></td><td><code>text.muted</code></td><td><code>surface.raised</code></td><td class="num">6.68</td><td class="num">-53</td><td>passa (mín 4.5)</td></tr><tr class=""><td>dark</td><td><span class="pair" style="color: var(--color-text-muted); background: var(--color-surface-sunken)" data-mode="dark">Aa</span></td><td><code>text.muted</code></td><td><code>surface.sunken</code></td><td class="num">8.02</td><td class="num">-55</td><td>passa (mín 4.5)</td></tr><tr class=""><td>dark</td><td><span class="pair" style="color: var(--color-text-inverse); background: var(--color-surface-inverse)" data-mode="dark">Aa</span></td><td><code>text.inverse</code></td><td><code>surface.inverse</code></td><td class="num">11.18</td><td class="num">87</td><td>passa (mín 4.5)</td></tr><tr class=""><td>dark</td><td><span class="pair" style="color: var(--color-accent-on); background: var(--color-accent-default)" data-mode="dark">Aa</span></td><td><code>accent.on</code></td><td><code>accent.default</code></td><td class="num">7.11</td><td class="num">55</td><td>passa (mín 4.5)</td></tr><tr class=""><td>dark</td><td><span class="pair" style="color: var(--color-accent-on); background: var(--color-accent-hover)" data-mode="dark">Aa</span></td><td><code>accent.on</code></td><td><code>accent.hover</code></td><td class="num">9.51</td><td class="num">69</td><td>passa (mín 4.5)</td></tr><tr class=""><td>dark</td><td><span class="pair" style="color: var(--color-accent-default); background: var(--color-surface-default)" data-mode="dark">Aa</span></td><td><code>accent.default</code></td><td><code>surface.default</code></td><td class="num">7.11</td><td class="num">-53</td><td>passa (mín 4.5)</td></tr><tr class=""><td>dark</td><td><span class="pair" style="color: var(--color-feedback-danger); background: var(--color-surface-default)" data-mode="dark">Aa</span></td><td><code>feedback.danger</code></td><td><code>surface.default</code></td><td class="num">7.06</td><td class="num">-53</td><td>passa (mín 4.5)</td></tr></tbody></table></div></section>
+<section id="tipo"><h2>Tipografia</h2><div class="fams"><div class="fam"><span style="font-family: var(--font-family-display)">Aa Bb Cc 0123 ÁÇÕ</span><code>font.family.display · &quot;Brygada 1918&quot;, Georgia, serif</code></div><div class="fam"><span style="font-family: var(--font-family-text)">Aa Bb Cc 0123 ÁÇÕ</span><code>font.family.text · &quot;Figtree&quot;, system-ui, sans-serif</code></div></div><div class="sizes"><div class="size"><code>control-md · 2.75rem</code><span style="font-size: var(--size-control-md)">Ag</span></div><div class="size"><code>control-sm · 2.25rem</code><span style="font-size: var(--size-control-sm)">Ag</span></div><div class="size"><code>icon · 1.25rem</code><span style="font-size: var(--size-icon)">Ag</span></div><div class="size"><code>layout-max · 72rem</code><span style="font-size: var(--size-layout-max)">Ag</span></div><div class="size"><code>reading · 40rem</code><span style="font-size: var(--size-reading)">Ag</span></div><div class="size"><code>touch-min · 2.75rem</code><span style="font-size: var(--size-touch-min)">Ag</span></div></div></section>
+<section id="espaco"><h2>Espaço</h2><div class="sp"><code>1</code><i style="width: var(--space-1)"></i><small>4px</small></div><div class="sp"><code>2</code><i style="width: var(--space-2)"></i><small>8px</small></div><div class="sp"><code>3</code><i style="width: var(--space-3)"></i><small>12px</small></div><div class="sp"><code>4</code><i style="width: var(--space-4)"></i><small>16px</small></div><div class="sp"><code>5</code><i style="width: var(--space-5)"></i><small>24px</small></div><div class="sp"><code>6</code><i style="width: var(--space-6)"></i><small>32px</small></div><div class="sp"><code>7</code><i style="width: var(--space-7)"></i><small>48px</small></div><div class="sp"><code>8</code><i style="width: var(--space-8)"></i><small>64px</small></div></section>
+<section id="forma"><h2>Raio e sombra</h2><div class="row"><div class="rad"><i style="border-radius: var(--radius-none)"></i><code>none · 0</code><small>sem canto</small></div><div class="rad"><i style="border-radius: var(--radius-sm)"></i><code>sm · 2px</code><small>chip, pílula de estado</small></div><div class="rad"><i style="border-radius: var(--radius-md)"></i><code>md · 4px</code><small>cartão e painel</small></div><div class="rad"><i style="border-radius: var(--radius-control)"></i><code>control · 4px</code><small>botão, campo</small></div><div class="rad"><i style="border-radius: var(--radius-arch)"></i><code>arch · 999px 999px 2px 2px</code><small>forma-assinatura: arco da porta (topo semicircular, base reta)</small></div></div><h4>Sombras</h4><div class="row"></div></section>
+<section id="movimento"><h2>Movimento</h2><p style="color:var(--_muted);margin-top:-8px">Clique numa trilha pra rodar.</p><p>Sem tokens de movimento.</p></section>
+</main>
+<div class="toast" id="toast">copiado</div>
+<script>
+(function () {
+  var t = document.getElementById("theme"), modes = ["auto", "light", "dark"], i = 0;
+  try { var saved = localStorage.getItem("ds-forge-theme"); if (saved) i = Math.max(0, modes.indexOf(saved)); } catch (e) {}
+  function apply() { var m = modes[i]; if (m === "auto") document.documentElement.removeAttribute("data-theme"); else document.documentElement.setAttribute("data-theme", m); if (t) t.textContent = "tema: " + (m === "auto" ? "auto" : m === "light" ? "claro" : "escuro"); try { localStorage.setItem("ds-forge-theme", m); } catch (e) {} }
+  if (t) { t.addEventListener("click", function () { i = (i + 1) % modes.length; apply(); }); apply(); }
+  var toast = document.getElementById("toast"), tm;
+  document.addEventListener("click", function (e) {
+    var b = e.target.closest("[data-copy]");
+    if (b) { var v = b.getAttribute("data-copy"); (navigator.clipboard ? navigator.clipboard.writeText(v) : Promise.reject()).catch(function () {}); toast.textContent = "copiado: " + v; toast.classList.add("on"); clearTimeout(tm); tm = setTimeout(function () { toast.classList.remove("on"); }, 1200); }
+    var ball = e.target.closest(".ball");
+    if (ball) { var track = ball.parentElement; track.querySelectorAll(".ball").forEach(function (x) { x.classList.toggle("go"); }); }
+  });
+  // pares do modo escuro mostram as cores do escuro mesmo no tema claro
+  document.querySelectorAll('.pair[data-mode]').forEach(function (p) { p.setAttribute("data-theme", p.getAttribute("data-mode")); });
+})();
+</script>
+</body>
+</html>

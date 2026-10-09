@@ -18,16 +18,16 @@ export const seasonDescriptions: Record<SeasonId, string> = {
 
 /** Cores de desenho (SVG) e classes literais para o Tailwind. */
 export const colorStyles: Record<LiturgicalColor, { fill: string; label: string; swatch: string }> = {
-  purple: { fill: '#6d5591', label: 'Roxo', swatch: 'bg-[#6d5591]' },
-  white: { fill: 'var(--color-primary-soft)', label: 'Branco', swatch: 'bg-primary-soft ring-1 ring-primary/40' },
-  green: { fill: 'var(--color-sage)', label: 'Verde', swatch: 'bg-sage' },
-  red: { fill: '#b0463a', label: 'Vermelho', swatch: 'bg-[#b0463a]' },
+  purple: { fill: 'var(--color-liturgia-roxo)', label: 'Roxo', swatch: 'bg-liturgia-roxo' },
+  white: { fill: 'var(--color-liturgia-branco)', label: 'Branco', swatch: 'bg-liturgia-branco ring-1 ring-ink/20' },
+  green: { fill: 'var(--color-liturgia-verde)', label: 'Verde', swatch: 'bg-liturgia-verde' },
+  red: { fill: 'var(--color-liturgia-vermelho)', label: 'Vermelho', swatch: 'bg-liturgia-vermelho' },
 }
 
 export const colorMeanings = [
-  { swatch: 'bg-sage', name: 'Verde', meaning: 'Esperança e vida que cresce. Usado no Tempo Comum.' },
-  { swatch: 'bg-[#6d5591]', name: 'Roxo', meaning: 'Penitência e preparação. Advento e Quaresma.' },
-  { swatch: 'bg-primary-soft ring-1 ring-primary/40', name: 'Branco', meaning: 'Alegria, festa e pureza. Natal, Páscoa e festas de Nossa Senhora.' },
-  { swatch: 'bg-[#b0463a]', name: 'Vermelho', meaning: 'O fogo do Espírito e o sangue dos mártires. Pentecostes e Paixão.' },
-  { swatch: 'bg-pink-300', name: 'Rosa', meaning: 'Alegria no meio da espera. Só em dois domingos: 3º do Advento e 4º da Quaresma.' },
+  { swatch: 'bg-liturgia-verde', name: 'Verde', meaning: 'Esperança e vida que cresce. Usado no Tempo Comum.' },
+  { swatch: 'bg-liturgia-roxo', name: 'Roxo', meaning: 'Penitência e preparação. Advento e Quaresma.' },
+  { swatch: 'bg-liturgia-branco ring-1 ring-ink/20', name: 'Branco', meaning: 'Alegria, festa e pureza. Natal, Páscoa e festas de Nossa Senhora.' },
+  { swatch: 'bg-liturgia-vermelho', name: 'Vermelho', meaning: 'O fogo do Espírito e o sangue dos mártires. Pentecostes e Paixão.' },
+  { swatch: 'bg-liturgia-rosa', name: 'Rosa', meaning: 'Alegria no meio da espera. Só em dois domingos: 3º do Advento e 4º da Quaresma.' },
 ]

@@ -1,0 +1,746 @@
+<!doctype html>
+<html lang="pt-BR" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tolle Lege · DS · a-missal-consolidado (r1)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Inter:wght@400..700&display=swap" rel="stylesheet">
+<style>
+/* ===== TOKENS (mesmos nomes que tokens-build geraria) ===== */
+:root {
+  /* primitivos (extraido.md §4.1) */
+  --color-paper-50: oklch(97.7% 0.010 87.5);
+  --color-paper-100: oklch(91.0% 0.025 89.2);
+  --color-paper-200: oklch(87.2% 0.030 87.6);
+  --color-paper-300: oklch(82.0% 0.039 86.9);
+  --color-sepia-600: oklch(45.0% 0.025 67.1);
+  --color-sepia-900: oklch(25.9% 0.018 63.1);
+  --color-sepia-950: oklch(19.4% 0.006 56.0);
+  --color-gold-100: oklch(91.8% 0.038 86.9);
+  --color-gold-300: oklch(80.9% 0.076 83.8);
+  --color-gold-400: oklch(71.8% 0.102 80.7);
+  --color-gold-500: oklch(63.0% 0.097 79.6);
+  --color-gold-600: oklch(54.5% 0.081 78.3);
+  --color-gold-700: oklch(47.4% 0.081 79.5);
+  --color-gold-800: oklch(40.7% 0.060 76.2);
+  --color-cardinal-700: oklch(39.0% 0.125 21.1);
+  --color-cardinal-on-inverse: oklch(66.5% 0.150 20.5); /* derivado (#d0646b): vermelho legível sobre sepia-950 */
+  --color-marian-100: oklch(91.6% 0.013 251.6);
+  --color-marian-700: oklch(39.2% 0.058 253.8);
+  --color-terracotta-100: oklch(91.0% 0.024 47.1);
+  --color-terracotta-700: oklch(49.0% 0.098 35.6);
+  --color-sage-100: oklch(91.9% 0.017 137.0);
+  --color-sage-600: oklch(52.5% 0.052 148.5);
+  --color-sage-700: oklch(43.3% 0.047 147.9);
+  --color-rose-100: oklch(91.7% 0.025 2.1);
+  --color-rose-400: oklch(65.5% 0.145 9.5);
+  --color-rose-600: oklch(48.9% 0.156 12.6);
+  --color-liturgical-roxo: oklch(50.0% 0.096 301.4);
+  --color-liturgical-vermelho: oklch(53.4% 0.141 29.1);
+
+  /* semânticos (claro) */
+  --color-surface-page: var(--color-paper-100);
+  --color-surface-default: var(--color-paper-50);
+  --color-surface-alt: var(--color-paper-200);
+  --color-surface-inverse: var(--color-sepia-900);
+  --color-text-default: var(--color-sepia-900);
+  --color-text-muted: var(--color-sepia-600);
+  --color-text-accent: var(--color-gold-700);
+  --color-text-on-inverse: var(--color-paper-50);
+  --color-text-on-inverse-muted: var(--color-paper-300);
+  --color-text-accent-on-inverse: var(--color-gold-400);
+  --color-text-on-action: var(--color-paper-50);
+  --color-mark-default: var(--color-cardinal-700);
+  --color-border-default: var(--color-paper-300);
+  --color-border-strong: var(--color-sepia-600);
+  --color-accent-default: var(--color-gold-500);
+  --color-accent-strong: var(--color-gold-700);
+  --color-accent-soft: var(--color-gold-100);
+  --color-action-default: var(--color-cardinal-700);
+  --color-action-hover-rule: var(--color-gold-300);
+  --color-danger-default: var(--color-rose-600);
+  --color-focus-ring: var(--color-cardinal-700);
+  --color-area-duvidas-soft: var(--color-marian-100);
+  --color-area-duvidas-text: var(--color-marian-700);
+  --color-area-curiosidades-soft: var(--color-terracotta-100);
+  --color-area-curiosidades-text: var(--color-terracotta-700);
+  --color-area-passos-soft: var(--color-sage-100);
+  --color-area-passos-text: var(--color-sage-700);
+  --color-area-novena-soft: var(--color-rose-100);
+  --color-area-novena-text: var(--color-rose-600);
+  --color-liturgical-verde: var(--color-sage-600);
+  --color-liturgical-branco: var(--color-paper-50);
+
+  /* tipo */
+  --font-family-display: "EB Garamond", "Garamond", Georgia, serif;
+  --font-family-text: "Inter", system-ui, sans-serif;
+  --font-size-display: clamp(3.25rem, 9vw, 5.25rem);
+  --font-size-h1: clamp(2.25rem, 6vw, 3.25rem);
+  --font-size-h2: clamp(1.75rem, 4vw, 2.25rem);
+  --font-size-h3: 1.5rem;
+  --font-size-lead: 1.125rem;
+  --font-size-body: 1rem;
+  --font-size-small: 0.875rem;
+  --font-size-caption: 0.75rem;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --line-height-tight: 1.1;
+  --line-height-body: 1.625;
+  --letter-spacing-rubric: 0.28em;
+  --letter-spacing-label: 0.2em;
+  --letter-spacing-button: 0.15em;
+
+  /* espaço */
+  --space-1: 0.25rem; --space-2: 0.5rem; --space-3: 0.75rem; --space-4: 1rem;
+  --space-6: 1.5rem; --space-8: 2rem; --space-12: 3rem; --space-16: 4rem; --space-24: 6rem;
+  --container-max: 80rem;
+  --measure-reading: 36rem;
+
+  /* forma */
+  --radius-sm: 3px;
+  --radius-md: 4px;
+  --radius-lg: 6px;
+  --radius-arch: 9999px 9999px 0 0;
+  --radius-pill: 9999px;
+  --border-width-hair: 1px;
+  --rule-width: 1px;
+  --shadow-raised: 0 18px 40px -20px rgb(42 34 27 / 0.35);
+  --shadow-floating: 0 24px 50px -24px rgb(42 34 27 / 0.4);
+  --shadow-none: none;
+
+  /* movimento */
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --duration-fast: 200ms;
+  --duration-base: 300ms;
+  --duration-slow: 600ms;
+
+  color-scheme: light;
+}
+
+[data-theme="dark"] {
+  --color-surface-page: var(--color-sepia-950);
+  --color-surface-default: var(--color-sepia-900);
+  --color-surface-alt: var(--color-sepia-950);
+  --color-surface-inverse: var(--color-paper-50);
+  --color-text-default: var(--color-paper-50);
+  --color-text-muted: var(--color-paper-300);
+  --color-text-accent: var(--color-gold-400);
+  --color-text-on-inverse: var(--color-sepia-900);
+  --color-text-on-inverse-muted: var(--color-sepia-600);
+  --color-text-accent-on-inverse: var(--color-gold-700);
+  --color-text-on-action: var(--color-sepia-950);
+  --color-mark-default: var(--color-cardinal-on-inverse);
+  --color-border-default: var(--color-sepia-600);
+  --color-border-strong: var(--color-paper-300);
+  --color-accent-default: var(--color-gold-400);
+  --color-accent-strong: var(--color-gold-300);
+  --color-accent-soft: var(--color-sepia-900);
+  --color-action-default: var(--color-cardinal-on-inverse);
+  --color-action-hover-rule: var(--color-gold-300);
+  --color-danger-default: var(--color-rose-400);
+  --color-focus-ring: var(--color-gold-400);
+  --color-area-duvidas-soft: var(--color-sepia-900);
+  --color-area-curiosidades-soft: var(--color-sepia-900);
+  --color-area-passos-soft: var(--color-sepia-900);
+  --color-area-novena-soft: var(--color-sepia-900);
+  --color-area-duvidas-text: var(--color-marian-100);
+  --color-area-curiosidades-text: var(--color-paper-100);
+  --color-area-passos-text: var(--color-sage-100);
+  --color-area-novena-text: var(--color-rose-400);
+  --shadow-raised: none;
+  --shadow-floating: none;
+  color-scheme: dark;
+}
+
+/* ===== BASE ===== */
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--color-surface-page);
+  color: var(--color-text-default);
+  font-family: var(--font-family-text);
+  font-size: var(--font-size-body);
+  line-height: var(--line-height-body);
+  transition: background-color var(--duration-slow) var(--ease-out), color var(--duration-slow) var(--ease-out);
+}
+img, svg { display: block; max-width: 100%; }
+h1, h2, h3, h4 { font-family: var(--font-family-display); font-weight: var(--font-weight-medium); margin: 0; line-height: var(--line-height-tight); }
+p { margin: 0; }
+:focus-visible { outline: 2px solid var(--color-focus-ring); outline-offset: 3px; }
+.sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+
+.wrap { max-width: var(--container-max); margin: 0 auto; padding: 0 var(--space-4); }
+.section { padding: var(--space-16) 0; border-top: var(--rule-width) solid var(--color-border-default); }
+.section__head { display: grid; gap: var(--space-2); margin-bottom: var(--space-12); }
+.section__num { font-family: var(--font-family-display); font-size: var(--font-size-small); color: var(--color-text-muted); }
+.rubric { font-family: var(--font-family-display); font-weight: var(--font-weight-semibold); font-size: var(--font-size-small); text-transform: uppercase; letter-spacing: var(--letter-spacing-rubric); color: var(--color-mark-default); }
+.label { font-size: var(--font-size-caption); font-weight: var(--font-weight-semibold); text-transform: uppercase; letter-spacing: var(--letter-spacing-label); color: var(--color-text-muted); }
+.small { font-size: var(--font-size-small); color: var(--color-text-muted); }
+.caption { font-size: var(--font-size-caption); color: var(--color-text-muted); }
+.fio { display: block; height: var(--rule-width); width: 4rem; background: var(--color-accent-default); }
+.muted-block { color: var(--color-text-muted); }
+
+/* ===== TOPO ===== */
+.topbar { position: sticky; top: 0; z-index: 50; background: var(--color-surface-page); border-bottom: var(--rule-width) solid var(--color-border-default); }
+.topbar .wrap { display: flex; align-items: center; justify-content: space-between; min-height: 3.5rem; gap: var(--space-4); }
+.topbar nav { display: none; gap: var(--space-6); font-size: var(--font-size-small); }
+.topbar nav a { color: var(--color-text-muted); text-decoration: none; }
+.topbar nav a:hover { color: var(--color-text-accent); }
+@media (min-width: 40rem) { .topbar nav { display: flex; } }
+
+/* ===== ÍCONES ===== */
+.ico { width: 1.25rem; height: 1.25rem; fill: none; stroke: currentColor; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; flex: none; }
+
+/* ===== BOTÕES ===== */
+.btn {
+  --btn-bg: var(--color-action-default);
+  --btn-fg: var(--color-text-on-action);
+  display: inline-flex; align-items: center; justify-content: center; gap: var(--space-2);
+  min-height: 2.75rem; padding: var(--space-3) var(--space-6);
+  font-family: var(--font-family-text); font-size: var(--font-size-small); font-weight: var(--font-weight-semibold);
+  text-transform: uppercase; letter-spacing: var(--letter-spacing-button);
+  color: var(--btn-fg); background: var(--btn-bg);
+  border: var(--border-width-hair) solid transparent; border-radius: var(--radius-sm);
+  cursor: pointer; text-decoration: none;
+  transition: background-color var(--duration-base) var(--ease-out), box-shadow var(--duration-base) var(--ease-out), color var(--duration-base) var(--ease-out);
+}
+/* filete dourado interno: a assinatura do missal */
+.btn--primary { box-shadow: inset 0 0 0 3px var(--btn-bg), inset 0 0 0 4px var(--color-accent-default); }
+.btn--primary:hover, .btn--primary.is-hover { box-shadow: inset 0 0 0 3px var(--btn-bg), inset 0 0 0 4px var(--color-action-hover-rule); }
+.btn--secondary { --btn-bg: transparent; --btn-fg: var(--color-text-default); border-color: var(--color-border-strong); }
+.btn--secondary:hover, .btn--secondary.is-hover { background: var(--color-surface-alt); }
+.btn--ghost { --btn-bg: transparent; --btn-fg: var(--color-text-accent); padding-inline: var(--space-3); }
+.btn--ghost:hover, .btn--ghost.is-hover { text-decoration: underline; text-underline-offset: 0.3em; }
+.btn--danger { --btn-bg: var(--color-danger-default); --btn-fg: var(--color-text-on-action); }
+.btn--danger:hover, .btn--danger.is-hover { box-shadow: inset 0 0 0 3px var(--btn-bg), inset 0 0 0 4px var(--color-accent-default); }
+.btn:disabled, .btn.is-disabled { --btn-bg: var(--color-surface-alt); --btn-fg: var(--color-text-muted); box-shadow: none; border-color: var(--color-border-default); cursor: not-allowed; }
+.btn--ghost:disabled { --btn-bg: transparent; }
+.btn--full { width: 100%; }
+.btn--pill { border-radius: var(--radius-pill); }
+.btn .ico { width: 1rem; height: 1rem; }
+.btn-row { display: flex; flex-wrap: wrap; gap: var(--space-4); align-items: center; }
+.state-cell { display: grid; gap: var(--space-2); justify-items: start; }
+
+/* ===== FORMULÁRIO ===== */
+.field { display: grid; gap: var(--space-2); }
+.field label, .field .field__label { font-size: var(--font-size-small); font-weight: var(--font-weight-semibold); }
+.field__help { font-size: var(--font-size-caption); color: var(--color-text-muted); }
+.field__error { display: flex; gap: var(--space-2); align-items: center; font-size: var(--font-size-caption); color: var(--color-danger-default); }
+.field__error .ico { width: 1rem; height: 1rem; }
+.input, .select {
+  width: 100%; min-height: 2.75rem; padding: var(--space-2) var(--space-3);
+  font: inherit; color: var(--color-text-default); background: var(--color-surface-default);
+  border: var(--border-width-hair) solid var(--color-border-strong); border-radius: var(--radius-sm);
+  transition: border-color var(--duration-base) var(--ease-out);
+}
+.input:hover, .select:hover { border-color: var(--color-text-default); }
+.input::placeholder { color: var(--color-text-muted); }
+.input[aria-invalid="true"] { border-color: var(--color-danger-default); box-shadow: inset 0 0 0 1px var(--color-danger-default); }
+.input:disabled, .select:disabled { background: var(--color-surface-alt); color: var(--color-text-muted); border-color: var(--color-border-default); }
+.select { appearance: none; background-image: linear-gradient(45deg, transparent 50%, currentColor 50%), linear-gradient(135deg, currentColor 50%, transparent 50%); background-position: calc(100% - 1.1rem) 55%, calc(100% - 0.75rem) 55%; background-size: 0.35rem 0.35rem; background-repeat: no-repeat; padding-right: var(--space-8); }
+.check, .switch-row { display: flex; align-items: center; gap: var(--space-3); font-size: var(--font-size-small); cursor: pointer; }
+.check input { width: 1.125rem; height: 1.125rem; accent-color: var(--color-action-default); margin: 0; }
+.switch { position: relative; width: 2.75rem; height: 1.5rem; flex: none; border: var(--border-width-hair) solid var(--color-border-strong); border-radius: var(--radius-pill); background: var(--color-surface-alt); cursor: pointer; padding: 0; transition: background-color var(--duration-base) var(--ease-out); }
+.switch::after { content: ""; position: absolute; top: 0.1875rem; left: 0.1875rem; width: 1rem; height: 1rem; border-radius: var(--radius-pill); background: var(--color-text-default); transition: transform var(--duration-base) var(--ease-out); }
+.switch[aria-checked="true"] { background: var(--color-action-default); border-color: var(--color-action-default); }
+.switch[aria-checked="true"]::after { transform: translateX(1.25rem); background: var(--color-text-on-action); }
+
+/* ===== BADGE / CARD ===== */
+.badge { display: inline-flex; align-items: center; gap: var(--space-1); padding: 0.125rem var(--space-3); font-size: var(--font-size-caption); font-weight: var(--font-weight-semibold); border-radius: var(--radius-pill); background: var(--color-accent-soft); color: var(--color-text-accent); }
+.badge--duvidas { background: var(--color-area-duvidas-soft); color: var(--color-area-duvidas-text); }
+.badge--curiosidades { background: var(--color-area-curiosidades-soft); color: var(--color-area-curiosidades-text); }
+.badge--passos { background: var(--color-area-passos-soft); color: var(--color-area-passos-text); }
+.badge--novena { background: var(--color-area-novena-soft); color: var(--color-area-novena-text); }
+.card { position: relative; display: grid; gap: var(--space-3); padding: var(--space-6); background: var(--color-surface-default); border: var(--border-width-hair) solid var(--color-border-default); border-radius: var(--radius-md); box-shadow: var(--shadow-raised); }
+.card::after { content: ""; position: absolute; left: var(--space-6); bottom: 0; height: var(--rule-width); width: 0; background: var(--color-accent-default); transition: transform var(--duration-slow) var(--ease-out); transform-origin: left; transform: scaleX(0); width: calc(100% - 3rem); }
+.card:hover::after { transform: scaleX(1); }
+
+/* ===== 1. ASSINATURA ===== */
+.wordmark { font-family: var(--font-family-display); font-weight: var(--font-weight-medium); font-size: var(--font-size-display); line-height: 0.9; letter-spacing: -0.01em; margin: 0; }
+.wordmark em { font-style: italic; color: var(--color-text-accent); }
+.wordmark-small { font-family: var(--font-family-display); font-size: var(--font-size-lead); font-weight: var(--font-weight-semibold); letter-spacing: 0.01em; }
+.wordmark-small em { font-style: italic; color: var(--color-text-accent); font-weight: var(--font-weight-medium); }
+.sig { min-height: 80vh; display: grid; align-content: center; gap: var(--space-8); padding: var(--space-16) 0; }
+.sig__phrase { font-family: var(--font-family-display); font-size: var(--font-size-h2); max-width: 26ch; line-height: 1.25; }
+.sig__dono { display: grid; gap: var(--space-3); padding: var(--space-6); border-left: 3px solid var(--color-mark-default); background: var(--color-surface-default); max-width: var(--measure-reading); }
+.sig__dono p { font-family: var(--font-family-display); font-size: var(--font-size-h3); line-height: 1.3; }
+.sig__dono .rubric { font-size: var(--font-size-caption); }
+.sig__dono .rubric-red { color: var(--color-mark-default); }
+
+/* ===== 2. COR ===== */
+.palette { display: flex; flex-direction: column; gap: 0; border: var(--border-width-hair) solid var(--color-border-default); border-radius: var(--radius-md); overflow: hidden; }
+.swatch { display: grid; align-content: end; gap: var(--space-1); padding: var(--space-4); min-height: 6.5rem; flex: var(--w) 1 0; }
+.swatch strong { font-family: var(--font-family-display); font-size: var(--font-size-lead); font-weight: var(--font-weight-semibold); }
+.swatch span { font-size: var(--font-size-caption); }
+.swatch--paper { background: var(--color-paper-50); color: var(--color-sepia-900); }
+.swatch--paper2 { background: var(--color-paper-100); color: var(--color-sepia-900); }
+.swatch--ink { background: var(--color-sepia-900); color: var(--color-paper-50); }
+.swatch--line { background: var(--color-paper-300); color: var(--color-sepia-900); }
+.swatch--gold { background: var(--color-gold-500); color: var(--color-sepia-950); }
+.swatch--red { background: var(--color-cardinal-700); color: var(--color-paper-50); }
+.swatch--goldnoir { background: var(--color-gold-400); color: var(--color-sepia-950); }
+.palette-meta { display: grid; gap: var(--space-2); }
+.palette-col { display: flex; flex-direction: column; }
+.swatch-row { display: flex; flex-direction: row; }
+.swatch-row .swatch { min-height: 9rem; }
+.origin-list { display: grid; gap: var(--space-2); font-size: var(--font-size-small); }
+.origin-list dt { font-weight: var(--font-weight-semibold); }
+.origin-list dd { margin: 0 0 var(--space-2); color: var(--color-text-muted); }
+.pairs { width: 100%; border-collapse: collapse; font-size: var(--font-size-small); }
+.pairs th, .pairs td { text-align: left; padding: var(--space-2) var(--space-3); border-bottom: var(--rule-width) solid var(--color-border-default); }
+.pairs th { font-size: var(--font-size-caption); text-transform: uppercase; letter-spacing: var(--letter-spacing-label); color: var(--color-text-muted); font-weight: var(--font-weight-semibold); }
+.pair-chip { display: inline-grid; place-items: center; min-width: 4.5rem; padding: var(--space-2); border-radius: var(--radius-sm); font-weight: var(--font-weight-semibold); }
+.table-wrap { overflow-x: auto; }
+
+/* ===== 3. TIPOGRAFIA ===== */
+.type-grid { display: grid; gap: var(--space-8); }
+.type-row { display: grid; gap: var(--space-2); padding-bottom: var(--space-6); border-bottom: var(--rule-width) solid var(--color-border-default); }
+.type-row__meta { display: flex; gap: var(--space-4); flex-wrap: wrap; }
+.t-display { font-family: var(--font-family-display); font-size: var(--font-size-display); line-height: var(--line-height-tight); font-weight: var(--font-weight-medium); }
+.t-h1 { font-family: var(--font-family-display); font-size: var(--font-size-h1); line-height: var(--line-height-tight); font-weight: var(--font-weight-medium); }
+.t-h2 { font-family: var(--font-family-display); font-size: var(--font-size-h2); line-height: 1.2; font-weight: var(--font-weight-medium); }
+.t-body { font-size: var(--font-size-body); line-height: var(--line-height-body); max-width: var(--measure-reading); }
+.t-lead { font-size: var(--font-size-lead); line-height: 1.625; max-width: var(--measure-reading); }
+.t-small { font-size: var(--font-size-small); line-height: 1.43; }
+.t-label { font-size: var(--font-size-caption); font-weight: var(--font-weight-semibold); text-transform: uppercase; letter-spacing: var(--letter-spacing-label); }
+
+/* ===== 4. FORMA / COMPONENTES ===== */
+.forma-grid { display: grid; gap: var(--space-12); }
+.forma-block { display: grid; gap: var(--space-6); }
+.forma-tokens { display: grid; gap: var(--space-4); grid-template-columns: 1fr; }
+.radius-demo { display: flex; gap: var(--space-4); flex-wrap: wrap; align-items: flex-end; }
+.radius-demo div { display: grid; gap: var(--space-2); justify-items: start; font-size: var(--font-size-caption); color: var(--color-text-muted); }
+.radius-demo i { display: block; width: 5rem; height: 5rem; background: var(--color-surface-default); border: var(--border-width-hair) solid var(--color-border-strong); }
+.radius-demo .r-sm { border-radius: var(--radius-sm); }
+.radius-demo .r-md { border-radius: var(--radius-md); }
+.radius-demo .r-lg { border-radius: var(--radius-lg); }
+.radius-demo .r-arch { border-radius: var(--radius-arch); background: var(--color-accent-soft); border-color: var(--color-accent-default); }
+.radius-demo .r-pill { border-radius: var(--radius-pill); height: 2.5rem; width: 7rem; }
+.form-grid { display: grid; gap: var(--space-6); grid-template-columns: 1fr; }
+.stack { display: grid; gap: var(--space-6); }
+
+/* ===== 5. TELA DE PRODUTO (celular 390) ===== */
+.stage { display: grid; gap: var(--space-8); justify-items: center; }
+.phone { width: 100%; max-width: 24.375rem; background: var(--color-surface-page); border: var(--border-width-hair) solid var(--color-border-strong); border-radius: var(--radius-lg); box-shadow: var(--shadow-floating); overflow: hidden; }
+.phone__bar { display: flex; justify-content: space-between; align-items: center; padding: var(--space-3) var(--space-4); border-bottom: var(--rule-width) solid var(--color-border-default); }
+.phone__body { display: grid; gap: var(--space-6); padding: var(--space-6) var(--space-4) var(--space-8); }
+.liturgy-date { display: grid; gap: var(--space-1); }
+.liturgy-date h1 { font-size: var(--font-size-h1); }
+.liturgy-color { display: flex; align-items: center; gap: var(--space-3); padding: var(--space-3) var(--space-4); background: var(--color-surface-default); border: var(--border-width-hair) solid var(--color-border-default); border-radius: var(--radius-md); font-size: var(--font-size-small); }
+.liturgy-color__dot { width: 1rem; height: 1rem; border-radius: var(--radius-pill); background: var(--color-liturgical-verde); box-shadow: 0 0 0 3px var(--color-surface-default), 0 0 0 4px var(--color-accent-default); flex: none; }
+.day-nav { display: flex; justify-content: space-between; gap: var(--space-2); align-items: center; }
+.day-nav .pills { display: flex; gap: var(--space-2); }
+.reading { display: grid; gap: var(--space-4); }
+.verses { display: grid; gap: var(--space-3); margin: 0; padding: 0; list-style: none; }
+.verses li { display: grid; grid-template-columns: 1.75rem 1fr; gap: var(--space-2); font-size: var(--font-size-body); line-height: var(--line-height-body); }
+.verses .num { font-family: var(--font-family-display); font-weight: var(--font-weight-semibold); color: var(--color-mark-default); font-size: var(--font-size-small); padding-top: 0.2rem; }
+.reading__ref { font-family: var(--font-family-display); font-style: italic; font-size: var(--font-size-lead); color: var(--color-text-muted); }
+.phone__cta { display: grid; gap: var(--space-3); padding: var(--space-4); border-top: var(--rule-width) solid var(--color-border-default); background: var(--color-surface-default); }
+.phone__meta { display: flex; justify-content: space-between; font-size: var(--font-size-caption); color: var(--color-text-muted); }
+
+/* ===== 6. PEÇA DE MARCA (1080 × 1350) ===== */
+.piece-row { display: grid; gap: var(--space-8); justify-items: center; grid-template-columns: 1fr; }
+.piece { position: relative; width: 100%; max-width: 23rem; aspect-ratio: 4 / 5; container-type: inline-size; background: var(--color-surface-default); color: var(--color-text-default); border: var(--border-width-hair) solid var(--color-border-strong); overflow: hidden; display: grid; grid-template-rows: auto 1fr auto; padding: 9cqi; }
+.piece__top { display: flex; justify-content: space-between; align-items: center; gap: 4cqi; }
+.piece__top .rubric { font-size: 3.2cqi; letter-spacing: 0.22em; }
+.piece__arch { align-self: center; justify-self: center; width: 70cqi; padding: 12cqi 8cqi 9cqi; border: var(--rule-width) solid var(--color-accent-default); border-radius: var(--radius-arch); display: grid; gap: 4cqi; text-align: center; align-content: center; background: var(--color-surface-page); }
+.piece__quote { font-family: var(--font-family-display); font-weight: var(--font-weight-medium); font-size: 6.2cqi; line-height: 1.22; }
+.piece__ref { font-family: var(--font-family-display); font-style: italic; font-size: 4cqi; color: var(--color-text-muted); }
+.piece__foot { display: flex; justify-content: space-between; align-items: end; gap: 4cqi; }
+.piece__foot .wordmark-small { font-size: 5cqi; }
+.piece__foot .caption { font-size: 2.8cqi; }
+.piece--ink { background: var(--color-surface-inverse); color: var(--color-text-on-inverse); border-color: var(--color-surface-inverse); }
+.piece--ink .rubric { color: var(--color-text-accent-on-inverse); }
+.piece--ink .piece__arch { background: transparent; }
+.piece--ink .piece__ref, .piece--ink .caption { color: var(--color-text-on-inverse-muted); }
+.piece--ink .piece__arch { border-color: var(--color-accent-default); }
+.piece-label { display: grid; gap: var(--space-2); }
+.piece-wrap { display: grid; gap: var(--space-3); justify-items: center; width: 100%; }
+
+/* ===== 7. MOVIMENTO ===== */
+.motion-grid { display: grid; gap: var(--space-6); grid-template-columns: 1fr; }
+.motion-spec { display: grid; gap: var(--space-2); font-size: var(--font-size-small); }
+.motion-spec code { font-family: var(--font-family-text); font-size: var(--font-size-caption); }
+.entrance { animation: rise var(--duration-slow) var(--ease-out) both; }
+.entrance--2 { animation-delay: var(--duration-base); }
+@keyframes rise { from { opacity: 0; transform: translateY(0.75rem); } to { opacity: 1; transform: none; } }
+.rule-draw { display: grid; gap: var(--space-3); }
+.rule-draw .fio { width: 100%; transform-origin: left; transform: scaleX(0.2); transition: transform var(--duration-slow) var(--ease-out); }
+.rule-draw:hover .fio, .rule-draw:focus-within .fio { transform: scaleX(1); }
+.focus-demo { display: flex; gap: var(--space-4); flex-wrap: wrap; }
+
+/* ===== RODAPÉ ===== */
+.foot { padding: var(--space-12) 0; border-top: var(--rule-width) solid var(--color-border-default); }
+.foot .wrap { display: grid; gap: var(--space-4); }
+
+/* ===== MOBILE-FIRST: ≥ 40rem ===== */
+@media (min-width: 40rem) {
+  .sig__dono { grid-template-columns: auto 1fr; }
+  .form-grid { grid-template-columns: 1fr 1fr; }
+  .motion-grid { grid-template-columns: 1fr 1fr; }
+  .piece-row { grid-template-columns: 1fr 1fr; }
+  .palette { flex-direction: row; }
+  .palette-col { flex-direction: row; }
+  .swatch-row { flex-direction: row; }
+  .type-row { grid-template-columns: 14rem 1fr; align-items: baseline; }
+}
+@media (min-width: 64rem) {
+  .phone-wrap { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-12); align-items: start; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: 1ms !important; animation-iteration-count: 1 !important; transition-duration: 1ms !important; }
+}
+</style>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="wrap">
+    <a href="#assinatura" class="wordmark-small" style="color: var(--color-text-default); text-decoration: none;">Tolle <em>Lege</em></a>
+    <nav aria-label="Seções do DS">
+      <a href="#cor">Cor</a>
+      <a href="#tipografia">Tipografia</a>
+      <a href="#forma">Componentes</a>
+      <a href="#produto">Produto</a>
+      <a href="#marca">Marca</a>
+      <a href="#movimento">Movimento</a>
+    </nav>
+    <button type="button" class="btn btn--secondary btn--pill" id="theme-toggle" aria-pressed="false" aria-label="Alternar para o modo escuro">
+      <svg class="ico" viewBox="0 0 24 24" aria-hidden="true" id="theme-icon"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+      <span id="theme-label">Escuro</span>
+    </button>
+  </div>
+</header>
+
+<main>
+
+<!-- 1. ASSINATURA -->
+<section id="assinatura" class="section">
+  <div class="wrap sig">
+    <p class="section__num">01 · Assinatura</p>
+    <div class="wordmark" role="img" aria-label="Tolle Lege">Tolle<br><em>Lege</em></div>
+    <span class="fio" style="width: 6rem" aria-hidden="true"></span>
+    <p class="sig__phrase">Um caminho simples para conhecer o que a Igreja crê, celebra e vive, no seu ritmo.</p>
+    <div class="sig__dono">
+      <span class="rubric">Detalhe de dono</span>
+      <p>Faça o vermelho, diga o preto.</p>
+      <p class="small" style="grid-column: 1 / -1">O que se diz fica em tinta. O que se faz (ajoelhe-se, levante-se, clique em “Começar”) fica em vermelho cardinal. É a regra da rubrica dos missais, aplicada à interface.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 2. COR -->
+<section id="cor" class="section">
+  <div class="wrap">
+    <div class="section__head">
+      <p class="section__num">02 · Cor</p>
+      <h2 class="t-h2">Papel na maior parte, tinta para ler, ouro em fio, vermelho para agir.</h2>
+      <p class="t-lead muted-block">Estratégia: neutro quente dominante, acento em fio. Âncora <strong>#a8823f</strong> (ouro velho), extraída de <code>--color-primary</code> do site atual e usada hoje no filete dos botões e nos fios.</p>
+    </div>
+
+    <div class="palette" role="img" aria-label="Proporção de uso: cerca de 60% papel, 20% tinta, 12% ouro em fio, 8% vermelho">
+      <div class="swatch swatch--paper" style="--w: 45"><strong>Papel 50</strong><span>#faf7f0 · fundo de cartão</span></div>
+      <div class="swatch swatch--paper2" style="--w: 20"><strong>Papel 100</strong><span>#e8e1cf · fundo da página</span></div>
+      <div class="swatch swatch--line" style="--w: 8"><strong>Linha</strong><span>#cfc3a8</span></div>
+      <div class="swatch swatch--ink" style="--w: 18"><strong>Tinta 900</strong><span>#2a221b · texto e seção escura</span></div>
+      <div class="swatch swatch--gold" style="--w: 6"><strong>Ouro 500</strong><span>#a8823f · fio</span></div>
+      <div class="swatch swatch--red" style="--w: 5"><strong>Cardinal</strong><span>#7a1f26 · rubrica, ação</span></div>
+    </div>
+    <p class="caption" style="margin-top: var(--space-3)">Proporção de uso: papel ~73%, tinta ~18%, ouro ~6%, cardinal ~5%. A cor de marca nunca passa de 6% da tela.</p>
+
+    <div class="forma-grid" style="margin-top: var(--space-12)">
+      <div class="forma-block">
+        <h3>Origem de cada cor</h3>
+        <dl class="origin-list">
+          <dt>Papel 50 / 100 · Linha · Tinta 900 / 600</dt><dd>Primitivos do site (<code>paper</code>, <code>ink</code>, <code>line</code>, <code>ink-muted</code>). Tinta e papel são o livro, não uma escolha de tendência.</dd>
+          <dt>Ouro 100 a 800 (âncora 500)</dt><dd>Rampa do <code>primary</code> do site, com passos em luminosidade fixa. Ouro 400 é a versão para fundo escuro (#c59d55), por contraste.</dd>
+          <dt>Cardinal 700 (#7a1f26)</dt><dd>Cor de rubrica dos livros litúrgicos (<em>ruber</em>). Corrigido: era ouro, agora é vermelho de verdade. Função: sobretítulo, número de versículo, ação primária.</dd>
+          <dt>Cardinal sobre tinta (#d0646b, derivado)</dt><dd>Mesmo vermelho clareado para ler sobre fundo escuro. Não estava no extraído: é uma adição honesta, a conferir.</dd>
+          <dt>Terracota, sálvia, marian, rosa</dt><dd>Áreas do app (Curiosidades, Primeiros passos, Dúvidas, Novena). Texto usa o passo 700 para passar em 4,5:1 sobre o soft.</dd>
+        </dl>
+      </div>
+      <div class="forma-block">
+        <h3>Pares de contraste (WCAG 2)</h3>
+        <div class="table-wrap">
+          <table class="pairs">
+            <thead><tr><th>Texto / fundo</th><th>Amostra</th><th>Razão</th><th>Uso</th></tr></thead>
+            <tbody>
+              <tr><td>Tinta 900 / Papel 50</td><td><span class="pair-chip" style="background: var(--color-paper-50); color: var(--color-sepia-900)">Aa</span></td><td>14,61</td><td>Texto principal</td></tr>
+              <tr><td>Tinta 600 / Papel 50</td><td><span class="pair-chip" style="background: var(--color-paper-50); color: var(--color-sepia-600)">Aa</span></td><td>6,97</td><td>Texto secundário</td></tr>
+              <tr><td>Tinta 600 / Papel 200</td><td><span class="pair-chip" style="background: var(--color-paper-200); color: var(--color-sepia-600)">Aa</span></td><td>5,06</td><td>Muted sobre superfície alt.</td></tr>
+              <tr><td>Ouro 700 / Papel 50</td><td><span class="pair-chip" style="background: var(--color-paper-50); color: var(--color-gold-700)">Aa</span></td><td>6,34</td><td>Texto de acento</td></tr>
+              <tr><td>Papel 50 / Cardinal 700</td><td><span class="pair-chip" style="background: var(--color-cardinal-700); color: var(--color-paper-50)">Aa</span></td><td>9,57</td><td>Accent.on do botão</td></tr>
+              <tr><td>Ouro 400 / Tinta 900</td><td><span class="pair-chip" style="background: var(--color-sepia-900); color: var(--color-gold-400)">Aa</span></td><td>6,20</td><td>Acento no escuro</td></tr>
+              <tr><td>Terracota 700 / Terracota 100</td><td><span class="pair-chip" style="background: var(--color-terracotta-100); color: var(--color-terracotta-700)">Aa</span></td><td>4,99</td><td>Badge Curiosidades</td></tr>
+              <tr><td>Ouro 500 / Tinta 900 (fio, não texto)</td><td><span class="pair-chip" style="background: var(--color-sepia-900); color: var(--color-gold-500)">Aa</span></td><td>4,42</td><td>Só decorativo: nunca texto de 14px</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 3. TIPOGRAFIA -->
+<section id="tipografia" class="section">
+  <div class="wrap">
+    <div class="section__head">
+      <p class="section__num">03 · Tipografia</p>
+      <h2 class="t-h2">Garamond para o que se lê como livro; Inter para o que se usa como tela.</h2>
+      <p class="t-lead muted-block">Display: EB Garamond (serifa garalde, categoria humanista do séc. XVI, a voz do missal impresso). Texto: Inter (sans humanista de texto, leitura de tela e rótulos). Nenhuma das duas é display do cemitério.</p>
+    </div>
+    <div class="type-grid">
+      <div class="type-row"><div class="type-row__meta"><span class="label">display</span><span class="caption">EB Garamond 500 · 84/1.1</span></div><p class="t-display">Vinde a mim</p></div>
+      <div class="type-row"><div class="type-row__meta"><span class="label">h1</span><span class="caption">EB Garamond 500 · 52/1.1</span></div><h1 class="t-h1">Liturgia de hoje</h1></div>
+      <div class="type-row"><div class="type-row__meta"><span class="label">h2</span><span class="caption">EB Garamond 500 · 36/1.2</span></div><h2 class="t-h2">O que a Igreja celebra neste domingo</h2></div>
+      <div class="type-row"><div class="type-row__meta"><span class="label">body</span><span class="caption">Inter 400 · 16/1.625 · medida 36rem</span></div><p class="t-body">Quem chega à fé não precisa saber tudo de uma vez. Cada passo aqui explica uma coisa, na ordem em que ela acontece na Missa, e pode ser lido no seu tempo.</p></div>
+      <div class="type-row"><div class="type-row__meta"><span class="label">small</span><span class="caption">Inter 400 · 14/1.43</span></div><p class="t-small muted-block">Leituras de hoje segundo o calendário litúrgico. Textos da versão CNBB.</p></div>
+      <div class="type-row"><div class="type-row__meta"><span class="label">label</span><span class="caption">Inter 600 · 12 · caixa-alta · 0,2em</span></div><p class="t-label muted-block">Próxima leitura · 3 min</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 4. FORMA E COMPONENTES -->
+<section id="forma" class="section">
+  <div class="wrap">
+    <div class="section__head">
+      <p class="section__num">04 · Forma e componentes</p>
+      <h2 class="t-h2">Reto para ação, arco para entrada, pílula para escolha.</h2>
+      <p class="t-lead muted-block">Regra: controles em 3px, cartões em 4px, superfícies de peça em 6px. O arco (janela de igreja) só aparece em moldura de imagem e marca. Sombra é sépia, e no escuro some: vira borda.</p>
+    </div>
+
+    <div class="forma-grid">
+      <div class="forma-block">
+        <div class="radius-demo" aria-label="Raios">
+          <div><i class="r-sm"></i>sm · 3px</div>
+          <div><i class="r-md"></i>md · 4px</div>
+          <div><i class="r-lg"></i>lg · 6px</div>
+          <div><i class="r-arch"></i>arch · entrada</div>
+          <div><span class="r-pill" style="display:block;border:1px solid var(--color-border-strong)"></span>pill · escolha</div>
+        </div>
+      </div>
+
+      <div class="forma-block">
+        <h3>Botões · normal, hover, foco, desabilitado</h3>
+        <p class="small">Hover: o filete interno clareia (ouro 300). Foco: contorno cardinal de 2px com 3px de respiro. Desabilitado: sem filete, texto em muted.</p>
+        <div class="table-wrap">
+          <div class="btn-row" style="align-items: flex-start">
+            <div class="state-cell"><span class="caption">primário</span><button class="btn btn--primary">Começar a visita</button><button class="btn btn--primary is-hover">Hover</button><button class="btn btn--primary" style="outline: 2px solid var(--color-focus-ring); outline-offset: 3px">Foco</button><button class="btn btn--primary" disabled>Desabilitado</button></div>
+            <div class="state-cell"><span class="caption">secundário</span><button class="btn btn--secondary">Ver a Missa</button><button class="btn btn--secondary is-hover">Hover</button><button class="btn btn--secondary" style="outline: 2px solid var(--color-focus-ring); outline-offset: 3px">Foco</button><button class="btn btn--secondary" disabled>Desabilitado</button></div>
+            <div class="state-cell"><span class="caption">ghost</span><button class="btn btn--ghost">Ler o Evangelho</button><button class="btn btn--ghost is-hover">Hover</button><button class="btn btn--ghost" style="outline: 2px solid var(--color-focus-ring); outline-offset: 3px">Foco</button><button class="btn btn--ghost" disabled>Desabilitado</button></div>
+            <div class="state-cell"><span class="caption">destrutivo</span><button class="btn btn--danger">Apagar anotação</button><button class="btn btn--danger is-hover">Hover</button><button class="btn btn--danger" style="outline: 2px solid var(--color-focus-ring); outline-offset: 3px">Foco</button><button class="btn btn--danger" disabled>Desabilitado</button></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-grid">
+        <div class="stack">
+          <div class="field">
+            <label for="nome">Seu nome (opcional)</label>
+            <input class="input" id="nome" type="text" placeholder="Como você gosta de ser chamado" aria-describedby="nome-help">
+            <span class="field__help" id="nome-help">Usamos só para cumprimentar você na tela inicial.</span>
+          </div>
+          <div class="field">
+            <label for="email">E-mail</label>
+            <input class="input" id="email" type="email" value="maria@exemplo" aria-invalid="true" aria-describedby="email-err">
+            <span class="field__error" id="email-err"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 8v5M12 16.5v.01"/></svg>Falta o domínio, por exemplo @gmail.com.</span>
+          </div>
+          <div class="field">
+            <label for="paroquia">Paróquia mais próxima</label>
+            <select class="select" id="paroquia">
+              <option>Matriz de Nossa Senhora da Conceição</option>
+              <option>Santuário São José</option>
+            </select>
+          </div>
+        </div>
+        <div class="stack">
+          <label class="check"><input type="checkbox" checked> Lembrar de rezar o Angelus às 12h</label>
+          <div class="switch-row">
+            <button type="button" class="switch" role="switch" aria-checked="true" aria-label="Notificar leitura do dia"></button>
+            <span>Notificar a leitura do dia</span>
+          </div>
+          <div class="btn-row">
+            <span class="badge">Tempo Comum</span>
+            <span class="badge badge--duvidas">Dúvidas</span>
+            <span class="badge badge--curiosidades">Curiosidades</span>
+            <span class="badge badge--passos">Primeiros passos</span>
+            <span class="badge badge--novena">Novena</span>
+          </div>
+          <article class="card">
+            <span class="rubric">Trilha · Não sou batizado</span>
+            <h3>O que acontece na Missa</h3>
+            <p class="small">Doze passos curtos, cada um com a postura do momento: de pé, sentado ou de joelhos.</p>
+            <div class="btn-row"><a class="btn btn--ghost" href="#forma">Abrir trilha</a></div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 5. TELA DE PRODUTO -->
+<section id="produto" class="section">
+  <div class="wrap">
+    <div class="section__head">
+      <p class="section__num">05 · Tela de produto · 40%</p>
+      <h2 class="t-h2">Liturgia de hoje, no celular.</h2>
+      <p class="t-lead muted-block">A leitura longa usa a medida de 36rem e Inter 16/1.625. A cor litúrgica do dia vira um ponto com anel de ouro, não um fundo inteiro. Os números dos versículos são cardinais: são as rubricas da leitura.</p>
+    </div>
+    <div class="phone-wrap">
+      <div class="phone" role="region" aria-label="Liturgia de hoje, 390 pixels">
+        <div class="phone__bar">
+          <span class="wordmark-small">Tolle <em>Lege</em></span>
+          <button class="btn btn--ghost" aria-label="Abrir menu" style="padding-inline: var(--space-2)"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h10"/></svg></button>
+        </div>
+        <div class="phone__body">
+          <div class="day-nav">
+            <button class="btn btn--ghost" aria-label="Dia anterior" style="padding-inline: var(--space-2)"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M15 6l-6 6 6 6"/></svg></button>
+            <div class="pills">
+              <span class="badge">8 out</span>
+              <span class="badge" style="background: var(--color-text-default); color: var(--color-surface-default)">9 out</span>
+              <span class="badge">10 out</span>
+            </div>
+            <button class="btn btn--ghost" aria-label="Próximo dia" style="padding-inline: var(--space-2)"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></button>
+          </div>
+          <div class="liturgy-date">
+            <span class="rubric">Sexta-feira · 9 de outubro de 2026</span>
+            <h1>Liturgia de hoje</h1>
+          </div>
+          <div class="liturgy-color">
+            <span class="liturgy-color__dot" aria-hidden="true"></span>
+            <span><strong>Tempo Comum</strong> · cor verde</span>
+          </div>
+          <div class="reading">
+            <span class="label">1ª leitura</span>
+            <p class="reading__ref">Salmo 23 · trecho</p>
+            <ol class="verses" style="padding:0">
+              <li><span class="num">1</span><span>O Senhor é meu pastor, nada me faltará.</span></li>
+              <li><span class="num">2</span><span>Em verdes prados me faz repousar, para águas tranquilas me conduz.</span></li>
+              <li><span class="num">3</span><span>Restaura minhas forças, guia-me por caminhos justos, por amor do seu nome.</span></li>
+            </ol>
+            <button class="btn btn--ghost" style="justify-self: start; padding-inline: 0">Ler a leitura inteira</button>
+          </div>
+        </div>
+        <div class="phone__cta">
+          <button class="btn btn--primary btn--full">
+            <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="10" r="1.5"/><path d="M21 16l-5-5-8 8"/></svg>
+            Criar imagem
+          </button>
+          <div class="phone__meta"><span>Evangelho: Lc 11,1-4</span><span>Compartilhar</span></div>
+        </div>
+      </div>
+
+      <div class="card" style="align-self: start">
+        <span class="rubric">Estados da tela</span>
+        <p class="small">Com dia sem leitura cadastrada, o bloco vira <em>“Leitura ainda não publicada para este dia.”</em> em tinta muted, sem ícone de alerta.</p>
+        <p class="small">No modo escuro, o cartão do dia usa borda em vez de sombra, e a cor litúrgica mantém o anel de ouro (400).</p>
+        <p class="small">Dados ilustrativos; a sequência de leituras real vem do calendário do app.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 6. PEÇA DE MARCA -->
+<section id="marca" class="section">
+  <div class="wrap">
+    <div class="section__head">
+      <p class="section__num">06 · Peça de marca · 60%</p>
+      <h2 class="t-h2">Imagem de partilha, 1080 × 1350.</h2>
+      <p class="t-lead muted-block">Evangelho do dia para o Instagram. O arco de entrada enquadra a frase; o vermelho marca a referência; o ouro entra só como fio. Abaixo, a versão escura da mesma peça.</p>
+    </div>
+    <div class="piece-row">
+      <div class="piece-wrap">
+        <span class="label">Papel</span>
+        <figure class="piece" aria-label="Imagem de partilha: Evangelho do dia, Mateus 11,28">
+          <div class="piece__top"><span class="rubric">Evangelho do dia</span><span class="caption">9 · 10</span></div>
+          <div class="piece__arch">
+            <p class="piece__quote">“Vinde a mim, todos vós que estais cansados e sobrecarregados, e eu vos darei descanso.”</p>
+            <span class="fio" style="justify-self: center; width: 5cqi; background: var(--color-accent-default)" aria-hidden="true"></span>
+            <p class="piece__ref">Mateus 11,28</p>
+          </div>
+          <div class="piece__foot">
+            <span class="wordmark-small">Tolle <em>Lege</em></span>
+            <span class="caption">tolle-et-lege.vercel.app</span>
+          </div>
+        </figure>
+      </div>
+      <div class="piece-wrap" data-theme="dark">
+        <span class="label">Tinta</span>
+        <figure class="piece piece--ink" aria-label="Versão escura da imagem de partilha">
+          <div class="piece__top"><span class="rubric">Evangelho do dia</span><span class="caption">9 · 10</span></div>
+          <div class="piece__arch">
+            <p class="piece__quote">“Vinde a mim, todos vós que estais cansados e sobrecarregados, e eu vos darei descanso.”</p>
+            <span class="fio" style="justify-self: center; width: 5cqi; background: var(--color-accent-default)" aria-hidden="true"></span>
+            <p class="piece__ref">Mateus 11,28</p>
+          </div>
+          <div class="piece__foot">
+            <span class="wordmark-small">Tolle <em>Lege</em></span>
+            <span class="caption">tolle-et-lege.vercel.app</span>
+          </div>
+        </figure>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 7. MOVIMENTO -->
+<section id="movimento" class="section">
+  <div class="wrap">
+    <div class="section__head">
+      <p class="section__num">07 · Movimento · ousadia 4</p>
+      <h2 class="t-h2">Lento, sem rebote. O movimento é a disciplina.</h2>
+      <p class="t-lead muted-block">Uma curva só: <code>cubic-bezier(0.22, 1, 0.36, 1)</code>. 200 ms para foco, 300 ms para estado, 600 ms para entrada e para o fio. Sem rebote, sem escala, sem brilho.</p>
+    </div>
+    <div class="motion-grid">
+      <div class="card entrance" style="--x:0">
+        <span class="rubric">Entrada · 600 ms</span>
+        <p class="t-body">Este bloco sobe 12px e aparece, uma vez, ao abrir a página.</p>
+        <p class="motion-spec"><span><code>--ease-out</code> · <code>--duration-slow</code></span></p>
+      </div>
+      <div class="card rule-draw" tabindex="0">
+        <span class="rubric">Fio · passe o mouse</span>
+        <p class="t-body">O fio dourado se estende em 600 ms ao passar o mouse ou focar com o teclado.</p>
+        <span class="fio" aria-hidden="true"></span>
+      </div>
+    </div>
+    <div class="focus-demo" style="margin-top: var(--space-8)">
+      <button class="btn btn--primary" style="transition-duration: var(--duration-base)">Hover: filete clareia em 300 ms</button>
+      <button class="btn btn--secondary">Foco: contorno cardinal</button>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <p class="wordmark-small">Tolle <em>Lege</em></p>
+    <p class="caption">DS r1 · a-missal-consolidado · fiel ao site atual, com correções de rubrica, contraste e raio. Fontes OFL (EB Garamond, Inter).</p>
+  </div>
+</footer>
+
+<script>
+  (function () {
+    var root = document.documentElement;
+    var btn = document.getElementById('theme-toggle');
+    var label = document.getElementById('theme-label');
+    var icon = document.getElementById('theme-icon');
+    var moon = '<path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/>';
+    var sun = '<circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/>';
+    function apply(dark) {
+      root.setAttribute('data-theme', dark ? 'dark' : 'light');
+      btn.setAttribute('aria-pressed', String(dark));
+      btn.setAttribute('aria-label', dark ? 'Alternar para o modo claro' : 'Alternar para o modo escuro');
+      label.textContent = dark ? 'Claro' : 'Escuro';
+      icon.innerHTML = dark ? sun : moon;
+    }
+    btn.addEventListener('click', function () { apply(root.getAttribute('data-theme') !== 'dark'); });
+  })();
+</script>
+</body>
+</html>

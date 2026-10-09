@@ -1,0 +1,54 @@
+<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Direções · r1</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;600&family=Geist+Mono&display=swap" rel="stylesheet">
+<style>
+:root{--bg:oklch(.17 .005 260);--fg:oklch(.95 .005 260);--muted:oklch(.65 .01 260);--line:oklch(.3 .01 260);--accent:oklch(.78 .15 70)}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--fg);font:15px/1.5 Geist,sans-serif}
+.top{position:sticky;top:0;z-index:2;display:flex;gap:16px;align-items:center;padding:12px 24px;background:var(--bg);border-bottom:1px solid var(--line)}
+.top b{font-family:"Geist Mono",monospace;font-size:13px;color:var(--accent)}.top nav{display:flex;gap:12px;flex-wrap:wrap}.top a{color:var(--muted);text-decoration:none;font-size:13px}.top a:hover{color:var(--fg)}
+main{padding:24px;display:grid;gap:48px}
+.v header{display:flex;justify-content:space-between;align-items:baseline}.v h2{margin:0;font:600 18px "Geist Mono",monospace}.v header a{color:var(--accent);font-size:13px}
+.n{color:var(--muted);font-size:13px;margin:4px 0 12px;max-width:110ch}
+.frames{display:grid;grid-template-columns:1fr 300px;gap:16px;align-items:start}
+.desk,.mob{border:1px solid var(--line);border-radius:6px;overflow:hidden;background:#fff}
+.desk{height:620px}.desk iframe{width:1440px;height:1033px;transform:scale(.6);transform-origin:0 0;border:0}
+.mob{height:620px}.mob iframe{width:390px;height:806px;transform:scale(.77);transform-origin:0 0;border:0}
+@media (max-width:1100px){.frames{grid-template-columns:1fr}.desk{height:auto;aspect-ratio:1440/900}.desk iframe{transform:scale(.4)}}
+</style></head><body>
+<div class="top"><b>direções · r1 · 4 direções</b><nav><a href="#a-missal-consolidado">a-missal-consolidado</a><a href="#b-rubrica">b-rubrica</a><a href="#c-cal-e-telha">c-cal-e-telha</a><a href="#d-cor-do-dia">d-cor-do-dia</a></nav></div>
+<main>
+  <section class="v" id="a-missal-consolidado">
+    <header><h2>a-missal-consolidado</h2><a href="./a-missal-consolidado/index.html" target="_blank" rel="noopener">abrir ↗</a></header>
+    <p class="n">família: editorial clássico / livro litúrgico · estratégia de cor: neutro quente dominante + acento em fio (âncora #a8823f) · fontes: EB Garamond / Inter (categoria garalde + sans humanista de texto) · forma: raio 3/4/6px + arco · borda 1px sépia · sombra sépia (no escuro, borda) · movimento: lento, cubic-bezier(0.22,1,0.36,1), 300/600ms · ousadia: nenhuma troca de forma: o movimento é a disciplina; a ousadia está só na regra "vermelho = o que se faz" aplicada ao botão primário. · detalhe de dono: "Faça o vermelho, diga o preto": cardinal #7a1f26 é ação e rubrica; tinta é leitura.</p>
+    <div class="frames">
+      <div class="desk"><iframe src="./a-missal-consolidado/index.html" loading="lazy" title="a-missal-consolidado desktop"></iframe></div>
+      <div class="mob"><iframe src="./a-missal-consolidado/index.html" loading="lazy" title="a-missal-consolidado mobile"></iframe></div>
+    </div>
+  </section>
+
+  <section class="v" id="b-rubrica">
+    <header><h2>b-rubrica</h2><a href="./b-rubrica/index.html" target="_blank" rel="noopener">abrir ↗</a></header>
+    <p class="n">família: editorial-serifado (apoio: suíço de grade na UI) · estratégia de cor: duas tintas (preto de impressão + vermelho de rubrica sobre papel) · fontes: Literata / Literata (categoria serifa de texto, UMA família para tudo) · forma: raio 0 · borda 1px (2px só em foco/erro) · sombra nenhuma · movimento: 150 ms hover/foco, 200 ms entrada, uma curva · ousadia: a regra de função "faça o vermelho, diga o preto" aplicada em todo componente, inclusive na postura da Missa e no botão de avançar. · detalhe de dono: rubrica dos missais. Postura (de pé, sentados, de joelhos) em vermelho, fala e resposta do povo em preto.</p>
+    <div class="frames">
+      <div class="desk"><iframe src="./b-rubrica/index.html" loading="lazy" title="b-rubrica desktop"></iframe></div>
+      <div class="mob"><iframe src="./b-rubrica/index.html" loading="lazy" title="b-rubrica mobile"></iframe></div>
+    </div>
+  </section>
+
+  <section class="v" id="c-cal-e-telha">
+    <header><h2>c-cal-e-telha</h2><a href="./c-cal-e-telha/index.html" target="_blank" rel="noopener">abrir ↗</a></header>
+    <p class="n">família: material / arquitetura colonial brasileira (apoio: humanista contemporâneo) · estratégia de cor: materiais da igreja · fontes: Brygada 1918 / Figtree (categoria serif de texto sóbria para display, humanista para texto) · forma: raio 2–4 px, arco da porta (topo semicircular, base reta) como forma-assinatura · borda 1 px (2 px em destaque) · sombra: fio de luz natural mínimo, no escuro vira borda · movimento: 400 ms, curva cubic-bezier(.2,.6,.2,1), luz que muda · ousadia: o site deixa de ser pergaminho sépia e passa a ter a cal, o granito, a telha e a madeira da igreja real, com o arco como recorte de tudo. · detalhe de dono: "telha só onde se age": a telha aparece no botão de ação, na parada atual e no próximo passo, e em mais nenhum lugar.</p>
+    <div class="frames">
+      <div class="desk"><iframe src="./c-cal-e-telha/index.html" loading="lazy" title="c-cal-e-telha desktop"></iframe></div>
+      <div class="mob"><iframe src="./c-cal-e-telha/index.html" loading="lazy" title="c-cal-e-telha mobile"></iframe></div>
+    </div>
+  </section>
+
+  <section class="v" id="d-cor-do-dia">
+    <header><h2>d-cor-do-dia</h2><a href="./d-cor-do-dia/index.html" target="_blank" rel="noopener">abrir ↗</a></header>
+    <p class="n">família: cor chapada expressiva / pôster editorial contemporâneo (apoio: editorial-serifado) · estratégia de cor: o site veste a cor do tempo litúrgico · fontes: Bodoni Moda / Geist (categoria serifa display de alto contraste com itálico + grotesca neutra) · forma: raio 0 em tudo · borda 1px (2px em erro e no celular) · sombra nenhuma · movimento: troca de cor do dia 600ms, UI 160ms, entrada do arco 600ms · ousadia: a cor da página inteira muda com o calendário da Igreja; o arco da abertura corta o título · detalhe de dono: o rótulo do tempo litúrgico vive dentro da abertura do arco ("Tempo Comum · verde")</p>
+    <div class="frames">
+      <div class="desk"><iframe src="./d-cor-do-dia/index.html" loading="lazy" title="d-cor-do-dia desktop"></iframe></div>
+      <div class="mob"><iframe src="./d-cor-do-dia/index.html" loading="lazy" title="d-cor-do-dia mobile"></iframe></div>
+    </div>
+  </section></main></body></html>

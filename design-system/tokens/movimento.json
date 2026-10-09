@@ -1,0 +1,28 @@
+{
+  "motion": {
+    "duration": {
+      "fast": {
+        "$value": "160ms",
+        "$type": "string",
+        "$description": "press, foco, hover de controle"
+      },
+      "base": {
+        "$value": "400ms",
+        "$type": "string",
+        "$description": "luz que muda, tema, entrada"
+      },
+      "slow": {
+        "$value": "700ms",
+        "$type": "string",
+        "$description": "reserva, não usada em componente"
+      }
+    },
+    "ease": {
+      "light": {
+        "$value": "cubic-bezier(0.2, 0.6, 0.2, 1)",
+        "$type": "string",
+        "$description": "curva da luz: entra rápido, assenta"
+      }
+    }
+  }
+}

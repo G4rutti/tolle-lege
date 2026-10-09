@@ -1,0 +1,316 @@
+// gerado por ds-forge/tokens-build - não edite à mão
+export const tokens = {
+  "share": {
+    "cal": "var(--share-cal)",
+    "moldura": "var(--share-moldura)",
+    "granito": "var(--share-granito)",
+    "madeira": "var(--share-madeira)",
+    "ferro": "var(--share-ferro)",
+    "telha": "var(--share-telha)"
+  },
+  "space": {
+    "1": "var(--space-1)",
+    "2": "var(--space-2)",
+    "3": "var(--space-3)",
+    "4": "var(--space-4)",
+    "5": "var(--space-5)",
+    "6": "var(--space-6)",
+    "7": "var(--space-7)",
+    "8": "var(--space-8)"
+  },
+  "radius": {
+    "none": "var(--radius-none)",
+    "sm": "var(--radius-sm)",
+    "md": "var(--radius-md)",
+    "control": "var(--radius-control)",
+    "arch": "var(--radius-arch)"
+  },
+  "border": {
+    "width": {
+      "default": "var(--border-width-default)",
+      "strong": "var(--border-width-strong)"
+    }
+  },
+  "shadow": {
+    "sm": "var(--shadow-sm)",
+    "none": "var(--shadow-none)"
+  },
+  "size": {
+    "control-md": "var(--size-control-md)",
+    "control-sm": "var(--size-control-sm)",
+    "icon": "var(--size-icon)",
+    "layout-max": "var(--size-layout-max)",
+    "reading": "var(--size-reading)",
+    "touch-min": "var(--size-touch-min)"
+  },
+  "motion": {
+    "duration": {
+      "fast": "var(--motion-duration-fast)",
+      "base": "var(--motion-duration-base)",
+      "slow": "var(--motion-duration-slow)"
+    },
+    "ease": {
+      "light": "var(--motion-ease-light)"
+    }
+  },
+  "color": {
+    "marca": {
+      "50": "var(--color-marca-50)",
+      "100": "var(--color-marca-100)",
+      "200": "var(--color-marca-200)",
+      "300": "var(--color-marca-300)",
+      "400": "var(--color-marca-400)",
+      "500": "var(--color-marca-500)",
+      "600": "var(--color-marca-600)",
+      "700": "var(--color-marca-700)",
+      "800": "var(--color-marca-800)",
+      "900": "var(--color-marca-900)",
+      "950": "var(--color-marca-950)"
+    },
+    "neutro": {
+      "50": "var(--color-neutro-50)",
+      "100": "var(--color-neutro-100)",
+      "200": "var(--color-neutro-200)",
+      "300": "var(--color-neutro-300)",
+      "400": "var(--color-neutro-400)",
+      "500": "var(--color-neutro-500)",
+      "600": "var(--color-neutro-600)",
+      "700": "var(--color-neutro-700)",
+      "800": "var(--color-neutro-800)",
+      "900": "var(--color-neutro-900)",
+      "950": "var(--color-neutro-950)"
+    },
+    "erro": {
+      "50": "var(--color-erro-50)",
+      "100": "var(--color-erro-100)",
+      "200": "var(--color-erro-200)",
+      "300": "var(--color-erro-300)",
+      "400": "var(--color-erro-400)",
+      "500": "var(--color-erro-500)",
+      "600": "var(--color-erro-600)",
+      "700": "var(--color-erro-700)",
+      "800": "var(--color-erro-800)",
+      "900": "var(--color-erro-900)",
+      "950": "var(--color-erro-950)"
+    },
+    "primitivos": {
+      "cal": "var(--color-primitivos-cal)",
+      "branco": "var(--color-primitivos-branco)",
+      "moldura": "var(--color-primitivos-moldura)",
+      "barrado": "var(--color-primitivos-barrado)",
+      "granito": "var(--color-primitivos-granito)",
+      "granito-escuro": "var(--color-primitivos-granito-escuro)",
+      "telha": "var(--color-primitivos-telha)",
+      "telha-escura": "var(--color-primitivos-telha-escura)",
+      "telha-clara": "var(--color-primitivos-telha-clara)",
+      "madeira": "var(--color-primitivos-madeira)",
+      "ferro": "var(--color-primitivos-ferro)",
+      "erro": "var(--color-primitivos-erro)",
+      "noite-base": "var(--color-primitivos-noite-base)",
+      "noite-raised": "var(--color-primitivos-noite-raised)",
+      "noite-sunken": "var(--color-primitivos-noite-sunken)",
+      "noite-ferro": "var(--color-primitivos-noite-ferro)",
+      "noite-cal": "var(--color-primitivos-noite-cal)",
+      "noite-granito": "var(--color-primitivos-noite-granito)",
+      "noite-telha": "var(--color-primitivos-noite-telha)",
+      "noite-telha-clara": "var(--color-primitivos-noite-telha-clara)",
+      "noite-telha-fundo": "var(--color-primitivos-noite-telha-fundo)",
+      "noite-erro": "var(--color-primitivos-noite-erro)"
+    },
+    "liturgia": {
+      "verde": "var(--color-liturgia-verde)",
+      "roxo": "var(--color-liturgia-roxo)",
+      "vermelho": "var(--color-liturgia-vermelho)",
+      "rosa": "var(--color-liturgia-rosa)",
+      "branco": "var(--color-liturgia-branco)"
+    },
+    "surface": {
+      "default": "var(--color-surface-default)",
+      "raised": "var(--color-surface-raised)",
+      "sunken": "var(--color-surface-sunken)",
+      "inverse": "var(--color-surface-inverse)"
+    },
+    "text": {
+      "default": "var(--color-text-default)",
+      "muted": "var(--color-text-muted)",
+      "inverse": "var(--color-text-inverse)"
+    },
+    "border": {
+      "default": "var(--color-border-default)",
+      "strong": "var(--color-border-strong)"
+    },
+    "accent": {
+      "default": "var(--color-accent-default)",
+      "hover": "var(--color-accent-hover)",
+      "on": "var(--color-accent-on)",
+      "subtle": "var(--color-accent-subtle)"
+    },
+    "feedback": {
+      "danger": "var(--color-feedback-danger)"
+    },
+    "focus": {
+      "ring": "var(--color-focus-ring)"
+    },
+    "dia": {
+      "default": "var(--color-dia-default)",
+      "on": "var(--color-dia-on)"
+    }
+  },
+  "font": {
+    "family": {
+      "display": "var(--font-family-display)",
+      "text": "var(--font-family-text)"
+    },
+    "size": {
+      "display": "var(--font-size-display)",
+      "h1": "var(--font-size-h1)",
+      "h2": "var(--font-size-h2)",
+      "body": "var(--font-size-body)",
+      "small": "var(--font-size-small)",
+      "label": "var(--font-size-label)"
+    },
+    "weight": {
+      "regular": "var(--font-weight-regular)",
+      "medium": "var(--font-weight-medium)",
+      "semibold": "var(--font-weight-semibold)"
+    }
+  },
+  "line-height": {
+    "tight": "var(--line-height-tight)",
+    "heading": "var(--line-height-heading)",
+    "body": "var(--line-height-body)"
+  },
+  "letter-spacing": {
+    "label": "var(--letter-spacing-label)"
+  }
+} as const;
+
+export const raw = {
+  "share.cal": "46",
+  "share.moldura": "14",
+  "share.granito": "10",
+  "share.madeira": "9",
+  "share.ferro": "6",
+  "share.telha": "4",
+  "space.1": "4px",
+  "space.2": "8px",
+  "space.3": "12px",
+  "space.4": "16px",
+  "space.5": "24px",
+  "space.6": "32px",
+  "space.7": "48px",
+  "space.8": "64px",
+  "radius.none": "0",
+  "radius.sm": "2px",
+  "radius.md": "4px",
+  "radius.control": "4px",
+  "radius.arch": "999px 999px 2px 2px",
+  "border.width.default": "1px",
+  "border.width.strong": "2px",
+  "shadow.sm": "0 1px 2px color-mix(in oklch, var(--color-primitivos-madeira) 12%, transparent)",
+  "shadow.none": "none",
+  "size.control-md": "2.75rem",
+  "size.control-sm": "2.25rem",
+  "size.icon": "1.25rem",
+  "size.layout-max": "72rem",
+  "size.reading": "40rem",
+  "size.touch-min": "2.75rem",
+  "motion.duration.fast": "160ms",
+  "motion.duration.base": "400ms",
+  "motion.duration.slow": "700ms",
+  "motion.ease.light": "cubic-bezier(0.2, 0.6, 0.2, 1)",
+  "color.marca.50": "oklch(97.7% 0.003 38.79)",
+  "color.marca.100": "oklch(94.58% 0.0103 38.79)",
+  "color.marca.200": "oklch(89.27% 0.0264 38.79)",
+  "color.marca.300": "oklch(82.25% 0.0588 38.79)",
+  "color.marca.400": "oklch(72.93% 0.1109 38.79)",
+  "color.marca.500": "oklch(63.92% 0.1371 38.79)",
+  "color.marca.600": "oklch(55.4% 0.1189 38.79)",
+  "color.marca.700": "oklch(47.42% 0.0957 38.79)",
+  "color.marca.800": "oklch(39.43% 0.0712 38.79)",
+  "color.marca.900": "oklch(31.95% 0.0495 38.79)",
+  "color.marca.950": "oklch(23.97% 0.0312 38.79)",
+  "color.neutro.50": "oklch(98.5% 0.004 38.79)",
+  "color.neutro.100": "oklch(96.7% 0.004 38.79)",
+  "color.neutro.200": "oklch(92.2% 0.0143 38.79)",
+  "color.neutro.300": "oklch(87% 0.0143 38.79)",
+  "color.neutro.400": "oklch(70.8% 0.0143 38.79)",
+  "color.neutro.500": "oklch(55.6% 0.0143 38.79)",
+  "color.neutro.600": "oklch(43.9% 0.0143 38.79)",
+  "color.neutro.700": "oklch(37.1% 0.0143 38.79)",
+  "color.neutro.800": "oklch(26.9% 0.0143 38.79)",
+  "color.neutro.900": "oklch(20.5% 0.0121 38.79)",
+  "color.neutro.950": "oklch(14.5% 0.0121 38.79)",
+  "color.erro.50": "oklch(97.7% 0.0028 27)",
+  "color.erro.100": "oklch(94.6% 0.0099 27)",
+  "color.erro.200": "oklch(89.3% 0.0254 27)",
+  "color.erro.300": "oklch(82.3% 0.0567 27)",
+  "color.erro.400": "oklch(73% 0.1075 27)",
+  "color.erro.500": "oklch(64% 0.1636 27)",
+  "color.erro.600": "oklch(55.5% 0.1508 27)",
+  "color.erro.700": "oklch(47.5% 0.1213 27)",
+  "color.erro.800": "oklch(39.5% 0.0902 27)",
+  "color.erro.900": "oklch(32% 0.0627 27)",
+  "color.erro.950": "oklch(24% 0.0393 27)",
+  "color.primitivos.cal": "oklch(97.23% 0.004 106.47)",
+  "color.primitivos.branco": "oklch(98.78% 0.0013 106.42)",
+  "color.primitivos.moldura": "oklch(88.92% 0.006 239.83)",
+  "color.primitivos.barrado": "oklch(78.99% 0.0159 241.83)",
+  "color.primitivos.granito": "oklch(65.61% 0.0121 243.74)",
+  "color.primitivos.granito-escuro": "oklch(47.4% 0.012 238.73)",
+  "color.primitivos.telha": "oklch(55.4% 0.1189 38.79)",
+  "color.primitivos.telha-escura": "oklch(47.47% 0.0962 39.03)",
+  "color.primitivos.telha-clara": "oklch(94.58% 0.0103 38.79)",
+  "color.primitivos.madeira": "oklch(34.03% 0.0446 49.05)",
+  "color.primitivos.ferro": "oklch(30.18% 0.0023 67.74)",
+  "color.primitivos.erro": "oklch(47.5% 0.1213 27)",
+  "color.primitivos.noite-base": "oklch(22.81% 0.0195 52.41)",
+  "color.primitivos.noite-raised": "oklch(25.82% 0.0223 57.58)",
+  "color.primitivos.noite-sunken": "oklch(18% 0.014 52)",
+  "color.primitivos.noite-ferro": "oklch(34.49% 0.0037 84.58)",
+  "color.primitivos.noite-cal": "oklch(93.44% 0.0099 87.47)",
+  "color.primitivos.noite-granito": "oklch(73.43% 0.0118 243.71)",
+  "color.primitivos.noite-telha": "oklch(74.09% 0.1113 35.58)",
+  "color.primitivos.noite-telha-clara": "oklch(82% 0.075 36)",
+  "color.primitivos.noite-telha-fundo": "oklch(32% 0.05 40)",
+  "color.primitivos.noite-erro": "oklch(74% 0.11 27)",
+  "color.liturgia.verde": "oklch(43.97% 0.0461 152.24)",
+  "color.liturgia.roxo": "oklch(49.96% 0.0964 301.43)",
+  "color.liturgia.vermelho": "oklch(50.7% 0.1373 31.74)",
+  "color.liturgia.rosa": "oklch(52.19% 0.1153 356.47)",
+  "color.liturgia.branco": "oklch(88.92% 0.006 239.83)",
+  "color.surface.default": "oklch(97.23% 0.004 106.47)",
+  "color.surface.raised": "oklch(98.78% 0.0013 106.42)",
+  "color.surface.sunken": "oklch(88.92% 0.006 239.83)",
+  "color.surface.inverse": "oklch(30.18% 0.0023 67.74)",
+  "color.text.default": "oklch(34.03% 0.0446 49.05)",
+  "color.text.muted": "oklch(47.4% 0.012 238.73)",
+  "color.text.inverse": "oklch(97.23% 0.004 106.47)",
+  "color.border.default": "oklch(78.99% 0.0159 241.83)",
+  "color.border.strong": "oklch(65.61% 0.0121 243.74)",
+  "color.accent.default": "oklch(55.4% 0.1189 38.79)",
+  "color.accent.hover": "oklch(47.47% 0.0962 39.03)",
+  "color.accent.on": "oklch(98.78% 0.0013 106.42)",
+  "color.accent.subtle": "oklch(94.58% 0.0103 38.79)",
+  "color.feedback.danger": "oklch(47.5% 0.1213 27)",
+  "color.focus.ring": "oklch(55.4% 0.1189 38.79)",
+  "color.dia.default": "oklch(43.97% 0.0461 152.24)",
+  "color.dia.on": "oklch(98.78% 0.0013 106.42)",
+  "font.family.display": "\"Brygada 1918\", Georgia, serif",
+  "font.family.text": "\"Figtree\", system-ui, sans-serif",
+  "font.size.display": "clamp(2.5rem, 1.6rem + 4vw, 4.75rem)",
+  "font.size.h1": "clamp(1.75rem, 1.35rem + 1.6vw, 2.5rem)",
+  "font.size.h2": "1.375rem",
+  "font.size.body": "1rem",
+  "font.size.small": "0.875rem",
+  "font.size.label": "0.75rem",
+  "font.weight.regular": "400",
+  "font.weight.medium": "500",
+  "font.weight.semibold": "600",
+  "line-height.tight": "1.05",
+  "line-height.heading": "1.2",
+  "line-height.body": "1.55",
+  "letter-spacing.label": "0.12em"
+} as const;
+
+export type TokenName = keyof typeof raw;

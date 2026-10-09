@@ -1,0 +1,179 @@
+{
+  "color": {
+    "surface": {
+      "default": {
+        "$value": "{color.primitivos.cal}",
+        "$type": "color",
+        "$description": "uso: surface.default (light cal, dark noite-base)",
+        "$extensions": {
+          "ds-forge": {
+            "dark": "{color.primitivos.noite-base}"
+          }
+        }
+      },
+      "raised": {
+        "$value": "{color.primitivos.branco}",
+        "$type": "color",
+        "$description": "uso: surface.raised (light branco, dark noite-raised)",
+        "$extensions": {
+          "ds-forge": {
+            "dark": "{color.primitivos.noite-raised}"
+          }
+        }
+      },
+      "sunken": {
+        "$value": "{color.primitivos.moldura}",
+        "$type": "color",
+        "$description": "uso: surface.sunken (light moldura, dark noite-sunken)",
+        "$extensions": {
+          "ds-forge": {
+            "dark": "{color.primitivos.noite-sunken}"
+          }
+        }
+      },
+      "inverse": {
+        "$value": "{color.primitivos.ferro}",
+        "$type": "color",
+        "$description": "uso: surface.inverse (light ferro, dark noite-cal)",
+        "$extensions": {
+          "ds-forge": {
+            "dark": "{color.primitivos.noite-cal}"
+          }
+        }
+      }
+    },
+    "text": {
+      "default": {
+        "$value": "{color.primitivos.madeira}",
+        "$type": "color",
+        "$description": "uso: text.default (light madeira, dark noite-cal)",
+        "$extensions": {
+          "ds-forge": {
+            "dark": "{color.primitivos.noite-cal}"
+          }
+        }
+      },
+      "muted": {
+        "$value": "{color.primitivos.granito-escuro}",
+        "$type": "color",
+        "$description": "uso: text.muted (light granito-escuro, dark noite-granito)",
+        "$extensions": {
+          "ds-forge": {
+            "dark": "{color.primitivos.noite-granito}"
+          }
+        }
+      },
+      "inverse": {
+        "$value": "{color.primitivos.cal}",
+        "$type": "color",
+        "$description": "uso: text.inverse (light cal, dark ferro)",
+        "$extensions": {
+          "ds-forge": {
+            "dark": "{color.primitivos.ferro}"
+          }
+        }
+      }
+    },
+    "border": {
+      "default": {
+        "$value": "{color.primitivos.barrado}",
+        "$type": "color",
+        "$description": "uso: border.default (light barrado, dark noite-ferro)",
+        "$extensions": {
+          "ds-forge": {
+            "dark": "{color.primitivos.noite-ferro}"
+          }
+        }
+      },
+      "strong": {
+        "$value": "{color.primitivos.granito}",
+        "$type": "color",
+        "$description": "uso: border.strong (light granito, dark noite-granito)",
+        "$extensions": {
+          "ds-forge": {
+            "dark": "{color.primitivos.noite-granito}"
+          }
+        }
+      }
+    },
+    "accent": {
+      "default": {
+        "$value": "{color.primitivos.telha}",
+        "$type": "color",
+        "$description": "uso: accent.default (light telha, dark noite-telha)",
+        "$extensions": {
+          "ds-forge": {
+            "dark": "{color.primitivos.noite-telha}"
+          }
+        }
+      },
+      "hover": {
+        "$value": "{color.primitivos.telha-escura}",
+        "$type": "color",
+        "$description": "uso: accent.hover (light telha-escura, dark noite-telha-clara)",
+        "$extensions": {
+          "ds-forge": {
+            "dark": "{color.primitivos.noite-telha-clara}"
+          }
+        }
+      },
+      "on": {
+        "$value": "{color.primitivos.branco}",
+        "$type": "color",
+        "$description": "uso: accent.on (light branco, dark noite-base)",
+        "$extensions": {
+          "ds-forge": {
+            "dark": "{color.primitivos.noite-base}"
+          }
+        }
+      },
+      "subtle": {
+        "$value": "{color.primitivos.telha-clara}",
+        "$type": "color",
+        "$description": "uso: accent.subtle (light telha-clara, dark noite-telha-fundo)",
+        "$extensions": {
+          "ds-forge": {
+            "dark": "{color.primitivos.noite-telha-fundo}"
+          }
+        }
+      }
+    },
+    "feedback": {
+      "danger": {
+        "$value": "{color.primitivos.erro}",
+        "$type": "color",
+        "$description": "uso: feedback.danger (light erro, dark noite-erro)",
+        "$extensions": {
+          "ds-forge": {
+            "dark": "{color.primitivos.noite-erro}"
+          }
+        }
+      }
+    },
+    "focus": {
+      "ring": {
+        "$value": "{color.primitivos.telha}",
+        "$type": "color",
+        "$description": "uso: focus.ring (light telha, dark noite-telha)",
+        "$extensions": {
+          "ds-forge": {
+            "dark": "{color.primitivos.noite-telha}"
+          }
+        }
+      }
+    },
+    "dia": {
+      "$description": "A cor do dia: o app troca o alias por tempo litúrgico em runtime (data-tempo). Só no arco: wordmark, portal, abertura de seção, marcador. Nunca em botão.",
+      "default": {
+        "$type": "color",
+        "$value": "{color.liturgia.verde}",
+        "$description": "uso: arco do nome, portal da home, arquinho de seção. Valor do dia trocado em runtime."
+      },
+      "on": {
+        "$type": "color",
+        "$value": "{color.primitivos.branco}",
+        "$description": "uso: texto sobre o portal (no Natal/Páscoa vira madeira)."
+      }
+    }
+  }
+}

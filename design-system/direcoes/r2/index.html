@@ -1,0 +1,36 @@
+<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Direções · r2</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;600&family=Geist+Mono&display=swap" rel="stylesheet">
+<style>
+:root{--bg:oklch(.17 .005 260);--fg:oklch(.95 .005 260);--muted:oklch(.65 .01 260);--line:oklch(.3 .01 260);--accent:oklch(.78 .15 70)}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--fg);font:15px/1.5 Geist,sans-serif}
+.top{position:sticky;top:0;z-index:2;display:flex;gap:16px;align-items:center;padding:12px 24px;background:var(--bg);border-bottom:1px solid var(--line)}
+.top b{font-family:"Geist Mono",monospace;font-size:13px;color:var(--accent)}.top nav{display:flex;gap:12px;flex-wrap:wrap}.top a{color:var(--muted);text-decoration:none;font-size:13px}.top a:hover{color:var(--fg)}
+main{padding:24px;display:grid;gap:48px}
+.v header{display:flex;justify-content:space-between;align-items:baseline}.v h2{margin:0;font:600 18px "Geist Mono",monospace}.v header a{color:var(--accent);font-size:13px}
+.n{color:var(--muted);font-size:13px;margin:4px 0 12px;max-width:110ch}
+.frames{display:grid;grid-template-columns:1fr 300px;gap:16px;align-items:start}
+.desk,.mob{border:1px solid var(--line);border-radius:6px;overflow:hidden;background:#fff}
+.desk{height:620px}.desk iframe{width:1440px;height:1033px;transform:scale(.6);transform-origin:0 0;border:0}
+.mob{height:620px}.mob iframe{width:390px;height:806px;transform:scale(.77);transform-origin:0 0;border:0}
+@media (max-width:1100px){.frames{grid-template-columns:1fr}.desk{height:auto;aspect-ratio:1440/900}.desk iframe{transform:scale(.4)}}
+</style></head><body>
+<div class="top"><b>direções · r2 · 2 direções</b><nav><a href="#a-fiel">a-fiel</a><a href="#b-ousada">b-ousada</a></nav></div>
+<main>
+  <section class="v" id="a-fiel">
+    <header><h2>a-fiel</h2><a href="./a-fiel/index.html" target="_blank" rel="noopener">abrir ↗</a></header>
+    <p class="n"></p>
+    <div class="frames">
+      <div class="desk"><iframe src="./a-fiel/index.html" loading="lazy" title="a-fiel desktop"></iframe></div>
+      <div class="mob"><iframe src="./a-fiel/index.html" loading="lazy" title="a-fiel mobile"></iframe></div>
+    </div>
+  </section>
+
+  <section class="v" id="b-ousada">
+    <header><h2>b-ousada</h2><a href="./b-ousada/index.html" target="_blank" rel="noopener">abrir ↗</a></header>
+    <p class="n"></p>
+    <div class="frames">
+      <div class="desk"><iframe src="./b-ousada/index.html" loading="lazy" title="b-ousada desktop"></iframe></div>
+      <div class="mob"><iframe src="./b-ousada/index.html" loading="lazy" title="b-ousada mobile"></iframe></div>
+    </div>
+  </section></main></body></html>

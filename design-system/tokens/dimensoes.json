@@ -1,0 +1,129 @@
+{
+  "space": {
+    "1": {
+      "$value": "4px",
+      "$type": "dimension",
+      "$description": "grade de 4"
+    },
+    "2": {
+      "$value": "8px",
+      "$type": "dimension",
+      "$description": "grade de 4"
+    },
+    "3": {
+      "$value": "12px",
+      "$type": "dimension",
+      "$description": "grade de 4"
+    },
+    "4": {
+      "$value": "16px",
+      "$type": "dimension",
+      "$description": "grade de 4"
+    },
+    "5": {
+      "$value": "24px",
+      "$type": "dimension",
+      "$description": "grade de 4"
+    },
+    "6": {
+      "$value": "32px",
+      "$type": "dimension",
+      "$description": "grade de 4"
+    },
+    "7": {
+      "$value": "48px",
+      "$type": "dimension",
+      "$description": "grade de 4"
+    },
+    "8": {
+      "$value": "64px",
+      "$type": "dimension",
+      "$description": "grade de 4"
+    }
+  },
+  "radius": {
+    "none": {
+      "$value": "0",
+      "$type": "dimension",
+      "$description": "sem canto"
+    },
+    "sm": {
+      "$value": "2px",
+      "$type": "dimension",
+      "$description": "chip, pílula de estado"
+    },
+    "md": {
+      "$value": "4px",
+      "$type": "dimension",
+      "$description": "cartão e painel"
+    },
+    "control": {
+      "$value": "4px",
+      "$type": "dimension",
+      "$description": "botão, campo"
+    },
+    "arch": {
+      "$value": "999px 999px 2px 2px",
+      "$type": "string",
+      "$description": "forma-assinatura: arco da porta (topo semicircular, base reta)"
+    }
+  },
+  "border": {
+    "width": {
+      "default": {
+        "$value": "1px",
+        "$type": "dimension",
+        "$description": "fio padrão"
+      },
+      "strong": {
+        "$value": "2px",
+        "$type": "dimension",
+        "$description": "destaque e foco de tela"
+      }
+    }
+  },
+  "shadow": {
+    "sm": {
+      "$value": "0 1px 2px color-mix(in oklch, var(--color-primitivos-madeira) 12%, transparent)",
+      "$type": "string",
+      "$description": "luz natural mínima (claro). No escuro, vira borda."
+    },
+    "none": {
+      "$value": "none",
+      "$type": "string",
+      "$description": "escuro: borda no lugar de sombra"
+    }
+  },
+  "size": {
+    "control-md": {
+      "$value": "2.75rem",
+      "$type": "dimension",
+      "$description": "altura de controle, toque ≥ 44px"
+    },
+    "control-sm": {
+      "$value": "2.25rem",
+      "$type": "dimension",
+      "$description": "altura de chip"
+    },
+    "icon": {
+      "$value": "1.25rem",
+      "$type": "dimension",
+      "$description": "ícone monoline"
+    },
+    "layout-max": {
+      "$value": "72rem",
+      "$type": "dimension",
+      "$description": "largura da página"
+    },
+    "reading": {
+      "$value": "40rem",
+      "$type": "dimension",
+      "$description": "medida de leitura"
+    },
+    "touch-min": {
+      "$value": "2.75rem",
+      "$type": "dimension",
+      "$description": "alvo de toque mínimo"
+    }
+  }
+}

@@ -1,0 +1,1088 @@
+<!doctype html>
+<html lang="pt-BR" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tolle Lege · direção b-rubrica (r1)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Literata:opsz,wght@7..72,400..700&display=swap" rel="stylesheet">
+<style>
+/* ==========================================================
+   TOKENS (nomes no padrão do tokens-build)
+   primitivos: palette.mjs (marca = #7a1f26, neutro tintado a 21°)
+   ========================================================== */
+:root {
+  /* primitivos · neutro (papel e tinta) */
+  --color-neutro-50: oklch(98.5% 0.0052 21.09);
+  --color-neutro-100: oklch(96.7% 0.0075 21.09);
+  --color-neutro-200: oklch(92.2% 0.015 21.09);
+  --color-neutro-300: oklch(87% 0.015 21.09);
+  --color-neutro-400: oklch(70.8% 0.015 21.09);
+  --color-neutro-500: oklch(55.6% 0.015 21.09);
+  --color-neutro-600: oklch(43.9% 0.015 21.09);
+  --color-neutro-700: oklch(37.1% 0.015 21.09);
+  --color-neutro-800: oklch(26.9% 0.015 21.09);
+  --color-neutro-900: oklch(20.5% 0.0127 21.09);
+  --color-neutro-950: oklch(14.5% 0.0127 21.09);
+  /* primitivos · marca (vermelho de rubrica) */
+  --color-marca-100: oklch(94.54% 0.0119 21.09);
+  --color-marca-300: oklch(82.11% 0.0684 21.09);
+  --color-marca-400: oklch(72.75% 0.1298 21.09);
+  --color-marca-700: oklch(47.06% 0.1414 21.09);
+  --color-marca-800: oklch(38.99% 0.1247 21.09);
+  --color-marca-900: oklch(31.56% 0.0728 21.09);
+  --color-marca-950: oklch(23.62% 0.0456 21.09);
+  /* primitivos · erro */
+  --color-erro-400: oklch(73% 0.1281 27);
+  --color-erro-700: oklch(47.5% 0.1446 27);
+
+  /* semântico · superfície, texto, borda (claro) */
+  --color-surface-default: var(--color-neutro-50);
+  --color-surface-sunken: var(--color-neutro-100);
+  --color-surface-raised: var(--color-neutro-50);
+  --color-text-default: var(--color-neutro-900);
+  --color-text-muted: var(--color-neutro-600);
+  --color-text-disabled: var(--color-neutro-500);
+  --color-border-default: var(--color-neutro-300);
+  --color-border-control: var(--color-neutro-500);
+  --color-border-strong: var(--color-neutro-900);
+  /* semântico · ação (vermelho = o que se faz) */
+  --color-accent-default: var(--color-marca-800);
+  --color-accent-hover: var(--color-marca-900);
+  --color-accent-strong: var(--color-marca-700);
+  --color-accent-on: var(--color-neutro-50);
+  --color-accent-subtle: var(--color-marca-100);
+  --color-focus: var(--color-marca-800);
+  --color-danger-default: var(--color-erro-700);
+  --color-danger-on: var(--color-neutro-50);
+  --color-disabled-bg: var(--color-neutro-200);
+  /* semântico · código litúrgico (só marcador, nunca texto) */
+  --color-liturgia-verde: oklch(47.9% 0.0786 161.35);
+  --color-liturgia-roxo: oklch(41.36% 0.0878 316.44);
+  --color-liturgia-rosa: oklch(65.2% 0.1035 2.63);
+
+  /* tipografia · uma família (Literata) para tudo */
+  --font-family-display: "Literata", Georgia, "Times New Roman", serif;
+  --font-family-text: "Literata", Georgia, "Times New Roman", serif;
+  --font-size-display: clamp(2.75rem, 9vw, 5.25rem);
+  --font-size-h1: clamp(2.125rem, 6vw, 3.25rem);
+  --font-size-h2: clamp(1.5rem, 4vw, 2rem);
+  --font-size-h3: 1.25rem;
+  --font-size-body-lg: 1.1875rem;
+  --font-size-body: 1.0625rem;
+  --font-size-small: 0.9375rem;
+  --font-size-label: 0.75rem;
+  --font-weight-regular: 400;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --line-height-display: 1;
+  --line-height-heading: 1.15;
+  --line-height-body: 1.6;
+  --line-height-label: 1.3;
+  --letter-spacing-display: -0.025em;
+  --letter-spacing-label: 0.12em;
+
+  /* espaço (grade de 4) */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-7: 3rem;
+  --space-8: 4rem;
+  --space-9: 6rem;
+
+  /* forma: sem raio, fio de 1px, sem sombra */
+  --radius-none: 0;
+  --border-width-hairline: 1px;
+  --border-width-strong: 2px;
+
+  /* tamanhos de componente */
+  --size-control: 2.75rem;
+  --size-icon: 1.25rem;
+  --size-icon-sm: 1rem;
+  --size-check: 1.25rem;
+  --size-switch-w: 2.5rem;
+  --size-switch-h: 1.375rem;
+  --size-switch-travel: calc(var(--size-switch-w) - var(--size-switch-h));
+  --size-device: 24.375rem;
+  --size-artboard: 27rem;
+  --size-mix-h: 3.5rem;
+  --size-arco: 1.75rem;
+  --size-swatch: 2.75rem;
+  --measure: 36rem;
+  --layout-margin: clamp(1.25rem, 5vw, 4rem);
+  --layout-max: 74rem;
+  --layout-rail: 13rem;
+  --size-artboard-verso: 8cqi;
+  --size-artboard-verse: 7.4cqi;
+  --size-artboard-title: 5.6cqi;
+
+  /* movimento */
+  --duration-fast: 150ms;
+  --duration-base: 200ms;
+  --ease-standard: cubic-bezier(0.2, 0, 0, 1);
+}
+
+/* escuro: superfícies por elevação, acento mais claro, sem sombra (borda faz o trabalho) */
+[data-theme="dark"] {
+  --color-surface-default: var(--color-neutro-950);
+  --color-surface-sunken: var(--color-neutro-950);
+  --color-surface-raised: var(--color-neutro-900);
+  --color-text-default: var(--color-neutro-50);
+  --color-text-muted: var(--color-neutro-300);
+  --color-text-disabled: var(--color-neutro-600);
+  --color-border-default: var(--color-neutro-700);
+  --color-border-control: var(--color-neutro-400);
+  --color-border-strong: var(--color-neutro-50);
+  --color-accent-default: var(--color-marca-400);
+  --color-accent-hover: var(--color-marca-300);
+  --color-accent-strong: var(--color-marca-300);
+  --color-accent-on: var(--color-neutro-950);
+  --color-accent-subtle: var(--color-marca-950);
+  --color-focus: var(--color-marca-300);
+  --color-danger-default: var(--color-erro-400);
+  --color-danger-on: var(--color-neutro-950);
+  --color-disabled-bg: var(--color-neutro-800);
+  --color-liturgia-verde: oklch(69.84% 0.0825 159.69);
+  --color-liturgia-roxo: oklch(68.3% 0.0831 309.99);
+  --color-liturgia-rosa: oklch(76.56% 0.0928 2.1);
+  color-scheme: dark;
+}
+
+/* ==========================================================
+   BASE
+   ========================================================== */
+*, *::before, *::after { box-sizing: border-box; }
+html { background: var(--color-surface-default); color: var(--color-text-default); }
+body {
+  margin: 0;
+  font-family: var(--font-family-text);
+  font-size: var(--font-size-body);
+  line-height: var(--line-height-body);
+  font-weight: var(--font-weight-regular);
+  font-optical-sizing: auto;
+  background: var(--color-surface-default);
+  color: var(--color-text-default);
+  font-variant-numeric: oldstyle-nums;
+  -webkit-text-size-adjust: 100%;
+}
+h1, h2, h3, p, ol, ul, dl, dd, figure { margin: 0; }
+ol, ul { padding: 0; list-style: none; }
+button, input, select { font: inherit; color: inherit; }
+button { cursor: pointer; }
+svg.icon {
+  width: var(--size-icon);
+  height: var(--size-icon);
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.5;
+  stroke-linecap: square;
+  stroke-linejoin: miter;
+  flex: none;
+}
+.sr-only {
+  position: absolute;
+  width: var(--border-width-hairline);
+  height: var(--border-width-hairline);
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+:focus-visible {
+  outline: var(--border-width-strong) solid var(--color-focus);
+  outline-offset: var(--space-1);
+}
+
+/* tipos */
+.display {
+  font-size: var(--font-size-display);
+  line-height: var(--line-height-display);
+  letter-spacing: var(--letter-spacing-display);
+  font-weight: var(--font-weight-bold);
+  font-family: var(--font-family-display);
+}
+.h1 {
+  font-size: var(--font-size-h1);
+  line-height: var(--line-height-heading);
+  letter-spacing: var(--letter-spacing-display);
+  font-weight: var(--font-weight-bold);
+  font-family: var(--font-family-display);
+}
+.h2 {
+  font-size: var(--font-size-h2);
+  line-height: var(--line-height-heading);
+  font-weight: var(--font-weight-semibold);
+  font-family: var(--font-family-display);
+}
+.h3 {
+  font-size: var(--font-size-h3);
+  line-height: var(--line-height-heading);
+  font-weight: var(--font-weight-semibold);
+}
+.body-lg { font-size: var(--font-size-body-lg); }
+.small { font-size: var(--font-size-small); line-height: var(--line-height-body); }
+.label {
+  font-size: var(--font-size-label);
+  line-height: var(--line-height-label);
+  letter-spacing: var(--letter-spacing-label);
+  text-transform: uppercase;
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-muted);
+}
+.muted { color: var(--color-text-muted); }
+.ink { color: var(--color-text-default); }
+.rubric { color: var(--color-accent-strong); }
+.measure { max-width: var(--measure); }
+
+/* ==========================================================
+   LAYOUT: margem à esquerda com o rótulo da seção (como nota de margem)
+   ========================================================== */
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+  padding: var(--space-4) var(--layout-margin);
+  border-bottom: var(--border-width-hairline) solid var(--color-border-default);
+  max-width: var(--layout-max);
+  margin-inline: auto;
+}
+.brand-mini { display: inline-flex; align-items: center; gap: var(--space-2); font-weight: var(--font-weight-bold); font-family: var(--font-family-display); }
+.brand-mini .arco { width: var(--size-arco); height: var(--size-arco); }
+main { max-width: var(--layout-max); margin-inline: auto; }
+.sec {
+  display: grid;
+  gap: var(--space-5);
+  padding: var(--space-8) var(--layout-margin);
+  border-bottom: var(--border-width-hairline) solid var(--color-border-default);
+}
+.sec-rail { display: grid; gap: var(--space-2); align-content: start; }
+.sec-body { display: grid; gap: var(--space-6); min-width: 0; }
+
+/* ==========================================================
+   1. ASSINATURA
+   ========================================================== */
+.wordmark { display: inline-flex; align-items: flex-end; gap: var(--space-3); }
+.wordmark .arco { width: clamp(2.5rem, 8vw, 4.5rem); height: auto; color: var(--color-accent-default); align-self: flex-end; margin-bottom: 0.1em; }
+.wordmark-text { font-size: var(--font-size-display); line-height: var(--line-height-display); font-weight: var(--font-weight-bold); letter-spacing: var(--letter-spacing-display); font-family: var(--font-family-display); }
+.lead { font-size: var(--font-size-body-lg); line-height: 1.5; max-width: var(--measure); }
+.tagline { font-family: var(--font-family-display); font-size: var(--font-size-h2); line-height: var(--line-height-heading); font-weight: var(--font-weight-semibold); max-width: 22ch; }
+.dono {
+  display: grid;
+  gap: var(--space-3);
+  max-width: var(--measure);
+  padding-top: var(--space-4);
+  border-top: var(--border-width-strong) solid var(--color-border-strong);
+}
+.dono-rubrica { color: var(--color-accent-strong); font-weight: var(--font-weight-semibold); font-size: var(--font-size-body); }
+.dono-fala { font-size: var(--font-size-body-lg); }
+.dono-legenda { display: flex; align-items: center; gap: var(--space-2); }
+
+/* ==========================================================
+   2. COR
+   ========================================================== */
+.mix { display: flex; height: var(--size-mix-h); width: 100%; }
+.mix-papel { flex: 56; background: var(--color-surface-default); border: var(--border-width-hairline) solid var(--color-border-strong); }
+.mix-tinta { flex: 26; background: var(--color-text-default); }
+.mix-vermelho { flex: 10; background: var(--color-accent-default); }
+.mix-lit { flex: 8; display: flex; }
+.mix-lit span { flex: 1; }
+.bar { display: block; width: 100%; height: 100%; }
+.bar-verde { background: var(--color-liturgia-verde); }
+.bar-roxo { background: var(--color-liturgia-roxo); }
+.bar-rosa { background: var(--color-liturgia-rosa); }
+.bar-branco { background: var(--color-surface-default); box-shadow: inset 0 0 0 var(--border-width-hairline) var(--color-border-strong); }
+.lit-legenda { display: grid; gap: var(--space-2); }
+.lit-item { display: grid; grid-template-columns: var(--space-4) 1fr; gap: var(--space-3); align-items: center; }
+.lit-item .bar { height: var(--space-4); width: var(--space-4); }
+
+.swatches { display: grid; gap: 0; border-top: var(--border-width-hairline) solid var(--color-border-default); }
+.sw-row {
+  display: grid;
+  grid-template-columns: var(--size-swatch) 1fr;
+  gap: var(--space-4);
+  padding-block: var(--space-4);
+  border-bottom: var(--border-width-hairline) solid var(--color-border-default);
+  align-items: start;
+}
+.sw-chip { width: var(--size-swatch); height: var(--size-swatch); border: var(--border-width-hairline) solid var(--color-border-strong); }
+.sw-name { font-weight: var(--font-weight-semibold); }
+.sw-meta { font-size: var(--font-size-small); color: var(--color-text-muted); }
+.sw-par { font-size: var(--font-size-small); }
+.dark-strip { display: grid; gap: var(--space-3); padding: var(--space-5); border: var(--border-width-hairline) solid var(--color-border-default); background: var(--color-surface-default); color: var(--color-text-default); }
+.dark-cells { display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--space-2); }
+.dark-cell { padding: var(--space-3); border: var(--border-width-hairline) solid var(--color-border-default); font-size: var(--font-size-small); display: grid; gap: var(--space-1); background: var(--color-surface-raised); }
+.dark-cell.is-acento { color: var(--color-accent-default); }
+.dark-cell.is-acento .label { color: var(--color-text-muted); }
+
+/* ==========================================================
+   3. TIPOGRAFIA
+   ========================================================== */
+.type-rows { display: grid; gap: var(--space-5); }
+.type-row { display: grid; gap: var(--space-2); padding-bottom: var(--space-5); border-bottom: var(--border-width-hairline) solid var(--color-border-default); }
+.type-spec { font-size: var(--font-size-label); letter-spacing: var(--letter-spacing-label); text-transform: uppercase; color: var(--color-text-muted); line-height: var(--line-height-label); }
+.type-prose p + p { margin-top: var(--space-4); }
+.type-prose { max-width: var(--measure); }
+
+/* ==========================================================
+   4. FORMA E COMPONENTES
+   ========================================================== */
+.regras { display: grid; gap: var(--space-2); }
+.regra { display: grid; grid-template-columns: 6rem 1fr; gap: var(--space-3); padding-block: var(--space-2); border-bottom: var(--border-width-hairline) solid var(--color-border-default); }
+.comp-grid { display: grid; gap: var(--space-7); }
+.comp-block { display: grid; gap: var(--space-4); align-content: start; min-width: 0; }
+.comp-block > h3 { padding-bottom: var(--space-2); border-bottom: var(--border-width-hairline) solid var(--color-border-strong); }
+.states { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-4) var(--space-3); align-items: start; }
+.state { display: grid; gap: var(--space-2); justify-items: start; }
+.state .label { font-size: var(--font-size-label); }
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  min-height: var(--size-control);
+  padding: var(--space-2) var(--space-4);
+  border: var(--border-width-hairline) solid transparent;
+  border-radius: var(--radius-none);
+  background: transparent;
+  font-family: var(--font-family-text);
+  font-size: var(--font-size-small);
+  font-weight: var(--font-weight-semibold);
+  line-height: 1.2;
+  text-align: center;
+  color: var(--color-text-default);
+  transition: background-color var(--duration-fast) var(--ease-standard), border-color var(--duration-fast) var(--ease-standard), color var(--duration-fast) var(--ease-standard), text-decoration-thickness var(--duration-fast) var(--ease-standard);
+}
+.btn-block { width: 100%; }
+.btn-primary { background: var(--color-accent-default); color: var(--color-accent-on); }
+.btn-primary:hover, .btn-primary.is-hover { background: var(--color-accent-hover); }
+.btn-secondary { border-color: var(--color-accent-default); color: var(--color-accent-strong); }
+.btn-secondary:hover, .btn-secondary.is-hover { background: var(--color-accent-subtle); }
+.btn-ghost { color: var(--color-accent-strong); padding-inline: var(--space-2); text-decoration: underline; text-decoration-thickness: var(--border-width-hairline); text-underline-offset: var(--space-1); }
+.btn-ghost:hover, .btn-ghost.is-hover { text-decoration-thickness: var(--border-width-strong); }
+.btn-danger { background: var(--color-danger-default); color: var(--color-danger-on); }
+.btn-danger:hover, .btn-danger.is-hover { filter: none; text-decoration: underline; text-underline-offset: var(--space-1); }
+.btn:disabled, .btn.is-disabled { background: var(--color-disabled-bg); border-color: var(--color-disabled-bg); color: var(--color-text-disabled); text-decoration: none; cursor: not-allowed; }
+.btn.is-focus { outline: var(--border-width-strong) solid var(--color-focus); outline-offset: var(--space-1); }
+.btn .icon-btn-svg { width: var(--size-icon-sm); height: var(--size-icon-sm); }
+.icon-btn { min-width: var(--size-control); padding-inline: var(--space-2); }
+
+.field { display: grid; gap: var(--space-2); }
+.field-label { font-size: var(--font-size-small); font-weight: var(--font-weight-semibold); }
+.field-help { font-size: var(--font-size-small); color: var(--color-text-muted); }
+.field-error { display: flex; align-items: center; gap: var(--space-2); font-size: var(--font-size-small); color: var(--color-danger-default); font-weight: var(--font-weight-semibold); }
+.input, .select {
+  width: 100%;
+  min-height: var(--size-control);
+  padding: var(--space-2) var(--space-3);
+  border: var(--border-width-hairline) solid var(--color-border-control);
+  border-radius: var(--radius-none);
+  background: var(--color-surface-default);
+  color: var(--color-text-default);
+  font-size: var(--font-size-body);
+  appearance: none;
+  -webkit-appearance: none;
+}
+.select-wrap { position: relative; }
+.select-wrap svg.icon { position: absolute; right: var(--space-3); top: 50%; transform: translateY(-50%); pointer-events: none; }
+.select { padding-right: var(--space-7); }
+.input.is-error, .select.is-error { border-color: var(--color-danger-default); border-width: var(--border-width-strong); }
+.input::placeholder { color: var(--color-text-muted); opacity: 1; }
+.input.is-focus, .select.is-focus { outline: var(--border-width-strong) solid var(--color-focus); outline-offset: var(--space-1); }
+
+.check, .switch { display: inline-flex; align-items: flex-start; gap: var(--space-3); cursor: pointer; position: relative; font-size: var(--font-size-small); }
+.check input, .switch input { position: absolute; opacity: 0; width: var(--border-width-hairline); height: var(--border-width-hairline); margin: 0; }
+.check-box {
+  flex: none;
+  position: relative;
+  width: var(--size-check);
+  height: var(--size-check);
+  border: var(--border-width-strong) solid var(--color-border-strong);
+  background: var(--color-surface-default);
+  margin-top: var(--space-1);
+}
+.check-box svg { position: absolute; inset: 0; width: 100%; height: 100%; stroke: var(--color-accent-on); fill: none; stroke-width: 2; opacity: 0; }
+.check input:checked + .check-box { background: var(--color-accent-default); border-color: var(--color-accent-default); }
+.check input:checked + .check-box svg { opacity: 1; }
+.check input:focus-visible + .check-box, .switch input:focus-visible + .track { outline: var(--border-width-strong) solid var(--color-focus); outline-offset: var(--space-1); }
+.track {
+  flex: none;
+  position: relative;
+  width: var(--size-switch-w);
+  height: var(--size-switch-h);
+  border: var(--border-width-hairline) solid var(--color-border-strong);
+  background: var(--color-surface-default);
+  margin-top: var(--space-1);
+  transition: background-color var(--duration-base) var(--ease-standard);
+}
+.thumb {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: calc(var(--size-switch-h) - var(--border-width-hairline) * 2);
+  height: calc(var(--size-switch-h) - var(--border-width-hairline) * 2);
+  background: var(--color-text-default);
+  transition: transform var(--duration-base) var(--ease-standard);
+}
+.switch input:checked + .track { background: var(--color-accent-default); border-color: var(--color-accent-default); }
+.switch input:checked + .track .thumb { transform: translateX(var(--size-switch-travel)); background: var(--color-accent-on); }
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-1) var(--space-2);
+  border: var(--border-width-hairline) solid currentColor;
+  font-size: var(--font-size-label);
+  line-height: var(--line-height-label);
+  letter-spacing: var(--letter-spacing-label);
+  text-transform: uppercase;
+  font-weight: var(--font-weight-semibold);
+  border-radius: var(--radius-none);
+}
+.badge-postura { color: var(--color-accent-strong); }
+.badge-tempo { color: var(--color-text-default); }
+.badge-tempo .bar { width: var(--space-3); height: var(--space-3); }
+.badge-tempo .bar { display: inline-block; }
+
+.card {
+  display: grid;
+  gap: var(--space-4);
+  padding: var(--space-5);
+  background: var(--color-surface-raised);
+  border: var(--border-width-hairline) solid var(--color-border-default);
+  border-top: var(--border-width-strong) solid var(--color-border-strong);
+  max-width: var(--measure);
+}
+.progress-track { height: var(--border-width-strong); background: var(--color-border-default); width: 100%; }
+.progress-fill { display: block; width: 100%; height: 100%; background: var(--color-accent-default); transform-origin: left center; transition: transform var(--duration-base) var(--ease-standard); }
+.card-acoes { display: flex; flex-wrap: wrap; gap: var(--space-3); align-items: center; }
+
+/* ==========================================================
+   5. TELA DE PRODUTO · Missa passo a passo
+   ========================================================== */
+.device {
+  width: 100%;
+  max-width: var(--size-device);
+  margin-inline: auto;
+  background: var(--color-surface-raised);
+  border: var(--border-width-strong) solid var(--color-border-strong);
+}
+.app { display: grid; gap: var(--space-4); padding: var(--space-4); }
+.app-bar { display: flex; align-items: center; gap: var(--space-3); }
+.app-bar .bar { width: var(--space-4); height: var(--space-4); }
+.app-head { display: flex; align-items: center; justify-content: space-between; gap: var(--space-2); }
+.app-head .label { color: var(--color-text-default); }
+.app .progress-track { height: var(--border-width-hairline); }
+.app .progress-track .progress-fill { height: var(--border-width-strong); margin-top: calc(var(--border-width-hairline) * -1); }
+.step { display: grid; gap: var(--space-3); padding-block: var(--space-2); }
+.posture { display: inline-flex; align-items: center; gap: var(--space-2); color: var(--color-accent-strong); font-weight: var(--font-weight-semibold); font-size: var(--font-size-body); }
+.posture svg.icon { width: var(--size-icon); height: var(--size-icon); }
+.fala { font-size: var(--font-size-body-lg); line-height: 1.5; color: var(--color-text-default); }
+.resposta { display: grid; gap: var(--space-1); padding-top: var(--space-3); border-top: var(--border-width-hairline) solid var(--color-border-default); }
+.resposta-texto { font-size: var(--font-size-body); font-weight: var(--font-weight-semibold); color: var(--color-text-default); }
+.actions { display: grid; gap: var(--space-2); }
+.a-seguir { display: grid; gap: var(--space-2); }
+.lista { display: grid; }
+.lista li { display: grid; gap: var(--space-1); padding-block: var(--space-3); border-top: var(--border-width-hairline) solid var(--color-border-default); }
+.lista li .posture { font-size: var(--font-size-small); }
+.lista-titulo { font-weight: var(--font-weight-semibold); font-size: var(--font-size-body); }
+.app-foot { font-size: var(--font-size-label); color: var(--color-text-muted); letter-spacing: var(--letter-spacing-label); text-transform: uppercase; }
+
+/* ==========================================================
+   6. PEÇA DE MARCA · 1080×1350 (4:5), escalada por cqi
+   ========================================================== */
+.artboard-wrap { display: grid; justify-items: start; gap: var(--space-3); }
+.artboard {
+  container-type: inline-size;
+  width: min(100%, var(--size-artboard));
+  aspect-ratio: 4 / 5;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  padding: var(--size-artboard-verso);
+  background: var(--color-surface-default);
+  border: var(--border-width-hairline) solid var(--color-border-strong);
+  position: relative;
+  overflow: hidden;
+}
+.artboard-faixa { position: absolute; left: 0; top: 0; bottom: 0; width: 3.2cqi; background: var(--color-liturgia-verde); }
+.artboard-topo { display: flex; align-items: center; justify-content: space-between; gap: 2cqi; padding-left: 4cqi; }
+.artboard-topo .label { font-size: 2.6cqi; color: var(--color-text-default); letter-spacing: 0.14em; }
+.artboard-arco { width: 9cqi; height: auto; color: var(--color-accent-default); }
+.artboard-meio { display: grid; align-content: center; gap: 5cqi; padding-left: 4cqi; }
+.artboard-verso { font-family: var(--font-family-display); font-size: var(--size-artboard-verse); line-height: 1.22; letter-spacing: -0.01em; font-weight: var(--font-weight-semibold); color: var(--color-text-default); }
+.artboard-regra { width: 16cqi; height: var(--border-width-strong); background: var(--color-accent-default); }
+.artboard-ref { font-size: 3.4cqi; color: var(--color-text-default); letter-spacing: 0.04em; }
+.artboard-base { display: grid; gap: 2cqi; padding-left: 4cqi; border-top: var(--border-width-hairline) solid var(--color-border-strong); padding-top: 3cqi; }
+.artboard-cta { font-size: 3.8cqi; font-weight: var(--font-weight-bold); color: var(--color-accent-strong); }
+.artboard-marca { font-family: var(--font-family-display); font-size: var(--size-artboard-title); font-weight: var(--font-weight-bold); letter-spacing: -0.02em; color: var(--color-text-default); }
+.artboard-legenda { font-size: var(--font-size-small); color: var(--color-text-muted); }
+
+/* ==========================================================
+   7. MOVIMENTO
+   ========================================================== */
+.motion-grid { display: grid; gap: var(--space-6); }
+.motion-card { display: grid; gap: var(--space-4); align-content: start; padding-top: var(--space-4); border-top: var(--border-width-hairline) solid var(--color-border-strong); }
+.link-draw {
+  justify-self: start;
+  color: var(--color-accent-strong);
+  font-weight: var(--font-weight-semibold);
+  text-decoration: none;
+  background: linear-gradient(currentColor, currentColor) 0 100% / 0 var(--border-width-hairline) no-repeat;
+  padding-bottom: var(--space-1);
+  transition: background-size var(--duration-base) var(--ease-standard);
+}
+.link-draw:hover, .link-draw:focus-visible { background-size: 100% var(--border-width-hairline) no-repeat; }
+.link-draw:focus-visible { outline: var(--border-width-strong) solid var(--color-focus); outline-offset: var(--space-1); }
+.rubrica-draw { position: relative; padding-bottom: var(--space-3); }
+.rubrica-draw::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: var(--border-width-strong);
+  background: var(--color-accent-default);
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: transform var(--duration-base) var(--ease-standard);
+}
+.rubrica-draw.is-in::after { transform: scaleX(1); }
+.fade-in { opacity: 0; transition: opacity var(--duration-base) var(--ease-standard); }
+.fade-in.is-in { opacity: 1; }
+.motion-table { display: grid; gap: var(--space-2); }
+.motion-row { display: grid; grid-template-columns: 8rem 1fr; gap: var(--space-3); padding-block: var(--space-2); border-bottom: var(--border-width-hairline) solid var(--color-border-default); font-size: var(--font-size-small); }
+
+.footer { padding: var(--space-6) var(--layout-margin); color: var(--color-text-muted); font-size: var(--font-size-small); max-width: var(--layout-max); margin-inline: auto; }
+
+/* ==========================================================
+   LAYOUT POR TAMANHO (mobile-first)
+   ========================================================== */
+@media (min-width: 48rem) {
+  .sec { grid-template-columns: var(--layout-rail) 1fr; }
+  .sec-rail { position: sticky; top: var(--space-6); align-self: start; }
+  .states { grid-template-columns: repeat(4, auto); justify-content: start; }
+  .comp-grid { grid-template-columns: 1fr 1fr; }
+  .comp-grid .comp-wide { grid-column: 1 / -1; }
+  .motion-grid { grid-template-columns: 1fr 1fr; }
+  .dark-cells { grid-template-columns: repeat(4, 1fr); }
+  .lit-legenda { grid-template-columns: 1fr 1fr; }
+  .product-wrap { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-7); align-items: start; }
+}
+@media (min-width: 64rem) {
+  .sec-body { gap: var(--space-7); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    transition: none !important;
+    animation: none !important;
+    scroll-behavior: auto !important;
+  }
+  .rubrica-draw::after, .fade-in { transform: none; opacity: 1; }
+}
+</style>
+</head>
+<body>
+
+<!-- sprite de ícones (monoline, 24×24) -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-sol" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></symbol>
+  <symbol id="i-lua" viewBox="0 0 24 24"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z"/></symbol>
+  <symbol id="i-seta-dir" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-seta-esq" viewBox="0 0 24 24"><path d="M19 12H5M11 6l-6 6 6 6"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="M4 12.5l5 5L20 6.5"/></symbol>
+  <symbol id="i-alerta" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7.5v5.5M12 16.5v.01"/></symbol>
+  <symbol id="i-chevron" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></symbol>
+  <symbol id="i-de-pe" viewBox="0 0 24 24"><circle cx="12" cy="4.5" r="2"/><path d="M12 8v7M8.5 10.5h7M12 15l-3 6.5M12 15l3 6.5"/></symbol>
+  <symbol id="i-sentado" viewBox="0 0 24 24"><circle cx="12" cy="4.5" r="2"/><path d="M11 8v6h5v6M11 10.5l4 2.5"/></symbol>
+  <symbol id="i-joelhos" viewBox="0 0 24 24"><circle cx="12" cy="4.5" r="2"/><path d="M12 8v5l-3 0 M12 13l-2.5 7M9 20.5h6"/></symbol>
+</svg>
+
+<header class="topbar">
+  <span class="brand-mini">
+    <svg class="arco" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25" aria-hidden="true"><path d="M3 22V10a9 9 0 0 1 18 0v12"/><path d="M12 4v5M10 6.5h4"/></svg>
+    Tolle Lege
+  </span>
+  <button class="btn btn-secondary" id="tema" type="button" aria-pressed="false">
+    <svg class="icon" aria-hidden="true"><use href="#i-lua"/></svg>
+    <span id="temaTexto">Modo escuro</span>
+  </button>
+</header>
+
+<main>
+
+  <!-- 1. ASSINATURA -->
+  <section class="sec" id="assinatura">
+    <div class="sec-rail">
+      <p class="label">01 · Assinatura</p>
+      <p class="small muted">Wordmark tipográfico. Sem logo novo: o arco da porta do logo atual, em fio.</p>
+    </div>
+    <div class="sec-body">
+      <h1 class="wordmark" aria-label="Tolle Lege">
+        <svg class="arco" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25" aria-hidden="true"><path d="M3 22V10a9 9 0 0 1 18 0v12"/><path d="M12 4v5M10 6.5h4"/></svg>
+        <span class="wordmark-text">Tolle Lege</span>
+      </h1>
+      <p class="tagline">Toma e lê, no seu ritmo.</p>
+      <p class="lead">Um caminho simples para conhecer o que a Igreja crê, celebra e vive. Sem pressa, com o texto à frente e a postura de cada parte da Missa indicada.</p>
+
+      <div class="dono">
+        <p class="label">Detalhe de dono</p>
+        <p class="dono-rubrica">Faça o vermelho.</p>
+        <p class="dono-fala">Em nome do Pai, e do Filho, e do Espírito Santo. Amém.</p>
+        <p class="dono-legenda small muted">Diga o preto. Como nos missais: o que se lê vem em tinta preta, e o que se faz vem em vermelho de rubrica.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. COR -->
+  <section class="sec" id="cor">
+    <div class="sec-rail">
+      <p class="label">02 · Cor</p>
+      <p class="small muted">Duas tintas, uma regra de função. Vermelho = o que se faz. Preto = o que se lê.</p>
+    </div>
+    <div class="sec-body">
+      <div>
+        <h2 class="h2">Duas tintas, sobre papel</h2>
+        <p class="measure small muted" style="margin-top: var(--space-3)">A estratégia vem do missal impresso. Papel quase branco, preto de impressão para o texto, vermelho de rubrica para a ação. O verde, o roxo e o rosa aparecem só como código pequeno, nunca como fundo.</p>
+      </div>
+
+      <div class="mix" role="img" aria-label="Proporção de uso: papel 56%, tinta 26%, vermelho 10%, código litúrgico 8%">
+        <div class="mix-papel"></div>
+        <div class="mix-tinta"></div>
+        <div class="mix-vermelho"></div>
+        <div class="mix-lit">
+          <span class="bar bar-verde"></span>
+          <span class="bar bar-roxo"></span>
+          <span class="bar bar-rosa"></span>
+          <span class="bar bar-branco"></span>
+        </div>
+      </div>
+
+      <div class="swatches">
+        <div class="sw-row">
+          <div class="sw-chip" style="background: var(--color-surface-default)"></div>
+          <div>
+            <p class="sw-name">Papel · neutro 50</p>
+            <p class="sw-meta">#fef9f8 · <code>--color-surface-default</code> · 56% do uso</p>
+            <p class="sw-meta">Origem: papel de missal. Tintado a 21° (a matiz do vermelho), croma 0,005. Sem bege, sem pergaminho.</p>
+            <p class="sw-par">Par: tinta sobre papel <strong>17,2:1</strong></p>
+          </div>
+        </div>
+        <div class="sw-row">
+          <div class="sw-chip" style="background: var(--color-text-default)"></div>
+          <div>
+            <p class="sw-name">Tinta · neutro 900 (preto de impressão)</p>
+            <p class="sw-meta">#1d1515 · <code>--color-text-default</code> · 26% do uso</p>
+            <p class="sw-meta">Origem: a tinta preta do miolo. Tudo que se lê usa esta cor: leitura, respostas, títulos.</p>
+            <p class="sw-par">Par: sobre papel <strong>17,2:1</strong> · muted (neutro 600) <strong>7,6:1</strong></p>
+          </div>
+        </div>
+        <div class="sw-row">
+          <div class="sw-chip" style="background: var(--color-accent-default)"></div>
+          <div>
+            <p class="sw-name">Vermelho de rubrica · marca 800</p>
+            <p class="sw-meta">#7a1f26 · <code>--color-accent-default</code> · 10% do uso</p>
+            <p class="sw-meta">Origem: a rubrica dos missais (<em>ruber</em>, vermelho). Botões, links de ação, próximo passo e a postura (de pé, sentado, de joelhos).</p>
+            <p class="sw-par">Par: papel sobre vermelho <strong>9,8:1</strong> · texto de link (marca 700) sobre papel <strong>7,0:1</strong></p>
+          </div>
+        </div>
+        <div class="sw-row">
+          <div class="sw-chip" style="background: var(--color-liturgia-verde)"></div>
+          <div>
+            <p class="sw-name">Código litúrgico · verde, roxo, rosa, branco</p>
+            <p class="sw-meta">Verde #2e6b4f · roxo #5e3b6b · rosa #c4748a · branco = papel com fio. <code>--color-liturgia-*</code> · 8% do uso</p>
+            <p class="sw-meta">Origem: a cor do tempo litúrgico do dia. Só como barra de 4 a 16 px (faixa, marcador). Nunca como texto nem fundo de bloco. Estilo Penguin: a cor é o código, não a decoração.</p>
+            <p class="sw-par">Tempo comum: verde · Advento e Quaresma: roxo · Paixão e Pentecostes: vermelho · Gaudete e Laetare: rosa · Natal e Páscoa: branco</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="lit-legenda">
+        <p class="label" style="grid-column: 1 / -1">Código litúrgico em uso</p>
+        <div class="lit-item"><span class="bar bar-verde"></span><span class="small">Tempo comum</span></div>
+        <div class="lit-item"><span class="bar bar-roxo"></span><span class="small">Advento e Quaresma</span></div>
+        <div class="lit-item"><span class="bar bar-rosa"></span><span class="small">Gaudete e Laetare</span></div>
+        <div class="lit-item"><span class="bar bar-branco"></span><span class="small">Natal e Páscoa</span></div>
+      </div>
+
+      <div class="dark-strip" data-theme="dark" aria-label="Pares no modo escuro">
+        <p class="label">Mesmos tokens, modo escuro (sem inverter a escala)</p>
+        <div class="dark-cells">
+          <div class="dark-cell"><span class="label">Página</span><span>#0f0808 · neutro 950</span><span class="small muted">texto 19,0:1</span></div>
+          <div class="dark-cell"><span class="label">Superfície</span><span>#1d1515 · neutro 900</span><span class="small muted">texto 17,2:1</span></div>
+          <div class="dark-cell is-acento"><span class="label">Ação</span><span>#ed8483 · marca 400</span><span class="small">sobre página 7,8:1</span></div>
+          <div class="dark-cell"><span class="label">Muted</span><span>neutro 300</span><span class="small muted">sobre superfície ~11:1</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. TIPOGRAFIA -->
+  <section class="sec" id="tipografia">
+    <div class="sec-rail">
+      <p class="label">03 · Tipografia</p>
+      <p class="small muted">Literata para tudo. Ela foi desenhada para ler na tela, com eixo óptico: o texto pequeno abre, o título fecha.</p>
+    </div>
+    <div class="sec-body">
+      <div class="type-rows">
+        <div class="type-row">
+          <p class="type-spec">Display · Literata 700 · 84/84 · −2,5%</p>
+          <p class="display">Diga o preto. Faça o vermelho.</p>
+        </div>
+        <div class="type-row">
+          <p class="type-spec">H1 · Literata 700 · 52/60</p>
+          <p class="h1">Missa passo a passo</p>
+        </div>
+        <div class="type-row">
+          <p class="type-spec">H2 · Literata 600 · 32/37</p>
+          <p class="h2">Ritos iniciais</p>
+        </div>
+        <div class="type-row">
+          <p class="type-spec">H3 · Literata 600 · 20/24</p>
+          <p class="h3">Sinal da cruz</p>
+        </div>
+        <div class="type-row">
+          <div class="type-prose">
+            <p class="type-spec" style="margin-bottom: var(--space-2)">Body · Literata 400 · 17/27 · medida 36rem</p>
+            <p class="body-lg">A Missa tem partes que se dizem e partes que se fazem. Aqui cada passo mostra as duas: a postura em vermelho, a fala em preto.</p>
+            <p>O texto segue a ordem do missal. Quando o povo responde, a resposta vem logo abaixo da fala, sem nota de rodapé.</p>
+          </div>
+        </div>
+        <div class="type-row">
+          <p class="type-spec">Small · Literata 400 · 15/24</p>
+          <p class="small muted">Postura segue o costume da sua paróquia. Na dúvida, faça o que o povo faz ao seu redor.</p>
+        </div>
+        <div class="type-row">
+          <p class="type-spec">Label · Literata 600 · 12 · caixa-alta · +12%</p>
+          <p class="label">Passo 6 de 12 · Liturgia da Palavra</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. FORMA E COMPONENTES -->
+  <section class="sec" id="componentes">
+    <div class="sec-rail">
+      <p class="label">04 · Forma e componentes</p>
+      <p class="small muted">Forma reta, fio de 1 px, nenhuma sombra. O foco é um fio de 2 px em vermelho, sempre visível.</p>
+    </div>
+    <div class="sec-body">
+      <div class="regras">
+        <div class="regra"><span class="label">Raio</span><span class="small">0. Em tudo: botão, campo, cartão, peça.</span></div>
+        <div class="regra"><span class="label">Borda</span><span class="small">1 px de fio. 2 px só em foco, em erro e na linha de cabeçalho.</span></div>
+        <div class="regra"><span class="label">Sombra</span><span class="small">Nenhuma. A elevação é a superfície e o fio, não o brilho.</span></div>
+        <div class="regra"><span class="label">Regra de cor</span><span class="small">Vermelho só para o que se faz. Se um texto que se lê estiver vermelho, o componente está errado.</span></div>
+      </div>
+
+      <div class="comp-grid">
+        <div class="comp-block comp-wide">
+          <h3 class="h3">Botões · padrão, hover, foco, desabilitado</h3>
+          <div class="states">
+            <div class="state"><button class="btn btn-primary" type="button">Próximo passo</button><span class="label">primário · padrão</span></div>
+            <div class="state"><button class="btn btn-primary is-hover" type="button">Próximo passo</button><span class="label">primário · hover</span></div>
+            <div class="state"><button class="btn btn-primary is-focus" type="button">Próximo passo</button><span class="label">primário · foco</span></div>
+            <div class="state"><button class="btn btn-primary" type="button" disabled>Próximo passo</button><span class="label">primário · desabilitado</span></div>
+            <div class="state"><button class="btn btn-secondary" type="button">Voltar</button><span class="label">secundário · padrão</span></div>
+            <div class="state"><button class="btn btn-secondary is-hover" type="button">Voltar</button><span class="label">secundário · hover</span></div>
+            <div class="state"><button class="btn btn-secondary is-focus" type="button">Voltar</button><span class="label">secundário · foco</span></div>
+            <div class="state"><button class="btn btn-secondary" type="button" disabled>Voltar</button><span class="label">secundário · desabilitado</span></div>
+            <div class="state"><button class="btn btn-ghost" type="button">Ler o texto</button><span class="label">ghost · padrão</span></div>
+            <div class="state"><button class="btn btn-ghost is-hover" type="button">Ler o texto</button><span class="label">ghost · hover</span></div>
+            <div class="state"><button class="btn btn-ghost is-focus" type="button">Ler o texto</button><span class="label">ghost · foco</span></div>
+            <div class="state"><button class="btn btn-ghost" type="button" disabled>Ler o texto</button><span class="label">ghost · desabilitado</span></div>
+            <div class="state"><button class="btn btn-danger" type="button">Apagar progresso</button><span class="label">destrutivo · padrão</span></div>
+            <div class="state"><button class="btn btn-danger is-hover" type="button">Apagar progresso</button><span class="label">destrutivo · hover</span></div>
+            <div class="state"><button class="btn btn-danger is-focus" type="button">Apagar progresso</button><span class="label">destrutivo · foco</span></div>
+            <div class="state"><button class="btn btn-danger" type="button" disabled>Apagar progresso</button><span class="label">destrutivo · desabilitado</span></div>
+          </div>
+        </div>
+
+        <div class="comp-block">
+          <h3 class="h3">Campos</h3>
+          <div class="field">
+            <label class="field-label" for="paroquia">Paróquia mais próxima</label>
+            <div class="select-wrap">
+              <select class="select" id="paroquia" aria-describedby="ajuda-paroquia">
+                <option>Escolha uma paróquia</option>
+                <option>Matriz de Nossa Senhora da Conceição</option>
+                <option>Capela São José Operário</option>
+              </select>
+              <svg class="icon" aria-hidden="true"><use href="#i-chevron"/></svg>
+            </div>
+            <p class="field-help" id="ajuda-paroquia">Usamos para mostrar os horários da Missa na sua região.</p>
+          </div>
+          <div class="field">
+            <label class="field-label" for="nome">Como você quer ser chamado</label>
+            <input class="input" id="nome" type="text" placeholder="Ex.: Ana">
+            <p class="field-help">Só aparece no seu caminho. Não vai para ninguém.</p>
+          </div>
+          <div class="field">
+            <label class="field-label" for="data">Dia da Missa que você frequenta</label>
+            <input class="input is-error" id="data" type="text" value="domingo de manhã" aria-invalid="true" aria-describedby="erro-data">
+            <p class="field-error" id="erro-data">
+              <svg class="icon icon-btn-svg" aria-hidden="true"><use href="#i-alerta"/></svg>
+              Escolha um dia da semana, como domingo.
+            </p>
+          </div>
+        </div>
+
+        <div class="comp-block">
+          <h3 class="h3">Seleção e alternância</h3>
+          <label class="check">
+            <input type="checkbox" checked>
+            <span class="check-box" aria-hidden="true"><svg viewBox="0 0 16 16"><path d="M3 8.5l3 3 7-7"/></svg></span>
+            <span>Quero o lembrete da Missa do domingo.</span>
+          </label>
+          <label class="check">
+            <input type="checkbox">
+            <span class="check-box" aria-hidden="true"><svg viewBox="0 0 16 16"><path d="M3 8.5l3 3 7-7"/></svg></span>
+            <span>Já fui batizado.</span>
+          </label>
+          <label class="switch">
+            <input type="checkbox" role="switch" checked>
+            <span class="track" aria-hidden="true"><span class="thumb"></span></span>
+            <span>Lembrar onde eu parei.</span>
+          </label>
+          <div class="field" style="margin-top: var(--space-2)">
+            <p class="field-label">Marcadores</p>
+            <div style="display:flex; flex-wrap:wrap; gap: var(--space-2)">
+              <span class="badge badge-postura"><svg class="icon icon-btn-svg" aria-hidden="true"><use href="#i-de-pe"/></svg>De pé</span>
+              <span class="badge badge-postura"><svg class="icon icon-btn-svg" aria-hidden="true"><use href="#i-sentado"/></svg>Sentados</span>
+              <span class="badge badge-postura"><svg class="icon icon-btn-svg" aria-hidden="true"><use href="#i-joelhos"/></svg>De joelhos</span>
+              <span class="badge badge-tempo"><span class="bar bar-verde"></span>Tempo comum</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="comp-block comp-wide">
+          <h3 class="h3">Cartão</h3>
+          <article class="card">
+            <p class="label">Trilha · Não sou batizado</p>
+            <h4 class="h3">Entender a fé em sete passos</h4>
+            <p class="small muted">Cada passo é curto e termina com uma pergunta de quem está chegando. Você lê no seu tempo.</p>
+            <div class="progress-track" role="progressbar" aria-valuenow="2" aria-valuemin="0" aria-valuemax="7" aria-label="2 de 7 passos"><span class="progress-fill" style="transform: scaleX(0.285)"></span></div>
+            <p class="label">2 de 7 passos concluídos</p>
+            <div class="card-acoes">
+              <button class="btn btn-primary" type="button">Continuar</button>
+              <button class="btn btn-ghost" type="button">Ver os passos</button>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. TELA DE PRODUTO -->
+  <section class="sec" id="produto">
+    <div class="sec-rail">
+      <p class="label">05 · Tela de produto</p>
+      <p class="small muted">Missa passo a passo, no celular. A postura em vermelho, o que se diz em preto, o que o povo responde em preto. O botão avança o passo.</p>
+    </div>
+    <div class="sec-body">
+      <div class="product-wrap">
+        <div class="device" role="region" aria-label="Missa passo a passo">
+          <div class="app">
+            <div class="app-bar">
+              <span class="bar bar-verde" aria-hidden="true"></span>
+              <span class="label">Tempo comum · Missa</span>
+            </div>
+
+            <header class="app-head">
+              <button class="btn btn-ghost icon-btn" id="anterior" type="button" aria-label="Passo anterior">
+                <svg class="icon" aria-hidden="true"><use href="#i-seta-esq"/></svg>
+              </button>
+              <p class="label" id="contador" aria-live="polite">Passo 6 de 12</p>
+              <span class="label" id="secao">Liturgia da Palavra</span>
+            </header>
+
+            <div class="progress-track" role="progressbar" aria-valuemin="0" aria-valuemax="12" aria-valuenow="6" aria-label="Progresso da Missa">
+              <span class="progress-fill" id="progresso" style="transform: scaleX(0.5)"></span>
+            </div>
+
+            <article class="step" aria-live="polite">
+              <h2 class="h2" id="titulo">Primeira leitura</h2>
+              <p class="posture" id="postura"><svg class="icon" aria-hidden="true" id="posturaIcone"><use href="#i-sentado"/></svg><span id="posturaTexto">Sentados</span></p>
+              <p class="fala" id="fala">Palavra do Senhor.</p>
+              <div class="resposta">
+                <span class="label">O povo responde</span>
+                <span class="resposta-texto" id="resposta">Graças a Deus.</span>
+              </div>
+            </article>
+
+            <div class="actions">
+              <button class="btn btn-primary btn-block" id="proximo" type="button">
+                Próximo passo
+                <svg class="icon" aria-hidden="true"><use href="#i-seta-dir"/></svg>
+              </button>
+              <button class="btn btn-secondary btn-block" id="voltar" type="button">Voltar</button>
+            </div>
+
+            <section class="a-seguir" aria-label="A seguir">
+              <p class="label">A seguir</p>
+              <ol class="lista" id="lista"></ol>
+            </section>
+
+            <p class="app-foot">Postura segue o costume da sua paróquia.</p>
+          </div>
+        </div>
+
+        <div class="small muted measure">
+          <p class="label" style="margin-bottom: var(--space-3)">Como a tela decide a cor</p>
+          <p>Vermelho: tudo que se faz. A postura, o botão de avançar e o link de voltar.</p>
+          <p style="margin-top: var(--space-3)">Preto: tudo que se lê. A fala do leitor, a resposta do povo e o nome do passo.</p>
+          <p style="margin-top: var(--space-3)">Verde: o código do tempo litúrgico, só na barra do topo. Ele muda com o calendário.</p>
+          <p style="margin-top: var(--space-3)">Sem sombra, sem imagem: o texto da Missa é o que está em destaque.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. PEÇA DE MARCA -->
+  <section class="sec" id="marca">
+    <div class="sec-rail">
+      <p class="label">06 · Peça de marca</p>
+      <p class="small muted">Imagem de partilha do Evangelho do dia, 1080×1350. Exemplo com Jo 15,5 (dado de amostra; o dia real vem do calendário do site).</p>
+    </div>
+    <div class="sec-body">
+      <div class="artboard-wrap">
+        <div class="artboard" role="img" aria-label="Imagem de partilha: Evangelho do dia, Jo 15,5">
+          <span class="artboard-faixa" aria-hidden="true"></span>
+          <div class="artboard-topo">
+            <span class="label">Evangelho do dia</span>
+            <svg class="artboard-arco" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" aria-hidden="true"><path d="M3 22V10a9 9 0 0 1 18 0v12"/><path d="M12 4v5M10 6.5h4"/></svg>
+          </div>
+          <div class="artboard-meio">
+            <p class="artboard-verso">“Eu sou a videira, vós sois os ramos. Quem permanece em mim, e eu nele, esse dá muito fruto, porque sem mim nada podeis fazer.”</p>
+            <span class="artboard-regra" aria-hidden="true"></span>
+            <p class="artboard-ref">Jo 15,5</p>
+          </div>
+          <div class="artboard-base">
+            <p class="artboard-cta">Leia hoje, no seu ritmo.</p>
+            <p class="artboard-marca">Tolle Lege</p>
+          </div>
+        </div>
+        <p class="small muted">Papel, tinta e um fio de vermelho. A faixa verde é o código do tempo. Sem foto, sem gradiente, sem brilho.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. MOVIMENTO -->
+  <section class="sec" id="movimento">
+    <div class="sec-rail">
+      <p class="label">07 · Movimento</p>
+      <p class="small muted">Quase nenhum. Duas durações: 150 ms para resposta de toque, 200 ms para entrada. Uma curva só, sem quique.</p>
+    </div>
+    <div class="sec-body">
+      <div class="motion-grid">
+        <div class="motion-card">
+          <p class="label">Hover de link · o fio se desenha (200 ms)</p>
+          <a class="link-draw" href="#movimento">Ler a leitura de hoje</a>
+          <p class="small muted">Passe o cursor ou foque com o teclado. O sublinhado cresce da esquerda.</p>
+        </div>
+        <div class="motion-card" id="entrada">
+          <p class="label">Entrada · a rubrica se escreve (200 ms)</p>
+          <div class="rubrica-draw" data-draw>
+            <h3 class="h2">Antes de sentar, faça o sinal da cruz.</h3>
+          </div>
+          <p class="small muted fade-in" data-fade>Quando a seção entra na tela, o fio vermelho corre e o texto aparece. Com “reduzir movimento” ativo, tudo fica pronto de imediato.</p>
+        </div>
+      </div>
+
+      <div class="motion-table">
+        <div class="motion-row"><span class="label">Hover, foco</span><span>150 ms · cor de fundo e fio</span></div>
+        <div class="motion-row"><span class="label">Entrada, troca de passo</span><span>200 ms · transform e opacidade</span></div>
+        <div class="motion-row"><span class="label">Curva</span><span><code>cubic-bezier(0.2, 0, 0, 1)</code>, a mesma para tudo</span></div>
+        <div class="motion-row"><span class="label">Proibido</span><span>Quique, escala no hover, brilho, animação em loop</span></div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  Tolle Lege · direção b-rubrica · rodada r1 · tokens em <code>tokens.json</code> (palette.mjs)
+</footer>
+
+<script>
+(function () {
+  var root = document.documentElement;
+  var botao = document.getElementById('tema');
+  var texto = document.getElementById('temaTexto');
+  var icone = botao.querySelector('use');
+
+  function aplicarTema(escuro) {
+    root.setAttribute('data-theme', escuro ? 'dark' : 'light');
+    botao.setAttribute('aria-pressed', String(escuro));
+    texto.textContent = escuro ? 'Modo claro' : 'Modo escuro';
+    icone.setAttribute('href', escuro ? '#i-sol' : '#i-lua');
+  }
+  botao.addEventListener('click', function () {
+    aplicarTema(root.getAttribute('data-theme') !== 'dark');
+  });
+
+  /* Missa passo a passo: avança e volta entre os passos */
+  var passos = [
+    { secao: 'Liturgia da Palavra', titulo: 'Primeira leitura', postura: 'Sentados', icone: '#i-sentado', fala: 'Palavra do Senhor.', resposta: 'Graças a Deus.' },
+    { secao: 'Liturgia da Palavra', titulo: 'Salmo responsorial', postura: 'Sentados', icone: '#i-sentado', fala: 'Leitura do salmo.', resposta: 'O refrão, conforme o folheto da sua missa.' },
+    { secao: 'Liturgia da Palavra', titulo: 'Evangelho', postura: 'De pé', icone: '#i-de-pe', fala: 'Palavra da salvação.', resposta: 'Glória a vós, Senhor.' },
+    { secao: 'Liturgia Eucarística', titulo: 'Consagração', postura: 'De joelhos', icone: '#i-joelhos', fala: 'Mistério da fé.', resposta: 'Anunciamos, Senhor, a vossa morte e proclamamos a vossa ressurreição. Vinde, Senhor Jesus.' }
+  ];
+  var inicio = 0;
+  var total = 12;
+  var i = 0;
+
+  function pintar() {
+    var p = passos[i];
+    var numero = inicio + i + 1;
+    document.getElementById('secao').textContent = p.secao;
+    document.getElementById('titulo').textContent = p.titulo;
+    document.getElementById('posturaTexto').textContent = p.postura;
+    document.getElementById('posturaIcone').firstElementChild.setAttribute('href', p.icone);
+    document.getElementById('fala').textContent = p.fala;
+    document.getElementById('resposta').textContent = p.resposta;
+    document.getElementById('contador').textContent = 'Passo ' + numero + ' de ' + total;
+    var barra = document.getElementById('progresso');
+    barra.style.transform = 'scaleX(' + ((numero - 1) / total).toFixed(3) + ')';
+    document.getElementById('anterior').disabled = i === 0;
+    document.getElementById('voltar').disabled = i === 0;
+    var lista = document.getElementById('lista');
+    lista.innerHTML = '';
+    passos.slice(i + 1, i + 3).forEach(function (q) {
+      var li = document.createElement('li');
+      li.innerHTML = '<span class="badge badge-postura">' + q.postura + '</span><span class="lista-titulo"></span>';
+      li.querySelector('.lista-titulo').textContent = q.titulo;
+      lista.appendChild(li);
+    });
+    document.getElementById('proximo').disabled = i === passos.length - 1;
+  }
+  document.getElementById('proximo').addEventListener('click', function () {
+    if (i < passos.length - 1) { i++; pintar(); }
+  });
+  function voltar() { if (i > 0) { i--; pintar(); } }
+  document.getElementById('voltar').addEventListener('click', voltar);
+  document.getElementById('anterior').addEventListener('click', voltar);
+  pintar();
+
+  /* entrada: o fio vermelho corre quando a seção aparece */
+  var alvos = document.querySelectorAll('[data-draw], [data-fade]');
+  if ('IntersectionObserver' in window) {
+    var obs = new IntersectionObserver(function (entradas) {
+      entradas.forEach(function (e) {
+        if (e.isIntersecting) { e.target.classList.add('is-in'); obs.unobserve(e.target); }
+      });
+    }, { threshold: 0.4 });
+    alvos.forEach(function (el) { obs.observe(el); });
+    document.querySelectorAll('[data-draw]').forEach(function (el) { el.classList.add('rubrica-draw'); });
+    document.querySelectorAll('[data-fade]').forEach(function (el) { el.classList.add('fade-in'); });
+  } else {
+    alvos.forEach(function (el) { el.classList.add('is-in'); });
+  }
+})();
+</script>
+</body>
+</html>

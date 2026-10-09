@@ -1,0 +1,1241 @@
+{
+  "prefix": "",
+  "modes": [
+    "dark"
+  ],
+  "tokens": {
+    "share.cal": {
+      "type": "string",
+      "css": "--share-cal",
+      "value": "46",
+      "description": "proporção de uso, cal"
+    },
+    "share.moldura": {
+      "type": "string",
+      "css": "--share-moldura",
+      "value": "14"
+    },
+    "share.granito": {
+      "type": "string",
+      "css": "--share-granito",
+      "value": "10"
+    },
+    "share.madeira": {
+      "type": "string",
+      "css": "--share-madeira",
+      "value": "9"
+    },
+    "share.ferro": {
+      "type": "string",
+      "css": "--share-ferro",
+      "value": "6"
+    },
+    "share.telha": {
+      "type": "string",
+      "css": "--share-telha",
+      "value": "4",
+      "description": "ação, pequena por regra"
+    },
+    "space.1": {
+      "type": "dimension",
+      "css": "--space-1",
+      "value": "4px",
+      "description": "grade de 4"
+    },
+    "space.2": {
+      "type": "dimension",
+      "css": "--space-2",
+      "value": "8px",
+      "description": "grade de 4"
+    },
+    "space.3": {
+      "type": "dimension",
+      "css": "--space-3",
+      "value": "12px",
+      "description": "grade de 4"
+    },
+    "space.4": {
+      "type": "dimension",
+      "css": "--space-4",
+      "value": "16px",
+      "description": "grade de 4"
+    },
+    "space.5": {
+      "type": "dimension",
+      "css": "--space-5",
+      "value": "24px",
+      "description": "grade de 4"
+    },
+    "space.6": {
+      "type": "dimension",
+      "css": "--space-6",
+      "value": "32px",
+      "description": "grade de 4"
+    },
+    "space.7": {
+      "type": "dimension",
+      "css": "--space-7",
+      "value": "48px",
+      "description": "grade de 4"
+    },
+    "space.8": {
+      "type": "dimension",
+      "css": "--space-8",
+      "value": "64px",
+      "description": "grade de 4"
+    },
+    "radius.none": {
+      "type": "dimension",
+      "css": "--radius-none",
+      "value": "0",
+      "description": "sem canto"
+    },
+    "radius.sm": {
+      "type": "dimension",
+      "css": "--radius-sm",
+      "value": "2px",
+      "description": "chip, pílula de estado"
+    },
+    "radius.md": {
+      "type": "dimension",
+      "css": "--radius-md",
+      "value": "4px",
+      "description": "cartão e painel"
+    },
+    "radius.control": {
+      "type": "dimension",
+      "css": "--radius-control",
+      "value": "4px",
+      "description": "botão, campo"
+    },
+    "radius.arch": {
+      "type": "string",
+      "css": "--radius-arch",
+      "value": "999px 999px 2px 2px",
+      "description": "forma-assinatura: arco da porta (topo semicircular, base reta)"
+    },
+    "border.width.default": {
+      "type": "dimension",
+      "css": "--border-width-default",
+      "value": "1px",
+      "description": "fio padrão"
+    },
+    "border.width.strong": {
+      "type": "dimension",
+      "css": "--border-width-strong",
+      "value": "2px",
+      "description": "destaque e foco de tela"
+    },
+    "shadow.sm": {
+      "type": "string",
+      "css": "--shadow-sm",
+      "value": "0 1px 2px color-mix(in oklch, var(--color-primitivos-madeira) 12%, transparent)",
+      "description": "luz natural mínima (claro). No escuro, vira borda."
+    },
+    "shadow.none": {
+      "type": "string",
+      "css": "--shadow-none",
+      "value": "none",
+      "description": "escuro: borda no lugar de sombra"
+    },
+    "size.control-md": {
+      "type": "dimension",
+      "css": "--size-control-md",
+      "value": "2.75rem",
+      "description": "altura de controle, toque ≥ 44px"
+    },
+    "size.control-sm": {
+      "type": "dimension",
+      "css": "--size-control-sm",
+      "value": "2.25rem",
+      "description": "altura de chip"
+    },
+    "size.icon": {
+      "type": "dimension",
+      "css": "--size-icon",
+      "value": "1.25rem",
+      "description": "ícone monoline"
+    },
+    "size.layout-max": {
+      "type": "dimension",
+      "css": "--size-layout-max",
+      "value": "72rem",
+      "description": "largura da página"
+    },
+    "size.reading": {
+      "type": "dimension",
+      "css": "--size-reading",
+      "value": "40rem",
+      "description": "medida de leitura"
+    },
+    "size.touch-min": {
+      "type": "dimension",
+      "css": "--size-touch-min",
+      "value": "2.75rem",
+      "description": "alvo de toque mínimo"
+    },
+    "motion.duration.fast": {
+      "type": "string",
+      "css": "--motion-duration-fast",
+      "value": "160ms",
+      "description": "press, foco, hover de controle"
+    },
+    "motion.duration.base": {
+      "type": "string",
+      "css": "--motion-duration-base",
+      "value": "400ms",
+      "description": "luz que muda, tema, entrada"
+    },
+    "motion.duration.slow": {
+      "type": "string",
+      "css": "--motion-duration-slow",
+      "value": "700ms",
+      "description": "reserva, não usada em componente"
+    },
+    "motion.ease.light": {
+      "type": "string",
+      "css": "--motion-ease-light",
+      "value": "cubic-bezier(0.2, 0.6, 0.2, 1)",
+      "description": "curva da luz: entra rápido, assenta"
+    },
+    "color.marca.50": {
+      "type": "color",
+      "css": "--color-marca-50",
+      "value": "oklch(97.7% 0.003 38.79)",
+      "hex": "#f9f7f6"
+    },
+    "color.marca.100": {
+      "type": "color",
+      "css": "--color-marca-100",
+      "value": "oklch(94.58% 0.0103 38.79)",
+      "hex": "#f4ebe8"
+    },
+    "color.marca.200": {
+      "type": "color",
+      "css": "--color-marca-200",
+      "value": "oklch(89.27% 0.0264 38.79)",
+      "hex": "#ecd6cf"
+    },
+    "color.marca.300": {
+      "type": "color",
+      "css": "--color-marca-300",
+      "value": "oklch(82.25% 0.0588 38.79)",
+      "hex": "#e8b9a9"
+    },
+    "color.marca.400": {
+      "type": "color",
+      "css": "--color-marca-400",
+      "value": "oklch(72.93% 0.1109 38.79)",
+      "hex": "#e38e73"
+    },
+    "color.marca.500": {
+      "type": "color",
+      "css": "--color-marca-500",
+      "value": "oklch(63.92% 0.1371 38.79)",
+      "hex": "#d06b49"
+    },
+    "color.marca.600": {
+      "type": "color",
+      "css": "--color-marca-600",
+      "value": "oklch(55.4% 0.1189 38.79)",
+      "hex": "#ac573b",
+      "description": "cor-âncora · origem: telha de barro, terracotta_tile, modelo 3D Igreja Matriz de Resende"
+    },
+    "color.marca.700": {
+      "type": "color",
+      "css": "--color-marca-700",
+      "value": "oklch(47.42% 0.0957 38.79)",
+      "hex": "#894731"
+    },
+    "color.marca.800": {
+      "type": "color",
+      "css": "--color-marca-800",
+      "value": "oklch(39.43% 0.0712 38.79)",
+      "hex": "#663828"
+    },
+    "color.marca.900": {
+      "type": "color",
+      "css": "--color-marca-900",
+      "value": "oklch(31.95% 0.0495 38.79)",
+      "hex": "#482a20"
+    },
+    "color.marca.950": {
+      "type": "color",
+      "css": "--color-marca-950",
+      "value": "oklch(23.97% 0.0312 38.79)",
+      "hex": "#2c1a14"
+    },
+    "color.neutro.50": {
+      "type": "color",
+      "css": "--color-neutro-50",
+      "value": "oklch(98.5% 0.004 38.79)",
+      "hex": "#fdf9f8"
+    },
+    "color.neutro.100": {
+      "type": "color",
+      "css": "--color-neutro-100",
+      "value": "oklch(96.7% 0.004 38.79)",
+      "hex": "#f7f3f2"
+    },
+    "color.neutro.200": {
+      "type": "color",
+      "css": "--color-neutro-200",
+      "value": "oklch(92.2% 0.0143 38.79)",
+      "hex": "#eee2de"
+    },
+    "color.neutro.300": {
+      "type": "color",
+      "css": "--color-neutro-300",
+      "value": "oklch(87% 0.0143 38.79)",
+      "hex": "#ddd1cd"
+    },
+    "color.neutro.400": {
+      "type": "color",
+      "css": "--color-neutro-400",
+      "value": "oklch(70.8% 0.0143 38.79)",
+      "hex": "#a99e9a"
+    },
+    "color.neutro.500": {
+      "type": "color",
+      "css": "--color-neutro-500",
+      "value": "oklch(55.6% 0.0143 38.79)",
+      "hex": "#7b716d"
+    },
+    "color.neutro.600": {
+      "type": "color",
+      "css": "--color-neutro-600",
+      "value": "oklch(43.9% 0.0143 38.79)",
+      "hex": "#5a504d"
+    },
+    "color.neutro.700": {
+      "type": "color",
+      "css": "--color-neutro-700",
+      "value": "oklch(37.1% 0.0143 38.79)",
+      "hex": "#473e3a"
+    },
+    "color.neutro.800": {
+      "type": "color",
+      "css": "--color-neutro-800",
+      "value": "oklch(26.9% 0.0143 38.79)",
+      "hex": "#2d2421"
+    },
+    "color.neutro.900": {
+      "type": "color",
+      "css": "--color-neutro-900",
+      "value": "oklch(20.5% 0.0121 38.79)",
+      "hex": "#1c1513"
+    },
+    "color.neutro.950": {
+      "type": "color",
+      "css": "--color-neutro-950",
+      "value": "oklch(14.5% 0.0121 38.79)",
+      "hex": "#0f0807"
+    },
+    "color.erro.50": {
+      "type": "color",
+      "css": "--color-erro-50",
+      "value": "oklch(97.7% 0.0028 27)",
+      "hex": "#f9f7f6"
+    },
+    "color.erro.100": {
+      "type": "color",
+      "css": "--color-erro-100",
+      "value": "oklch(94.6% 0.0099 27)",
+      "hex": "#f4ebea"
+    },
+    "color.erro.200": {
+      "type": "color",
+      "css": "--color-erro-200",
+      "value": "oklch(89.3% 0.0254 27)",
+      "hex": "#ecd6d3"
+    },
+    "color.erro.300": {
+      "type": "color",
+      "css": "--color-erro-300",
+      "value": "oklch(82.3% 0.0567 27)",
+      "hex": "#e8b8b1"
+    },
+    "color.erro.400": {
+      "type": "color",
+      "css": "--color-erro-400",
+      "value": "oklch(73% 0.1075 27)",
+      "hex": "#e38d83"
+    },
+    "color.erro.500": {
+      "type": "color",
+      "css": "--color-erro-500",
+      "value": "oklch(64% 0.1636 27)",
+      "hex": "#de5d53"
+    },
+    "color.erro.600": {
+      "type": "color",
+      "css": "--color-erro-600",
+      "value": "oklch(55.5% 0.1508 27)",
+      "hex": "#bb4840"
+    },
+    "color.erro.700": {
+      "type": "color",
+      "css": "--color-erro-700",
+      "value": "oklch(47.5% 0.1213 27)",
+      "hex": "#943c35"
+    },
+    "color.erro.800": {
+      "type": "color",
+      "css": "--color-erro-800",
+      "value": "oklch(39.5% 0.0902 27)",
+      "hex": "#6f302b"
+    },
+    "color.erro.900": {
+      "type": "color",
+      "css": "--color-erro-900",
+      "value": "oklch(32% 0.0627 27)",
+      "hex": "#4e2521"
+    },
+    "color.erro.950": {
+      "type": "color",
+      "css": "--color-erro-950",
+      "value": "oklch(24% 0.0393 27)",
+      "hex": "#301815"
+    },
+    "color.primitivos.cal": {
+      "type": "color",
+      "css": "--color-primitivos-cal",
+      "value": "oklch(97.23% 0.004 106.47)",
+      "hex": "#f6f6f3",
+      "description": "origem: lime_plaster, paredes da igreja (modelo 3D Igreja Matriz de Resende). Fundo do site."
+    },
+    "color.primitivos.branco": {
+      "type": "color",
+      "css": "--color-primitivos-branco",
+      "value": "oklch(98.78% 0.0013 106.42)",
+      "hex": "#fbfbfa",
+      "description": "origem: cal mais clara, cartões. Texto sobre telha."
+    },
+    "color.primitivos.moldura": {
+      "type": "color",
+      "css": "--color-primitivos-moldura",
+      "value": "oklch(88.92% 0.006 239.83)",
+      "hex": "#d7dbde",
+      "description": "origem: molduras das janelas (modelo 3D). Superfície afundada."
+    },
+    "color.primitivos.barrado": {
+      "type": "color",
+      "css": "--color-primitivos-barrado",
+      "value": "oklch(78.99% 0.0159 241.83)",
+      "hex": "#b2bcc4",
+      "description": "origem: barrado pintado (modelo 3D). Bordas."
+    },
+    "color.primitivos.granito": {
+      "type": "color",
+      "css": "--color-primitivos-granito",
+      "value": "oklch(65.61% 0.0121 243.74)",
+      "hex": "#8b9298",
+      "description": "origem: cantaria de granito (modelo 3D). Borda forte, nunca texto sobre cal."
+    },
+    "color.primitivos.granito-escuro": {
+      "type": "color",
+      "css": "--color-primitivos-granito-escuro",
+      "value": "oklch(47.4% 0.012 238.73)",
+      "hex": "#565d62",
+      "description": "origem: granito escurecido para texto secundário AA sobre cal e moldura."
+    },
+    "color.primitivos.telha": {
+      "type": "color",
+      "css": "--color-primitivos-telha",
+      "value": "oklch(55.4% 0.1189 38.79)",
+      "hex": "#ac573b",
+      "description": "origem: terracotta_tile, telha de barro (modelo 3D). Acento de ação."
+    },
+    "color.primitivos.telha-escura": {
+      "type": "color",
+      "css": "--color-primitivos-telha-escura",
+      "value": "oklch(47.47% 0.0962 39.03)",
+      "hex": "#894731",
+      "description": "origem: telha escurecida, hover."
+    },
+    "color.primitivos.telha-clara": {
+      "type": "color",
+      "css": "--color-primitivos-telha-clara",
+      "value": "oklch(94.58% 0.0103 38.79)",
+      "hex": "#f4ebe8",
+      "description": "origem: telha clarificada (palette.mjs, marca-100). Destaque suave."
+    },
+    "color.primitivos.madeira": {
+      "type": "color",
+      "css": "--color-primitivos-madeira",
+      "value": "oklch(34.03% 0.0446 49.05)",
+      "hex": "#4b3123",
+      "description": "origem: madeira escura das portas (modelo 3D). Tinta."
+    },
+    "color.primitivos.ferro": {
+      "type": "color",
+      "css": "--color-primitivos-ferro",
+      "value": "oklch(30.18% 0.0023 67.74)",
+      "hex": "#2f2e2d",
+      "description": "origem: ferro forjado das grades (modelo 3D). Superfície invertida, noite."
+    },
+    "color.primitivos.erro": {
+      "type": "color",
+      "css": "--color-primitivos-erro",
+      "value": "oklch(47.5% 0.1213 27)",
+      "hex": "#943c35",
+      "description": "origem: palette.mjs, erro-700. Feedback de erro."
+    },
+    "color.primitivos.noite-base": {
+      "type": "color",
+      "css": "--color-primitivos-noite-base",
+      "value": "oklch(22.81% 0.0195 52.41)",
+      "hex": "#241a14",
+      "description": "origem: madeira em noite. Fundo do modo escuro."
+    },
+    "color.primitivos.noite-raised": {
+      "type": "color",
+      "css": "--color-primitivos-noite-raised",
+      "value": "oklch(25.82% 0.0223 57.58)",
+      "hex": "#2c2119",
+      "description": "origem: madeira em noite, elevação 1."
+    },
+    "color.primitivos.noite-sunken": {
+      "type": "color",
+      "css": "--color-primitivos-noite-sunken",
+      "value": "oklch(18% 0.014 52)",
+      "hex": "#17100c",
+      "description": "origem: madeira em noite, afundado."
+    },
+    "color.primitivos.noite-ferro": {
+      "type": "color",
+      "css": "--color-primitivos-noite-ferro",
+      "value": "oklch(34.49% 0.0037 84.58)",
+      "hex": "#3a3937",
+      "description": "origem: ferro em noite. Linhas no escuro."
+    },
+    "color.primitivos.noite-cal": {
+      "type": "color",
+      "css": "--color-primitivos-noite-cal",
+      "value": "oklch(93.44% 0.0099 87.47)",
+      "hex": "#ece9e2",
+      "description": "origem: cal sob luz de vela. Texto no escuro."
+    },
+    "color.primitivos.noite-granito": {
+      "type": "color",
+      "css": "--color-primitivos-noite-granito",
+      "value": "oklch(73.43% 0.0118 243.71)",
+      "hex": "#a3aab0",
+      "description": "origem: granito sob luz de vela. Texto secundário no escuro."
+    },
+    "color.primitivos.noite-telha": {
+      "type": "color",
+      "css": "--color-primitivos-noite-telha",
+      "value": "oklch(74.09% 0.1113 35.58)",
+      "hex": "#e8917a",
+      "description": "origem: telha sob luz de vela. Acento no escuro."
+    },
+    "color.primitivos.noite-telha-clara": {
+      "type": "color",
+      "css": "--color-primitivos-noite-telha-clara",
+      "value": "oklch(82% 0.075 36)",
+      "hex": "#f0b4a3",
+      "description": "origem: telha clarificada, hover no escuro."
+    },
+    "color.primitivos.noite-telha-fundo": {
+      "type": "color",
+      "css": "--color-primitivos-noite-telha-fundo",
+      "value": "oklch(32% 0.05 40)",
+      "hex": "#492a1f",
+      "description": "origem: telha escurecida, fundo de destaque no escuro."
+    },
+    "color.primitivos.noite-erro": {
+      "type": "color",
+      "css": "--color-primitivos-noite-erro",
+      "value": "oklch(74% 0.11 27)",
+      "hex": "#e88f85",
+      "description": "origem: erro clarificado no escuro."
+    },
+    "color.liturgia.verde": {
+      "type": "color",
+      "css": "--color-liturgia-verde",
+      "value": "oklch(43.97% 0.0461 152.24)",
+      "hex": "#3f5a46",
+      "description": "origem: cor litúrgica do Tempo Comum (calendário que o site já calcula). Fundo do portal/arco no dia verde."
+    },
+    "color.liturgia.roxo": {
+      "type": "color",
+      "css": "--color-liturgia-roxo",
+      "value": "oklch(49.96% 0.0964 301.43)",
+      "hex": "#6d5591",
+      "description": "origem: cor litúrgica do Advento e da Quaresma (já usada em liturgical-year/seasonInfo.ts)."
+    },
+    "color.liturgia.vermelho": {
+      "type": "color",
+      "css": "--color-liturgia-vermelho",
+      "value": "oklch(50.7% 0.1373 31.74)",
+      "hex": "#a5402f",
+      "description": "origem: cor litúrgica de Pentecostes, Paixão e mártires (#b0463a do site, escurecido para AA). Fica perto da telha: nunca usar como ação."
+    },
+    "color.liturgia.rosa": {
+      "type": "color",
+      "css": "--color-liturgia-rosa",
+      "value": "oklch(52.19% 0.1153 356.47)",
+      "hex": "#9c4a6b",
+      "description": "origem: cor litúrgica de Gaudete e Laetare. Substitui pink-300/400 do Tailwind."
+    },
+    "color.liturgia.branco": {
+      "type": "color",
+      "css": "--color-liturgia-branco",
+      "value": "oklch(88.92% 0.006 239.83)",
+      "hex": "#d7dbde",
+      "alias": "color.primitivos.moldura",
+      "description": "origem: cor litúrgica do Natal e da Páscoa; branco vira moldura clara, texto em madeira."
+    },
+    "color.surface.default": {
+      "type": "color",
+      "css": "--color-surface-default",
+      "value": "oklch(97.23% 0.004 106.47)",
+      "hex": "#f6f6f3",
+      "alias": "color.primitivos.cal",
+      "description": "uso: surface.default (light cal, dark noite-base)",
+      "modes": {
+        "dark": {
+          "value": "oklch(22.81% 0.0195 52.41)",
+          "hex": "#241a14",
+          "alias": "color.primitivos.noite-base"
+        }
+      }
+    },
+    "color.surface.raised": {
+      "type": "color",
+      "css": "--color-surface-raised",
+      "value": "oklch(98.78% 0.0013 106.42)",
+      "hex": "#fbfbfa",
+      "alias": "color.primitivos.branco",
+      "description": "uso: surface.raised (light branco, dark noite-raised)",
+      "modes": {
+        "dark": {
+          "value": "oklch(25.82% 0.0223 57.58)",
+          "hex": "#2c2119",
+          "alias": "color.primitivos.noite-raised"
+        }
+      }
+    },
+    "color.surface.sunken": {
+      "type": "color",
+      "css": "--color-surface-sunken",
+      "value": "oklch(88.92% 0.006 239.83)",
+      "hex": "#d7dbde",
+      "alias": "color.primitivos.moldura",
+      "description": "uso: surface.sunken (light moldura, dark noite-sunken)",
+      "modes": {
+        "dark": {
+          "value": "oklch(18% 0.014 52)",
+          "hex": "#17100c",
+          "alias": "color.primitivos.noite-sunken"
+        }
+      }
+    },
+    "color.surface.inverse": {
+      "type": "color",
+      "css": "--color-surface-inverse",
+      "value": "oklch(30.18% 0.0023 67.74)",
+      "hex": "#2f2e2d",
+      "alias": "color.primitivos.ferro",
+      "description": "uso: surface.inverse (light ferro, dark noite-cal)",
+      "modes": {
+        "dark": {
+          "value": "oklch(93.44% 0.0099 87.47)",
+          "hex": "#ece9e2",
+          "alias": "color.primitivos.noite-cal"
+        }
+      }
+    },
+    "color.text.default": {
+      "type": "color",
+      "css": "--color-text-default",
+      "value": "oklch(34.03% 0.0446 49.05)",
+      "hex": "#4b3123",
+      "alias": "color.primitivos.madeira",
+      "description": "uso: text.default (light madeira, dark noite-cal)",
+      "modes": {
+        "dark": {
+          "value": "oklch(93.44% 0.0099 87.47)",
+          "hex": "#ece9e2",
+          "alias": "color.primitivos.noite-cal"
+        }
+      }
+    },
+    "color.text.muted": {
+      "type": "color",
+      "css": "--color-text-muted",
+      "value": "oklch(47.4% 0.012 238.73)",
+      "hex": "#565d62",
+      "alias": "color.primitivos.granito-escuro",
+      "description": "uso: text.muted (light granito-escuro, dark noite-granito)",
+      "modes": {
+        "dark": {
+          "value": "oklch(73.43% 0.0118 243.71)",
+          "hex": "#a3aab0",
+          "alias": "color.primitivos.noite-granito"
+        }
+      }
+    },
+    "color.text.inverse": {
+      "type": "color",
+      "css": "--color-text-inverse",
+      "value": "oklch(97.23% 0.004 106.47)",
+      "hex": "#f6f6f3",
+      "alias": "color.primitivos.cal",
+      "description": "uso: text.inverse (light cal, dark ferro)",
+      "modes": {
+        "dark": {
+          "value": "oklch(30.18% 0.0023 67.74)",
+          "hex": "#2f2e2d",
+          "alias": "color.primitivos.ferro"
+        }
+      }
+    },
+    "color.border.default": {
+      "type": "color",
+      "css": "--color-border-default",
+      "value": "oklch(78.99% 0.0159 241.83)",
+      "hex": "#b2bcc4",
+      "alias": "color.primitivos.barrado",
+      "description": "uso: border.default (light barrado, dark noite-ferro)",
+      "modes": {
+        "dark": {
+          "value": "oklch(34.49% 0.0037 84.58)",
+          "hex": "#3a3937",
+          "alias": "color.primitivos.noite-ferro"
+        }
+      }
+    },
+    "color.border.strong": {
+      "type": "color",
+      "css": "--color-border-strong",
+      "value": "oklch(65.61% 0.0121 243.74)",
+      "hex": "#8b9298",
+      "alias": "color.primitivos.granito",
+      "description": "uso: border.strong (light granito, dark noite-granito)",
+      "modes": {
+        "dark": {
+          "value": "oklch(73.43% 0.0118 243.71)",
+          "hex": "#a3aab0",
+          "alias": "color.primitivos.noite-granito"
+        }
+      }
+    },
+    "color.accent.default": {
+      "type": "color",
+      "css": "--color-accent-default",
+      "value": "oklch(55.4% 0.1189 38.79)",
+      "hex": "#ac573b",
+      "alias": "color.primitivos.telha",
+      "description": "uso: accent.default (light telha, dark noite-telha)",
+      "modes": {
+        "dark": {
+          "value": "oklch(74.09% 0.1113 35.58)",
+          "hex": "#e8917a",
+          "alias": "color.primitivos.noite-telha"
+        }
+      }
+    },
+    "color.accent.hover": {
+      "type": "color",
+      "css": "--color-accent-hover",
+      "value": "oklch(47.47% 0.0962 39.03)",
+      "hex": "#894731",
+      "alias": "color.primitivos.telha-escura",
+      "description": "uso: accent.hover (light telha-escura, dark noite-telha-clara)",
+      "modes": {
+        "dark": {
+          "value": "oklch(82% 0.075 36)",
+          "hex": "#f0b4a3",
+          "alias": "color.primitivos.noite-telha-clara"
+        }
+      }
+    },
+    "color.accent.on": {
+      "type": "color",
+      "css": "--color-accent-on",
+      "value": "oklch(98.78% 0.0013 106.42)",
+      "hex": "#fbfbfa",
+      "alias": "color.primitivos.branco",
+      "description": "uso: accent.on (light branco, dark noite-base)",
+      "modes": {
+        "dark": {
+          "value": "oklch(22.81% 0.0195 52.41)",
+          "hex": "#241a14",
+          "alias": "color.primitivos.noite-base"
+        }
+      }
+    },
+    "color.accent.subtle": {
+      "type": "color",
+      "css": "--color-accent-subtle",
+      "value": "oklch(94.58% 0.0103 38.79)",
+      "hex": "#f4ebe8",
+      "alias": "color.primitivos.telha-clara",
+      "description": "uso: accent.subtle (light telha-clara, dark noite-telha-fundo)",
+      "modes": {
+        "dark": {
+          "value": "oklch(32% 0.05 40)",
+          "hex": "#492a1f",
+          "alias": "color.primitivos.noite-telha-fundo"
+        }
+      }
+    },
+    "color.feedback.danger": {
+      "type": "color",
+      "css": "--color-feedback-danger",
+      "value": "oklch(47.5% 0.1213 27)",
+      "hex": "#943c35",
+      "alias": "color.primitivos.erro",
+      "description": "uso: feedback.danger (light erro, dark noite-erro)",
+      "modes": {
+        "dark": {
+          "value": "oklch(74% 0.11 27)",
+          "hex": "#e88f85",
+          "alias": "color.primitivos.noite-erro"
+        }
+      }
+    },
+    "color.focus.ring": {
+      "type": "color",
+      "css": "--color-focus-ring",
+      "value": "oklch(55.4% 0.1189 38.79)",
+      "hex": "#ac573b",
+      "alias": "color.primitivos.telha",
+      "description": "uso: focus.ring (light telha, dark noite-telha)",
+      "modes": {
+        "dark": {
+          "value": "oklch(74.09% 0.1113 35.58)",
+          "hex": "#e8917a",
+          "alias": "color.primitivos.noite-telha"
+        }
+      }
+    },
+    "color.dia.default": {
+      "type": "color",
+      "css": "--color-dia-default",
+      "value": "oklch(43.97% 0.0461 152.24)",
+      "hex": "#3f5a46",
+      "alias": "color.liturgia.verde",
+      "description": "uso: arco do nome, portal da home, arquinho de seção. Valor do dia trocado em runtime."
+    },
+    "color.dia.on": {
+      "type": "color",
+      "css": "--color-dia-on",
+      "value": "oklch(98.78% 0.0013 106.42)",
+      "hex": "#fbfbfa",
+      "alias": "color.primitivos.branco",
+      "description": "uso: texto sobre o portal (no Natal/Páscoa vira madeira)."
+    },
+    "font.family.display": {
+      "type": "fontFamily",
+      "css": "--font-family-display",
+      "value": "\"Brygada 1918\", Georgia, serif",
+      "description": "display: Brygada 1918 (romana de contraste baixo, inscrição). Não é da lista do cemitério."
+    },
+    "font.family.text": {
+      "type": "fontFamily",
+      "css": "--font-family-text",
+      "value": "\"Figtree\", system-ui, sans-serif",
+      "description": "texto e UI: Figtree (humanista contemporâneo)."
+    },
+    "font.size.display": {
+      "type": "string",
+      "css": "--font-size-display",
+      "value": "clamp(2.5rem, 1.6rem + 4vw, 4.75rem)",
+      "description": "display, até 76px"
+    },
+    "font.size.h1": {
+      "type": "string",
+      "css": "--font-size-h1",
+      "value": "clamp(1.75rem, 1.35rem + 1.6vw, 2.5rem)",
+      "description": "h1"
+    },
+    "font.size.h2": {
+      "type": "string",
+      "css": "--font-size-h2",
+      "value": "1.375rem",
+      "description": "h2"
+    },
+    "font.size.body": {
+      "type": "string",
+      "css": "--font-size-body",
+      "value": "1rem",
+      "description": "corpo"
+    },
+    "font.size.small": {
+      "type": "string",
+      "css": "--font-size-small",
+      "value": "0.875rem",
+      "description": "texto de apoio"
+    },
+    "font.size.label": {
+      "type": "string",
+      "css": "--font-size-label",
+      "value": "0.75rem",
+      "description": "label caixa-alta"
+    },
+    "font.weight.regular": {
+      "type": "string",
+      "css": "--font-weight-regular",
+      "value": "400"
+    },
+    "font.weight.medium": {
+      "type": "string",
+      "css": "--font-weight-medium",
+      "value": "500"
+    },
+    "font.weight.semibold": {
+      "type": "string",
+      "css": "--font-weight-semibold",
+      "value": "600"
+    },
+    "line-height.tight": {
+      "type": "string",
+      "css": "--line-height-tight",
+      "value": "1.05",
+      "description": "display"
+    },
+    "line-height.heading": {
+      "type": "string",
+      "css": "--line-height-heading",
+      "value": "1.2",
+      "description": "títulos"
+    },
+    "line-height.body": {
+      "type": "string",
+      "css": "--line-height-body",
+      "value": "1.55",
+      "description": "corpo"
+    },
+    "letter-spacing.label": {
+      "type": "string",
+      "css": "--letter-spacing-label",
+      "value": "0.12em",
+      "description": "caixa-alta de label"
+    }
+  },
+  "contraste": [
+    {
+      "modo": "base",
+      "fg": "color.primitivos.branco",
+      "bg": "color.liturgia.verde",
+      "min": 4.5,
+      "uso": "portal no dia verde",
+      "wcag": 7.342021546107949,
+      "apca": -88.47277990405158,
+      "ok": true
+    },
+    {
+      "modo": "base",
+      "fg": "color.primitivos.branco",
+      "bg": "color.liturgia.roxo",
+      "min": 4.5,
+      "uso": "portal no dia roxo",
+      "wcag": 6.0385592091365705,
+      "apca": -83.49750168355958,
+      "ok": true
+    },
+    {
+      "modo": "base",
+      "fg": "color.primitivos.branco",
+      "bg": "color.liturgia.vermelho",
+      "min": 4.5,
+      "uso": "portal no dia vermelho",
+      "wcag": 6.010349091359045,
+      "apca": -82.7518792909344,
+      "ok": true
+    },
+    {
+      "modo": "base",
+      "fg": "color.primitivos.branco",
+      "bg": "color.liturgia.rosa",
+      "min": 4.5,
+      "uso": "portal no dia rosa",
+      "wcag": 5.625044653861841,
+      "apca": -81.27320791481627,
+      "ok": true
+    },
+    {
+      "modo": "base",
+      "fg": "color.primitivos.madeira",
+      "bg": "color.liturgia.branco",
+      "min": 4.5,
+      "uso": "portal no Natal/Páscoa",
+      "wcag": 8.55309048914223,
+      "apca": 75.7624507683452,
+      "ok": true
+    },
+    {
+      "modo": "base",
+      "fg": "color.text.default",
+      "bg": "color.surface.default",
+      "min": 4.5,
+      "uso": "texto default sobre default",
+      "wcag": 11.002903873169151,
+      "apca": 91.70321616649579,
+      "ok": true
+    },
+    {
+      "modo": "base",
+      "fg": "color.text.default",
+      "bg": "color.surface.raised",
+      "min": 4.5,
+      "uso": "texto default sobre raised",
+      "wcag": 11.505593655704843,
+      "apca": 94.7654231928477,
+      "ok": true
+    },
+    {
+      "modo": "base",
+      "fg": "color.text.default",
+      "bg": "color.surface.sunken",
+      "min": 4.5,
+      "uso": "texto default sobre sunken",
+      "wcag": 8.55309048914223,
+      "apca": 75.7624507683452,
+      "ok": true
+    },
+    {
+      "modo": "base",
+      "fg": "color.text.muted",
+      "bg": "color.surface.default",
+      "min": 4.5,
+      "uso": "texto muted sobre default",
+      "wcag": 6.17958352099379,
+      "apca": 77.54563550922732,
+      "ok": true
+    },
+    {
+      "modo": "base",
+      "fg": "color.text.muted",
+      "bg": "color.surface.raised",
+      "min": 4.5,
+      "uso": "texto muted sobre raised",
+      "wcag": 6.461910216940355,
+      "apca": 80.60784253557925,
+      "ok": true
+    },
+    {
+      "modo": "base",
+      "fg": "color.text.muted",
+      "bg": "color.surface.sunken",
+      "min": 4.5,
+      "uso": "texto muted sobre sunken",
+      "wcag": 4.803689794033293,
+      "apca": 61.60487011107675,
+      "ok": true
+    },
+    {
+      "modo": "base",
+      "fg": "color.text.inverse",
+      "bg": "color.surface.inverse",
+      "min": 4.5,
+      "uso": "texto invertido",
+      "wcag": 12.518123864457523,
+      "apca": -97.10846341622616,
+      "ok": true
+    },
+    {
+      "modo": "base",
+      "fg": "color.accent.on",
+      "bg": "color.accent.default",
+      "min": 4.5,
+      "uso": "botão de ação",
+      "wcag": 4.8511377542782865,
+      "apca": -76.99341209447522,
+      "ok": true
+    },
+    {
+      "modo": "base",
+      "fg": "color.accent.on",
+      "bg": "color.accent.hover",
+      "min": 4.5,
+      "uso": "botão de ação, hover",
+      "wcag": 6.738481366502818,
+      "apca": -86.07511998305829,
+      "ok": true
+    },
+    {
+      "modo": "base",
+      "fg": "color.accent.default",
+      "bg": "color.surface.default",
+      "min": 4.5,
+      "uso": "rubrica/link de ação sobre cal",
+      "wcag": 4.6391871626163175,
+      "apca": 68.7839263463948,
+      "ok": true
+    },
+    {
+      "modo": "base",
+      "fg": "color.feedback.danger",
+      "bg": "color.surface.default",
+      "min": 4.5,
+      "uso": "mensagem de erro",
+      "wcag": 6.55732445417478,
+      "apca": 78.47384564656828,
+      "ok": true
+    },
+    {
+      "modo": "dark",
+      "fg": "color.primitivos.branco",
+      "bg": "color.liturgia.verde",
+      "min": 4.5,
+      "uso": "portal no dia verde",
+      "wcag": 7.342021546107949,
+      "apca": -88.47277990405158,
+      "ok": true
+    },
+    {
+      "modo": "dark",
+      "fg": "color.primitivos.branco",
+      "bg": "color.liturgia.roxo",
+      "min": 4.5,
+      "uso": "portal no dia roxo",
+      "wcag": 6.0385592091365705,
+      "apca": -83.49750168355958,
+      "ok": true
+    },
+    {
+      "modo": "dark",
+      "fg": "color.primitivos.branco",
+      "bg": "color.liturgia.vermelho",
+      "min": 4.5,
+      "uso": "portal no dia vermelho",
+      "wcag": 6.010349091359045,
+      "apca": -82.7518792909344,
+      "ok": true
+    },
+    {
+      "modo": "dark",
+      "fg": "color.primitivos.branco",
+      "bg": "color.liturgia.rosa",
+      "min": 4.5,
+      "uso": "portal no dia rosa",
+      "wcag": 5.625044653861841,
+      "apca": -81.27320791481627,
+      "ok": true
+    },
+    {
+      "modo": "dark",
+      "fg": "color.primitivos.madeira",
+      "bg": "color.liturgia.branco",
+      "min": 4.5,
+      "uso": "portal no Natal/Páscoa",
+      "wcag": 8.55309048914223,
+      "apca": 75.7624507683452,
+      "ok": true
+    },
+    {
+      "modo": "dark",
+      "fg": "color.text.default",
+      "bg": "color.surface.default",
+      "min": 4.5,
+      "uso": "texto default sobre default",
+      "wcag": 14.048190404039469,
+      "apca": -92.04553450375248,
+      "ok": true
+    },
+    {
+      "modo": "dark",
+      "fg": "color.text.default",
+      "bg": "color.surface.raised",
+      "min": 4.5,
+      "uso": "texto default sobre raised",
+      "wcag": 12.939455520340875,
+      "apca": -91.02129252252111,
+      "ok": true
+    },
+    {
+      "modo": "dark",
+      "fg": "color.text.default",
+      "bg": "color.surface.sunken",
+      "min": 4.5,
+      "uso": "texto default sobre sunken",
+      "wcag": 15.538460239846001,
+      "apca": -93.11585938375929,
+      "ok": true
+    },
+    {
+      "modo": "dark",
+      "fg": "color.text.muted",
+      "bg": "color.surface.default",
+      "min": 4.5,
+      "uso": "texto muted sobre default",
+      "wcag": 7.247442118381166,
+      "apca": -54.089066551280865,
+      "ok": true
+    },
+    {
+      "modo": "dark",
+      "fg": "color.text.muted",
+      "bg": "color.surface.raised",
+      "min": 4.5,
+      "uso": "texto muted sobre raised",
+      "wcag": 6.675447315981201,
+      "apca": -53.064824570049495,
+      "ok": true
+    },
+    {
+      "modo": "dark",
+      "fg": "color.text.muted",
+      "bg": "color.surface.sunken",
+      "min": 4.5,
+      "uso": "texto muted sobre sunken",
+      "wcag": 8.016270278104257,
+      "apca": -55.15939143128767,
+      "ok": true
+    },
+    {
+      "modo": "dark",
+      "fg": "color.text.inverse",
+      "bg": "color.surface.inverse",
+      "min": 4.5,
+      "uso": "texto invertido",
+      "wcag": 11.178916736362918,
+      "apca": 87.13321857691676,
+      "ok": true
+    },
+    {
+      "modo": "dark",
+      "fg": "color.accent.on",
+      "bg": "color.accent.default",
+      "min": 4.5,
+      "uso": "botão de ação",
+      "wcag": 7.106226590540232,
+      "apca": 54.87679416970567,
+      "ok": true
+    },
+    {
+      "modo": "dark",
+      "fg": "color.accent.on",
+      "bg": "color.accent.hover",
+      "min": 4.5,
+      "uso": "botão de ação, hover",
+      "wcag": 9.512536509941809,
+      "apca": 68.689345411227,
+      "ok": true
+    },
+    {
+      "modo": "dark",
+      "fg": "color.accent.default",
+      "bg": "color.surface.default",
+      "min": 4.5,
+      "uso": "rubrica/link de ação sobre cal",
+      "wcag": 7.106226590540232,
+      "apca": -53.43156774909686,
+      "ok": true
+    },
+    {
+      "modo": "dark",
+      "fg": "color.feedback.danger",
+      "bg": "color.surface.default",
+      "min": 4.5,
+      "uso": "mensagem de erro",
+      "wcag": 7.059788383458736,
+      "apca": -53.13103670705386,
+      "ok": true
+    }
+  ]
+}

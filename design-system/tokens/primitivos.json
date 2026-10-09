@@ -1,0 +1,800 @@
+{
+  "$extensions": {
+    "ds-forge": {
+      "modes": [
+        "dark"
+      ],
+      "pares": [
+        {
+          "texto": "color.primitivos.branco",
+          "fundo": "color.liturgia.verde",
+          "min": 4.5,
+          "uso": "portal no dia verde"
+        },
+        {
+          "texto": "color.primitivos.branco",
+          "fundo": "color.liturgia.roxo",
+          "min": 4.5,
+          "uso": "portal no dia roxo"
+        },
+        {
+          "texto": "color.primitivos.branco",
+          "fundo": "color.liturgia.vermelho",
+          "min": 4.5,
+          "uso": "portal no dia vermelho"
+        },
+        {
+          "texto": "color.primitivos.branco",
+          "fundo": "color.liturgia.rosa",
+          "min": 4.5,
+          "uso": "portal no dia rosa"
+        },
+        {
+          "texto": "color.primitivos.madeira",
+          "fundo": "color.liturgia.branco",
+          "min": 4.5,
+          "uso": "portal no Natal/Páscoa"
+        },
+        {
+          "texto": "color.text.default",
+          "fundo": "color.surface.default",
+          "min": 4.5,
+          "uso": "texto default sobre default"
+        },
+        {
+          "texto": "color.text.default",
+          "fundo": "color.surface.raised",
+          "min": 4.5,
+          "uso": "texto default sobre raised"
+        },
+        {
+          "texto": "color.text.default",
+          "fundo": "color.surface.sunken",
+          "min": 4.5,
+          "uso": "texto default sobre sunken"
+        },
+        {
+          "texto": "color.text.muted",
+          "fundo": "color.surface.default",
+          "min": 4.5,
+          "uso": "texto muted sobre default"
+        },
+        {
+          "texto": "color.text.muted",
+          "fundo": "color.surface.raised",
+          "min": 4.5,
+          "uso": "texto muted sobre raised"
+        },
+        {
+          "texto": "color.text.muted",
+          "fundo": "color.surface.sunken",
+          "min": 4.5,
+          "uso": "texto muted sobre sunken"
+        },
+        {
+          "texto": "color.text.inverse",
+          "fundo": "color.surface.inverse",
+          "min": 4.5,
+          "uso": "texto invertido"
+        },
+        {
+          "texto": "color.accent.on",
+          "fundo": "color.accent.default",
+          "min": 4.5,
+          "uso": "botão de ação"
+        },
+        {
+          "texto": "color.accent.on",
+          "fundo": "color.accent.hover",
+          "min": 4.5,
+          "uso": "botão de ação, hover"
+        },
+        {
+          "texto": "color.accent.default",
+          "fundo": "color.surface.default",
+          "min": 4.5,
+          "uso": "rubrica/link de ação sobre cal"
+        },
+        {
+          "texto": "color.feedback.danger",
+          "fundo": "color.surface.default",
+          "min": 4.5,
+          "uso": "mensagem de erro"
+        }
+      ]
+    }
+  },
+  "color": {
+    "marca": {
+      "50": {
+        "$value": {
+          "colorSpace": "oklch",
+          "components": [
+            0.977,
+            0.003,
+            38.79
+          ],
+          "hex": "#f9f7f6"
+        }
+      },
+      "100": {
+        "$value": {
+          "colorSpace": "oklch",
+          "components": [
+            0.9458,
+            0.0103,
+            38.79
+          ],
+          "hex": "#f4ebe8"
+        }
+      },
+      "200": {
+        "$value": {
+          "colorSpace": "oklch",
+          "components": [
+            0.8927,
+            0.0264,
+            38.79
+          ],
+          "hex": "#ecd6cf"
+        }
+      },
+      "300": {
+        "$value": {
+          "colorSpace": "oklch",
+          "components": [
+            0.8225,
+            0.0588,
+            38.79
+          ],
+          "hex": "#e8b9a9"
+        }
+      },
+      "400": {
+        "$value": {
+          "colorSpace": "oklch",
+          "components": [
+            0.7293,
+            0.1109,
+            38.79
+          ],
+          "hex": "#e38e73"
+        }
+      },
+      "500": {
+        "$value": {
+          "colorSpace": "oklch",
+          "components": [
+            0.6392,
+            0.1371,
+            38.79
+          ],
+          "hex": "#d06b49"
+        }
+      },
+      "600": {
+        "$value": {
+          "colorSpace": "oklch",
+          "components": [
+            0.554,
+            0.1189,
+            38.79
+          ],
+          "hex": "#ac573b"
+        },
+        "$description": "cor-âncora · origem: telha de barro, terracotta_tile, modelo 3D Igreja Matriz de Resende"
+      },
+      "700": {
+        "$value": {
+          "colorSpace": "oklch",
+          "components": [
+            0.4742,
+            0.0957,
+            38.79
+          ],
+          "hex": "#894731"
+        }
+      },
+      "800": {
+        "$value": {
+          "colorSpace": "oklch",
+          "components": [
+            0.3943,
+            0.0712,
+            38.79
+          ],
+          "hex": "#663829"
+        }
+      },
+      "900": {
+        "$value": {
+          "colorSpace": "oklch",
+          "components": [
+            0.3195,
+            0.0495,
+            38.79
+          ],
+          "hex": "#482a1f"
+        }
+      },
+      "950": {
+        "$value": {
+          "colorSpace": "oklch",
+          "components": [
+            0.2397,
+            0.0312,
+            38.79
+          ],
+          "hex": "#2c1a14"
+        }
+      },
+      "$type": "color",
+      "$description": "escala da marca · origem: telha de barro, terracotta_tile, modelo 3D Igreja Matriz de Resende"
+    },
+    "neutro": {
+      "50": {
+        "$value": {
+          "colorSpace": "oklch",
+          "components": [
+            0.985,
+            0.004,
+            38.79
+          ],
+          "hex": "#fdf9f8"
+        }
+      },
+      "100": {
+        "$value": {
+          "colorSpace": "oklch",
+          "components": [
+            0.967,
+            0.004,
+            38.79
+          ],
+          "hex": "#f7f3f2"
+        }
+      },
+      "200": {
+        "$value": {
+          "colorSpace": "oklch",
+          "components": [
+            0.922,
+            0.0143,
+            38.79
+          ],
+          "hex": "#eee2de"
+        }
+      },
+      "300": {
+        "$value": {
+          "colorSpace": "oklch",
+          "components": [
+            0.87,
+            0.0143,
+            38.79
+          ],
+          "hex": "#ddd1cd"
+        }
+      },
+      "400": {
+        "$value": {
+          "colorSpace": "oklch",
+          "components": [
+            0.708,
+            0.0143,
+            38.79
+          ],
+          "hex": "#a99e9a"
+        }
+      },
+      "500": {
+        "$value": {
+          "colorSpace": "oklch",
+          "components": [
+            0.556,
+            0.0143,
+            38.79
+          ],
+          "hex": "#7b716d"
+        }
+      },
+      "600": {
+        "$value": {
+          "colorSpace": "oklch",
+          "components": [
+            0.439,
+            0.0143,
+            38.79
+          ],
+          "hex": "#5a504d"
+        }
+      },
+      "700": {
+        "$value": {
+          "colorSpace": "oklch",
+          "components": [
+            0.371,
+            0.0143,
+            38.79
+          ],
+          "hex": "#473e3a"
+        }
+      },
+      "800": {
+        "$value": {
+          "colorSpace": "oklch",
+          "components": [
+            0.269,
+            0.0143,
+            38.79
+          ],
+          "hex": "#2d2421"
+        }
+      },
+      "900": {
+        "$value": {
+          "colorSpace": "oklch",
+          "components": [
+            0.205,
+            0.0121,
+            38.79
+          ],
+          "hex": "#1c1513"
+        }
+      },
+      "950": {
+        "$value": {
+          "colorSpace": "oklch",
+          "components": [
+            0.145,
+            0.0121,
+            38.79
+          ],
+          "hex": "#0f0807"
+        }
+      },
+      "$type": "color",
+      "$description": "neutro tingido na matiz da marca (H 39, C 0.014)"
+    },
+    "erro": {
+      "50": {
+        "$value": {
+          "colorSpace": "oklch",
+          "components": [
+            0.977,
+            0.0028,
+            27
+          ],
+          "hex": "#f9f7f6"
+        }
+      },
+      "100": {
+        "$value": {
+          "colorSpace": "oklch",
+          "components": [
+            0.946,
+            0.0099,
+            27
+          ],
+          "hex": "#f4ebea"
+        }
+      },
+      "200": {
+        "$value": {
+          "colorSpace": "oklch",
+          "components": [
+            0.893,
+            0.0254,
+            27
+          ],
+          "hex": "#ecd6d3"
+        }
+      },
+      "300": {
+        "$value": {
+          "colorSpace": "oklch",
+          "components": [
+            0.823,
+            0.0567,
+            27
+          ],
+          "hex": "#e8b8b1"
+        }
+      },
+      "400": {
+        "$value": {
+          "colorSpace": "oklch",
+          "components": [
+            0.73,
+            0.1075,
+            27
+          ],
+          "hex": "#e38d83"
+        }
+      },
+      "500": {
+        "$value": {
+          "colorSpace": "oklch",
+          "components": [
+            0.64,
+            0.1636,
+            27
+          ],
+          "hex": "#de5d53"
+        }
+      },
+      "600": {
+        "$value": {
+          "colorSpace": "oklch",
+          "components": [
+            0.555,
+            0.1508,
+            27
+          ],
+          "hex": "#bb4840"
+        }
+      },
+      "700": {
+        "$value": {
+          "colorSpace": "oklch",
+          "components": [
+            0.475,
+            0.1213,
+            27
+          ],
+          "hex": "#943c35"
+        }
+      },
+      "800": {
+        "$value": {
+          "colorSpace": "oklch",
+          "components": [
+            0.395,
+            0.0902,
+            27
+          ],
+          "hex": "#6f302b"
+        }
+      },
+      "900": {
+        "$value": {
+          "colorSpace": "oklch",
+          "components": [
+            0.32,
+            0.0627,
+            27
+          ],
+          "hex": "#4e2521"
+        }
+      },
+      "950": {
+        "$value": {
+          "colorSpace": "oklch",
+          "components": [
+            0.24,
+            0.0393,
+            27
+          ],
+          "hex": "#301815"
+        }
+      },
+      "$type": "color",
+      "$description": "semântica erro"
+    },
+    "primitivos": {
+      "cal": {
+        "$value": {
+          "colorSpace": "oklch",
+          "components": [
+            0.9723,
+            0.004,
+            106.47
+          ],
+          "hex": "#f6f6f3"
+        },
+        "$description": "origem: lime_plaster, paredes da igreja (modelo 3D Igreja Matriz de Resende). Fundo do site.",
+        "$type": "color"
+      },
+      "branco": {
+        "$value": {
+          "colorSpace": "oklch",
+          "components": [
+            0.9878,
+            0.0013,
+            106.42
+          ],
+          "hex": "#fbfbfa"
+        },
+        "$description": "origem: cal mais clara, cartões. Texto sobre telha.",
+        "$type": "color"
+      },
+      "moldura": {
+        "$value": {
+          "colorSpace": "oklch",
+          "components": [
+            0.8892,
+            0.006,
+            239.83
+          ],
+          "hex": "#d7dbde"
+        },
+        "$description": "origem: molduras das janelas (modelo 3D). Superfície afundada.",
+        "$type": "color"
+      },
+      "barrado": {
+        "$value": {
+          "colorSpace": "oklch",
+          "components": [
+            0.7899,
+            0.0159,
+            241.83
+          ],
+          "hex": "#b2bcc4"
+        },
+        "$description": "origem: barrado pintado (modelo 3D). Bordas.",
+        "$type": "color"
+      },
+      "granito": {
+        "$value": {
+          "colorSpace": "oklch",
+          "components": [
+            0.6561,
+            0.0121,
+            243.74
+          ],
+          "hex": "#8b9298"
+        },
+        "$description": "origem: cantaria de granito (modelo 3D). Borda forte, nunca texto sobre cal.",
+        "$type": "color"
+      },
+      "granito-escuro": {
+        "$value": {
+          "colorSpace": "oklch",
+          "components": [
+            0.474,
+            0.012,
+            238.73
+          ],
+          "hex": "#565d62"
+        },
+        "$description": "origem: granito escurecido para texto secundário AA sobre cal e moldura.",
+        "$type": "color"
+      },
+      "telha": {
+        "$value": {
+          "colorSpace": "oklch",
+          "components": [
+            0.554,
+            0.1189,
+            38.79
+          ],
+          "hex": "#ac573b"
+        },
+        "$description": "origem: terracotta_tile, telha de barro (modelo 3D). Acento de ação.",
+        "$type": "color"
+      },
+      "telha-escura": {
+        "$value": {
+          "colorSpace": "oklch",
+          "components": [
+            0.4747,
+            0.0962,
+            39.03
+          ],
+          "hex": "#894731"
+        },
+        "$description": "origem: telha escurecida, hover.",
+        "$type": "color"
+      },
+      "telha-clara": {
+        "$value": {
+          "colorSpace": "oklch",
+          "components": [
+            0.9458,
+            0.0103,
+            38.79
+          ],
+          "hex": "#f4ebe8"
+        },
+        "$description": "origem: telha clarificada (palette.mjs, marca-100). Destaque suave.",
+        "$type": "color"
+      },
+      "madeira": {
+        "$value": {
+          "colorSpace": "oklch",
+          "components": [
+            0.3403,
+            0.0446,
+            49.05
+          ],
+          "hex": "#4b3123"
+        },
+        "$description": "origem: madeira escura das portas (modelo 3D). Tinta.",
+        "$type": "color"
+      },
+      "ferro": {
+        "$value": {
+          "colorSpace": "oklch",
+          "components": [
+            0.3018,
+            0.0023,
+            67.74
+          ],
+          "hex": "#2f2e2d"
+        },
+        "$description": "origem: ferro forjado das grades (modelo 3D). Superfície invertida, noite.",
+        "$type": "color"
+      },
+      "erro": {
+        "$value": {
+          "colorSpace": "oklch",
+          "components": [
+            0.475,
+            0.1213,
+            27
+          ],
+          "hex": "#943c35"
+        },
+        "$description": "origem: palette.mjs, erro-700. Feedback de erro.",
+        "$type": "color"
+      },
+      "noite-base": {
+        "$value": {
+          "colorSpace": "oklch",
+          "components": [
+            0.2281,
+            0.0195,
+            52.41
+          ],
+          "hex": "#241a14"
+        },
+        "$description": "origem: madeira em noite. Fundo do modo escuro.",
+        "$type": "color"
+      },
+      "noite-raised": {
+        "$value": {
+          "colorSpace": "oklch",
+          "components": [
+            0.2582,
+            0.0223,
+            57.58
+          ],
+          "hex": "#2c2119"
+        },
+        "$description": "origem: madeira em noite, elevação 1.",
+        "$type": "color"
+      },
+      "noite-sunken": {
+        "$value": {
+          "colorSpace": "oklch",
+          "components": [
+            0.18,
+            0.014,
+            52
+          ],
+          "hex": "#17100c"
+        },
+        "$description": "origem: madeira em noite, afundado.",
+        "$type": "color"
+      },
+      "noite-ferro": {
+        "$value": {
+          "colorSpace": "oklch",
+          "components": [
+            0.3449,
+            0.0037,
+            84.58
+          ],
+          "hex": "#3a3937"
+        },
+        "$description": "origem: ferro em noite. Linhas no escuro.",
+        "$type": "color"
+      },
+      "noite-cal": {
+        "$value": {
+          "colorSpace": "oklch",
+          "components": [
+            0.9344,
+            0.0099,
+            87.47
+          ],
+          "hex": "#ece9e2"
+        },
+        "$description": "origem: cal sob luz de vela. Texto no escuro.",
+        "$type": "color"
+      },
+      "noite-granito": {
+        "$value": {
+          "colorSpace": "oklch",
+          "components": [
+            0.7343,
+            0.0118,
+            243.71
+          ],
+          "hex": "#a3aab0"
+        },
+        "$description": "origem: granito sob luz de vela. Texto secundário no escuro.",
+        "$type": "color"
+      },
+      "noite-telha": {
+        "$value": {
+          "colorSpace": "oklch",
+          "components": [
+            0.7409,
+            0.1113,
+            35.58
+          ],
+          "hex": "#e8917a"
+        },
+        "$description": "origem: telha sob luz de vela. Acento no escuro.",
+        "$type": "color"
+      },
+      "noite-telha-clara": {
+        "$value": {
+          "colorSpace": "oklch",
+          "components": [
+            0.82,
+            0.075,
+            36
+          ],
+          "hex": "#f0a893"
+        },
+        "$description": "origem: telha clarificada, hover no escuro.",
+        "$type": "color"
+      },
+      "noite-telha-fundo": {
+        "$value": {
+          "colorSpace": "oklch",
+          "components": [
+            0.32,
+            0.05,
+            40
+          ],
+          "hex": "#4a2e22"
+        },
+        "$description": "origem: telha escurecida, fundo de destaque no escuro.",
+        "$type": "color"
+      },
+      "noite-erro": {
+        "$value": {
+          "colorSpace": "oklch",
+          "components": [
+            0.74,
+            0.11,
+            27
+          ],
+          "hex": "#f0a095"
+        },
+        "$description": "origem: erro clarificado no escuro.",
+        "$type": "color"
+      }
+    },
+    "liturgia": {
+      "verde": {
+        "$type": "color",
+        "$value": "#3f5a46",
+        "$description": "origem: cor litúrgica do Tempo Comum (calendário que o site já calcula). Fundo do portal/arco no dia verde."
+      },
+      "roxo": {
+        "$type": "color",
+        "$value": "#6d5591",
+        "$description": "origem: cor litúrgica do Advento e da Quaresma (já usada em liturgical-year/seasonInfo.ts)."
+      },
+      "vermelho": {
+        "$type": "color",
+        "$value": "#a5402f",
+        "$description": "origem: cor litúrgica de Pentecostes, Paixão e mártires (#b0463a do site, escurecido para AA). Fica perto da telha: nunca usar como ação."
+      },
+      "rosa": {
+        "$type": "color",
+        "$value": "#9c4a6b",
+        "$description": "origem: cor litúrgica de Gaudete e Laetare. Substitui pink-300/400 do Tailwind."
+      },
+      "branco": {
+        "$type": "color",
+        "$value": "{color.primitivos.moldura}",
+        "$description": "origem: cor litúrgica do Natal e da Páscoa; branco vira moldura clara, texto em madeira."
+      }
+    }
+  }
+}
